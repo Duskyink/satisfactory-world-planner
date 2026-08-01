@@ -1,0 +1,13 @@
+import RECIPES from '../../public/data/recipes.json';
+import CAPS from '../../public/data/caps.json';
+import NODESTAT from '../../public/data/nodestat.json';
+import RESK from '../../public/data/resk.json';
+import PURK from '../../public/data/purk.json';
+import FULLK from '../../public/data/fullk.json';
+import NODES from '../../public/data/nodes.json';
+import SEED from '../../public/data/plan.json';
+import MAPBG from '../../public/data/mapbg.json';
+import GOALS from '../../public/data/goals.json';
+import WORLD from '../../public/data/world.json';
+import MAPS from '../../public/data/maps.json';
+export {RECIPES,CAPS,NODESTAT,RESK,PURK,FULLK,NODES,SEED,MAPBG,GOALS,WORLD,MAPS};
