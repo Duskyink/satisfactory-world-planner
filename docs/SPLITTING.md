@@ -98,6 +98,50 @@ complexes purely to stay manageable or to fit a region, even when volume alone
 wouldn't require it; in that case the volume rule only decides whether the link
 between them needs a dedicated line or can be a simple drop.
 
+## Sizing, phasing, and lifecycle
+
+**Size to the local node cluster, built complete on first touch.** A complex is
+sized to what its site physically holds — every node in the cluster — not to
+near-term demand. If a site sits on five iron nodes, all five are claimed and
+processed in one build, even if today only two nodes' worth is needed; the surplus
+banks. You never leave nodes on the table to force a future return trip. "Finish it
+and walk away" is the rule: a cluster is always built out fully the first time it's
+touched.
+
+How far up the chain the site processes its claimed nodes is the judgment call, and
+the volume rule answers it: extract and base-process the whole cluster, carry the
+chain up to the point the volume rule still says to ship from there (ingots if
+ingots ship, the next part if that's denser), then hand off. Claiming all the nodes
+means processing the whole cluster's throughput — not over-refining it locally.
+
+**Phase between complexes, never within one.** Demand decides *sequence*, not
+size. You don't build the second steel site (a different cluster, elsewhere) until
+demand grows into it — but when you do, you build it complete. Phasing happens
+between clusters, never inside one. The unit you phase in is a whole cluster's
+worth of finished production. This is also why geography giving us multiple
+complexes matters: those complexes are the units we phase in over time.
+
+Power sizing follows the same curve. Because only the clusters demand has reached
+are lit up, the bridge grid (coal, then fuel) only ever powers what is actually
+running — never the whole endgame world at once. Building everything to endgame
+scale immediately would force a massive bridge grid to power the entire endgame
+load *plus* construction, before nuclear exists to carry it. Don't.
+
+**Lifecycle — a per-complex flag.**
+
+- **Permanent** (default) — built once, complete, never revisited. Includes
+  *convert-in-place*: a complex whose recipe is upgraded on the same site as the
+  tech tree opens (the fuel-power plant climbing turbo/heavy → diluted → rocket →
+  nitro rocket fuel). It changes recipe but is never deleted, and it stays as the
+  permanent backup grid even after nuclear.
+- **Retire / reclaim** — deleted only if its nodes are needed elsewhere. Coal power
+  is the case: torn down to free its coal for a downstream consumer *if* something
+  needs that coal; otherwise left standing. Purely conditional.
+- **Low-volume one-shot** (rare) — a small item with trivial total volume and no
+  meaningful power or belt cost: make all of it once, in one convenient spot,
+  neither phased nor split. Flagged as it shows up; the tiny numbers make it
+  obvious.
+
 ## Granularity
 
 Group by **site and resource family plus immediate derivatives** — not one item
