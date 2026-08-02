@@ -1,0 +1,37 @@
+{
+  "_note": "Game-given hard constants the engine optimizes against. These are facts (caps, throughputs, power), not plan choices. Verified against Satisfactory 1.0 wiki.",
+  "clock": {
+    "powerExponent": 1.321928,
+    "productionScalesLinearly": true,
+    "maxClockPct": 250,
+    "shardsUnlimited": true,
+    "note": "Production output is linear with clock; power is clock^1.321928. At 250%: 2.5x output, 3.357x power. Generators are the exception - fully linear (power AND fuel scale 1:1 with clock), so with unlimited shards they always run at 250% to save buildings at no efficiency cost."
+  },
+  "carriers": {
+    "belt":     { "class": "solid", "throughputByMk": [60, 120, 270, 480, 780, 1200] },
+    "pipe":     { "class": "fluid", "throughputByMk": [300, 600] },
+    "trainCarSolid": { "class": "solid", "throughput": 1200, "note": "sustained rate belt-limited at load/unload" },
+    "trainCarFluid": { "class": "fluid", "throughput": 600 },
+    "truck":    { "class": "solid", "throughput": 240, "note": "route/round-trip dependent, nominal" },
+    "drone":    { "class": "solid", "throughput": 120, "note": "battery/distance dependent, nominal" }
+  },
+  "depot": { "acceptsFluids": false, "note": "Dimensional Depot cannot store fluid-class items; fluids must be piped or fluid-car railed." },
+  "buildingPowerMW": {
+    "Smelter": 4, "Foundry": 16, "Constructor": 4, "Assembler": 15,
+    "Manufacturer": 55, "Refinery": 30, "Packager": 10, "Blender": 75,
+    "Particle Accelerator": { "variable": true, "min": 100, "max": 1500, "avg": 700 },
+    "Quantum Encoder":      { "variable": true, "min": 0.1, "max": 2000, "avg": 1000 },
+    "Converter":            { "variable": true, "min": 100, "max": 400, "avg": 250 }
+  },
+  "extractorPowerMW": {
+    "Miner Mk1": 5, "Miner Mk2": 12.5, "Miner Mk3": 30,
+    "Water Extractor": 20, "Oil Extractor": 40, "Resource Well Pressurizer": 150
+  },
+  "generators": {
+    "Coal Gen":      { "outputMW": 75,   "waterPerMin": 45,  "overclockLinear": true, "fuelPerMin": { "Coal": 15, "Compacted Coal": 7.14, "Petroleum Coke": 25 } },
+    "Fuel Gen":      { "outputMW": 250,  "waterPerMin": 0,   "overclockLinear": true, "fuelPerMin": { "Fuel": 20, "Turbofuel": 7.5, "Rocket Fuel": 4.17, "Ionized Fuel": 3 } },
+    "Nuclear Plant": { "outputMW": 2500, "waterPerMin": 240, "overclockLinear": true, "fuelPerMin": { "Uranium Fuel Rod": 0.2, "Plutonium Fuel Rod": 0.1, "Ficsonium Fuel Rod": 0.2 }, "wastePerMin": { "Uranium Fuel Rod": 10, "Plutonium Fuel Rod": 1, "Ficsonium Fuel Rod": 0 } },
+    "Geothermal":    { "outputMWByPurity": { "impure": 50, "normal": 200, "pure": 400 }, "overclockable": false, "fluctuates": true }
+  },
+  "nodeCapacityBasis": "caps.json values are per-resource max extraction /min at Mk.3 miner, 250% clock"
+}
