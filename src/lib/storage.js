@@ -1,5 +1,5 @@
 // Browser-local persistence. Swap this one file for fetch() calls to a server
-// when you want friends to share a plan - nothing else touches persistence.
+// when you want friends to share a plan.
 const KEY = k => 'swp:' + k;
 export const storage = {
   async get(k){ const v = localStorage.getItem(KEY(k)); return v==null?null:{key:k,value:v}; },
