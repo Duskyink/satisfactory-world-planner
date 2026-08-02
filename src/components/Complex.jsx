@@ -1,5 +1,6 @@
 import React from 'react';
 import {RECIPES,CAPS,NODESTAT,RESK,PURK,FULLK,NODES,SEED,GOALS,MAPBG,WORLD,MAPS,RAW,BP,RMAP,RNAMES,MODES,MINER,PUR,EXTRACTOR,RESCOL,UNLIMITED,TH,PRODBY,fmt,tierColor,barColor,nodeRate,maxTarget,computeStep,perItem,allInputs,cxMach,cxPow,cxShards,cxStatus,computeWorld,srcList,computeGraph,defRecipe,solveGoals,scoreSites,rawNeeds,capNear,nodesNear,Info,Tip} from '../lib/model.jsx';
+import {RecipePicker} from './Ui.jsx';
 function Complex({c,kids,graph,nm,go,cxs,stName,producersOf,consumersNeeding,editStep,addStep,delStep,up,setSrcRows,setDestRows,addStation,editStation,delStation,addSub,del}){
   const t=c.totals||{},m=graph.per[c.id]||{};
   const mach=cxMach(c),pow=cxPow(c),shards=cxShards(c),st=cxStatus(c);
