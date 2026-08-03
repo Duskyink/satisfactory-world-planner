@@ -47,17 +47,25 @@ balances), and the order complexes are phased in. None of these are fixed by rul
   from somewhere that has it. Nothing is produced from thin air.
 - **The invariants**, below.
 
-## Objective — what the engine minimizes
+## Objective — what the engine solves for
 
-Across the whole design, minimize total **transport + build + power cost**: prefer
-the plan that moves the least, builds the least, and powers the least while meeting
-every goal and honoring every constraint. This is a whole-design objective, not a
-per-stage one — a choice that costs more at one step but less overall wins.
+There is really **one hard constraint: every raw draw fits under its cap** — ore,
+oil, uranium, water, *and the fuel burned to power every machine*. Power is not a
+separate thing to minimize; its only cost is the fuel it burns, and that fuel is
+just another raw draw that must fit under the oil/uranium caps. So "does the whole
+plan fit under caps, fuel included?" already accounts for power completely.
+Optimizing wattage on top of that would double-count.
 
-In practice it pulls toward local production over shipping, denser shipments over
-bulky ones, fewer and more self-contained complexes, and recipe and clock choices
-that lower the total. When two approaches both satisfy the constraints, the
-lower-cost one wins — and the rules never prescribe which that is.
+The one real lever is **recipe selection**, which decides how much raw each product
+pulls. Where a resource sits near its ceiling, the engine is forced toward the
+raw-efficient recipe to fit; where a resource is abundant, it may choose freely.
+That is the whole recipe rule: raw-efficient only where the cap is tight, free
+choice where it is not.
+
+Machines and power both **fall out** of the recipe choices — you build the machines
+the recipes need and the generators to power them. Fewer machines is nicer and
+breaks ties between two plans that both fit, but it is a tiebreaker, not the
+objective. The objective is: fit under caps. Everything else is geography.
 
 ## The model
 
@@ -95,12 +103,18 @@ a structural distinction in it.
    demand first, until every goal's requirement is met. Co-located resources are
    credited together, so a site serving several needs at once is preferred.
 3. **Combine** onto one complex all the production a claimed site can support.
-4. **Choose recipes** across the whole design to minimize the objective. This is
-   where "which recipe" is answered — globally, as a cost decision, never as a rule.
+4. **Choose recipes** across the whole design so every raw draw fits under its cap
+   with the fewest machines. Raw-efficient recipes only where a cap is tight; the
+   fewest-machine recipe wherever the raw is abundant. This is where "which recipe"
+   is answered — as a caps decision, never as a rule.
 5. **Localize or ship** each stream by comparing its cost produced locally (or fed
    in on an edge) against shipped in, weighting each item by its transport cost.
    Keep producing locally while local-plus-feed is cheaper; ship only when the
-   finished item is cheaper to move than everything feeding it.
+   finished item is cheaper to move than everything feeding it. Two exceptions
+   override transport: item-*expanding* bulky parts (a little input becoming a lot
+   of output) always localize to the consumer; and deep, complex, low-volume
+   assemblies are made in **one** place and shipped, because replicating a
+   complicated setup at every consumer costs more than moving the finished part.
 6. **Size** each complex to its whole cluster: claim every node, process the
    cluster's throughput, bank the surplus. Built complete on first touch.
 7. **Phase** complexes in as demand crosses capacity — sequence between complexes,
