@@ -216,35 +216,73 @@ def allocate(comps, prod):
         # any residual demand no complex can source locally is left for edges
     return made, rem
 
-# ============================================================ edges
-def build_edges(comps, prod, made, rem, ship):
-    """Compute each complex's surplus/deficit per item, then match surplus->deficit
-    nearest-first into edges. Localized (non-ship) items make no edges."""
+# ============================================================ routing (placement)
+def route(comps, prod, made, rem, ship):
+    """Convergence-placement + routing. After the complex-first pass has distributed
+    what it can, this fills the residual: for each still-unmet product (bottom-up),
+    pick the hub where its inputs are cheapest to gather, import shippable inputs as
+    edges, make non-shippable inputs on-site, and make the product there. Returns the
+    edge list; `made` is updated in place so downstream products can pull from it.
+
+    KNOWN BUG (next fix): a hub makes non-shippable inputs (fluids, bulky-expanding
+    parts) on-site even when that input was already produced at another complex,
+    double-producing it. For fluids this breaches caps (alumina re-made -> bauxite
+    over cap). Fix: pin a convergence product to the complex holding its
+    non-shippable/fluid inputs and consume that production instead of remaking."""
     N = len(comps)
+    depth = {}
+    def dep(it, seen=frozenset()):
+        if it in RAW or it not in prod: return 0
+        if it in depth: return depth[it]
+        if it in seen: return 0
+        depth[it] = 1 + max([dep(x, seen | {it}) for x in prod[it]["in"]] + [0]); return depth[it]
+    for it in prod: dep(it)
+
+    # export pool: net surplus per item per complex after the local pass
     cons = [defaultdict(float) for _ in comps]
     for ci in range(N):
         for it, q in made[ci].items():
             for x, pu in prod[it]["in"].items():
-                if x != "Water":
-                    cons[ci][x] += pu * q
-    surplus, deficit = defaultdict(list), defaultdict(list)
+                if x != "Water": cons[ci][x] += pu * q
+    pool = defaultdict(lambda: defaultdict(float))
     for ci in range(N):
-        items = set(made[ci]) | set(cons[ci]) | set(rem[ci])
-        for it in items:
-            m = made[ci].get(it, 0) + (rem[ci].get(it, 0) if it in RAW else 0)
-            net = m - cons[ci].get(it, 0)
-            if net > 1: surplus[it].append([ci, net])
-            elif net < -1: deficit[it].append([ci, -net])
+        for it in set(made[ci]) | set(rem[ci]):
+            net = made[ci].get(it, 0) + (rem[ci].get(it, 0) if it in RAW else 0) - cons[ci].get(it, 0)
+            if net > 1: pool[it][ci] = net
     edges = []
-    for it, defs in deficit.items():
-        sups = surplus.get(it, [])
-        for dci, dq in defs:
-            for sup in sorted(sups, key=lambda s: _dist(comps[s[0]], comps[dci])):
-                if dq <= 1: break
-                if sup[0] == dci or sup[1] <= 1: continue
-                f = min(sup[1], dq); sup[1] -= f; dq -= f
-                edges.append({"item": it, "src": sup[0], "dst": dci,
-                              "rate": round(f, 1), "dist_m": round(_dist(comps[sup[0]], comps[dci]) * 10)})
+    def imp(item, qty, dst):
+        for sci in sorted(pool[item], key=lambda c: _dist(comps[c], comps[dst])):
+            if qty <= 1: break
+            a = pool[item][sci]
+            if a <= 1: continue
+            f = min(a, qty); pool[item][sci] -= f; qty -= f
+            if sci != dst:
+                edges.append({"item": item, "src": sci, "dst": dst, "rate": round(f, 1),
+                              "dist_m": round(_dist(comps[sci], comps[dst]) * 10)})
+        return qty
+    def ensure(hub, item, qty):
+        if item == "Water" or qty <= 1: return
+        have = pool[item].get(hub, 0); u = min(have, qty); pool[item][hub] -= u; qty -= u
+        if qty <= 1: return
+        if item in RAW or ship.get(item, True):
+            imp(item, qty, hub)                       # raw / dense: ship in
+        else:                                          # bulky-expanding: make on-site
+            for x, pu in prod[item]["in"].items(): ensure(hub, x, pu * qty)
+            made[hub][item] = made[hub].get(item, 0) + qty
+    for it in sorted(prod, key=lambda i: depth.get(i, 0)):
+        residual = prod[it]["rate"] - sum(made[ci].get(it, 0) for ci in range(N))
+        if residual <= 1: continue
+        def score(ci):                                 # hub = where inputs already are
+            s = 0.0
+            for x, pu in prod[it]["in"].items():
+                if x == "Water": continue
+                w = 2.0 if x in FLUID_ITEMS else 1.0
+                s += min(pool[x].get(ci, 0), pu * residual) * w
+            return s
+        hub = max(range(N), key=score)
+        for x, pu in prod[it]["in"].items(): ensure(hub, x, pu * residual)
+        made[hub][it] = made[hub].get(it, 0) + residual
+        pool[it][hub] = pool[it].get(hub, 0) + residual
     return edges
 
 # ============================================================ driver
@@ -283,7 +321,7 @@ def main():
     # step; see docs). classify -> allocate -> edges.
     ship = classify_ship(prod)
     made, rem = allocate(comps, prod)
-    edges = build_edges(comps, prod, made, rem, ship)
+    edges = route(comps, prod, made, rem, ship)
 
     # machine + cap summary
     mach = 0
