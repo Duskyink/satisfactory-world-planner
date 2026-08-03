@@ -10,7 +10,8 @@
     "Sulfur": 2100
    },
    "makes": {
-    "Sulfuric Acid": 1056.8,
+    "Quartz Crystal": 973.1,
+    "Sulfuric Acid": 567.1,
     "Reanimated SAM": 75.0
    }
   },
@@ -24,7 +25,8 @@
     "Limestone": 1200
    },
    "makes": {
-    "Quartz Crystal": 1045.3
+    "Concrete": 412.0,
+    "Quartz Crystal": 934.0
    }
   },
   {
@@ -39,18 +41,27 @@
     "Caterium Ore": 1200
    },
    "makes": {
-    "Concrete": 2800.0,
-    "Iron Ingot": 11142.9,
-    "Copper Ingot": 12000.0,
-    "Caterium Ingot": 600.0,
-    "Iron Rod": 8214.3,
-    "Steel Ingot": 2700.0,
-    "Copper Sheet": 6000.0,
-    "Quickwire": 3000.0,
-    "Steel Beam": 675.0,
-    "AI Limiter": 150.0,
-    "Iron Rebar": 420.0,
-    "Encased Industrial Beam": 225.0
+    "Concrete": 1404.3,
+    "Iron Ingot": 9151.8,
+    "Copper Ingot": 11989.6,
+    "Caterium Ingot": 599.8,
+    "Iron Rod": 5372.4,
+    "Iron Plate": 2004.1,
+    "Steel Ingot": 1159.8,
+    "Copper Sheet": 2459.4,
+    "Quickwire": 2806.1,
+    "Wire": 308.4,
+    "Copper Powder": 1152.0,
+    "Screws": 17268.5,
+    "Steel Pipe": 773.2,
+    "AI Limiter": 140.3,
+    "Iron Rebar": 79.8,
+    "Reinforced Iron Plate": 316.9,
+    "Stator": 38.6,
+    "Rotor": 190.6,
+    "Modular Frame": 3.8,
+    "Electromagnetic Control Rod": 25.7,
+    "Smart Plating": 16.6
    }
   },
   {
@@ -65,11 +76,21 @@
     "Nitrogen Gas": 2100
    },
    "makes": {
-    "Iron Ingot": 6685.7,
-    "Copper Ingot": 3000.0,
-    "Iron Plate": 4457.1,
-    "Copper Powder": 500.0,
-    "Nitric Acid": 525.0
+    "Concrete": 726.9,
+    "Iron Ingot": 5124.5,
+    "Copper Ingot": 2981.5,
+    "Sulfuric Acid": 210.6,
+    "Iron Rod": 2619.4,
+    "Iron Plate": 1240.6,
+    "Copper Sheet": 474.3,
+    "Copper Powder": 318.7,
+    "Screws": 7257.3,
+    "Iron Rebar": 53.5,
+    "Nitric Acid": 525.0,
+    "Reinforced Iron Plate": 160.8,
+    "Rotor": 141.4,
+    "Modular Frame": 7.4,
+    "Smart Plating": 8.6
    }
   },
   {
@@ -84,10 +105,22 @@
     "Copper Ore": 600
    },
    "makes": {
-    "Concrete": 2000.0,
-    "Copper Ingot": 1500.0,
+    "Concrete": 858.0,
+    "Iron Ingot": 4081.7,
+    "Copper Ingot": 1486.0,
     "Reanimated SAM": 300.0,
-    "Copper Powder": 250.0
+    "Iron Rod": 1925.5,
+    "Iron Plate": 1016.8,
+    "Steel Ingot": 946.6,
+    "Copper Sheet": 222.6,
+    "Copper Powder": 160.7,
+    "Screws": 4910.2,
+    "Steel Pipe": 631.1,
+    "Iron Rebar": 42.0,
+    "Reinforced Iron Plate": 148.8,
+    "Rotor": 112.5,
+    "Modular Frame": 15.5,
+    "Smart Plating": 5.3
    }
   },
   {
@@ -100,13 +133,19 @@
     "Limestone": 3000
    },
    "makes": {
-    "Concrete": 2000.0,
-    "Iron Ingot": 13371.4,
-    "Copper Ingot": 3000.0,
-    "Iron Rod": 13371.4,
-    "Copper Powder": 500.0,
-    "Screws": 52583.0,
-    "Rotor": 45.1
+    "Concrete": 796.6,
+    "Iron Ingot": 9409.7,
+    "Copper Ingot": 2966.0,
+    "Iron Rod": 4155.9,
+    "Iron Plate": 2368.7,
+    "Copper Sheet": 431.2,
+    "Copper Powder": 321.9,
+    "Screws": 9919.3,
+    "Iron Rebar": 92.7,
+    "Reinforced Iron Plate": 335.1,
+    "Rotor": 201.5,
+    "Modular Frame": 96.0,
+    "Smart Plating": 7.5
    }
   },
   {
@@ -122,17 +161,27 @@
     "Copper Ore": 3600
    },
    "makes": {
-    "Iron Ingot": 6685.7,
-    "Copper Ingot": 9000.0,
-    "Caterium Ingot": 300.0,
-    "Reanimated SAM": 75.0,
-    "Iron Plate": 1696.7,
-    "Steel Ingot": 6210.9,
-    "Copper Sheet": 464.2,
-    "Wire": 2400.0,
-    "Copper Powder": 1345.3,
-    "Steel Pipe": 4140.6,
-    "Stator": 300.0
+    "Concrete": 590.4,
+    "Iron Ingot": 4213.2,
+    "Copper Ingot": 8852.5,
+    "Caterium Ingot": 299.9,
+    "Reanimated SAM": 74.9,
+    "Iron Rod": 1573.4,
+    "Iron Plate": 1050.0,
+    "Steel Ingot": 1597.2,
+    "Copper Sheet": 1210.7,
+    "Quickwire": 1358.9,
+    "Wire": 224.9,
+    "Copper Powder": 964.5,
+    "Screws": 3179.2,
+    "Steel Pipe": 1064.8,
+    "AI Limiter": 67.9,
+    "Iron Rebar": 34.6,
+    "Reinforced Iron Plate": 133.8,
+    "Stator": 28.1,
+    "Rotor": 45.7,
+    "Modular Frame": 85.9,
+    "Electromagnetic Control Rod": 18.7
    }
   },
   {
@@ -147,13 +196,21 @@
     "Bauxite": 600
    },
    "makes": {
-    "Iron Ingot": 5214.9,
-    "Copper Ingot": 3000.0,
-    "Alumina Solution": 720.0,
-    "Steel Ingot": 5400.0,
-    "Copper Powder": 500.0,
-    "Steel Pipe": 2527.4,
-    "Steel Beam": 402.2
+    "Concrete": 416.1,
+    "Iron Ingot": 3967.7,
+    "Copper Ingot": 2872.2,
+    "Alumina Solution": 719.4,
+    "Iron Rod": 1374.0,
+    "Iron Plate": 963.7,
+    "Steel Ingot": 1722.1,
+    "Copper Sheet": 321.6,
+    "Copper Powder": 307.0,
+    "Screws": 2598.4,
+    "Steel Pipe": 1148.1,
+    "Iron Rebar": 29.3,
+    "Reinforced Iron Plate": 115.8,
+    "Rotor": 33.1,
+    "Modular Frame": 77.2
    }
   },
   {
@@ -168,10 +225,12 @@
     "SAM": 900
    },
    "makes": {
-    "Caterium Ingot": 600.0,
-    "Alumina Solution": 1440.0,
-    "Reanimated SAM": 225.0,
-    "Quickwire": 3000.0
+    "Concrete": 264.6,
+    "Caterium Ingot": 599.5,
+    "Alumina Solution": 1439.3,
+    "Reanimated SAM": 224.2,
+    "Quickwire": 2668.5,
+    "Wire": 526.5
    }
   },
   {
@@ -185,8 +244,21 @@
     "SAM": 600
    },
    "makes": {
-    "Black Powder": 866.0,
-    "Reanimated SAM": 150.0
+    "Iron Ingot": 1240.4,
+    "Black Powder": 522.6,
+    "Sulfuric Acid": 130.4,
+    "Compacted Coal": 186.3,
+    "Reanimated SAM": 150.0,
+    "Iron Rod": 399.4,
+    "Iron Plate": 291.0,
+    "Steel Ingot": 606.7,
+    "Screws": 711.3,
+    "Steel Pipe": 404.4,
+    "Iron Rebar": 8.2,
+    "Reinforced Iron Plate": 32.9,
+    "Nobelisk": 161.3,
+    "Rotor": 8.3,
+    "Modular Frame": 21.9
    }
   },
   {
@@ -201,7 +273,8 @@
     "Limestone": 2100
    },
    "makes": {
-    "Alumina Solution": 1080.0,
+    "Concrete": 448.7,
+    "Alumina Solution": 1079.4,
     "Reanimated SAM": 375.0
    }
   },
@@ -216,10 +289,11 @@
     "Nitrogen Gas": 3000
    },
    "makes": {
-    "Caterium Ingot": 300.0,
-    "Alumina Solution": 2880.0,
-    "Reanimated SAM": 75.0,
-    "Wire": 2400.0
+    "Caterium Ingot": 299.3,
+    "Alumina Solution": 2878.5,
+    "Reanimated SAM": 74.8,
+    "Quickwire": 1278.8,
+    "Wire": 347.6
    }
   },
   {
@@ -231,7 +305,7 @@
     "Bauxite": 1800
    },
    "makes": {
-    "Alumina Solution": 2160.0
+    "Alumina Solution": 2154.8
    }
   },
   {
@@ -246,9 +320,21 @@
     "SAM": 300
    },
    "makes": {
-    "Caterium Ingot": 1200.0,
-    "Reanimated SAM": 75.0,
-    "Quickwire": 6000.0
+    "Concrete": 242.3,
+    "Quartz Crystal": 745.4,
+    "Iron Ingot": 1820.5,
+    "Caterium Ingot": 1199.4,
+    "Reanimated SAM": 74.6,
+    "Iron Rod": 573.2,
+    "Iron Plate": 421.6,
+    "Quickwire": 5008.6,
+    "Wire": 1581.5,
+    "Screws": 1003.1,
+    "Iron Rebar": 11.6,
+    "Reinforced Iron Plate": 46.7,
+    "Shatter Rebar": 5.8,
+    "Rotor": 11.4,
+    "Modular Frame": 31.2
    }
   },
   {
@@ -264,12 +350,33 @@
     "Crude Oil": 450
    },
    "makes": {
-    "Fuel": 149.2,
-    "Copper Ingot": 1500.0,
-    "Caterium Ingot": 600.0,
-    "Alumina Solution": 2520.0,
-    "Quickwire": 3000.0,
-    "Copper Powder": 24.7
+    "Concrete": 351.9,
+    "Iron Ingot": 1173.4,
+    "Plastic": 276.6,
+    "Rubber": 18.0,
+    "Heavy Oil Residue": 8.0,
+    "Fuel": 1.0,
+    "Copper Ingot": 1411.4,
+    "Caterium Ingot": 598.8,
+    "Alumina Solution": 2501.1,
+    "Iron Rod": 357.3,
+    "Iron Plate": 266.2,
+    "Petroleum Coke": 23.3,
+    "Empty Canister": 17.0,
+    "Copper Sheet": 148.5,
+    "Quickwire": 2222.8,
+    "Wire": 1234.1,
+    "Copper Powder": 147.5,
+    "Screws": 609.5,
+    "Cable": 99.1,
+    "Circuit Board": 67.0,
+    "AI Limiter": 2.6,
+    "Iron Rebar": 7.1,
+    "Aluminum Scrap": 116.3,
+    "Reinforced Iron Plate": 28.7,
+    "Stun Rebar": 7.1,
+    "Rotor": 6.7,
+    "Modular Frame": 19.1
    }
   },
   {
@@ -281,8 +388,9 @@
     "Uranium": 300
    },
    "makes": {
-    "Caterium Ingot": 233.2,
-    "Wire": 1865.5
+    "Caterium Ingot": 298.4,
+    "Quickwire": 1028.2,
+    "Wire": 741.5
    }
   },
   {
@@ -299,12 +407,33 @@
     "SAM": 300
    },
    "makes": {
-    "Copper Ingot": 3000.0,
-    "Caterium Ingot": 600.0,
-    "Compacted Coal": 337.6,
-    "Reanimated SAM": 75.0,
-    "Quickwire": 3000.0,
-    "Copper Powder": 500.0
+    "Concrete": 223.3,
+    "Iron Ingot": 1146.9,
+    "Black Powder": 300.6,
+    "Copper Ingot": 2791.7,
+    "Caterium Ingot": 594.6,
+    "Sulfuric Acid": 121.6,
+    "Compacted Coal": 131.5,
+    "Reanimated SAM": 74.3,
+    "Iron Rod": 341.8,
+    "Iron Plate": 256.5,
+    "Steel Ingot": 630.7,
+    "Copper Sheet": 284.9,
+    "Quickwire": 1966.9,
+    "Wire": 1609.8,
+    "Copper Powder": 287.5,
+    "Screws": 573.8,
+    "Steel Pipe": 420.5,
+    "AI Limiter": 57.0,
+    "Iron Rebar": 6.7,
+    "Reinforced Iron Plate": 27.1,
+    "Nobelisk": 74.4,
+    "Stun Rebar": 6.7,
+    "Stator": 90.5,
+    "Rotor": 6.2,
+    "Modular Frame": 18.1,
+    "Electromagnetic Control Rod": 57.0,
+    "Motor": 2.5
    }
   },
   {
@@ -320,8 +449,25 @@
     "SAM": 600
    },
    "makes": {
-    "Copper Ingot": 1500.0,
-    "Reanimated SAM": 150.0
+    "Concrete": 432.1,
+    "Iron Ingot": 2241.1,
+    "Black Powder": 42.0,
+    "Copper Ingot": 1357.8,
+    "Sulfuric Acid": 26.3,
+    "Compacted Coal": 19.2,
+    "Reanimated SAM": 150.0,
+    "Iron Rod": 653.8,
+    "Iron Plate": 493.7,
+    "Steel Ingot": 1270.0,
+    "Copper Sheet": 130.3,
+    "Copper Powder": 135.1,
+    "Screws": 1080.8,
+    "Steel Pipe": 846.7,
+    "Iron Rebar": 12.6,
+    "Reinforced Iron Plate": 51.2,
+    "Nobelisk": 6.0,
+    "Rotor": 11.6,
+    "Modular Frame": 34.1
    }
   },
   {
@@ -333,9 +479,12 @@
     "Crude Oil": 1200
    },
    "makes": {
-    "Rubber": 368.4,
-    "Heavy Oil Residue": 148.7,
-    "Fuel": 357.2
+    "Plastic": 733.0,
+    "Rubber": 51.5,
+    "Heavy Oil Residue": 23.1,
+    "Fuel": 3.0,
+    "Petroleum Coke": 68.5,
+    "Empty Canister": 44.0
    }
   },
   {
@@ -349,9 +498,23 @@
     "Limestone": 900
    },
    "makes": {
-    "Copper Ingot": 1500.0,
-    "Caterium Ingot": 600.0,
-    "Quickwire": 3000.0
+    "Concrete": 151.4,
+    "Iron Ingot": 2135.4,
+    "Copper Ingot": 1334.5,
+    "Caterium Ingot": 585.1,
+    "Iron Rod": 597.1,
+    "Iron Plate": 455.9,
+    "Copper Sheet": 124.4,
+    "Quickwire": 1766.3,
+    "Wire": 1855.0,
+    "Copper Powder": 130.2,
+    "Screws": 958.0,
+    "AI Limiter": 24.9,
+    "Iron Rebar": 11.2,
+    "Reinforced Iron Plate": 45.5,
+    "Stun Rebar": 11.2,
+    "Rotor": 10.0,
+    "Modular Frame": 30.3
    }
   },
   {
@@ -364,10 +527,18 @@
     "Limestone": 2400
    },
    "makes": {
-    "Iron Ingot": 8914.3,
-    "Copper Ingot": 6000.0,
-    "Iron Plate": 5942.9,
-    "Copper Powder": 1000.0
+    "Concrete": 393.6,
+    "Iron Ingot": 4062.9,
+    "Copper Ingot": 5232.8,
+    "Iron Rod": 1090.9,
+    "Iron Plate": 839.3,
+    "Copper Sheet": 473.7,
+    "Copper Powder": 499.7,
+    "Screws": 1702.2,
+    "Iron Rebar": 20.0,
+    "Reinforced Iron Plate": 80.7,
+    "Rotor": 17.5,
+    "Modular Frame": 53.8
    }
   },
   {
@@ -379,8 +550,13 @@
     "Crude Oil": 4500
    },
    "makes": {
-    "Plastic": 3000.0,
-    "Reanimated SAM": 300.0
+    "Plastic": 2700.0,
+    "Rubber": 228.3,
+    "Heavy Oil Residue": 106.5,
+    "Fuel": 17.0,
+    "Reanimated SAM": 300.0,
+    "Petroleum Coke": 314.9,
+    "Empty Canister": 151.7
    }
   },
   {
@@ -394,9 +570,15 @@
     "Crude Oil": 2400
    },
    "makes": {
-    "Plastic": 1600.0,
-    "Alumina Solution": 464.0,
-    "Reanimated SAM": 150.0
+    "Plastic": 1327.6,
+    "Rubber": 197.6,
+    "Heavy Oil Residue": 108.0,
+    "Fuel": 18.9,
+    "Alumina Solution": 699.7,
+    "Reanimated SAM": 149.3,
+    "Petroleum Coke": 317.1,
+    "Empty Canister": 56.9,
+    "Aluminum Scrap": 1166.2
    }
   },
   {
@@ -412,13 +594,25 @@
     "Iron Ore": 1800
    },
    "makes": {
-    "Concrete": 1456.0,
-    "Quartz Crystal": 2333.3,
-    "Copper Ingot": 571.0,
-    "Caterium Ingot": 600.0,
+    "Concrete": 459.1,
+    "Quartz Crystal": 725.2,
+    "Iron Ingot": 1368.5,
+    "Copper Ingot": 1168.2,
+    "Caterium Ingot": 557.4,
     "Reanimated SAM": 150.0,
-    "Quickwire": 626.0,
-    "Wire": 3798.5
+    "Iron Rod": 339.2,
+    "Iron Plate": 263.3,
+    "Copper Sheet": 93.7,
+    "Quickwire": 1520.1,
+    "Wire": 2027.3,
+    "Copper Powder": 100.2,
+    "Screws": 502.4,
+    "AI Limiter": 18.7,
+    "Iron Rebar": 5.9,
+    "Reinforced Iron Plate": 22.4,
+    "Shatter Rebar": 3.0,
+    "Rotor": 5.3,
+    "Modular Frame": 14.1
    }
   },
   {
@@ -432,9 +626,15 @@
     "SAM": 300
    },
    "makes": {
-    "Rubber": 900.0,
-    "Alumina Solution": 1440.0,
-    "Reanimated SAM": 75.0
+    "Plastic": 707.4,
+    "Rubber": 133.4,
+    "Heavy Oil Residue": 82.9,
+    "Fuel": 16.0,
+    "Alumina Solution": 1376.7,
+    "Reanimated SAM": 75.0,
+    "Petroleum Coke": 241.2,
+    "Empty Canister": 26.8,
+    "Aluminum Scrap": 1206.2
    }
   },
   {
@@ -445,7 +645,7 @@
     "Bauxite": 1200
    },
    "makes": {
-    "Alumina Solution": 1440.0
+    "Alumina Solution": 1294.2
    }
   },
   {
@@ -456,7 +656,7 @@
     "SAM": 600
    },
    "makes": {
-    "Reanimated SAM": 150.0
+    "Reanimated SAM": 149.3
    }
   },
   {
@@ -472,9 +672,28 @@
     "Crude Oil": 5100
    },
    "makes": {
-    "Plastic": 3400.0,
+    "Concrete": 84.0,
+    "Iron Ingot": 876.2,
+    "Plastic": 2582.2,
+    "Rubber": 547.4,
+    "Heavy Oil Residue": 369.1,
+    "Fuel": 76.4,
+    "Copper Ingot": 1125.7,
     "Reanimated SAM": 75.0,
-    "Empty Canister": 464.0
+    "Iron Rod": 211.5,
+    "Iron Plate": 164.3,
+    "Steel Ingot": 627.3,
+    "Petroleum Coke": 1066.0,
+    "Empty Canister": 91.6,
+    "Copper Sheet": 88.0,
+    "Copper Powder": 93.9,
+    "Screws": 308.2,
+    "Steel Pipe": 418.2,
+    "Circuit Board": 44.0,
+    "Iron Rebar": 3.6,
+    "Reinforced Iron Plate": 13.5,
+    "Rotor": 3.3,
+    "Modular Frame": 8.1
    }
   },
   {
@@ -486,9 +705,13 @@
     "Crude Oil": 1200
    },
    "makes": {
-    "Heavy Oil Residue": 1600.0,
+    "Plastic": 514.6,
+    "Rubber": 161.1,
+    "Heavy Oil Residue": 149.1,
+    "Fuel": 41.8,
     "Reanimated SAM": 75.0,
-    "Petroleum Coke": 4674.7
+    "Petroleum Coke": 410.0,
+    "Empty Canister": 14.0
    }
   },
   {
@@ -499,7 +722,12 @@
     "Crude Oil": 4500
    },
    "makes": {
-    "Plastic": 3000.0
+    "Plastic": 1845.4,
+    "Rubber": 612.0,
+    "Heavy Oil Residue": 611.3,
+    "Fuel": 192.0,
+    "Petroleum Coke": 1628.6,
+    "Empty Canister": 48.1
    }
   },
   {
@@ -510,8 +738,12 @@
     "Crude Oil": 1800
    },
    "makes": {
-    "Plastic": 288.8,
-    "Rubber": 911.2
+    "Plastic": 601.0,
+    "Rubber": 229.5,
+    "Heavy Oil Residue": 290.1,
+    "Fuel": 139.4,
+    "Petroleum Coke": 604.1,
+    "Empty Canister": 13.1
    }
   },
   {
@@ -526,242 +758,60 @@
  ],
  "edges": [
   {
-   "item": "Sulfur",
-   "src": 17,
+   "item": "Raw Quartz",
+   "src": 13,
    "dst": 0,
-   "rate": 13.5,
-   "dist_m": 1034
+   "rate": 402.2,
+   "dist_m": 2726
   },
   {
    "item": "Raw Quartz",
-   "src": 0,
+   "src": 23,
    "dst": 1,
-   "rate": 287.8,
-   "dist_m": 2260
-  },
-  {
-   "item": "Raw Quartz",
-   "src": 0,
-   "dst": 23,
-   "rate": 1812.2,
-   "dist_m": 4080
-  },
-  {
-   "item": "Raw Quartz",
-   "src": 13,
-   "dst": 23,
-   "rate": 1187.8,
-   "dist_m": 4092
+   "rate": 1.8,
+   "dist_m": 1883
   },
   {
    "item": "Limestone",
-   "src": 16,
-   "dst": 2,
-   "rate": 1200.0,
-   "dist_m": 1343
-  },
-  {
-   "item": "Limestone",
-   "src": 13,
-   "dst": 2,
-   "rate": 1200.0,
-   "dist_m": 2222
-  },
-  {
-   "item": "Limestone",
-   "src": 6,
-   "dst": 2,
-   "rate": 1800.0,
-   "dist_m": 2909
-  },
-  {
-   "item": "Limestone",
-   "src": 1,
-   "dst": 4,
-   "rate": 1200.0,
-   "dist_m": 826
-  },
-  {
-   "item": "Limestone",
-   "src": 3,
-   "dst": 4,
-   "rate": 1800.0,
-   "dist_m": 873
-  },
-  {
-   "item": "Limestone",
-   "src": 6,
-   "dst": 5,
-   "rate": 600.0,
-   "dist_m": 1078
-  },
-  {
-   "item": "Limestone",
-   "src": 20,
-   "dst": 5,
-   "rate": 2400.0,
-   "dist_m": 1241
-  },
-  {
-   "item": "Limestone",
-   "src": 7,
-   "dst": 23,
-   "rate": 1368.0,
-   "dist_m": 931
-  },
-  {
-   "item": "Coal",
-   "src": 16,
-   "dst": 2,
-   "rate": 1124.8,
-   "dist_m": 1343
-  },
-  {
-   "item": "Coal",
-   "src": 10,
-   "dst": 2,
-   "rate": 675.2,
-   "dist_m": 3410
-  },
-  {
-   "item": "Coal",
-   "src": 10,
-   "dst": 6,
-   "rate": 224.8,
-   "dist_m": 967
-  },
-  {
-   "item": "Coal",
-   "src": 22,
-   "dst": 6,
-   "rate": 600.0,
-   "dist_m": 1087
-  },
-  {
-   "item": "Coal",
-   "src": 9,
-   "dst": 6,
-   "rate": 2734.0,
-   "dist_m": 1607
-  },
-  {
-   "item": "Coal",
-   "src": 24,
-   "dst": 6,
-   "rate": 522.4,
-   "dist_m": 2020
-  },
-  {
-   "item": "Coal",
-   "src": 24,
-   "dst": 7,
-   "rate": 77.6,
-   "dist_m": 862
-  },
-  {
-   "item": "Coal",
    "src": 8,
-   "dst": 7,
-   "rate": 2100.0,
-   "dist_m": 939
+   "dst": 1,
+   "rate": 36.0,
+   "dist_m": 782
   },
   {
-   "item": "Coal",
-   "src": 4,
-   "dst": 7,
-   "rate": 1422.4,
-   "dist_m": 1770
+   "item": "Limestone",
+   "src": 16,
+   "dst": 2,
+   "rate": 12.9,
+   "dist_m": 1343
   },
   {
-   "item": "Copper Ore",
+   "item": "Iron Ore",
+   "src": 20,
+   "dst": 2,
+   "rate": 424.6,
+   "dist_m": 4122
+  },
+  {
+   "item": "Iron Ore",
    "src": 27,
    "dst": 2,
-   "rate": 600.0,
+   "rate": 256.4,
    "dist_m": 4571
   },
   {
-   "item": "Copper Ore",
+   "item": "Iron Ore",
    "src": 23,
    "dst": 2,
-   "rate": 143.2,
+   "rate": 326.2,
    "dist_m": 5551
   },
   {
    "item": "Iron Ore",
-   "src": 16,
-   "dst": 2,
-   "rate": 1200.0,
-   "dist_m": 1343
-  },
-  {
-   "item": "Iron Ore",
-   "src": 13,
-   "dst": 2,
-   "rate": 1800.0,
-   "dist_m": 2222
-  },
-  {
-   "item": "Iron Ore",
-   "src": 14,
-   "dst": 2,
-   "rate": 1200.0,
-   "dist_m": 2950
-  },
-  {
-   "item": "Iron Ore",
-   "src": 9,
-   "dst": 2,
-   "rate": 1200.0,
-   "dist_m": 3517
-  },
-  {
-   "item": "Iron Ore",
-   "src": 27,
-   "dst": 2,
-   "rate": 600.0,
-   "dist_m": 4571
-  },
-  {
-   "item": "Iron Ore",
-   "src": 4,
-   "dst": 3,
-   "rate": 3000.0,
-   "dist_m": 873
-  },
-  {
-   "item": "Iron Ore",
    "src": 19,
-   "dst": 3,
-   "rate": 600.0,
-   "dist_m": 1266
-  },
-  {
-   "item": "Iron Ore",
-   "src": 23,
-   "dst": 5,
-   "rate": 1800.0,
-   "dist_m": 2501
-  },
-  {
-   "item": "Iron Ore",
-   "src": 27,
-   "dst": 5,
-   "rate": 600.0,
-   "dist_m": 3223
-  },
-  {
-   "item": "Iron Ore",
-   "src": 17,
-   "dst": 5,
-   "rate": 2400.0,
-   "dist_m": 3700
-  },
-  {
-   "item": "Iron Ore",
-   "src": 19,
-   "dst": 5,
-   "rate": 1800.0,
-   "dist_m": 3853
+   "dst": 2,
+   "rate": 100.3,
+   "dist_m": 6473
   },
   {
    "item": "Nitrogen Gas",
@@ -771,18 +821,18 @@
    "dist_m": 2562
   },
   {
-   "item": "Crude Oil",
-   "src": 14,
-   "dst": 18,
-   "rate": 2.4,
-   "dist_m": 3109
+   "item": "Coal",
+   "src": 4,
+   "dst": 17,
+   "rate": 573.7,
+   "dist_m": 1556
   }
  ],
  "stats": {
   "complexes": 32,
-  "edges": 36,
+  "edges": 10,
   "machines": 12976,
-  "shipped_per_min": 43396,
+  "shipped_per_min": 4234,
   "unmet_raw": {}
  }
 }

@@ -164,10 +164,16 @@ def classify_ship(prod):
 
 # ============================================================ allocation
 def allocate(comps, prod):
-    """Capacitated bottom-up allocation. Each complex's node capacity is finite and
-    CONSUMED on assignment, so no complex can produce more than its real resources.
-    TODO(complex-first): currently fills each product's world demand richest-first,
-    which concentrates smelting; flip to per-complex processing to distribute it."""
+    """Capacitated bottom-up allocation, COMPLEX-FIRST. Each complex's node capacity
+    is finite and CONSUMED on assignment (no double-use). Within each product, world
+    demand is distributed PROPORTIONALLY across every complex that has local inputs,
+    so every ore-bearing complex smelts its own share instead of the richest few
+    cornering demand and leaving smaller sites to ship raw ore.
+
+    KNOWN GAP (next step): only makes a product where all its inputs are ALREADY
+    local, so convergence products (aluminum, silica, computers, nuclear fuel) whose
+    inputs sit in different places are left unmade. The fix is a placement pass that
+    picks a hub for each such product, ships its inputs in, and makes it there."""
     N = len(comps)
     rem = [dict(c["caps"]) for c in comps]      # remaining raw
     avail = [dict() for _ in comps]             # intermediates made & unspent
@@ -182,21 +188,32 @@ def allocate(comps, prod):
     for it in prod: dep(it)
     have = lambda ci, x: (1e18 if x == "Water"
                           else (rem[ci].get(x, 0) if x in RAW else avail[ci].get(x, 0)))
+
+    def make_at(ci, it, ins, take):
+        for x, pu in ins.items():
+            if x == "Water": continue
+            if x in RAW: rem[ci][x] = rem[ci].get(x, 0) - pu * take
+            else: avail[ci][x] = avail[ci].get(x, 0) - pu * take
+        made[ci][it] = made[ci].get(it, 0) + take
+        avail[ci][it] = avail[ci].get(it, 0) + take
+
     for it in sorted(prod, key=lambda i: depth.get(i, 0)):
         d = prod[it]; need = d["rate"]; ins = d["in"]
-        cap = lambda ci: min([have(ci, x) / pu for x, pu in ins.items() if pu > 0] or [1e18])
-        for ci in sorted(range(N), key=lambda ci: -cap(ci)):
+        localcap = lambda ci: min([have(ci, x) / pu for x, pu in ins.items() if pu > 0] or [1e18])
+        # distribute proportionally to local capacity; iterate to soak up remainders
+        for _ in range(N + 2):
             if need <= 1: break
-            c = cap(ci)
-            if c <= 1: continue
-            take = min(c, need)
-            for x, pu in ins.items():
-                if x == "Water": continue
-                if x in RAW: rem[ci][x] = rem[ci].get(x, 0) - pu * take
-                else: avail[ci][x] = avail[ci].get(x, 0) - pu * take
-            made[ci][it] = made[ci].get(it, 0) + take
-            avail[ci][it] = avail[ci].get(it, 0) + take
-            need -= take
+            elig = [ci for ci in range(N) if localcap(ci) > 1]
+            tot = sum(localcap(ci) for ci in elig)
+            if tot <= 1: break
+            moved = 0.0
+            for ci in elig:
+                if need <= 1: break
+                share = min(localcap(ci), need * localcap(ci) / tot)
+                if share <= 0: continue
+                make_at(ci, it, ins, share); need -= share; moved += share
+            if moved < 1: break
+        # any residual demand no complex can source locally is left for edges
     return made, rem
 
 # ============================================================ edges
