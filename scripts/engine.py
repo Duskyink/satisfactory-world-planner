@@ -289,14 +289,22 @@ def route(comps, prod, made, rem, ship):
     return edges
 
 # ============================================================ emit app-shaped plan
-def emit_app_plan(comps, prod, made, edges):
+def emit_app_plan(comps, prod, made, edges, RMAP):
     """Convert the engine graph into the app's complex shape so every tab renders the
-    engine world. Emits, per complex: a step for each item it makes; complete sourcesN
-    for each input (a 'local' row for on-site production, 'raw' for raw/free items, and
-    one row per import edge); and dests split into a 'local' row plus one row per
-    external consumer. Quantities are rounded once and reused on both sides so the app's
-    recomputed needs match exactly and don't false-flag. Every row carries a stable key."""
+    engine world. Emits, per complex: a step for each item it makes; generator steps
+    that burn produced fuels into Power (so fuel rods / rocket fuel get a real consumer
+    and the dashboard shows generation); complete sourcesN for each input (a 'local' row
+    for on-site production, 'raw' for raw/free items, and one row per import edge); and
+    dests split into a 'local' row plus one row per external consumer. Quantities are
+    rounded once and reused on both sides. Every row carries a stable key."""
     from collections import Counter
+    # fuel -> (burn recipe, fuel-in per unit, Power out) for every power recipe
+    BURN = {}
+    for r in RMAP.values():
+        if any(o[0] == "Power" for o in r["o"]):
+            fin = next((x for x in r["i"] if x[0] != "Water"), None)
+            if fin:
+                BURN[fin[0]] = (r["n"], fin[1], next(o[1] for o in r["o"] if o[0] == "Power"))
     freq = Counter(c["region"] for c in comps)
     ctr = defaultdict(int); names = []
     for c in comps:
@@ -320,6 +328,14 @@ def emit_app_plan(comps, prod, made, edges):
             if not rec: continue
             steps.append({"id": "s%d_%d" % (i, j), "recipe": rec, "target": round(rate),
                           "clock": 100, "status": "todo", "sec": "PRODUCTION FLOW", "name": ""})
+        burned = {}                                   # fuels consumed on-site by generators
+        for fuel, (rname, qin, pout) in BURN.items():
+            R = made[i].get(fuel, 0)
+            if R <= 0.5: continue
+            steps.append({"id": "g%d_%d" % (i, len(steps)), "recipe": rname,
+                          "target": round(R * pout / qin), "clock": 100,
+                          "status": "todo", "sec": "POWER", "name": ""})
+            burned[fuel] = R
         srcs = {}                                     # inputs: local / raw / import rows
         for x, u in cons.items():
             if u <= 0.5: continue
@@ -342,6 +358,12 @@ def emit_app_plan(comps, prod, made, edges):
             for dst, rate in exp_by[i].get(x, []):
                 rows.append({"to": "c%d" % dst, "q": round(rate), "station": "", "key": "c%d|%s|c%d" % (i, x, dst)})
             if rows: dests[x] = rows
+        for fuel, R in burned.items():                # burned on-site -> local destination
+            rows = dests.get(fuel, [])
+            if not any(rw["to"] == "local" for rw in rows):
+                rows.insert(0, {"to": "local", "q": round(R), "station": "",
+                                "key": "c%d|%s|gen" % (i, fuel)})
+                dests[fuel] = rows
         res = ", ".join("%s %d" % (k.replace(" Ore", ""), round(v)) for k, v in
                         sorted(c["caps"].items(), key=lambda x: -x[1]))
         plan.append({"id": "c%d" % i, "name": names[i], "region": c["region"], "parent": None,
@@ -390,7 +412,7 @@ def main():
     ship = classify_ship(prod)
     made, rem = allocate(comps, prod, ship)
     edges = route(comps, prod, made, rem, ship)
-    emit_app_plan(comps, prod, made, edges)   # write app_plan.json for the whole UI
+    emit_app_plan(comps, prod, made, edges, RMAP)   # write app_plan.json for the whole UI
 
     # machine + cap summary
     mach = 0

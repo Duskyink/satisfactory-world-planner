@@ -62,6 +62,15 @@
     "status": "todo",
     "sec": "PRODUCTION FLOW",
     "name": ""
+   },
+   {
+    "id": "g0_6",
+    "recipe": "Uranium Fuel Rod (burn)",
+    "target": 581250,
+    "clock": 100,
+    "status": "todo",
+    "sec": "POWER",
+    "name": ""
    }
   ],
   "totals": {},
@@ -219,6 +228,14 @@
      "station": "",
      "key": "c0|Encased Uranium Cell|c31"
     }
+   ],
+   "Uranium Fuel Rod": [
+    {
+     "to": "local",
+     "q": 46,
+     "station": "",
+     "key": "c0|Uranium Fuel Rod|gen"
+    }
    ]
   },
   "stations": [],
@@ -226,7 +243,7 @@
    "x": 774,
    "y": 2114
   },
-  "desc": "Engine-generated. Nodes: Raw Quartz 2100, Sulfur 2100, SAM 300. 6 recipes."
+  "desc": "Engine-generated. Nodes: Raw Quartz 2100, Sulfur 2100, SAM 300. 7 recipes."
  },
  {
   "id": "c1",
@@ -5964,6 +5981,15 @@
     "status": "todo",
     "sec": "PRODUCTION FLOW",
     "name": ""
+   },
+   {
+    "id": "g26_9",
+    "recipe": "Ficsonium Fuel Rod (burn)",
+    "target": 1162500,
+    "clock": 100,
+    "status": "todo",
+    "sec": "POWER",
+    "name": ""
    }
   ],
   "totals": {},
@@ -6133,6 +6159,14 @@
      "station": "",
      "key": "c26|Ficsite Trigon|local"
     }
+   ],
+   "Ficsonium Fuel Rod": [
+    {
+     "to": "local",
+     "q": 93,
+     "station": "",
+     "key": "c26|Ficsonium Fuel Rod|gen"
+    }
    ]
   },
   "stations": [],
@@ -6140,7 +6174,7 @@
    "x": 1730,
    "y": -2860
   },
-  "desc": "Engine-generated. Nodes: SAM 600. 9 recipes."
+  "desc": "Engine-generated. Nodes: SAM 600. 10 recipes."
  },
  {
   "id": "c27",
@@ -6582,6 +6616,15 @@
     "status": "todo",
     "sec": "PRODUCTION FLOW",
     "name": ""
+   },
+   {
+    "id": "g28_10",
+    "recipe": "Plutonium Fuel Rod (burn)",
+    "target": 465000,
+    "clock": 100,
+    "status": "todo",
+    "sec": "POWER",
+    "name": ""
    }
   ],
   "totals": {},
@@ -6753,6 +6796,14 @@
      "station": "",
      "key": "c28|Encased Plutonium Cell|local"
     }
+   ],
+   "Plutonium Fuel Rod": [
+    {
+     "to": "local",
+     "q": 19,
+     "station": "",
+     "key": "c28|Plutonium Fuel Rod|gen"
+    }
    ]
   },
   "stations": [],
@@ -6760,7 +6811,7 @@
    "x": -423,
    "y": -2253
   },
-  "desc": "Engine-generated. Nodes: Crude Oil 1200, SAM 300. 10 recipes."
+  "desc": "Engine-generated. Nodes: Crude Oil 1200, SAM 300. 11 recipes."
  },
  {
   "id": "c29",
