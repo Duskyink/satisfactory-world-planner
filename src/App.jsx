@@ -8,6 +8,7 @@ import {MapView,Reach} from './components/MapView.jsx';
 import {Transport} from './components/Transport.jsx';
 import {Complex} from './components/Complex.jsx';
 import {WorldGraph} from './components/WorldGraph.jsx';
+import {APP_PLAN} from './lib/data.js';
 import './styles.css';
 function App(){
   const[cxs,setCxs]=React.useState(null);
@@ -16,11 +17,11 @@ function App(){
   const[q,setQ]=React.useState(""),[saved,setSaved]=React.useState(""),[modal,setModal]=React.useState(null);
   const[goals,setGoalsS]=React.useState(GOALS);
   React.useEffect(()=>{(async()=>{
-    try{const r=await window.storage.get("plan_v8",true);setCxs(r&&r.value?JSON.parse(r.value):SEED);}catch(e){setCxs(SEED);}
+    try{const r=await window.storage.get("plan_v9",true);setCxs(r&&r.value?JSON.parse(r.value):APP_PLAN);}catch(e){setCxs(APP_PLAN);}
     try{const w=await window.storage.get("worldname_v8",true);setWname(w&&w.value?w.value:"My Satisfactory World");}catch(e){setWname("My Satisfactory World");}
     try{const g=await window.storage.get("goals_v8",true);if(g&&g.value)setGoalsS(JSON.parse(g.value));}catch(e){}
   })();},[]);
-  const persist=async next=>{setCxs(next);try{await window.storage.set("plan_v8",JSON.stringify(next),true);setSaved("saved");setTimeout(()=>setSaved(""),900);}catch(e){}};
+  const persist=async next=>{setCxs(next);try{await window.storage.set("plan_v9",JSON.stringify(next),true);setSaved("saved");setTimeout(()=>setSaved(""),900);}catch(e){}};
   const saveName=async v=>{setWname(v);try{await window.storage.set("worldname_v8",v,true);}catch(e){}};
   const setGoals=async g=>{setGoalsS(g);try{await window.storage.set("goals_v8",JSON.stringify(g),true);}catch(e){}};
   const world=React.useMemo(()=>cxs?computeWorld(cxs):null,[cxs]);
@@ -46,7 +47,7 @@ function App(){
     const nc={id:"c"+Date.now(),name:n,region:"",parent,tier:"T?",bstep:"",tags:"",status:"To Do",steps:[],totals:{},sourcesN:{},dests:{},stations:[],desc:""};
     persist([...cxs,nc]);setSel(nc.id);}});
   const delComplex=id=>setModal({kind:"confirm",title:"Remove this complex and its sub-complexes?",onOk:()=>{persist(cxs.filter(c=>c.id!==id&&c.parent!==id));setSel("dash");}});
-  const reload=()=>setModal({kind:"confirm",title:"Reload the original plan? Overwrites your edits.",onOk:()=>persist(SEED)});
+  const reload=()=>setModal({kind:"confirm",title:"Regenerate from the engine plan? Overwrites your edits.",onOk:()=>persist(APP_PLAN)});
   const prog=c=>{let a=0,d=0;const walk=x=>{x.steps.forEach(s=>{a++;if(s.status==="done")d++;});kids(x.id).forEach(walk);};walk(c);return a?Math.round(d/a*100):0;};
   const producersOf=it=>cxs.filter(x=>{const p=graph.per[x.id];return p&&p[it]&&(p[it].made-p[it].used)>0.5;});
   const consumersNeeding=it=>cxs.filter(x=>{const p=graph.per[x.id];return p&&p[it]&&(p[it].made-p[it].used)<-0.5;});

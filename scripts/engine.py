@@ -286,6 +286,44 @@ def route(comps, prod, made, rem, ship):
         assigned[hub] += residual
     return edges
 
+# ============================================================ emit app-shaped plan
+def emit_app_plan(comps, prod, made, edges):
+    """Convert the engine graph into the app's complex shape so every tab (Dashboard,
+    Complexes, Resources, Transport, Map) renders the engine's world - not the old
+    flat plan. Each complex gets steps (from what it makes), sourcesN (from import
+    edges, keyed by producer id) and dests (from export edges)."""
+    from collections import Counter
+    freq = Counter(c["region"] for c in comps)
+    ctr = defaultdict(int); names = []
+    for c in comps:
+        r = c["region"]; ctr[r] += 1
+        names.append(r if freq[r] == 1 else "%s %d" % (r, ctr[r]))
+    plan = []
+    for i, c in enumerate(comps):
+        steps = []
+        for j, (item, rate) in enumerate(sorted(made[i].items(), key=lambda x: -x[1])):
+            if rate <= 1: continue
+            rec = prod.get(item, {}).get("recipe")
+            if not rec: continue
+            steps.append({"id": "s%d_%d" % (i, j), "recipe": rec, "target": round(rate, 1),
+                          "clock": 100, "status": "todo", "sec": "PRODUCTION FLOW", "name": ""})
+        srcs, dests = defaultdict(list), defaultdict(list)
+        for e in edges:
+            if e["dst"] == i:
+                srcs[e["item"]].append({"from": "c%d" % e["src"], "q": round(e["rate"], 1), "station": ""})
+            if e["src"] == i:
+                dests[e["item"]].append({"to": "c%d" % e["dst"], "q": round(e["rate"], 1), "station": ""})
+        res = ", ".join("%s %d" % (k.replace(" Ore", ""), round(v)) for k, v in
+                        sorted(c["caps"].items(), key=lambda x: -x[1]))
+        plan.append({"id": "c%d" % i, "name": names[i], "region": c["region"], "parent": None,
+                     "tier": "", "bstep": "", "tags": "", "status": "To Do", "steps": steps,
+                     "totals": {}, "sourcesN": dict(srcs), "dests": dict(dests), "stations": [],
+                     "site": {"x": round(c["cx"] * 10), "y": round(c["cy"] * 10)},
+                     "desc": "Engine-generated. Nodes: %s. %d recipes." % (res or "none", len(steps))})
+    with open(os.path.join(DATA, "app_plan.json"), "w", encoding="utf-8") as f:
+        json.dump(plan, f, indent=1)
+    return plan
+
 # ============================================================ driver
 def region_namer(mapbg):
     anchors = mapbg.get("anchors", []) if isinstance(mapbg, dict) else []
@@ -323,6 +361,7 @@ def main():
     ship = classify_ship(prod)
     made, rem = allocate(comps, prod, ship)
     edges = route(comps, prod, made, rem, ship)
+    emit_app_plan(comps, prod, made, edges)   # write app_plan.json for the whole UI
 
     # machine + cap summary
     mach = 0

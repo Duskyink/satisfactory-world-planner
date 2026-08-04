@@ -1,0 +1,5875 @@
+[
+ {
+  "id": "c0",
+  "name": "Eastern Dune Forest 1",
+  "region": "Eastern Dune Forest",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s0_0",
+    "recipe": "Quickwire",
+    "target": 6300.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s0_1",
+    "recipe": "Infused Uranium Cell",
+    "target": 1680.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s0_2",
+    "recipe": "Pure Quartz Crystal",
+    "target": 973.1,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s0_3",
+    "recipe": "Sulfuric Acid",
+    "target": 567.1,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s0_4",
+    "recipe": "Reanimated SAM",
+    "target": 78.7,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s0_5",
+    "recipe": "Uranium Fuel Unit",
+    "target": 46.5,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Uranium": [
+    {
+     "from": "c12",
+     "q": 600.0,
+     "station": ""
+    },
+    {
+     "from": "c10",
+     "q": 300.0,
+     "station": ""
+    },
+    {
+     "from": "c1",
+     "q": 600.0,
+     "station": ""
+    },
+    {
+     "from": "c18",
+     "q": 300.0,
+     "station": ""
+    },
+    {
+     "from": "c15",
+     "q": 300.0,
+     "station": ""
+    }
+   ],
+   "Silica": [
+    {
+     "from": "c23",
+     "q": 1260.0,
+     "station": ""
+    }
+   ],
+   "Sulfur": [
+    {
+     "from": "c17",
+     "q": 167.1,
+     "station": ""
+    },
+    {
+     "from": "c9",
+     "q": 43.9,
+     "station": ""
+    },
+    {
+     "from": "c3",
+     "q": 778.8,
+     "station": ""
+    },
+    {
+     "from": "c16",
+     "q": 144.4,
+     "station": ""
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "from": "c19",
+     "q": 585.1,
+     "station": ""
+    },
+    {
+     "from": "c6",
+     "q": 299.9,
+     "station": ""
+    },
+    {
+     "from": "c13",
+     "q": 139.5,
+     "station": ""
+    },
+    {
+     "from": "c8",
+     "q": 235.5,
+     "station": ""
+    }
+   ],
+   "Electromagnetic Control Rod": [
+    {
+     "from": "c9",
+     "q": 155.0,
+     "station": ""
+    }
+   ],
+   "Crystal Oscillator": [
+    {
+     "from": "c13",
+     "q": 46.5,
+     "station": ""
+    }
+   ],
+   "Rotor": [
+    {
+     "from": "c17",
+     "q": 155.0,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Sulfuric Acid": [
+    {
+     "to": "c11",
+     "q": 567.1,
+     "station": ""
+    }
+   ],
+   "Quartz Crystal": [
+    {
+     "to": "c13",
+     "q": 973.1,
+     "station": ""
+    }
+   ],
+   "Encased Uranium Cell": [
+    {
+     "to": "c31",
+     "q": 130.0,
+     "station": ""
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 78.7,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 774,
+   "y": 2114
+  },
+  "desc": "Engine-generated. Nodes: Raw Quartz 2100, Sulfur 2100, SAM 300. 6 recipes."
+ },
+ {
+  "id": "c1",
+  "name": "Crater Lakes 1",
+  "region": "Crater Lakes",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s1_0",
+    "recipe": "Pure Iron Ingot",
+    "target": 21585.8,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s1_1",
+    "recipe": "Iron Rod",
+    "target": 21585.8,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s1_2",
+    "recipe": "Pure Quartz Crystal",
+    "target": 934.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s1_3",
+    "recipe": "Wet Concrete",
+    "target": 412.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Iron Ore": [
+    {
+     "from": "c4",
+     "q": 3000.0,
+     "station": ""
+    },
+    {
+     "from": "c7",
+     "q": 3600.0,
+     "station": ""
+    },
+    {
+     "from": "c3",
+     "q": 3600.0,
+     "station": ""
+    },
+    {
+     "from": "c23",
+     "q": 1423.1,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Iron Rod": [
+    {
+     "to": "c10",
+     "q": 420.0,
+     "station": ""
+    },
+    {
+     "to": "c2",
+     "q": 4682.2,
+     "station": ""
+    },
+    {
+     "to": "c17",
+     "q": 4030.0,
+     "station": ""
+    },
+    {
+     "to": "c17",
+     "q": 5037.5,
+     "station": ""
+    },
+    {
+     "to": "c18",
+     "q": 3690.0,
+     "station": ""
+    },
+    {
+     "to": "c18",
+     "q": 3276.0,
+     "station": ""
+    }
+   ],
+   "Uranium": [
+    {
+     "to": "c0",
+     "q": 600.0,
+     "station": ""
+    }
+   ],
+   "Concrete": [
+    {
+     "to": "c8",
+     "q": 412.0,
+     "station": ""
+    }
+   ],
+   "Quartz Crystal": [
+    {
+     "to": "c13",
+     "q": 934.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": -910,
+   "y": 608
+  },
+  "desc": "Engine-generated. Nodes: Raw Quartz 2400, Limestone 1200, Uranium 600. 4 recipes."
+ },
+ {
+  "id": "c2",
+  "name": "Dune Desert 1",
+  "region": "Dune Desert",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s2_0",
+    "recipe": "Screws",
+    "target": 18729.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s2_1",
+    "recipe": "Pure Iron Ingot",
+    "target": 18145.1,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s2_2",
+    "recipe": "Iron Plate",
+    "target": 12096.8,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s2_3",
+    "recipe": "Reinforced Iron Plate",
+    "target": 1560.8,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s2_4",
+    "recipe": "Wet Concrete",
+    "target": 1404.3,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s2_5",
+    "recipe": "Pure Caterium Ingot",
+    "target": 599.8,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Iron Ore": [
+    {
+     "from": "c16",
+     "q": 1200.0,
+     "station": ""
+    },
+    {
+     "from": "c13",
+     "q": 1800.0,
+     "station": ""
+    },
+    {
+     "from": "c6",
+     "q": 770.5,
+     "station": ""
+    }
+   ],
+   "Iron Rod": [
+    {
+     "from": "c1",
+     "q": 4682.2,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Copper Ore": [
+    {
+     "to": "c5",
+     "q": 1859.4,
+     "station": ""
+    },
+    {
+     "to": "c24",
+     "q": 242.8,
+     "station": ""
+    },
+    {
+     "to": "c25",
+     "q": 1726.2,
+     "station": ""
+    }
+   ],
+   "Iron Plate": [
+    {
+     "to": "c16",
+     "q": 120.0,
+     "station": ""
+    },
+    {
+     "to": "c11",
+     "q": 302.2,
+     "station": ""
+    },
+    {
+     "to": "c14",
+     "q": 2010.0,
+     "station": ""
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "to": "c14",
+     "q": 60.0,
+     "station": ""
+    },
+    {
+     "to": "c15",
+     "q": 152.8,
+     "station": ""
+    },
+    {
+     "to": "c13",
+     "q": 128.1,
+     "station": ""
+    },
+    {
+     "to": "c28",
+     "q": 60.5,
+     "station": ""
+    },
+    {
+     "to": "c26",
+     "q": 48.0,
+     "station": ""
+    }
+   ],
+   "Reinforced Iron Plate": [
+    {
+     "to": "c13",
+     "q": 419.2,
+     "station": ""
+    },
+    {
+     "to": "c18",
+     "q": 922.5,
+     "station": ""
+    },
+    {
+     "to": "c30",
+     "q": 39.0,
+     "station": ""
+    }
+   ],
+   "Concrete": [
+    {
+     "to": "c14",
+     "q": 1404.3,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 3699,
+   "y": -1852
+  },
+  "desc": "Engine-generated. Nodes: Iron 6000, Copper 4800, Limestone 4200, Coal 1800, Caterium 1200. 6 recipes."
+ },
+ {
+  "id": "c3",
+  "name": "Jungle Spires",
+  "region": "Jungle Spires",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s3_0",
+    "recipe": "Biomass (Mycelia)",
+    "target": 900.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s3_1",
+    "recipe": "Wet Concrete",
+    "target": 726.9,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s3_2",
+    "recipe": "Sulfuric Acid",
+    "target": 210.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s3_3",
+    "recipe": "Fabric",
+    "target": 180.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s3_4",
+    "recipe": "Cooling Device",
+    "target": 132.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Heat Sink": [
+    {
+     "from": "c24",
+     "q": 264.0,
+     "station": ""
+    }
+   ],
+   "Motor": [
+    {
+     "from": "c17",
+     "q": 66.0,
+     "station": ""
+    }
+   ],
+   "Nitrogen Gas": [
+    {
+     "from": "c31",
+     "q": 111.0,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Iron Ore": [
+    {
+     "to": "c1",
+     "q": 3600.0,
+     "station": ""
+    }
+   ],
+   "Copper Ore": [
+    {
+     "to": "c4",
+     "q": 1200.0,
+     "station": ""
+    }
+   ],
+   "Fabric": [
+    {
+     "to": "c16",
+     "q": 120.0,
+     "station": ""
+    }
+   ],
+   "Nitrogen Gas": [
+    {
+     "to": "c11",
+     "q": 627.0,
+     "station": ""
+    }
+   ],
+   "Sulfur": [
+    {
+     "to": "c0",
+     "q": 778.8,
+     "station": ""
+    }
+   ],
+   "Concrete": [
+    {
+     "to": "c8",
+     "q": 726.9,
+     "station": ""
+    }
+   ],
+   "Sulfuric Acid": [
+    {
+     "to": "c11",
+     "q": 182.9,
+     "station": ""
+    },
+    {
+     "to": "c16",
+     "q": 27.7,
+     "station": ""
+    }
+   ],
+   "Cooling System": [
+    {
+     "to": "c29",
+     "q": 84.0,
+     "station": ""
+    },
+    {
+     "to": "c22",
+     "q": 18.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": -1523,
+   "y": 1520
+  },
+  "desc": "Engine-generated. Nodes: Iron 3600, Limestone 2400, Nitrogen Gas 2100, Copper 1200, Sulfur 1200. 5 recipes."
+ },
+ {
+  "id": "c4",
+  "name": "Red Bamboo Fields",
+  "region": "Red Bamboo Fields",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s4_0",
+    "recipe": "Pure Copper Ingot",
+    "target": 12928.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s4_1",
+    "recipe": "Copper Sheet",
+    "target": 6464.2,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s4_2",
+    "recipe": "Wet Concrete",
+    "target": 858.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s4_3",
+    "recipe": "Reanimated SAM",
+    "target": 300.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Copper Ore": [
+    {
+     "from": "c3",
+     "q": 1200.0,
+     "station": ""
+    },
+    {
+     "from": "c19",
+     "q": 600.0,
+     "station": ""
+    },
+    {
+     "from": "c17",
+     "q": 600.0,
+     "station": ""
+    },
+    {
+     "from": "c7",
+     "q": 1200.0,
+     "station": ""
+    },
+    {
+     "from": "c27",
+     "q": 600.0,
+     "station": ""
+    },
+    {
+     "from": "c6",
+     "q": 371.4,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Iron Ore": [
+    {
+     "to": "c1",
+     "q": 3000.0,
+     "station": ""
+    }
+   ],
+   "Coal": [
+    {
+     "to": "c6",
+     "q": 879.2,
+     "station": ""
+    },
+    {
+     "to": "c7",
+     "q": 360.0,
+     "station": ""
+    }
+   ],
+   "Copper Sheet": [
+    {
+     "to": "c21",
+     "q": 2750.7,
+     "station": ""
+    },
+    {
+     "to": "c9",
+     "q": 2447.5,
+     "station": ""
+    },
+    {
+     "to": "c22",
+     "q": 24.0,
+     "station": ""
+    },
+    {
+     "to": "c24",
+     "q": 972.0,
+     "station": ""
+    }
+   ],
+   "Concrete": [
+    {
+     "to": "c8",
+     "q": 858.0,
+     "station": ""
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 300.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": -659,
+   "y": 1394
+  },
+  "desc": "Engine-generated. Nodes: Iron 3000, Limestone 3000, Coal 2400, SAM 1200, Copper 600. 4 recipes."
+ },
+ {
+  "id": "c5",
+  "name": "Maze Canyons 1",
+  "region": "Maze Canyons",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s5_0",
+    "recipe": "Pure Copper Ingot",
+    "target": 27720.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s5_1",
+    "recipe": "Copper Powder",
+    "target": 4620.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s5_2",
+    "recipe": "Wet Concrete",
+    "target": 796.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s5_3",
+    "recipe": "Nuclear Pasta",
+    "target": 23.1,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Copper Ore": [
+    {
+     "from": "c6",
+     "q": 3228.6,
+     "station": ""
+    },
+    {
+     "from": "c20",
+     "q": 2400.0,
+     "station": ""
+    },
+    {
+     "from": "c23",
+     "q": 600.0,
+     "station": ""
+    },
+    {
+     "from": "c16",
+     "q": 1200.0,
+     "station": ""
+    },
+    {
+     "from": "c14",
+     "q": 600.0,
+     "station": ""
+    },
+    {
+     "from": "c2",
+     "q": 1859.4,
+     "station": ""
+    }
+   ],
+   "Pressure Conversion Cube": [
+    {
+     "from": "c20",
+     "q": 23.1,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Limestone": [
+    {
+     "to": "c23",
+     "q": 610.1,
+     "station": ""
+    }
+   ],
+   "Iron Ore": [
+    {
+     "to": "c6",
+     "q": 3784.9,
+     "station": ""
+    }
+   ],
+   "Nuclear Pasta": [
+    {
+     "to": "c14",
+     "q": 20.1,
+     "station": ""
+    }
+   ],
+   "Concrete": [
+    {
+     "to": "c14",
+     "q": 796.6,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 696,
+   "y": -832
+  },
+  "desc": "Engine-generated. Nodes: Iron 7200, Limestone 3000, Copper 1200. 4 recipes."
+ },
+ {
+  "id": "c6",
+  "name": "Maze Canyons 2",
+  "region": "Maze Canyons",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s6_0",
+    "recipe": "Solid Steel Ingot",
+    "target": 18426.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s6_1",
+    "recipe": "Pure Iron Ingot",
+    "target": 12284.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s6_2",
+    "recipe": "Steel Pipe",
+    "target": 6668.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s6_3",
+    "recipe": "Wet Concrete",
+    "target": 590.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s6_4",
+    "recipe": "Pure Caterium Ingot",
+    "target": 299.9,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s6_5",
+    "recipe": "Reanimated SAM",
+    "target": 74.9,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Iron Ore": [
+    {
+     "from": "c5",
+     "q": 3784.9,
+     "station": ""
+    }
+   ],
+   "Coal": [
+    {
+     "from": "c10",
+     "q": 900.0,
+     "station": ""
+    },
+    {
+     "from": "c22",
+     "q": 600.0,
+     "station": ""
+    },
+    {
+     "from": "c9",
+     "q": 2704.8,
+     "station": ""
+    },
+    {
+     "from": "c24",
+     "q": 600.0,
+     "station": ""
+    },
+    {
+     "from": "c27",
+     "q": 2400.0,
+     "station": ""
+    },
+    {
+     "from": "c4",
+     "q": 879.2,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Iron Ore": [
+    {
+     "to": "c2",
+     "q": 770.5,
+     "station": ""
+    }
+   ],
+   "Copper Ore": [
+    {
+     "to": "c4",
+     "q": 371.4,
+     "station": ""
+    },
+    {
+     "to": "c5",
+     "q": 3228.6,
+     "station": ""
+    }
+   ],
+   "Steel Ingot": [
+    {
+     "to": "c8",
+     "q": 8424.0,
+     "station": ""
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "to": "c0",
+     "q": 299.9,
+     "station": ""
+    }
+   ],
+   "Steel Pipe": [
+    {
+     "to": "c16",
+     "q": 485.0,
+     "station": ""
+    },
+    {
+     "to": "c13",
+     "q": 120.0,
+     "station": ""
+    },
+    {
+     "to": "c15",
+     "q": 3699.0,
+     "station": ""
+    },
+    {
+     "to": "c18",
+     "q": 2184.0,
+     "station": ""
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 74.9,
+     "station": ""
+    }
+   ],
+   "Concrete": [
+    {
+     "to": "c14",
+     "q": 590.4,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 1425,
+   "y": -37
+  },
+  "desc": "Engine-generated. Nodes: Coal 4200, Iron 3600, Copper 3600, Limestone 2400, Caterium 600, SAM 300. 6 recipes."
+ },
+ {
+  "id": "c7",
+  "name": "Rocky Desert 1",
+  "region": "Rocky Desert",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s7_0",
+    "recipe": "Sloppy Alumina",
+    "target": 719.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s7_1",
+    "recipe": "Turbo Diamonds",
+    "target": 606.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s7_2",
+    "recipe": "Biomass (Mycelia)",
+    "target": 600.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s7_3",
+    "recipe": "Dark Matter Crystal",
+    "target": 576.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s7_4",
+    "recipe": "Wet Concrete",
+    "target": 416.1,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s7_5",
+    "recipe": "Solid Biofuel",
+    "target": 300.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Coal": [
+    {
+     "from": "c8",
+     "q": 2100.0,
+     "station": ""
+    },
+    {
+     "from": "c4",
+     "q": 360.0,
+     "station": ""
+    }
+   ],
+   "Packaged Turbofuel": [
+    {
+     "from": "c29",
+     "q": 404.0,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Limestone": [
+    {
+     "to": "c23",
+     "q": 551.8,
+     "station": ""
+    }
+   ],
+   "Iron Ore": [
+    {
+     "to": "c1",
+     "q": 3600.0,
+     "station": ""
+    }
+   ],
+   "Copper Ore": [
+    {
+     "to": "c4",
+     "q": 1200.0,
+     "station": ""
+    }
+   ],
+   "Alumina Solution": [
+    {
+     "to": "c11",
+     "q": 719.4,
+     "station": ""
+    }
+   ],
+   "Concrete": [
+    {
+     "to": "c8",
+     "q": 416.1,
+     "station": ""
+    }
+   ],
+   "Diamonds": [
+    {
+     "to": "c19",
+     "q": 30.0,
+     "station": ""
+    }
+   ],
+   "Dark Matter Crystal": [
+    {
+     "to": "c19",
+     "q": 54.0,
+     "station": ""
+    },
+    {
+     "to": "c14",
+     "q": 402.0,
+     "station": ""
+    },
+    {
+     "to": "c26",
+     "q": 120.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": -1445,
+   "y": -192
+  },
+  "desc": "Engine-generated. Nodes: Coal 3600, Iron 3600, Limestone 1800, Copper 1200, Bauxite 600. 6 recipes."
+ },
+ {
+  "id": "c8",
+  "name": "Red Jungle",
+  "region": "Red Jungle",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s8_0",
+    "recipe": "Steel Beam",
+    "target": 2106.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s8_1",
+    "recipe": "Sloppy Alumina",
+    "target": 1439.3,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s8_2",
+    "recipe": "Encased Industrial Beam",
+    "target": 606.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s8_3",
+    "recipe": "Pure Caterium Ingot",
+    "target": 599.5,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s8_4",
+    "recipe": "Wet Concrete",
+    "target": 264.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s8_5",
+    "recipe": "Reanimated SAM",
+    "target": 224.2,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Steel Ingot": [
+    {
+     "from": "c6",
+     "q": 8424.0,
+     "station": ""
+    }
+   ],
+   "Concrete": [
+    {
+     "from": "c1",
+     "q": 412.0,
+     "station": ""
+    },
+    {
+     "from": "c3",
+     "q": 726.9,
+     "station": ""
+    },
+    {
+     "from": "c7",
+     "q": 416.1,
+     "station": ""
+    },
+    {
+     "from": "c4",
+     "q": 858.0,
+     "station": ""
+    },
+    {
+     "from": "c23",
+     "q": 459.1,
+     "station": ""
+    },
+    {
+     "from": "c19",
+     "q": 151.4,
+     "station": ""
+    },
+    {
+     "from": "c20",
+     "q": 348.0,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Limestone": [
+    {
+     "to": "c23",
+     "q": 406.1,
+     "station": ""
+    }
+   ],
+   "Alumina Solution": [
+    {
+     "to": "c11",
+     "q": 1439.3,
+     "station": ""
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "to": "c0",
+     "q": 235.5,
+     "station": ""
+    },
+    {
+     "to": "c27",
+     "q": 126.7,
+     "station": ""
+    },
+    {
+     "to": "c12",
+     "q": 237.3,
+     "station": ""
+    }
+   ],
+   "Coal": [
+    {
+     "to": "c7",
+     "q": 2100.0,
+     "station": ""
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 224.2,
+     "station": ""
+    }
+   ],
+   "Encased Industrial Beam": [
+    {
+     "to": "c18",
+     "q": 546.0,
+     "station": ""
+    }
+   ],
+   "Steel Beam": [
+    {
+     "to": "c19",
+     "q": 108.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": -1684,
+   "y": 716
+  },
+  "desc": "Engine-generated. Nodes: Coal 2100, Caterium 1200, Limestone 1200, Bauxite 1200, SAM 900. 6 recipes."
+ },
+ {
+  "id": "c9",
+  "name": "Eastern Dune Forest 2",
+  "region": "Eastern Dune Forest",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s9_0",
+    "recipe": "Quickwire",
+    "target": 9790.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s9_1",
+    "recipe": "Black Powder",
+    "target": 522.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s9_2",
+    "recipe": "AI Limiter",
+    "target": 489.5,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s9_3",
+    "recipe": "Electromagnetic Control Rod",
+    "target": 377.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s9_4",
+    "recipe": "Compacted Coal",
+    "target": 186.3,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s9_5",
+    "recipe": "Reanimated SAM",
+    "target": 150.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s9_6",
+    "recipe": "Sulfuric Acid",
+    "target": 130.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Copper Sheet": [
+    {
+     "from": "c4",
+     "q": 2447.5,
+     "station": ""
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "from": "c14",
+     "q": 598.8,
+     "station": ""
+    },
+    {
+     "from": "c11",
+     "q": 299.3,
+     "station": ""
+    },
+    {
+     "from": "c13",
+     "q": 1059.9,
+     "station": ""
+    }
+   ],
+   "Stator": [
+    {
+     "from": "c15",
+     "q": 565.5,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Coal": [
+    {
+     "to": "c6",
+     "q": 2704.8,
+     "station": ""
+    }
+   ],
+   "Compacted Coal": [
+    {
+     "to": "c29",
+     "q": 186.3,
+     "station": ""
+    }
+   ],
+   "Black Powder": [
+    {
+     "to": "c27",
+     "q": 381.0,
+     "station": ""
+    },
+    {
+     "to": "c16",
+     "q": 141.6,
+     "station": ""
+    }
+   ],
+   "Sulfur": [
+    {
+     "to": "c0",
+     "q": 43.9,
+     "station": ""
+    }
+   ],
+   "Sulfuric Acid": [
+    {
+     "to": "c11",
+     "q": 130.4,
+     "station": ""
+    }
+   ],
+   "AI Limiter": [
+    {
+     "to": "c29",
+     "q": 43.5,
+     "station": ""
+    },
+    {
+     "to": "c31",
+     "q": 39.0,
+     "station": ""
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 150.0,
+     "station": ""
+    }
+   ],
+   "Electromagnetic Control Rod": [
+    {
+     "to": "c0",
+     "q": 155.0,
+     "station": ""
+    },
+    {
+     "to": "c19",
+     "q": 6.0,
+     "station": ""
+    },
+    {
+     "to": "c26",
+     "q": 186.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 2239,
+   "y": 1349
+  },
+  "desc": "Engine-generated. Nodes: Coal 3600, Iron 1200, Sulfur 1200, SAM 600. 7 recipes."
+ },
+ {
+  "id": "c10",
+  "name": "Titan Forest 1",
+  "region": "Titan Forest",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s10_0",
+    "recipe": "Ficsite Ingot (Aluminum)",
+    "target": 1275.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s10_1",
+    "recipe": "Sloppy Alumina",
+    "target": 1079.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s10_2",
+    "recipe": "Wet Concrete",
+    "target": 448.7,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s10_3",
+    "recipe": "Iron Rebar",
+    "target": 420.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s10_4",
+    "recipe": "Reanimated SAM",
+    "target": 375.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Iron Rod": [
+    {
+     "from": "c1",
+     "q": 420.0,
+     "station": ""
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "from": "c9",
+     "q": 150.0,
+     "station": ""
+    },
+    {
+     "from": "c11",
+     "q": 74.8,
+     "station": ""
+    },
+    {
+     "from": "c6",
+     "q": 74.9,
+     "station": ""
+    },
+    {
+     "from": "c13",
+     "q": 74.6,
+     "station": ""
+    },
+    {
+     "from": "c27",
+     "q": 75.0,
+     "station": ""
+    },
+    {
+     "from": "c0",
+     "q": 78.7,
+     "station": ""
+    },
+    {
+     "from": "c22",
+     "q": 149.3,
+     "station": ""
+    },
+    {
+     "from": "c4",
+     "q": 300.0,
+     "station": ""
+    },
+    {
+     "from": "c24",
+     "q": 75.0,
+     "station": ""
+    },
+    {
+     "from": "c17",
+     "q": 150.0,
+     "station": ""
+    },
+    {
+     "from": "c21",
+     "q": 300.0,
+     "station": ""
+    },
+    {
+     "from": "c8",
+     "q": 224.2,
+     "station": ""
+    },
+    {
+     "from": "c16",
+     "q": 74.3,
+     "station": ""
+    },
+    {
+     "from": "c26",
+     "q": 149.3,
+     "station": ""
+    },
+    {
+     "from": "c28",
+     "q": 75.0,
+     "station": ""
+    },
+    {
+     "from": "c23",
+     "q": 150.0,
+     "station": ""
+    }
+   ],
+   "Aluminum Ingot": [
+    {
+     "from": "c11",
+     "q": 5100.0,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Coal": [
+    {
+     "to": "c6",
+     "q": 900.0,
+     "station": ""
+    }
+   ],
+   "Alumina Solution": [
+    {
+     "to": "c11",
+     "q": 1079.4,
+     "station": ""
+    }
+   ],
+   "Uranium": [
+    {
+     "to": "c0",
+     "q": 300.0,
+     "station": ""
+    }
+   ],
+   "Iron Rebar": [
+    {
+     "to": "c13",
+     "q": 120.0,
+     "station": ""
+    },
+    {
+     "to": "c13",
+     "q": 120.0,
+     "station": ""
+    },
+    {
+     "to": "c14",
+     "q": 60.0,
+     "station": ""
+    }
+   ],
+   "Ficsite Ingot": [
+    {
+     "to": "c19",
+     "q": 15.0,
+     "station": ""
+    },
+    {
+     "to": "c26",
+     "q": 20.0,
+     "station": ""
+    },
+    {
+     "to": "c26",
+     "q": 1240.0,
+     "station": ""
+    }
+   ],
+   "Concrete": [
+    {
+     "to": "c14",
+     "q": 448.7,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 1680,
+   "y": 896
+  },
+  "desc": "Engine-generated. Nodes: Limestone 2100, SAM 1500, Coal 900, Bauxite 900, Uranium 300. 5 recipes."
+ },
+ {
+  "id": "c11",
+  "name": "Titan Forest 2",
+  "region": "Titan Forest",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s11_0",
+    "recipe": "Electrode Aluminum Scrap",
+    "target": 23373.3,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s11_1",
+    "recipe": "Aluminum Ingot",
+    "target": 15582.2,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s11_2",
+    "recipe": "Petroleum Coke",
+    "target": 4674.7,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s11_3",
+    "recipe": "Non-Fissile Uranium",
+    "target": 3022.5,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s11_4",
+    "recipe": "Sloppy Alumina",
+    "target": 2878.5,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s11_5",
+    "recipe": "Nitric Acid",
+    "target": 906.8,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s11_6",
+    "recipe": "Pure Caterium Ingot",
+    "target": 299.3,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s11_7",
+    "recipe": "Reanimated SAM",
+    "target": 74.8,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Nitrogen Gas": [
+    {
+     "from": "c3",
+     "q": 627.0,
+     "station": ""
+    }
+   ],
+   "Iron Plate": [
+    {
+     "from": "c2",
+     "q": 302.2,
+     "station": ""
+    }
+   ],
+   "Alumina Solution": [
+    {
+     "from": "c12",
+     "q": 2154.8,
+     "station": ""
+    },
+    {
+     "from": "c10",
+     "q": 1079.4,
+     "station": ""
+    },
+    {
+     "from": "c22",
+     "q": 699.7,
+     "station": ""
+    },
+    {
+     "from": "c14",
+     "q": 2501.1,
+     "station": ""
+    },
+    {
+     "from": "c24",
+     "q": 1376.7,
+     "station": ""
+    },
+    {
+     "from": "c7",
+     "q": 719.4,
+     "station": ""
+    },
+    {
+     "from": "c8",
+     "q": 1439.3,
+     "station": ""
+    },
+    {
+     "from": "c25",
+     "q": 1175.0,
+     "station": ""
+    }
+   ],
+   "Heavy Oil Residue": [
+    {
+     "from": "c22",
+     "q": 108.0,
+     "station": ""
+    },
+    {
+     "from": "c27",
+     "q": 178.6,
+     "station": ""
+    },
+    {
+     "from": "c14",
+     "q": 8.0,
+     "station": ""
+    },
+    {
+     "from": "c24",
+     "q": 82.9,
+     "station": ""
+    },
+    {
+     "from": "c30",
+     "q": 290.1,
+     "station": ""
+    },
+    {
+     "from": "c18",
+     "q": 23.1,
+     "station": ""
+    },
+    {
+     "from": "c21",
+     "q": 106.5,
+     "station": ""
+    },
+    {
+     "from": "c28",
+     "q": 149.1,
+     "station": ""
+    },
+    {
+     "from": "c29",
+     "q": 611.3,
+     "station": ""
+    }
+   ],
+   "Silica": [
+    {
+     "from": "c23",
+     "q": 19477.8,
+     "station": ""
+    },
+    {
+     "from": "c23",
+     "q": 1511.2,
+     "station": ""
+    }
+   ],
+   "Sulfuric Acid": [
+    {
+     "from": "c0",
+     "q": 567.1,
+     "station": ""
+    },
+    {
+     "from": "c9",
+     "q": 130.4,
+     "station": ""
+    },
+    {
+     "from": "c17",
+     "q": 26.3,
+     "station": ""
+    },
+    {
+     "from": "c3",
+     "q": 182.9,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Caterium Ingot": [
+    {
+     "to": "c9",
+     "q": 299.3,
+     "station": ""
+    }
+   ],
+   "Aluminum Ingot": [
+    {
+     "to": "c24",
+     "q": 1821.0,
+     "station": ""
+    },
+    {
+     "to": "c25",
+     "q": 8631.2,
+     "station": ""
+    },
+    {
+     "to": "c26",
+     "q": 30.0,
+     "station": ""
+    },
+    {
+     "to": "c10",
+     "q": 5100.0,
+     "station": ""
+    }
+   ],
+   "Non-Fissile Uranium": [
+    {
+     "to": "c31",
+     "q": 232.5,
+     "station": ""
+    },
+    {
+     "to": "c28",
+     "q": 2790.0,
+     "station": ""
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 74.8,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 948,
+   "y": 842
+  },
+  "desc": "Engine-generated. Nodes: Nitrogen Gas 3000, Bauxite 2400, Caterium 600, SAM 300. 8 recipes."
+ },
+ {
+  "id": "c12",
+  "name": "Lake Forest 1",
+  "region": "Lake Forest",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s12_0",
+    "recipe": "Quickwire",
+    "target": 3037.5,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s12_1",
+    "recipe": "Sloppy Alumina",
+    "target": 2154.8,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s12_2",
+    "recipe": "Silicon High-Speed Connector",
+    "target": 101.2,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Caterium Ingot": [
+    {
+     "from": "c8",
+     "q": 237.3,
+     "station": ""
+    },
+    {
+     "from": "c23",
+     "q": 370.2,
+     "station": ""
+    }
+   ],
+   "Silica": [
+    {
+     "from": "c23",
+     "q": 1265.6,
+     "station": ""
+    }
+   ],
+   "Circuit Board": [
+    {
+     "from": "c21",
+     "q": 101.2,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Alumina Solution": [
+    {
+     "to": "c11",
+     "q": 2154.8,
+     "station": ""
+    }
+   ],
+   "Uranium": [
+    {
+     "to": "c0",
+     "q": 600.0,
+     "station": ""
+    }
+   ],
+   "High-Speed Connector": [
+    {
+     "to": "c29",
+     "q": 65.2,
+     "station": ""
+    },
+    {
+     "to": "c22",
+     "q": 6.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 240,
+   "y": 787
+  },
+  "desc": "Engine-generated. Nodes: Bauxite 1800, Uranium 600. 3 recipes."
+ },
+ {
+  "id": "c13",
+  "name": "Maze Canyons 3",
+  "region": "Maze Canyons",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s13_0",
+    "recipe": "Quickwire Cable",
+    "target": 2347.8,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s13_1",
+    "recipe": "Pure Caterium Ingot",
+    "target": 1199.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s13_2",
+    "recipe": "Pure Quartz Crystal",
+    "target": 745.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s13_3",
+    "recipe": "Quickwire",
+    "target": 640.3,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s13_4",
+    "recipe": "Wet Concrete",
+    "target": 242.3,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s13_5",
+    "recipe": "Crystal Oscillator",
+    "target": 167.7,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s13_6",
+    "recipe": "Reanimated SAM",
+    "target": 74.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s13_7",
+    "recipe": "Explosive Rebar",
+    "target": 60.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s13_8",
+    "recipe": "Shatter Rebar",
+    "target": 60.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Iron Rebar": [
+    {
+     "from": "c10",
+     "q": 120.0,
+     "station": ""
+    },
+    {
+     "from": "c10",
+     "q": 120.0,
+     "station": ""
+    }
+   ],
+   "Smokeless Powder": [
+    {
+     "from": "c27",
+     "q": 120.0,
+     "station": ""
+    }
+   ],
+   "Steel Pipe": [
+    {
+     "from": "c6",
+     "q": 120.0,
+     "station": ""
+    }
+   ],
+   "Quartz Crystal": [
+    {
+     "from": "c0",
+     "q": 973.1,
+     "station": ""
+    },
+    {
+     "from": "c1",
+     "q": 934.0,
+     "station": ""
+    },
+    {
+     "from": "c23",
+     "q": 546.1,
+     "station": ""
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "from": "c2",
+     "q": 128.1,
+     "station": ""
+    }
+   ],
+   "Rubber": [
+    {
+     "from": "c30",
+     "q": 229.5,
+     "station": ""
+    },
+    {
+     "from": "c14",
+     "q": 18.0,
+     "station": ""
+    },
+    {
+     "from": "c18",
+     "q": 51.5,
+     "station": ""
+    },
+    {
+     "from": "c22",
+     "q": 127.9,
+     "station": ""
+    }
+   ],
+   "Reinforced Iron Plate": [
+    {
+     "from": "c2",
+     "q": 419.2,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Iron Ore": [
+    {
+     "to": "c2",
+     "q": 1800.0,
+     "station": ""
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "to": "c9",
+     "q": 1059.9,
+     "station": ""
+    },
+    {
+     "to": "c0",
+     "q": 139.5,
+     "station": ""
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 74.6,
+     "station": ""
+    }
+   ],
+   "Crystal Oscillator": [
+    {
+     "to": "c20",
+     "q": 76.2,
+     "station": ""
+    },
+    {
+     "to": "c30",
+     "q": 6.0,
+     "station": ""
+    },
+    {
+     "to": "c19",
+     "q": 9.0,
+     "station": ""
+    },
+    {
+     "to": "c0",
+     "q": 46.5,
+     "station": ""
+    }
+   ],
+   "Concrete": [
+    {
+     "to": "c14",
+     "q": 242.3,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 2208,
+   "y": -204
+  },
+  "desc": "Engine-generated. Nodes: Caterium 2400, Raw Quartz 2400, Iron 1800, Limestone 1200, SAM 300. 9 recipes."
+ },
+ {
+  "id": "c14",
+  "name": "Eastern Dune Forest 3",
+  "region": "Eastern Dune Forest",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s14_0",
+    "recipe": "Sloppy Alumina",
+    "target": 2501.1,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s14_1",
+    "recipe": "Pure Caterium Ingot",
+    "target": 598.8,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s14_2",
+    "recipe": "Wet Concrete",
+    "target": 351.9,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s14_3",
+    "recipe": "Quickwire",
+    "target": 300.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s14_4",
+    "recipe": "Plastic",
+    "target": 276.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s14_5",
+    "recipe": "Singularity Cell",
+    "target": 201.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s14_6",
+    "recipe": "Ficsonium",
+    "target": 186.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s14_7",
+    "recipe": "Stun Rebar",
+    "target": 60.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s14_8",
+    "recipe": "Rubber",
+    "target": 18.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s14_9",
+    "recipe": "Adaptive Control Unit",
+    "target": 10.5,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s14_10",
+    "recipe": "Heavy Oil Residue",
+    "target": 8.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s14_11",
+    "recipe": "Assembly Director System",
+    "target": 3.8,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s14_12",
+    "recipe": "Fuel",
+    "target": 1.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Iron Rebar": [
+    {
+     "from": "c10",
+     "q": 60.0,
+     "station": ""
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "from": "c2",
+     "q": 60.0,
+     "station": ""
+    }
+   ],
+   "Automated Wiring": [
+    {
+     "from": "c28",
+     "q": 52.5,
+     "station": ""
+    }
+   ],
+   "Circuit Board": [
+    {
+     "from": "c21",
+     "q": 52.5,
+     "station": ""
+    }
+   ],
+   "Heavy Modular Frame": [
+    {
+     "from": "c18",
+     "q": 10.5,
+     "station": ""
+    }
+   ],
+   "Computer": [
+    {
+     "from": "c27",
+     "q": 21.0,
+     "station": ""
+    }
+   ],
+   "Supercomputer": [
+    {
+     "from": "c29",
+     "q": 3.8,
+     "station": ""
+    }
+   ],
+   "Nuclear Pasta": [
+    {
+     "from": "c5",
+     "q": 20.1,
+     "station": ""
+    }
+   ],
+   "Dark Matter Crystal": [
+    {
+     "from": "c7",
+     "q": 402.0,
+     "station": ""
+    }
+   ],
+   "Iron Plate": [
+    {
+     "from": "c2",
+     "q": 2010.0,
+     "station": ""
+    }
+   ],
+   "Concrete": [
+    {
+     "from": "c10",
+     "q": 448.7,
+     "station": ""
+    },
+    {
+     "from": "c13",
+     "q": 242.3,
+     "station": ""
+    },
+    {
+     "from": "c6",
+     "q": 590.4,
+     "station": ""
+    },
+    {
+     "from": "c27",
+     "q": 84.0,
+     "station": ""
+    },
+    {
+     "from": "c5",
+     "q": 796.6,
+     "station": ""
+    },
+    {
+     "from": "c2",
+     "q": 1404.3,
+     "station": ""
+    },
+    {
+     "from": "c17",
+     "q": 101.8,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Fuel": [
+    {
+     "to": "c29",
+     "q": 1.0,
+     "station": ""
+    }
+   ],
+   "Copper Ore": [
+    {
+     "to": "c5",
+     "q": 600.0,
+     "station": ""
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "to": "c9",
+     "q": 598.8,
+     "station": ""
+    }
+   ],
+   "Alumina Solution": [
+    {
+     "to": "c11",
+     "q": 2501.1,
+     "station": ""
+    }
+   ],
+   "Heavy Oil Residue": [
+    {
+     "to": "c11",
+     "q": 8.0,
+     "station": ""
+    }
+   ],
+   "Plastic": [
+    {
+     "to": "c27",
+     "q": 276.6,
+     "station": ""
+    }
+   ],
+   "Rubber": [
+    {
+     "to": "c13",
+     "q": 18.0,
+     "station": ""
+    }
+   ],
+   "Singularity Cell": [
+    {
+     "to": "c26",
+     "q": 15.0,
+     "station": ""
+    }
+   ],
+   "Ficsonium": [
+    {
+     "to": "c26",
+     "q": 186.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 2702,
+   "y": 925
+  },
+  "desc": "Engine-generated. Nodes: Bauxite 2100, Limestone 1800, Caterium 1200, Iron 1200, Copper 600, Crude Oil 450. 13 recipes."
+ },
+ {
+  "id": "c15",
+  "name": "Rocky Desert 2",
+  "region": "Rocky Desert",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s15_0",
+    "recipe": "Caterium Wire",
+    "target": 9864.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s15_1",
+    "recipe": "Stator",
+    "target": 1233.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s15_2",
+    "recipe": "Pure Caterium Ingot",
+    "target": 298.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Steel Pipe": [
+    {
+     "from": "c6",
+     "q": 3699.0,
+     "station": ""
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "from": "c23",
+     "q": 187.2,
+     "station": ""
+    },
+    {
+     "from": "c16",
+     "q": 594.6,
+     "station": ""
+    },
+    {
+     "from": "c2",
+     "q": 152.8,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Uranium": [
+    {
+     "to": "c0",
+     "q": 300.0,
+     "station": ""
+    }
+   ],
+   "Stator": [
+    {
+     "to": "c9",
+     "q": 565.5,
+     "station": ""
+    },
+    {
+     "to": "c17",
+     "q": 492.0,
+     "station": ""
+    },
+    {
+     "to": "c28",
+     "q": 55.5,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": -1340,
+   "y": -1815
+  },
+  "desc": "Engine-generated. Nodes: Caterium 600, Uranium 300. 3 recipes."
+ },
+ {
+  "id": "c16",
+  "name": "Dune Desert 2",
+  "region": "Dune Desert",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s16_0",
+    "recipe": "Pure Caterium Ingot",
+    "target": 594.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s16_1",
+    "recipe": "Black Powder",
+    "target": 300.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s16_2",
+    "recipe": "Nobelisk",
+    "target": 242.5,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s16_3",
+    "recipe": "Wet Concrete",
+    "target": 223.3,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s16_4",
+    "recipe": "Compacted Coal",
+    "target": 131.5,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s16_5",
+    "recipe": "Sulfuric Acid",
+    "target": 121.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s16_6",
+    "recipe": "Reanimated SAM",
+    "target": 74.3,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s16_7",
+    "recipe": "Gas Filter",
+    "target": 60.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s16_8",
+    "recipe": "Battery",
+    "target": 60.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Fabric": [
+    {
+     "from": "c3",
+     "q": 120.0,
+     "station": ""
+    }
+   ],
+   "Iron Plate": [
+    {
+     "from": "c2",
+     "q": 120.0,
+     "station": ""
+    }
+   ],
+   "Black Powder": [
+    {
+     "from": "c9",
+     "q": 141.6,
+     "station": ""
+    },
+    {
+     "from": "c17",
+     "q": 42.0,
+     "station": ""
+    }
+   ],
+   "Steel Pipe": [
+    {
+     "from": "c6",
+     "q": 485.0,
+     "station": ""
+    }
+   ],
+   "Sulfuric Acid": [
+    {
+     "from": "c3",
+     "q": 27.7,
+     "station": ""
+    }
+   ],
+   "Alumina Solution": [
+    {
+     "from": "c25",
+     "q": 119.1,
+     "station": ""
+    }
+   ],
+   "Aluminum Casing": [
+    {
+     "from": "c25",
+     "q": 60.0,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Iron Ore": [
+    {
+     "to": "c2",
+     "q": 1200.0,
+     "station": ""
+    }
+   ],
+   "Compacted Coal": [
+    {
+     "to": "c29",
+     "q": 131.5,
+     "station": ""
+    }
+   ],
+   "Copper Ore": [
+    {
+     "to": "c5",
+     "q": 1200.0,
+     "station": ""
+    }
+   ],
+   "Sulfur": [
+    {
+     "to": "c0",
+     "q": 144.4,
+     "station": ""
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "to": "c15",
+     "q": 594.6,
+     "station": ""
+    }
+   ],
+   "Nobelisk": [
+    {
+     "to": "c19",
+     "q": 90.0,
+     "station": ""
+    },
+    {
+     "to": "c20",
+     "q": 30.0,
+     "station": ""
+    },
+    {
+     "to": "c31",
+     "q": 32.5,
+     "station": ""
+    },
+    {
+     "to": "c30",
+     "q": 30.0,
+     "station": ""
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 74.3,
+     "station": ""
+    }
+   ],
+   "Gas Filter": [
+    {
+     "to": "c26",
+     "q": 30.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 2563,
+   "y": -2569
+  },
+  "desc": "Engine-generated. Nodes: Coal 1800, Copper 1200, Caterium 1200, Limestone 1200, Iron 1200, Sulfur 1200, SAM 300. 9 recipes."
+ },
+ {
+  "id": "c17",
+  "name": "Snaketree Forest 1",
+  "region": "Snaketree Forest",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s17_0",
+    "recipe": "Screws",
+    "target": 20150.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s17_1",
+    "recipe": "Rotor",
+    "target": 806.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s17_2",
+    "recipe": "Wet Concrete",
+    "target": 432.1,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s17_3",
+    "recipe": "Motor",
+    "target": 246.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s17_4",
+    "recipe": "Reanimated SAM",
+    "target": 150.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s17_5",
+    "recipe": "Black Powder",
+    "target": 42.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s17_6",
+    "recipe": "Sulfuric Acid",
+    "target": 26.3,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s17_7",
+    "recipe": "Compacted Coal",
+    "target": 19.2,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Iron Rod": [
+    {
+     "from": "c1",
+     "q": 4030.0,
+     "station": ""
+    },
+    {
+     "from": "c1",
+     "q": 5037.5,
+     "station": ""
+    }
+   ],
+   "Stator": [
+    {
+     "from": "c15",
+     "q": 492.0,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Compacted Coal": [
+    {
+     "to": "c29",
+     "q": 19.2,
+     "station": ""
+    }
+   ],
+   "Copper Ore": [
+    {
+     "to": "c4",
+     "q": 600.0,
+     "station": ""
+    }
+   ],
+   "Sulfur": [
+    {
+     "to": "c0",
+     "q": 167.1,
+     "station": ""
+    }
+   ],
+   "Black Powder": [
+    {
+     "to": "c16",
+     "q": 42.0,
+     "station": ""
+    }
+   ],
+   "Sulfuric Acid": [
+    {
+     "to": "c11",
+     "q": 26.3,
+     "station": ""
+    }
+   ],
+   "Rotor": [
+    {
+     "to": "c30",
+     "q": 39.0,
+     "station": ""
+    },
+    {
+     "to": "c0",
+     "q": 155.0,
+     "station": ""
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 150.0,
+     "station": ""
+    }
+   ],
+   "Motor": [
+    {
+     "to": "c22",
+     "q": 36.0,
+     "station": ""
+    },
+    {
+     "to": "c3",
+     "q": 66.0,
+     "station": ""
+    },
+    {
+     "to": "c29",
+     "q": 84.0,
+     "station": ""
+    }
+   ],
+   "Concrete": [
+    {
+     "to": "c14",
+     "q": 101.8,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 2,
+   "y": 2802
+  },
+  "desc": "Engine-generated. Nodes: Iron 2400, Limestone 2400, Coal 1200, Copper 600, SAM 600, Sulfur 300. 8 recipes."
+ },
+ {
+  "id": "c18",
+  "name": "Dune Desert 3",
+  "region": "Dune Desert",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s18_0",
+    "recipe": "Screws",
+    "target": 13104.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s18_1",
+    "recipe": "Plastic",
+    "target": 733.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s18_2",
+    "recipe": "Modular Frame",
+    "target": 615.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s18_3",
+    "recipe": "Heavy Modular Frame",
+    "target": 109.2,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s18_4",
+    "recipe": "Rubber",
+    "target": 51.5,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s18_5",
+    "recipe": "Heavy Oil Residue",
+    "target": 23.1,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s18_6",
+    "recipe": "Fuel",
+    "target": 3.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Reinforced Iron Plate": [
+    {
+     "from": "c2",
+     "q": 922.5,
+     "station": ""
+    }
+   ],
+   "Iron Rod": [
+    {
+     "from": "c1",
+     "q": 3690.0,
+     "station": ""
+    },
+    {
+     "from": "c1",
+     "q": 3276.0,
+     "station": ""
+    }
+   ],
+   "Steel Pipe": [
+    {
+     "from": "c6",
+     "q": 2184.0,
+     "station": ""
+    }
+   ],
+   "Encased Industrial Beam": [
+    {
+     "from": "c8",
+     "q": 546.0,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Fuel": [
+    {
+     "to": "c29",
+     "q": 3.0,
+     "station": ""
+    }
+   ],
+   "Plastic": [
+    {
+     "to": "c21",
+     "q": 733.0,
+     "station": ""
+    }
+   ],
+   "Heavy Oil Residue": [
+    {
+     "to": "c11",
+     "q": 23.1,
+     "station": ""
+    }
+   ],
+   "Uranium": [
+    {
+     "to": "c0",
+     "q": 300.0,
+     "station": ""
+    }
+   ],
+   "Rubber": [
+    {
+     "to": "c13",
+     "q": 51.5,
+     "station": ""
+    }
+   ],
+   "Modular Frame": [
+    {
+     "to": "c19",
+     "q": 9.0,
+     "station": ""
+    }
+   ],
+   "Heavy Modular Frame": [
+    {
+     "to": "c31",
+     "q": 68.7,
+     "station": ""
+    },
+    {
+     "to": "c14",
+     "q": 10.5,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 1637,
+   "y": -1995
+  },
+  "desc": "Engine-generated. Nodes: Crude Oil 1200, Uranium 300. 7 recipes."
+ },
+ {
+  "id": "c19",
+  "name": "Snaketree Forest 2",
+  "region": "Snaketree Forest",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s19_0",
+    "recipe": "Pure Caterium Ingot",
+    "target": 585.1,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s19_1",
+    "recipe": "Wet Concrete",
+    "target": 151.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s19_2",
+    "recipe": "Ficsite Trigon",
+    "target": 45.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s19_3",
+    "recipe": "Cluster Nobelisk",
+    "target": 30.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s19_4",
+    "recipe": "Versatile Framework",
+    "target": 18.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s19_5",
+    "recipe": "Time Crystal",
+    "target": 15.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s19_6",
+    "recipe": "Superposition Oscillator",
+    "target": 9.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s19_7",
+    "recipe": "Magnetic Field Generator",
+    "target": 6.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s19_8",
+    "recipe": "Neural-Quantum Processor",
+    "target": 3.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Nobelisk": [
+    {
+     "from": "c16",
+     "q": 90.0,
+     "station": ""
+    }
+   ],
+   "Smokeless Powder": [
+    {
+     "from": "c27",
+     "q": 120.0,
+     "station": ""
+    }
+   ],
+   "Diamonds": [
+    {
+     "from": "c7",
+     "q": 30.0,
+     "station": ""
+    }
+   ],
+   "Dark Matter Crystal": [
+    {
+     "from": "c7",
+     "q": 54.0,
+     "station": ""
+    }
+   ],
+   "Crystal Oscillator": [
+    {
+     "from": "c13",
+     "q": 9.0,
+     "station": ""
+    }
+   ],
+   "Alclad Aluminum Sheet": [
+    {
+     "from": "c24",
+     "q": 81.0,
+     "station": ""
+    }
+   ],
+   "Modular Frame": [
+    {
+     "from": "c18",
+     "q": 9.0,
+     "station": ""
+    }
+   ],
+   "Steel Beam": [
+    {
+     "from": "c8",
+     "q": 108.0,
+     "station": ""
+    }
+   ],
+   "Supercomputer": [
+    {
+     "from": "c29",
+     "q": 3.0,
+     "station": ""
+    }
+   ],
+   "Ficsite Ingot": [
+    {
+     "from": "c10",
+     "q": 15.0,
+     "station": ""
+    }
+   ],
+   "Electromagnetic Control Rod": [
+    {
+     "from": "c9",
+     "q": 6.0,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Copper Ore": [
+    {
+     "to": "c4",
+     "q": 600.0,
+     "station": ""
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "to": "c0",
+     "q": 585.1,
+     "station": ""
+    }
+   ],
+   "Concrete": [
+    {
+     "to": "c8",
+     "q": 151.4,
+     "station": ""
+    }
+   ],
+   "Magnetic Field Generator": [
+    {
+     "to": "c26",
+     "q": 3.0,
+     "station": ""
+    }
+   ],
+   "Neural-Quantum Processor": [
+    {
+     "to": "c26",
+     "q": 3.0,
+     "station": ""
+    }
+   ],
+   "Superposition Oscillator": [
+    {
+     "to": "c26",
+     "q": 3.0,
+     "station": ""
+    },
+    {
+     "to": "c26",
+     "q": 6.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": -953,
+   "y": 2650
+  },
+  "desc": "Engine-generated. Nodes: Iron 2400, Caterium 1200, Limestone 900, Copper 600. 9 recipes."
+ },
+ {
+  "id": "c20",
+  "name": "Northern Forest 1",
+  "region": "Northern Forest",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s20_0",
+    "recipe": "Wet Concrete",
+    "target": 393.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s20_1",
+    "recipe": "Biomass (Mycelia)",
+    "target": 300.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s20_2",
+    "recipe": "Radio Control Unit",
+    "target": 152.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s20_3",
+    "recipe": "Pressure Conversion Cube",
+    "target": 47.7,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s20_4",
+    "recipe": "Gas Nobelisk",
+    "target": 30.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Nobelisk": [
+    {
+     "from": "c16",
+     "q": 30.0,
+     "station": ""
+    }
+   ],
+   "Aluminum Casing": [
+    {
+     "from": "c25",
+     "q": 2438.4,
+     "station": ""
+    }
+   ],
+   "Crystal Oscillator": [
+    {
+     "from": "c13",
+     "q": 76.2,
+     "station": ""
+    }
+   ],
+   "Computer": [
+    {
+     "from": "c27",
+     "q": 152.4,
+     "station": ""
+    }
+   ],
+   "Fused Modular Frame": [
+    {
+     "from": "c31",
+     "q": 47.7,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Limestone": [
+    {
+     "to": "c23",
+     "q": 1219.2,
+     "station": ""
+    }
+   ],
+   "Copper Ore": [
+    {
+     "to": "c5",
+     "q": 2400.0,
+     "station": ""
+    }
+   ],
+   "Concrete": [
+    {
+     "to": "c8",
+     "q": 348.0,
+     "station": ""
+    }
+   ],
+   "Radio Control Unit": [
+    {
+     "to": "c29",
+     "q": 42.0,
+     "station": ""
+    }
+   ],
+   "Pressure Conversion Cube": [
+    {
+     "to": "c28",
+     "q": 18.6,
+     "station": ""
+    },
+    {
+     "to": "c5",
+     "q": 23.1,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": -400,
+   "y": -1412
+  },
+  "desc": "Engine-generated. Nodes: Iron 4800, Copper 2400, Limestone 2400. 5 recipes."
+ },
+ {
+  "id": "c21",
+  "name": "Northern Forest 2",
+  "region": "Northern Forest",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s21_0",
+    "recipe": "Plastic",
+    "target": 2700.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s21_1",
+    "recipe": "Circuit Board",
+    "target": 1375.3,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s21_2",
+    "recipe": "Reanimated SAM",
+    "target": 300.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s21_3",
+    "recipe": "Rubber",
+    "target": 228.3,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s21_4",
+    "recipe": "Heavy Oil Residue",
+    "target": 106.5,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s21_5",
+    "recipe": "Fuel",
+    "target": 17.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Copper Sheet": [
+    {
+     "from": "c4",
+     "q": 2750.7,
+     "station": ""
+    }
+   ],
+   "Plastic": [
+    {
+     "from": "c28",
+     "q": 514.6,
+     "station": ""
+    },
+    {
+     "from": "c18",
+     "q": 733.0,
+     "station": ""
+    },
+    {
+     "from": "c30",
+     "q": 601.0,
+     "station": ""
+    },
+    {
+     "from": "c22",
+     "q": 952.8,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Fuel": [
+    {
+     "to": "c29",
+     "q": 17.0,
+     "station": ""
+    }
+   ],
+   "Heavy Oil Residue": [
+    {
+     "to": "c11",
+     "q": 106.5,
+     "station": ""
+    }
+   ],
+   "Circuit Board": [
+    {
+     "to": "c27",
+     "q": 1161.6,
+     "station": ""
+    },
+    {
+     "to": "c12",
+     "q": 101.2,
+     "station": ""
+    },
+    {
+     "to": "c14",
+     "q": 52.5,
+     "station": ""
+    }
+   ],
+   "Rubber": [
+    {
+     "to": "c28",
+     "q": 40.7,
+     "station": ""
+    },
+    {
+     "to": "c22",
+     "q": 66.9,
+     "station": ""
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 300.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 435,
+   "y": -2126
+  },
+  "desc": "Engine-generated. Nodes: Crude Oil 4500, SAM 1200. 6 recipes."
+ },
+ {
+  "id": "c22",
+  "name": "Lake Forest 2",
+  "region": "Lake Forest",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s22_0",
+    "recipe": "Plastic",
+    "target": 1327.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s22_1",
+    "recipe": "Sloppy Alumina",
+    "target": 699.7,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s22_2",
+    "recipe": "Rubber",
+    "target": 197.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s22_3",
+    "recipe": "Reanimated SAM",
+    "target": 149.3,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s22_4",
+    "recipe": "Rifle Ammo",
+    "target": 120.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s22_5",
+    "recipe": "Heavy Oil Residue",
+    "target": 108.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s22_6",
+    "recipe": "Homing Rifle Ammo",
+    "target": 60.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s22_7",
+    "recipe": "Fuel",
+    "target": 18.9,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s22_8",
+    "recipe": "Modular Engine",
+    "target": 18.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s22_9",
+    "recipe": "Thermal Propulsion Rocket",
+    "target": 6.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Copper Sheet": [
+    {
+     "from": "c4",
+     "q": 24.0,
+     "station": ""
+    }
+   ],
+   "Smokeless Powder": [
+    {
+     "from": "c27",
+     "q": 16.0,
+     "station": ""
+    }
+   ],
+   "High-Speed Connector": [
+    {
+     "from": "c12",
+     "q": 6.0,
+     "station": ""
+    }
+   ],
+   "Motor": [
+    {
+     "from": "c17",
+     "q": 36.0,
+     "station": ""
+    }
+   ],
+   "Rubber": [
+    {
+     "from": "c24",
+     "q": 133.4,
+     "station": ""
+    },
+    {
+     "from": "c21",
+     "q": 66.9,
+     "station": ""
+    }
+   ],
+   "Smart Plating": [
+    {
+     "from": "c30",
+     "q": 36.0,
+     "station": ""
+    }
+   ],
+   "Turbo Motor": [
+    {
+     "from": "c29",
+     "q": 6.0,
+     "station": ""
+    }
+   ],
+   "Cooling System": [
+    {
+     "from": "c3",
+     "q": 18.0,
+     "station": ""
+    }
+   ],
+   "Fused Modular Frame": [
+    {
+     "from": "c31",
+     "q": 6.0,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Coal": [
+    {
+     "to": "c6",
+     "q": 600.0,
+     "station": ""
+    }
+   ],
+   "Fuel": [
+    {
+     "to": "c29",
+     "q": 18.9,
+     "station": ""
+    }
+   ],
+   "Plastic": [
+    {
+     "to": "c21",
+     "q": 952.8,
+     "station": ""
+    },
+    {
+     "to": "c27",
+     "q": 374.8,
+     "station": ""
+    }
+   ],
+   "Alumina Solution": [
+    {
+     "to": "c11",
+     "q": 699.7,
+     "station": ""
+    }
+   ],
+   "Heavy Oil Residue": [
+    {
+     "to": "c11",
+     "q": 108.0,
+     "station": ""
+    }
+   ],
+   "Rubber": [
+    {
+     "to": "c13",
+     "q": 127.9,
+     "station": ""
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 149.3,
+     "station": ""
+    }
+   ],
+   "Thermal Propulsion Rocket": [
+    {
+     "to": "c26",
+     "q": 3.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 338,
+   "y": -7
+  },
+  "desc": "Engine-generated. Nodes: Crude Oil 2400, Coal 600, SAM 600, Bauxite 600. 10 recipes."
+ },
+ {
+  "id": "c23",
+  "name": "Rocky Desert 3",
+  "region": "Rocky Desert",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s23_0",
+    "recipe": "Distilled Silica",
+    "target": 23814.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s23_1",
+    "recipe": "Pure Quartz Crystal",
+    "target": 725.2,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s23_2",
+    "recipe": "Pure Caterium Ingot",
+    "target": 557.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s23_3",
+    "recipe": "Wet Concrete",
+    "target": 459.1,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s23_4",
+    "recipe": "Reanimated SAM",
+    "target": 150.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Limestone": [
+    {
+     "from": "c7",
+     "q": 551.8,
+     "station": ""
+    },
+    {
+     "from": "c20",
+     "q": 1219.2,
+     "station": ""
+    },
+    {
+     "from": "c8",
+     "q": 406.1,
+     "station": ""
+    },
+    {
+     "from": "c5",
+     "q": 610.1,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Iron Ore": [
+    {
+     "to": "c1",
+     "q": 1423.1,
+     "station": ""
+    }
+   ],
+   "Copper Ore": [
+    {
+     "to": "c5",
+     "q": 600.0,
+     "station": ""
+    }
+   ],
+   "Silica": [
+    {
+     "to": "c0",
+     "q": 1260.0,
+     "station": ""
+    },
+    {
+     "to": "c12",
+     "q": 1265.6,
+     "station": ""
+    },
+    {
+     "to": "c11",
+     "q": 19477.8,
+     "station": ""
+    },
+    {
+     "to": "c11",
+     "q": 1511.2,
+     "station": ""
+    }
+   ],
+   "Concrete": [
+    {
+     "to": "c8",
+     "q": 459.1,
+     "station": ""
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "to": "c12",
+     "q": 370.2,
+     "station": ""
+    },
+    {
+     "to": "c15",
+     "q": 187.2,
+     "station": ""
+    }
+   ],
+   "Quartz Crystal": [
+    {
+     "to": "c13",
+     "q": 546.1,
+     "station": ""
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 150.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": -1795,
+   "y": -1055
+  },
+  "desc": "Engine-generated. Nodes: Raw Quartz 3000, Limestone 3000, Iron 1800, Caterium 1200, Copper 600, SAM 600. 5 recipes."
+ },
+ {
+  "id": "c24",
+  "name": "Crater Lakes 2",
+  "region": "Crater Lakes",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s24_0",
+    "recipe": "Alclad Aluminum Sheet",
+    "target": 1821.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s24_1",
+    "recipe": "Sloppy Alumina",
+    "target": 1376.7,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s24_2",
+    "recipe": "Plastic",
+    "target": 707.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s24_3",
+    "recipe": "Pure Copper Ingot",
+    "target": 607.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s24_4",
+    "recipe": "Heat Sink",
+    "target": 324.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s24_5",
+    "recipe": "Rubber",
+    "target": 133.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s24_6",
+    "recipe": "Heavy Oil Residue",
+    "target": 82.9,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s24_7",
+    "recipe": "Reanimated SAM",
+    "target": 75.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s24_8",
+    "recipe": "Fuel",
+    "target": 16.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Aluminum Ingot": [
+    {
+     "from": "c11",
+     "q": 1821.0,
+     "station": ""
+    }
+   ],
+   "Copper Ore": [
+    {
+     "from": "c2",
+     "q": 242.8,
+     "station": ""
+    }
+   ],
+   "Copper Sheet": [
+    {
+     "from": "c4",
+     "q": 972.0,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Coal": [
+    {
+     "to": "c6",
+     "q": 600.0,
+     "station": ""
+    }
+   ],
+   "Fuel": [
+    {
+     "to": "c29",
+     "q": 16.0,
+     "station": ""
+    }
+   ],
+   "Alumina Solution": [
+    {
+     "to": "c11",
+     "q": 1376.7,
+     "station": ""
+    }
+   ],
+   "Heavy Oil Residue": [
+    {
+     "to": "c11",
+     "q": 82.9,
+     "station": ""
+    }
+   ],
+   "Plastic": [
+    {
+     "to": "c27",
+     "q": 707.4,
+     "station": ""
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 75.0,
+     "station": ""
+    }
+   ],
+   "Alclad Aluminum Sheet": [
+    {
+     "to": "c19",
+     "q": 81.0,
+     "station": ""
+    }
+   ],
+   "Rubber": [
+    {
+     "to": "c22",
+     "q": 133.4,
+     "station": ""
+    }
+   ],
+   "Heat Sink": [
+    {
+     "to": "c3",
+     "q": 264.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": -594,
+   "y": -53
+  },
+  "desc": "Engine-generated. Nodes: Crude Oil 1350, Bauxite 1200, Coal 600, SAM 300. 9 recipes."
+ },
+ {
+  "id": "c25",
+  "name": "Western Beaches 1",
+  "region": "Western Beaches",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s25_0",
+    "recipe": "Alclad Casing",
+    "target": 6473.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s25_1",
+    "recipe": "Pure Copper Ingot",
+    "target": 4315.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s25_2",
+    "recipe": "Sloppy Alumina",
+    "target": 1294.2,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Aluminum Ingot": [
+    {
+     "from": "c11",
+     "q": 8631.2,
+     "station": ""
+    }
+   ],
+   "Copper Ore": [
+    {
+     "from": "c2",
+     "q": 1726.2,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Alumina Solution": [
+    {
+     "to": "c11",
+     "q": 1175.0,
+     "station": ""
+    },
+    {
+     "to": "c16",
+     "q": 119.1,
+     "station": ""
+    }
+   ],
+   "Aluminum Casing": [
+    {
+     "to": "c20",
+     "q": 2438.4,
+     "station": ""
+    },
+    {
+     "to": "c26",
+     "q": 30.0,
+     "station": ""
+    },
+    {
+     "to": "c16",
+     "q": 60.0,
+     "station": ""
+    },
+    {
+     "to": "c28",
+     "q": 372.0,
+     "station": ""
+    },
+    {
+     "to": "c31",
+     "q": 3435.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": -2170,
+   "y": 110
+  },
+  "desc": "Engine-generated. Nodes: Bauxite 1200. 3 recipes."
+ },
+ {
+  "id": "c26",
+  "name": "Dune Desert 4",
+  "region": "Dune Desert",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s26_0",
+    "recipe": "Ficsite Trigon",
+    "target": 3780.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s26_1",
+    "recipe": "Quickwire",
+    "target": 240.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s26_2",
+    "recipe": "Reanimated SAM",
+    "target": 149.3,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s26_3",
+    "recipe": "Ficsonium Fuel Rod",
+    "target": 93.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s26_4",
+    "recipe": "Empty Fluid Tank",
+    "target": 30.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s26_5",
+    "recipe": "Iodine-Infused Filter",
+    "target": 30.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s26_6",
+    "recipe": "AI Expansion Server",
+    "target": 3.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s26_7",
+    "recipe": "Biochemical Sculptor",
+    "target": 3.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s26_8",
+    "recipe": "Ballistic Warp Drive",
+    "target": 3.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Aluminum Ingot": [
+    {
+     "from": "c11",
+     "q": 30.0,
+     "station": ""
+    }
+   ],
+   "Gas Filter": [
+    {
+     "from": "c16",
+     "q": 30.0,
+     "station": ""
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "from": "c2",
+     "q": 48.0,
+     "station": ""
+    }
+   ],
+   "Aluminum Casing": [
+    {
+     "from": "c25",
+     "q": 30.0,
+     "station": ""
+    }
+   ],
+   "Magnetic Field Generator": [
+    {
+     "from": "c19",
+     "q": 3.0,
+     "station": ""
+    }
+   ],
+   "Neural-Quantum Processor": [
+    {
+     "from": "c19",
+     "q": 3.0,
+     "station": ""
+    }
+   ],
+   "Superposition Oscillator": [
+    {
+     "from": "c19",
+     "q": 3.0,
+     "station": ""
+    },
+    {
+     "from": "c19",
+     "q": 6.0,
+     "station": ""
+    }
+   ],
+   "Ficsite Ingot": [
+    {
+     "from": "c10",
+     "q": 20.0,
+     "station": ""
+    },
+    {
+     "from": "c10",
+     "q": 1240.0,
+     "station": ""
+    }
+   ],
+   "Thermal Propulsion Rocket": [
+    {
+     "from": "c22",
+     "q": 3.0,
+     "station": ""
+    }
+   ],
+   "Singularity Cell": [
+    {
+     "from": "c14",
+     "q": 15.0,
+     "station": ""
+    }
+   ],
+   "Dark Matter Crystal": [
+    {
+     "from": "c7",
+     "q": 120.0,
+     "station": ""
+    }
+   ],
+   "Ficsonium": [
+    {
+     "from": "c14",
+     "q": 186.0,
+     "station": ""
+    }
+   ],
+   "Electromagnetic Control Rod": [
+    {
+     "from": "c9",
+     "q": 186.0,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 149.3,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 1730,
+   "y": -2860
+  },
+  "desc": "Engine-generated. Nodes: SAM 600. 9 recipes."
+ },
+ {
+  "id": "c27",
+  "name": "Eastern Dune Forest 4",
+  "region": "Eastern Dune Forest",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s27_0",
+    "recipe": "Plastic",
+    "target": 2582.2,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s27_1",
+    "recipe": "Quickwire Cable",
+    "target": 2323.2,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s27_2",
+    "recipe": "Quickwire",
+    "target": 633.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s27_3",
+    "recipe": "Rubber",
+    "target": 547.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s27_4",
+    "recipe": "Smokeless Powder",
+    "target": 381.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s27_5",
+    "recipe": "Heavy Oil Residue",
+    "target": 369.1,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s27_6",
+    "recipe": "Computer",
+    "target": 290.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s27_7",
+    "recipe": "Wet Concrete",
+    "target": 84.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s27_8",
+    "recipe": "Fuel",
+    "target": 76.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s27_9",
+    "recipe": "Reanimated SAM",
+    "target": 75.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Black Powder": [
+    {
+     "from": "c9",
+     "q": 381.0,
+     "station": ""
+    }
+   ],
+   "Circuit Board": [
+    {
+     "from": "c21",
+     "q": 1161.6,
+     "station": ""
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "from": "c8",
+     "q": 126.7,
+     "station": ""
+    }
+   ],
+   "Plastic": [
+    {
+     "from": "c14",
+     "q": 276.6,
+     "station": ""
+    },
+    {
+     "from": "c22",
+     "q": 374.8,
+     "station": ""
+    },
+    {
+     "from": "c24",
+     "q": 707.4,
+     "station": ""
+    },
+    {
+     "from": "c29",
+     "q": 705.4,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Coal": [
+    {
+     "to": "c6",
+     "q": 2400.0,
+     "station": ""
+    }
+   ],
+   "Fuel": [
+    {
+     "to": "c29",
+     "q": 76.4,
+     "station": ""
+    }
+   ],
+   "Copper Ore": [
+    {
+     "to": "c4",
+     "q": 600.0,
+     "station": ""
+    }
+   ],
+   "Heavy Oil Residue": [
+    {
+     "to": "c11",
+     "q": 178.6,
+     "station": ""
+    }
+   ],
+   "Smokeless Powder": [
+    {
+     "to": "c13",
+     "q": 120.0,
+     "station": ""
+    },
+    {
+     "to": "c19",
+     "q": 120.0,
+     "station": ""
+    },
+    {
+     "to": "c22",
+     "q": 16.0,
+     "station": ""
+    },
+    {
+     "to": "c31",
+     "q": 65.0,
+     "station": ""
+    }
+   ],
+   "Computer": [
+    {
+     "to": "c29",
+     "q": 87.0,
+     "station": ""
+    },
+    {
+     "to": "c20",
+     "q": 152.4,
+     "station": ""
+    },
+    {
+     "to": "c14",
+     "q": 21.0,
+     "station": ""
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 75.0,
+     "station": ""
+    }
+   ],
+   "Concrete": [
+    {
+     "to": "c14",
+     "q": 84.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 1665,
+   "y": 2242
+  },
+  "desc": "Engine-generated. Nodes: Crude Oil 5100, Coal 2400, Iron 1200, Copper 600, Limestone 600, SAM 300. 10 recipes."
+ },
+ {
+  "id": "c28",
+  "name": "Northern Forest 3",
+  "region": "Northern Forest",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s28_0",
+    "recipe": "Quickwire Cable",
+    "target": 1110.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s28_1",
+    "recipe": "Plastic",
+    "target": 514.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s28_2",
+    "recipe": "Instant Plutonium Cell",
+    "target": 372.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s28_3",
+    "recipe": "Quickwire",
+    "target": 302.7,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s28_4",
+    "recipe": "Rubber",
+    "target": 161.1,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s28_5",
+    "recipe": "Heavy Oil Residue",
+    "target": 149.1,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s28_6",
+    "recipe": "Reanimated SAM",
+    "target": 75.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s28_7",
+    "recipe": "Automated Wiring",
+    "target": 55.5,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s28_8",
+    "recipe": "Fuel",
+    "target": 41.8,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s28_9",
+    "recipe": "Plutonium Fuel Unit",
+    "target": 18.6,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Stator": [
+    {
+     "from": "c15",
+     "q": 55.5,
+     "station": ""
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "from": "c2",
+     "q": 60.5,
+     "station": ""
+    }
+   ],
+   "Rubber": [
+    {
+     "from": "c21",
+     "q": 40.7,
+     "station": ""
+    }
+   ],
+   "Non-Fissile Uranium": [
+    {
+     "from": "c11",
+     "q": 2790.0,
+     "station": ""
+    }
+   ],
+   "Aluminum Casing": [
+    {
+     "from": "c25",
+     "q": 372.0,
+     "station": ""
+    }
+   ],
+   "Pressure Conversion Cube": [
+    {
+     "from": "c20",
+     "q": 18.6,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Fuel": [
+    {
+     "to": "c29",
+     "q": 41.8,
+     "station": ""
+    }
+   ],
+   "Plastic": [
+    {
+     "to": "c21",
+     "q": 514.6,
+     "station": ""
+    }
+   ],
+   "Heavy Oil Residue": [
+    {
+     "to": "c11",
+     "q": 149.1,
+     "station": ""
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 75.0,
+     "station": ""
+    }
+   ],
+   "Automated Wiring": [
+    {
+     "to": "c14",
+     "q": 52.5,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": -423,
+   "y": -2253
+  },
+  "desc": "Engine-generated. Nodes: Crude Oil 1200, SAM 300. 10 recipes."
+ },
+ {
+  "id": "c29",
+  "name": "Western Beaches 2",
+  "region": "Western Beaches",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s29_0",
+    "recipe": "Plastic",
+    "target": 1845.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s29_1",
+    "recipe": "Rubber",
+    "target": 612.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s29_2",
+    "recipe": "Heavy Oil Residue",
+    "target": 611.3,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s29_3",
+    "recipe": "Turbofuel",
+    "target": 422.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s29_4",
+    "recipe": "Empty Canister",
+    "target": 404.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s29_5",
+    "recipe": "Packaged Turbofuel",
+    "target": 404.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s29_6",
+    "recipe": "Fuel",
+    "target": 192.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s29_7",
+    "recipe": "Supercomputer",
+    "target": 21.8,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s29_8",
+    "recipe": "Turbo Motor",
+    "target": 21.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Fuel": [
+    {
+     "from": "c24",
+     "q": 16.0,
+     "station": ""
+    },
+    {
+     "from": "c22",
+     "q": 18.9,
+     "station": ""
+    },
+    {
+     "from": "c28",
+     "q": 41.8,
+     "station": ""
+    },
+    {
+     "from": "c21",
+     "q": 17.0,
+     "station": ""
+    },
+    {
+     "from": "c27",
+     "q": 76.4,
+     "station": ""
+    },
+    {
+     "from": "c30",
+     "q": 139.4,
+     "station": ""
+    },
+    {
+     "from": "c18",
+     "q": 3.0,
+     "station": ""
+    },
+    {
+     "from": "c14",
+     "q": 1.0,
+     "station": ""
+    }
+   ],
+   "Compacted Coal": [
+    {
+     "from": "c17",
+     "q": 19.2,
+     "station": ""
+    },
+    {
+     "from": "c9",
+     "q": 186.3,
+     "station": ""
+    },
+    {
+     "from": "c16",
+     "q": 131.5,
+     "station": ""
+    }
+   ],
+   "Computer": [
+    {
+     "from": "c27",
+     "q": 87.0,
+     "station": ""
+    }
+   ],
+   "AI Limiter": [
+    {
+     "from": "c9",
+     "q": 43.5,
+     "station": ""
+    }
+   ],
+   "High-Speed Connector": [
+    {
+     "from": "c12",
+     "q": 65.2,
+     "station": ""
+    }
+   ],
+   "Cooling System": [
+    {
+     "from": "c3",
+     "q": 84.0,
+     "station": ""
+    }
+   ],
+   "Radio Control Unit": [
+    {
+     "from": "c20",
+     "q": 42.0,
+     "station": ""
+    }
+   ],
+   "Motor": [
+    {
+     "from": "c17",
+     "q": 84.0,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Heavy Oil Residue": [
+    {
+     "to": "c11",
+     "q": 611.3,
+     "station": ""
+    }
+   ],
+   "Plastic": [
+    {
+     "to": "c27",
+     "q": 705.4,
+     "station": ""
+    }
+   ],
+   "Packaged Turbofuel": [
+    {
+     "to": "c7",
+     "q": 404.0,
+     "station": ""
+    }
+   ],
+   "Supercomputer": [
+    {
+     "to": "c19",
+     "q": 3.0,
+     "station": ""
+    },
+    {
+     "to": "c14",
+     "q": 3.8,
+     "station": ""
+    }
+   ],
+   "Turbo Motor": [
+    {
+     "to": "c22",
+     "q": 6.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": -2458,
+   "y": 780
+  },
+  "desc": "Engine-generated. Nodes: Crude Oil 4500. 9 recipes."
+ },
+ {
+  "id": "c30",
+  "name": "Maze Canyons 4",
+  "region": "Maze Canyons",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s30_0",
+    "recipe": "Plastic",
+    "target": 601.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s30_1",
+    "recipe": "Heavy Oil Residue",
+    "target": 290.1,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s30_2",
+    "recipe": "Rubber",
+    "target": 229.5,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s30_3",
+    "recipe": "Fuel",
+    "target": 139.4,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s30_4",
+    "recipe": "Smart Plating",
+    "target": 39.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s30_5",
+    "recipe": "Pulse Nobelisk",
+    "target": 30.0,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Reinforced Iron Plate": [
+    {
+     "from": "c2",
+     "q": 39.0,
+     "station": ""
+    }
+   ],
+   "Rotor": [
+    {
+     "from": "c17",
+     "q": 39.0,
+     "station": ""
+    }
+   ],
+   "Nobelisk": [
+    {
+     "from": "c16",
+     "q": 30.0,
+     "station": ""
+    }
+   ],
+   "Crystal Oscillator": [
+    {
+     "from": "c13",
+     "q": 6.0,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Fuel": [
+    {
+     "to": "c29",
+     "q": 139.4,
+     "station": ""
+    }
+   ],
+   "Plastic": [
+    {
+     "to": "c21",
+     "q": 601.0,
+     "station": ""
+    }
+   ],
+   "Heavy Oil Residue": [
+    {
+     "to": "c11",
+     "q": 290.1,
+     "station": ""
+    }
+   ],
+   "Rubber": [
+    {
+     "to": "c13",
+     "q": 229.5,
+     "station": ""
+    }
+   ],
+   "Smart Plating": [
+    {
+     "to": "c22",
+     "q": 36.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": 1725,
+   "y": -925
+  },
+  "desc": "Engine-generated. Nodes: Crude Oil 1800. 6 recipes."
+ },
+ {
+  "id": "c31",
+  "name": "Rocky Desert 4",
+  "region": "Rocky Desert",
+  "parent": null,
+  "tier": "",
+  "bstep": "",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
+    "id": "s31_0",
+    "recipe": "Plutonium Pellet",
+    "target": 69.8,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s31_1",
+    "recipe": "Fused Modular Frame",
+    "target": 68.7,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   },
+   {
+    "id": "s31_2",
+    "recipe": "Nuke Nobelisk",
+    "target": 6.5,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": ""
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Nobelisk": [
+    {
+     "from": "c16",
+     "q": 32.5,
+     "station": ""
+    }
+   ],
+   "Encased Uranium Cell": [
+    {
+     "from": "c0",
+     "q": 130.0,
+     "station": ""
+    }
+   ],
+   "Smokeless Powder": [
+    {
+     "from": "c27",
+     "q": 65.0,
+     "station": ""
+    }
+   ],
+   "AI Limiter": [
+    {
+     "from": "c9",
+     "q": 39.0,
+     "station": ""
+    }
+   ],
+   "Non-Fissile Uranium": [
+    {
+     "from": "c11",
+     "q": 232.5,
+     "station": ""
+    }
+   ],
+   "Heavy Modular Frame": [
+    {
+     "from": "c18",
+     "q": 68.7,
+     "station": ""
+    }
+   ],
+   "Aluminum Casing": [
+    {
+     "from": "c25",
+     "q": 3435.0,
+     "station": ""
+    }
+   ]
+  },
+  "dests": {
+   "Nitrogen Gas": [
+    {
+     "to": "c3",
+     "q": 111.0,
+     "station": ""
+    }
+   ],
+   "Fused Modular Frame": [
+    {
+     "to": "c20",
+     "q": 47.7,
+     "station": ""
+    },
+    {
+     "to": "c22",
+     "q": 6.0,
+     "station": ""
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": -2521,
+   "y": -1889
+  },
+  "desc": "Engine-generated. Nodes: Nitrogen Gas 1950. 3 recipes."
+ }
+]
