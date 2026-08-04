@@ -7,6 +7,7 @@ import {Resources} from './components/Resources.jsx';
 import {MapView,Reach} from './components/MapView.jsx';
 import {Transport} from './components/Transport.jsx';
 import {Complex} from './components/Complex.jsx';
+import {WorldGraph} from './components/WorldGraph.jsx';
 import './styles.css';
 function App(){
   const[cxs,setCxs]=React.useState(null);
@@ -50,7 +51,7 @@ function App(){
   const producersOf=it=>cxs.filter(x=>{const p=graph.per[x.id];return p&&p[it]&&(p[it].made-p[it].used)>0.5;});
   const consumersNeeding=it=>cxs.filter(x=>{const p=graph.per[x.id];return p&&p[it]&&(p[it].made-p[it].used)<-0.5;});
   const go=id=>{if(cxs.some(c=>c.id===id))setSel(id);};
-  const NAV=[["dash","Dashboard"],["goals","Goals"],["res","Resources"],["map","Map & placement"],["logistics","Transport"]];
+  const NAV=[["dash","Dashboard"],["goals","Goals"],["res","Resources"],["world","World (engine)"],["map","Map & placement"],["logistics","Transport"]];
   const flagged=Object.values(graph.flag).filter(Boolean).length;
   return(<div className="app"><Modal m={modal} onClose={()=>setModal(null)}/>
     <header className="hd"><div className="brand"><span className="mark"/>
@@ -80,6 +81,7 @@ function App(){
         {sel==="dash"?<Dashboard cxs={cxs} kids={kids} graph={graph} go={setSel} prog={prog} world={world} wname={wname}/>:
          sel==="goals"?<Goals goals={goals} setGoals={setGoals} world={world}/>:
          sel==="res"?<Resources world={world} graph={graph} nm={nm} go={go} cxs={cxs}/>:
+         sel==="world"?<WorldGraph/>:
          sel==="map"?<MapView cxs={cxs} up={up} persist={persist}/>:
          sel==="logistics"?<Transport cxs={cxs} graph={graph} nm={nm} go={go} stName={stName}/>:
          selCx?<Complex c={selCx} kids={kids(selCx.id)} graph={graph} nm={nm} go={go} cxs={cxs} stName={stName}

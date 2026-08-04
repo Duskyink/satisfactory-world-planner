@@ -10,4 +10,5 @@ import MAPBG from '../../public/data/mapbg.json';
 import GOALS from '../../public/data/goals.json';
 import WORLD from '../../public/data/world.json';
 import MAPS from '../../public/data/maps.json';
-export {RECIPES,CAPS,NODESTAT,RESK,PURK,FULLK,NODES,SEED,MAPBG,GOALS,WORLD,MAPS};
+import PLAN_GRAPH from '../../public/data/plan_graph.json';
+export {RECIPES,CAPS,NODESTAT,RESK,PURK,FULLK,NODES,SEED,MAPBG,GOALS,WORLD,MAPS,PLAN_GRAPH};
