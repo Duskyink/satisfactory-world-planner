@@ -262,6 +262,7 @@ def route(comps, prod, made, rem, ship):
         else:                             # bulky-expanding only: make on-site at the consumer
             for x, pu in prod[item]["in"].items(): ensure(hub, x, pu * qty)
             made[hub][item] = made[hub].get(item, 0) + qty
+    assigned = defaultdict(float)          # throughput placed per complex (load balancing)
     for it in sorted(prod, key=lambda i: depth.get(i, 0)):
         if not ship.get(it, True):
             continue                       # non-shippable: made on demand by ensure()
@@ -276,11 +277,13 @@ def route(comps, prod, made, rem, ship):
         def ship_gather(ci):               # local availability of shippable inputs (higher=closer)
             return sum(min(pool[x].get(ci, 0), pu * residual)
                        for x, pu in prod[it]["in"].items() if x != "Water" and x not in FLUID_ITEMS)
-        # hard-prefer complexes that already hold the fluid inputs; then most local shippables
-        hub = max(range(N), key=lambda ci: (round(fluid_cover(ci), 3), ship_gather(ci)))
+        # fluid inputs must be local (hard); among those, spread load and prefer local shippables
+        hub = max(range(N), key=lambda ci: (round(fluid_cover(ci), 3),
+                                            ship_gather(ci) - 0.5 * assigned[ci]))
         for x, pu in prod[it]["in"].items(): ensure(hub, x, pu * residual)
         made[hub][it] = made[hub].get(it, 0) + residual
         pool[it][hub] = pool[it].get(hub, 0) + residual
+        assigned[hub] += residual
     return edges
 
 # ============================================================ driver
@@ -382,6 +385,15 @@ def main():
             print("  %-22s %-16s -> %-16s %8.0f (%dm)"
                   % (e["item"], comps[e["src"]]["region"][:16], comps[e["dst"]]["region"][:16],
                      e["rate"], e["dist_m"]))
+        print("\n=== PER-COMPLEX LOAD (top by throughput; spot concentration) ===")
+        imp = defaultdict(float); exp = defaultdict(float)
+        nim = defaultdict(int); nex = defaultdict(int)
+        for e in edges:
+            imp[e["dst"]] += e["rate"]; nim[e["dst"]] += 1
+            exp[e["src"]] += e["rate"]; nex[e["src"]] += 1
+        for ci in sorted(range(len(comps)), key=lambda ci: -(imp[ci] + exp[ci]))[:10]:
+            print("  %-18s makes %3d | imports %2d (%7.0f) | exports %2d (%7.0f)"
+                  % (comps[ci]["region"][:18], len(made[ci]), nim[ci], imp[ci], nex[ci], exp[ci]))
 
 if __name__ == "__main__":
     main()
