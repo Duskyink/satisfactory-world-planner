@@ -13,14 +13,37 @@
     "Quartz Crystal": 973.1,
     "Sulfuric Acid": 567.1,
     "Reanimated SAM": 78.7,
-    "Biomass": 1800.0,
+    "Iron Ingot": 39730.9,
+    "Iron Rod": 21585.8,
+    "Iron Plate": 12096.8,
+    "Biomass": 1500.0,
     "Fabric": 180.0,
-    "Wire": 7.4,
+    "Copper Ingot": 40648.4,
+    "Copper Sheet": 6464.2,
+    "Copper Powder": 4620.0,
     "Solid Biofuel": 300.0,
-    "Shatter Rebar": 51.2,
-    "Gas Nobelisk": 30.0,
-    "Alumina Solution": 120.0,
-    "Battery": 60.0
+    "Circuit Board": 1375.3,
+    "Quickwire": 10970.3,
+    "AI Limiter": 489.5,
+    "Iron Rebar": 420.0,
+    "Gas Filter": 60.0,
+    "Screws": 38879.0,
+    "Reinforced Iron Plate": 1560.8,
+    "Explosive Rebar": 60.0,
+    "Shatter Rebar": 60.0,
+    "Stun Rebar": 60.0,
+    "Rotor": 806.0,
+    "Cable": 2347.8,
+    "Crystal Oscillator": 167.7,
+    "Modular Frame": 615.0,
+    "Motor": 246.0,
+    "Smart Plating": 39.0,
+    "Iodine-Infused Filter": 30.0,
+    "Nuclear Pasta": 23.1,
+    "Singularity Cell": 201.0,
+    "Ficsonium": 186.0,
+    "Ficsite Trigon": 3720.0,
+    "Ficsonium Fuel Rod": 93.0
    }
   },
   {
@@ -50,33 +73,7 @@
    },
    "makes": {
     "Concrete": 1404.3,
-    "Iron Ingot": 9151.8,
-    "Copper Ingot": 11989.6,
-    "Caterium Ingot": 599.8,
-    "Iron Rod": 5372.4,
-    "Iron Plate": 2004.1,
-    "Steel Ingot": 1159.8,
-    "Copper Sheet": 2459.4,
-    "Quickwire": 2806.1,
-    "Wire": 308.4,
-    "Copper Powder": 1152.0,
-    "Screws": 21670.9,
-    "Steel Pipe": 773.2,
-    "AI Limiter": 140.3,
-    "Iron Rebar": 79.8,
-    "Reinforced Iron Plate": 316.9,
-    "Stator": 38.6,
-    "Rotor": 190.6,
-    "Modular Frame": 3.8,
-    "Electromagnetic Control Rod": 25.7,
-    "Smart Plating": 16.6,
-    "Rifle Ammo": 570.0,
-    "Homing Rifle Ammo": 60.0,
-    "Heavy Modular Frame": 109.2,
-    "Turbo Rifle Ammo": 300.0,
-    "Nuclear Pasta": 23.1,
-    "Singularity Cell": 201.0,
-    "Ficsonium": 186.0
+    "Caterium Ingot": 599.8
    }
   },
   {
@@ -92,20 +89,8 @@
    },
    "makes": {
     "Concrete": 726.9,
-    "Iron Ingot": 5124.5,
-    "Copper Ingot": 2981.5,
     "Sulfuric Acid": 210.6,
-    "Iron Rod": 2619.4,
-    "Iron Plate": 1240.6,
-    "Copper Sheet": 474.3,
-    "Copper Powder": 318.7,
-    "Screws": 7257.3,
-    "Iron Rebar": 53.5,
-    "Nitric Acid": 525.0,
-    "Reinforced Iron Plate": 160.8,
-    "Rotor": 141.4,
-    "Modular Frame": 7.4,
-    "Smart Plating": 8.6
+    "Cooling System": 132.0
    }
   },
   {
@@ -121,21 +106,7 @@
    },
    "makes": {
     "Concrete": 858.0,
-    "Iron Ingot": 4081.7,
-    "Copper Ingot": 1486.0,
-    "Reanimated SAM": 300.0,
-    "Iron Rod": 1925.5,
-    "Iron Plate": 1016.8,
-    "Steel Ingot": 946.6,
-    "Copper Sheet": 222.6,
-    "Copper Powder": 160.7,
-    "Screws": 4910.2,
-    "Steel Pipe": 631.1,
-    "Iron Rebar": 42.0,
-    "Reinforced Iron Plate": 148.8,
-    "Rotor": 112.5,
-    "Modular Frame": 15.5,
-    "Smart Plating": 5.3
+    "Reanimated SAM": 300.0
    }
   },
   {
@@ -148,19 +119,7 @@
     "Limestone": 3000
    },
    "makes": {
-    "Concrete": 796.6,
-    "Iron Ingot": 9409.7,
-    "Copper Ingot": 2966.0,
-    "Iron Rod": 4155.9,
-    "Iron Plate": 2368.7,
-    "Copper Sheet": 431.2,
-    "Copper Powder": 321.9,
-    "Screws": 9919.3,
-    "Iron Rebar": 92.7,
-    "Reinforced Iron Plate": 335.1,
-    "Rotor": 201.5,
-    "Modular Frame": 96.0,
-    "Smart Plating": 7.5
+    "Concrete": 796.6
    }
   },
   {
@@ -177,27 +136,32 @@
    },
    "makes": {
     "Concrete": 590.4,
-    "Iron Ingot": 4213.2,
-    "Copper Ingot": 8852.5,
     "Caterium Ingot": 299.9,
     "Reanimated SAM": 74.9,
-    "Iron Rod": 1573.4,
-    "Iron Plate": 1050.0,
-    "Steel Ingot": 1597.2,
-    "Copper Sheet": 1210.7,
-    "Quickwire": 1358.9,
-    "Wire": 224.9,
-    "Copper Powder": 964.5,
-    "Screws": 3179.2,
-    "Steel Pipe": 1064.8,
-    "AI Limiter": 67.9,
-    "Iron Rebar": 34.6,
-    "Reinforced Iron Plate": 133.8,
-    "Stator": 28.1,
-    "Rotor": 45.7,
-    "Modular Frame": 85.9,
-    "Electromagnetic Control Rod": 18.7,
-    "Gas Filter": 60.0
+    "Iron Ingot": 12284.0,
+    "Steel Ingot": 18426.0,
+    "Steel Pipe": 6668.0,
+    "Steel Beam": 2106.0,
+    "Encased Industrial Beam": 606.0,
+    "Nobelisk": 242.5,
+    "Wire": 9864.0,
+    "Stator": 1233.0,
+    "Biomass": 300.0,
+    "Gas Nobelisk": 30.0,
+    "Electromagnetic Control Rod": 377.0,
+    "Quickwire": 302.7,
+    "Cable": 1110.0,
+    "Automated Wiring": 55.5,
+    "Screws": 13104.0,
+    "Heavy Modular Frame": 109.2,
+    "Pulse Nobelisk": 30.0,
+    "Versatile Framework": 18.0,
+    "Adaptive Control Unit": 10.5,
+    "Magnetic Field Generator": 6.0,
+    "Assembly Director System": 3.8,
+    "AI Expansion Server": 3.0,
+    "Ficsite Trigon": 60.0,
+    "Biochemical Sculptor": 3.0
    }
   },
   {
@@ -213,20 +177,13 @@
    },
    "makes": {
     "Concrete": 416.1,
-    "Iron Ingot": 3967.7,
-    "Copper Ingot": 2872.2,
     "Alumina Solution": 719.4,
-    "Iron Rod": 1374.0,
-    "Iron Plate": 963.7,
-    "Steel Ingot": 1722.1,
-    "Copper Sheet": 321.6,
-    "Copper Powder": 307.0,
-    "Screws": 2598.4,
-    "Steel Pipe": 1148.1,
-    "Iron Rebar": 29.3,
-    "Reinforced Iron Plate": 115.8,
-    "Rotor": 33.1,
-    "Modular Frame": 77.2
+    "Diamonds": 606.0,
+    "Dark Matter Crystal": 576.0,
+    "Time Crystal": 15.0,
+    "Ficsite Trigon": 45.0,
+    "Neural-Quantum Processor": 3.0,
+    "Ballistic Warp Drive": 3.0
    }
   },
   {
@@ -244,22 +201,7 @@
     "Concrete": 264.6,
     "Caterium Ingot": 599.5,
     "Alumina Solution": 1439.3,
-    "Reanimated SAM": 224.2,
-    "Quickwire": 2668.5,
-    "Wire": 526.5,
-    "Iron Ingot": 6577.0,
-    "Steel Ingot": 9865.5,
-    "Steel Pipe": 961.0,
-    "Steel Beam": 2106.0,
-    "Cable": 5981.9,
-    "Encased Industrial Beam": 606.0,
-    "Stun Rebar": 35.0,
-    "Crystal Oscillator": 167.7,
-    "Automated Wiring": 55.5,
-    "Versatile Framework": 18.0,
-    "Adaptive Control Unit": 10.5,
-    "Magnetic Field Generator": 6.0,
-    "Assembly Director System": 3.8
+    "Reanimated SAM": 224.2
    }
   },
   {
@@ -273,30 +215,10 @@
     "SAM": 600
    },
    "makes": {
-    "Iron Ingot": 1240.4,
     "Black Powder": 522.6,
     "Sulfuric Acid": 130.4,
     "Compacted Coal": 186.3,
-    "Reanimated SAM": 150.0,
-    "Iron Rod": 399.4,
-    "Iron Plate": 291.0,
-    "Steel Ingot": 606.7,
-    "Screws": 711.3,
-    "Steel Pipe": 404.4,
-    "Iron Rebar": 8.2,
-    "Reinforced Iron Plate": 32.9,
-    "Nobelisk": 161.3,
-    "Rotor": 8.3,
-    "Modular Frame": 21.9,
-    "Heavy Oil Residue": 190.5,
-    "Smokeless Powder": 381.0,
-    "Explosive Rebar": 60.0,
-    "Diamonds": 606.0,
-    "Cluster Nobelisk": 30.0,
-    "Dark Matter Crystal": 576.0,
-    "Time Crystal": 15.0,
-    "Pulse Nobelisk": 30.0,
-    "Ballistic Warp Drive": 3.0
+    "Reanimated SAM": 150.0
    }
   },
   {
@@ -328,31 +250,25 @@
    },
    "makes": {
     "Caterium Ingot": 299.3,
-    "Alumina Solution": 12530.7,
+    "Alumina Solution": 2878.5,
     "Reanimated SAM": 74.8,
-    "Quickwire": 1278.8,
-    "Wire": 347.6,
-    "Nitric Acid": 381.8,
-    "Heavy Oil Residue": 1392.3,
-    "Petroleum Coke": 4176.9,
-    "Aluminum Scrap": 20884.6,
+    "Nitric Acid": 906.8,
+    "Petroleum Coke": 4674.7,
+    "Aluminum Scrap": 23373.3,
     "Aluminum Ingot": 15582.2,
+    "Non-Fissile Uranium": 3022.5,
     "Copper Ingot": 4922.6,
     "Alclad Aluminum Sheet": 1821.0,
     "Aluminum Casing": 6473.4,
     "Empty Fluid Tank": 30.0,
+    "Plutonium Pellet": 69.8,
     "Ficsite Ingot": 1275.0,
     "Radio Control Unit": 152.4,
-    "Iodine-Infused Filter": 30.0,
     "Superposition Oscillator": 9.0,
     "Heat Sink": 324.0,
-    "Ficsite Trigon": 3825.0,
-    "Neural-Quantum Processor": 3.0,
-    "Fused Modular Frame": 68.7,
+    "Encased Plutonium Cell": 372.0,
     "Pressure Conversion Cube": 47.7,
-    "AI Expansion Server": 3.0,
-    "Biochemical Sculptor": 3.0,
-    "Ficsonium Fuel Rod": 93.0
+    "Plutonium Fuel Rod": 18.6
    }
   },
   {
@@ -381,20 +297,8 @@
    "makes": {
     "Concrete": 242.3,
     "Quartz Crystal": 745.4,
-    "Iron Ingot": 1820.5,
     "Caterium Ingot": 1199.4,
-    "Reanimated SAM": 74.6,
-    "Iron Rod": 573.2,
-    "Iron Plate": 421.6,
-    "Quickwire": 5008.6,
-    "Wire": 1581.5,
-    "Screws": 1003.1,
-    "Iron Rebar": 11.6,
-    "Reinforced Iron Plate": 46.7,
-    "Shatter Rebar": 5.8,
-    "Rotor": 11.4,
-    "Modular Frame": 31.2,
-    "AI Limiter": 178.0
+    "Reanimated SAM": 74.6
    }
   },
   {
@@ -411,33 +315,12 @@
    },
    "makes": {
     "Concrete": 351.9,
-    "Iron Ingot": 1173.4,
     "Plastic": 276.6,
     "Rubber": 18.0,
     "Heavy Oil Residue": 8.0,
     "Fuel": 1.0,
-    "Copper Ingot": 1411.4,
     "Caterium Ingot": 598.8,
-    "Alumina Solution": 2501.1,
-    "Iron Rod": 357.3,
-    "Iron Plate": 266.2,
-    "Petroleum Coke": 23.3,
-    "Empty Canister": 17.0,
-    "Copper Sheet": 148.5,
-    "Quickwire": 3151.9,
-    "Wire": 1234.1,
-    "Copper Powder": 147.5,
-    "Screws": 609.5,
-    "Cable": 99.1,
-    "Circuit Board": 67.0,
-    "AI Limiter": 2.6,
-    "Iron Rebar": 7.1,
-    "Aluminum Scrap": 116.3,
-    "Reinforced Iron Plate": 28.7,
-    "Stun Rebar": 7.1,
-    "Rotor": 6.7,
-    "Modular Frame": 19.1,
-    "High-Speed Connector": 101.2
+    "Alumina Solution": 2501.1
    }
   },
   {
@@ -449,9 +332,7 @@
     "Uranium": 300
    },
    "makes": {
-    "Caterium Ingot": 298.4,
-    "Quickwire": 1028.2,
-    "Wire": 741.5
+    "Caterium Ingot": 298.4
    }
   },
   {
@@ -469,32 +350,12 @@
    },
    "makes": {
     "Concrete": 223.3,
-    "Iron Ingot": 1146.9,
     "Black Powder": 300.6,
-    "Copper Ingot": 2791.7,
     "Caterium Ingot": 594.6,
     "Sulfuric Acid": 121.6,
     "Compacted Coal": 131.5,
     "Reanimated SAM": 74.3,
-    "Iron Rod": 341.8,
-    "Iron Plate": 256.5,
-    "Steel Ingot": 630.7,
-    "Copper Sheet": 284.9,
-    "Quickwire": 1966.9,
-    "Wire": 1609.8,
-    "Copper Powder": 287.5,
-    "Screws": 573.8,
-    "Steel Pipe": 420.5,
-    "AI Limiter": 57.0,
-    "Iron Rebar": 6.7,
-    "Reinforced Iron Plate": 27.1,
-    "Nobelisk": 74.4,
-    "Stun Rebar": 6.7,
-    "Stator": 90.5,
-    "Rotor": 6.2,
-    "Modular Frame": 18.1,
-    "Electromagnetic Control Rod": 57.0,
-    "Motor": 2.5
+    "Battery": 60.0
    }
   },
   {
@@ -511,24 +372,10 @@
    },
    "makes": {
     "Concrete": 432.1,
-    "Iron Ingot": 2241.1,
     "Black Powder": 42.0,
-    "Copper Ingot": 1357.8,
     "Sulfuric Acid": 26.3,
     "Compacted Coal": 19.2,
-    "Reanimated SAM": 150.0,
-    "Iron Rod": 653.8,
-    "Iron Plate": 493.7,
-    "Steel Ingot": 1270.0,
-    "Copper Sheet": 130.3,
-    "Copper Powder": 135.1,
-    "Screws": 1080.8,
-    "Steel Pipe": 846.7,
-    "Iron Rebar": 12.6,
-    "Reinforced Iron Plate": 51.2,
-    "Nobelisk": 6.0,
-    "Rotor": 11.6,
-    "Modular Frame": 34.1
+    "Reanimated SAM": 150.0
    }
   },
   {
@@ -543,9 +390,7 @@
     "Plastic": 733.0,
     "Rubber": 51.5,
     "Heavy Oil Residue": 23.1,
-    "Fuel": 3.0,
-    "Petroleum Coke": 68.5,
-    "Empty Canister": 44.0
+    "Fuel": 3.0
    }
   },
   {
@@ -560,22 +405,7 @@
    },
    "makes": {
     "Concrete": 151.4,
-    "Iron Ingot": 2135.4,
-    "Copper Ingot": 1334.5,
-    "Caterium Ingot": 585.1,
-    "Iron Rod": 597.1,
-    "Iron Plate": 455.9,
-    "Copper Sheet": 124.4,
-    "Quickwire": 1766.3,
-    "Wire": 1855.0,
-    "Copper Powder": 130.2,
-    "Screws": 958.0,
-    "AI Limiter": 24.9,
-    "Iron Rebar": 11.2,
-    "Reinforced Iron Plate": 45.5,
-    "Stun Rebar": 11.2,
-    "Rotor": 10.0,
-    "Modular Frame": 30.3
+    "Caterium Ingot": 585.1
    }
   },
   {
@@ -588,18 +418,7 @@
     "Limestone": 2400
    },
    "makes": {
-    "Concrete": 393.6,
-    "Iron Ingot": 4062.9,
-    "Copper Ingot": 5232.8,
-    "Iron Rod": 1090.9,
-    "Iron Plate": 839.3,
-    "Copper Sheet": 473.7,
-    "Copper Powder": 499.7,
-    "Screws": 1702.2,
-    "Iron Rebar": 20.0,
-    "Reinforced Iron Plate": 80.7,
-    "Rotor": 17.5,
-    "Modular Frame": 152.3
+    "Concrete": 393.6
    }
   },
   {
@@ -616,10 +435,9 @@
     "Heavy Oil Residue": 106.5,
     "Fuel": 17.0,
     "Reanimated SAM": 300.0,
-    "Petroleum Coke": 314.9,
-    "Empty Canister": 151.7,
-    "Circuit Board": 1264.3,
-    "Turbo Motor": 21.0
+    "Quickwire": 633.6,
+    "Cable": 2323.2,
+    "Computer": 290.4
    }
   },
   {
@@ -638,10 +456,7 @@
     "Heavy Oil Residue": 108.0,
     "Fuel": 18.9,
     "Alumina Solution": 699.7,
-    "Reanimated SAM": 149.3,
-    "Petroleum Coke": 317.1,
-    "Empty Canister": 56.9,
-    "Aluminum Scrap": 1166.2
+    "Reanimated SAM": 149.3
    }
   },
   {
@@ -659,35 +474,16 @@
    "makes": {
     "Concrete": 459.1,
     "Quartz Crystal": 725.2,
-    "Iron Ingot": 1368.5,
-    "Copper Ingot": 1168.2,
     "Caterium Ingot": 557.4,
     "Reanimated SAM": 150.0,
-    "Iron Rod": 339.2,
-    "Iron Plate": 263.3,
-    "Copper Sheet": 93.7,
-    "Quickwire": 6674.9,
-    "Wire": 8606.4,
-    "Copper Powder": 100.2,
-    "Screws": 502.4,
-    "AI Limiter": 18.7,
-    "Iron Rebar": 5.9,
-    "Reinforced Iron Plate": 22.4,
-    "Shatter Rebar": 3.0,
-    "Rotor": 5.3,
-    "Modular Frame": 14.1,
     "Silica": 23814.6,
+    "Quickwire": 9337.5,
     "Encased Uranium Cell": 1680.0,
-    "Stator": 1075.8,
-    "Sulfuric Acid": 906.8,
-    "Non-Fissile Uranium": 3022.5,
-    "Electromagnetic Control Rod": 275.6,
-    "Motor": 243.5,
+    "High-Speed Connector": 101.2,
+    "Rifle Ammo": 120.0,
+    "Homing Rifle Ammo": 60.0,
     "Nuke Nobelisk": 6.5,
-    "Plutonium Pellet": 69.8,
-    "Uranium Fuel Rod": 46.5,
-    "Encased Plutonium Cell": 372.0,
-    "Plutonium Fuel Rod": 18.6
+    "Uranium Fuel Rod": 46.5
    }
   },
   {
@@ -706,10 +502,7 @@
     "Heavy Oil Residue": 82.9,
     "Fuel": 16.0,
     "Alumina Solution": 1376.7,
-    "Reanimated SAM": 75.0,
-    "Petroleum Coke": 241.2,
-    "Empty Canister": 26.8,
-    "Aluminum Scrap": 1206.2
+    "Reanimated SAM": 75.0
    }
   },
   {
@@ -748,30 +541,13 @@
    },
    "makes": {
     "Concrete": 84.0,
-    "Iron Ingot": 876.2,
     "Plastic": 2582.2,
     "Rubber": 547.4,
     "Heavy Oil Residue": 369.1,
     "Fuel": 76.4,
-    "Copper Ingot": 1125.7,
     "Reanimated SAM": 75.0,
-    "Iron Rod": 211.5,
-    "Iron Plate": 164.3,
-    "Steel Ingot": 627.3,
-    "Petroleum Coke": 1066.0,
-    "Empty Canister": 91.6,
-    "Copper Sheet": 88.0,
-    "Copper Powder": 93.9,
-    "Screws": 308.2,
-    "Steel Pipe": 418.2,
-    "Circuit Board": 44.0,
-    "Iron Rebar": 3.6,
-    "Reinforced Iron Plate": 13.5,
-    "Rotor": 3.3,
-    "Modular Frame": 8.1,
-    "Quickwire": 633.6,
-    "Cable": 2323.2,
-    "Computer": 290.4
+    "Smokeless Powder": 381.0,
+    "Cluster Nobelisk": 30.0
    }
   },
   {
@@ -787,9 +563,7 @@
     "Rubber": 161.1,
     "Heavy Oil Residue": 149.1,
     "Fuel": 41.8,
-    "Reanimated SAM": 75.0,
-    "Petroleum Coke": 410.0,
-    "Empty Canister": 14.0
+    "Reanimated SAM": 75.0
    }
   },
   {
@@ -804,11 +578,13 @@
     "Rubber": 612.0,
     "Heavy Oil Residue": 611.3,
     "Fuel": 192.0,
-    "Petroleum Coke": 1628.6,
-    "Empty Canister": 404.0,
     "Turbofuel": 422.0,
+    "Empty Canister": 404.0,
     "Packaged Turbofuel": 404.0,
-    "Supercomputer": 21.8
+    "Supercomputer": 21.8,
+    "Modular Engine": 18.0,
+    "Turbo Motor": 21.0,
+    "Thermal Propulsion Rocket": 6.0
    }
   },
   {
@@ -822,10 +598,7 @@
     "Plastic": 601.0,
     "Rubber": 229.5,
     "Heavy Oil Residue": 290.1,
-    "Fuel": 139.4,
-    "Petroleum Coke": 604.1,
-    "Empty Canister": 13.1,
-    "Modular Engine": 18.0
+    "Fuel": 139.4
    }
   },
   {
@@ -836,8 +609,7 @@
     "Nitrogen Gas": 1950
    },
    "makes": {
-    "Cooling System": 132.0,
-    "Thermal Propulsion Rocket": 6.0
+    "Fused Modular Frame": 68.7
    }
   }
  ],
@@ -872,66 +644,136 @@
   },
   {
    "item": "Iron Ore",
-   "src": 23,
-   "dst": 8,
-   "rate": 326.2,
-   "dist_m": 1774
+   "src": 27,
+   "dst": 0,
+   "rate": 1200.0,
+   "dist_m": 899
+  },
+  {
+   "item": "Iron Ore",
+   "src": 17,
+   "dst": 0,
+   "rate": 2400.0,
+   "dist_m": 1034
+  },
+  {
+   "item": "Iron Ore",
+   "src": 4,
+   "dst": 0,
+   "rate": 3000.0,
+   "dist_m": 1604
+  },
+  {
+   "item": "Iron Ore",
+   "src": 9,
+   "dst": 0,
+   "rate": 1200.0,
+   "dist_m": 1653
   },
   {
    "item": "Iron Ore",
    "src": 19,
-   "dst": 8,
-   "rate": 100.3,
-   "dist_m": 2067
+   "dst": 0,
+   "rate": 2400.0,
+   "dist_m": 1809
+  },
+  {
+   "item": "Iron Ore",
+   "src": 6,
+   "dst": 0,
+   "rate": 1423.1,
+   "dist_m": 2248
+  },
+  {
+   "item": "Iron Ore",
+   "src": 6,
+   "dst": 0,
+   "rate": 2176.9,
+   "dist_m": 2248
+  },
+  {
+   "item": "Iron Ore",
+   "src": 14,
+   "dst": 0,
+   "rate": 1200.0,
+   "dist_m": 2265
+  },
+  {
+   "item": "Iron Ore",
+   "src": 3,
+   "dst": 0,
+   "rate": 3600.0,
+   "dist_m": 2373
+  },
+  {
+   "item": "Iron Ore",
+   "src": 13,
+   "dst": 0,
+   "rate": 1800.0,
+   "dist_m": 2726
+  },
+  {
+   "item": "Iron Ore",
+   "src": 5,
+   "dst": 0,
+   "rate": 993.5,
+   "dist_m": 2947
+  },
+  {
+   "item": "Iron Ore",
+   "src": 5,
+   "dst": 6,
+   "rate": 6206.5,
+   "dist_m": 1078
   },
   {
    "item": "Iron Ore",
    "src": 20,
-   "dst": 8,
-   "rate": 424.6,
-   "dist_m": 2486
-  },
-  {
-   "item": "Iron Ore",
-   "src": 27,
-   "dst": 8,
-   "rate": 256.4,
-   "dist_m": 3680
+   "dst": 6,
+   "rate": 408.0,
+   "dist_m": 2285
   },
   {
    "item": "Coal",
-   "src": 7,
-   "dst": 8,
-   "rate": 1303.9,
-   "dist_m": 939
-  },
-  {
-   "item": "Coal",
-   "src": 4,
-   "dst": 8,
-   "rate": 1137.9,
-   "dist_m": 1229
-  },
-  {
-   "item": "Coal",
-   "src": 24,
-   "dst": 8,
-   "rate": 600.0,
-   "dist_m": 1334
+   "src": 10,
+   "dst": 6,
+   "rate": 900.0,
+   "dist_m": 967
   },
   {
    "item": "Coal",
    "src": 22,
-   "dst": 8,
+   "dst": 6,
    "rate": 600.0,
-   "dist_m": 2148
+   "dist_m": 1087
   },
   {
    "item": "Coal",
-   "src": 6,
-   "dst": 8,
-   "rate": 835.3,
-   "dist_m": 3200
+   "src": 9,
+   "dst": 6,
+   "rate": 2704.8,
+   "dist_m": 1607
+  },
+  {
+   "item": "Coal",
+   "src": 24,
+   "dst": 6,
+   "rate": 600.0,
+   "dist_m": 2020
+  },
+  {
+   "item": "Coal",
+   "src": 27,
+   "dst": 6,
+   "rate": 2400.0,
+   "dist_m": 2292
+  },
+  {
+   "item": "Coal",
+   "src": 4,
+   "dst": 6,
+   "rate": 879.2,
+   "dist_m": 2529
   },
   {
    "item": "Fuel",
@@ -1012,143 +854,318 @@
   },
   {
    "item": "Black Powder",
+   "src": 9,
+   "dst": 27,
+   "rate": 381.0,
+   "dist_m": 1062
+  },
+  {
+   "item": "Copper Ore",
+   "src": 27,
+   "dst": 0,
+   "rate": 600.0,
+   "dist_m": 899
+  },
+  {
+   "item": "Copper Ore",
    "src": 17,
-   "dst": 9,
-   "rate": 30.0,
-   "dist_m": 2668
+   "dst": 0,
+   "rate": 600.0,
+   "dist_m": 1034
   },
   {
-   "item": "Black Powder",
-   "src": 16,
-   "dst": 9,
-   "rate": 151.0,
-   "dist_m": 3931
+   "item": "Copper Ore",
+   "src": 4,
+   "dst": 0,
+   "rate": 600.0,
+   "dist_m": 1604
   },
   {
-   "item": "Rubber",
-   "src": 29,
-   "dst": 8,
-   "rate": 612.0,
-   "dist_m": 777
+   "item": "Copper Ore",
+   "src": 19,
+   "dst": 0,
+   "rate": 600.0,
+   "dist_m": 1809
   },
   {
-   "item": "Rubber",
-   "src": 24,
-   "dst": 8,
-   "rate": 133.4,
-   "dist_m": 1334
-  },
-  {
-   "item": "Rubber",
-   "src": 22,
-   "dst": 8,
-   "rate": 197.6,
-   "dist_m": 2148
-  },
-  {
-   "item": "Rubber",
-   "src": 28,
-   "dst": 8,
-   "rate": 144.6,
-   "dist_m": 3226
-  },
-  {
-   "item": "Copper Sheet",
-   "src": 20,
-   "dst": 21,
-   "rate": 473.7,
-   "dist_m": 1098
-  },
-  {
-   "item": "Copper Sheet",
-   "src": 5,
-   "dst": 21,
-   "rate": 431.2,
-   "dist_m": 1320
-  },
-  {
-   "item": "Copper Sheet",
+   "item": "Copper Ore",
    "src": 6,
-   "dst": 21,
-   "rate": 871.0,
-   "dist_m": 2312
+   "dst": 0,
+   "rate": 2771.4,
+   "dist_m": 2248
   },
   {
-   "item": "Copper Sheet",
+   "item": "Copper Ore",
+   "src": 6,
+   "dst": 0,
+   "rate": 828.6,
+   "dist_m": 2248
+  },
+  {
+   "item": "Copper Ore",
+   "src": 14,
+   "dst": 0,
+   "rate": 600.0,
+   "dist_m": 2265
+  },
+  {
+   "item": "Copper Ore",
+   "src": 3,
+   "dst": 0,
+   "rate": 1200.0,
+   "dist_m": 2373
+  },
+  {
+   "item": "Copper Ore",
+   "src": 5,
+   "dst": 0,
+   "rate": 1200.0,
+   "dist_m": 2947
+  },
+  {
+   "item": "Copper Ore",
    "src": 7,
-   "dst": 21,
-   "rate": 321.6,
-   "dist_m": 2697
+   "dst": 0,
+   "rate": 1200.0,
+   "dist_m": 3201
   },
   {
-   "item": "Copper Sheet",
+   "item": "Copper Ore",
+   "src": 20,
+   "dst": 0,
+   "rate": 2400.0,
+   "dist_m": 3717
+  },
+  {
+   "item": "Copper Ore",
+   "src": 23,
+   "dst": 0,
+   "rate": 600.0,
+   "dist_m": 4080
+  },
+  {
+   "item": "Copper Ore",
    "src": 2,
-   "dst": 21,
-   "rate": 431.2,
-   "dist_m": 3275
+   "dst": 0,
+   "rate": 3059.4,
+   "dist_m": 4927
   },
   {
    "item": "Plastic",
-   "src": 28,
-   "dst": 21,
-   "rate": 507.6,
-   "dist_m": 868
+   "src": 27,
+   "dst": 0,
+   "rate": 2582.2,
+   "dist_m": 899
   },
   {
    "item": "Plastic",
-   "src": 18,
-   "dst": 21,
-   "rate": 711.0,
-   "dist_m": 1209
+   "src": 22,
+   "dst": 0,
+   "rate": 1327.6,
+   "dist_m": 2165
+  },
+  {
+   "item": "Plastic",
+   "src": 14,
+   "dst": 0,
+   "rate": 276.6,
+   "dist_m": 2265
+  },
+  {
+   "item": "Plastic",
+   "src": 24,
+   "dst": 0,
+   "rate": 707.4,
+   "dist_m": 2563
   },
   {
    "item": "Plastic",
    "src": 30,
-   "dst": 21,
-   "rate": 594.5,
-   "dist_m": 1763
+   "dst": 0,
+   "rate": 601.0,
+   "dist_m": 3185
   },
   {
    "item": "Plastic",
-   "src": 22,
-   "dst": 21,
-   "rate": 620.1,
-   "dist_m": 2122
+   "src": 29,
+   "dst": 0,
+   "rate": 6.6,
+   "dist_m": 3497
   },
   {
-   "item": "Copper Sheet",
-   "src": 14,
-   "dst": 13,
-   "rate": 1.4,
-   "dist_m": 1233
+   "item": "Caterium Ingot",
+   "src": 11,
+   "dst": 0,
+   "rate": 299.3,
+   "dist_m": 1285
   },
   {
-   "item": "Copper Sheet",
-   "src": 2,
-   "dst": 13,
-   "rate": 888.8,
-   "dist_m": 2222
+   "item": "Caterium Ingot",
+   "src": 19,
+   "dst": 0,
+   "rate": 585.1,
+   "dist_m": 1809
   },
   {
-   "item": "Fabric",
-   "src": 0,
-   "dst": 6,
-   "rate": 120.0,
+   "item": "Caterium Ingot",
+   "src": 6,
+   "dst": 0,
+   "rate": 299.9,
    "dist_m": 2248
   },
   {
-   "item": "Smokeless Powder",
-   "src": 9,
-   "dst": 2,
-   "rate": 76.0,
-   "dist_m": 3517
+   "item": "Caterium Ingot",
+   "src": 14,
+   "dst": 0,
+   "rate": 598.8,
+   "dist_m": 2265
+  },
+  {
+   "item": "Caterium Ingot",
+   "src": 13,
+   "dst": 0,
+   "rate": 174.9,
+   "dist_m": 2726
+  },
+  {
+   "item": "Coal",
+   "src": 17,
+   "dst": 0,
+   "rate": 240.0,
+   "dist_m": 1034
+  },
+  {
+   "item": "Nitrogen Gas",
+   "src": 3,
+   "dst": 11,
+   "rate": 627.0,
+   "dist_m": 2562
   },
   {
    "item": "Iron Plate",
-   "src": 6,
+   "src": 0,
    "dst": 11,
-   "rate": 127.2,
-   "dist_m": 1000
+   "rate": 302.2,
+   "dist_m": 1285
+  },
+  {
+   "item": "Alumina Solution",
+   "src": 12,
+   "dst": 11,
+   "rate": 2154.8,
+   "dist_m": 710
+  },
+  {
+   "item": "Alumina Solution",
+   "src": 10,
+   "dst": 11,
+   "rate": 1079.4,
+   "dist_m": 734
+  },
+  {
+   "item": "Alumina Solution",
+   "src": 22,
+   "dst": 11,
+   "rate": 699.7,
+   "dist_m": 1044
+  },
+  {
+   "item": "Alumina Solution",
+   "src": 14,
+   "dst": 11,
+   "rate": 2501.1,
+   "dist_m": 1756
+  },
+  {
+   "item": "Alumina Solution",
+   "src": 24,
+   "dst": 11,
+   "rate": 1376.7,
+   "dist_m": 1783
+  },
+  {
+   "item": "Alumina Solution",
+   "src": 7,
+   "dst": 11,
+   "rate": 719.4,
+   "dist_m": 2606
+  },
+  {
+   "item": "Alumina Solution",
+   "src": 8,
+   "dst": 11,
+   "rate": 1439.3,
+   "dist_m": 2635
+  },
+  {
+   "item": "Alumina Solution",
+   "src": 25,
+   "dst": 11,
+   "rate": 1175.0,
+   "dist_m": 3202
+  },
+  {
+   "item": "Heavy Oil Residue",
+   "src": 22,
+   "dst": 11,
+   "rate": 108.0,
+   "dist_m": 1044
+  },
+  {
+   "item": "Heavy Oil Residue",
+   "src": 27,
+   "dst": 11,
+   "rate": 178.6,
+   "dist_m": 1573
+  },
+  {
+   "item": "Heavy Oil Residue",
+   "src": 14,
+   "dst": 11,
+   "rate": 8.0,
+   "dist_m": 1756
+  },
+  {
+   "item": "Heavy Oil Residue",
+   "src": 24,
+   "dst": 11,
+   "rate": 82.9,
+   "dist_m": 1783
+  },
+  {
+   "item": "Heavy Oil Residue",
+   "src": 30,
+   "dst": 11,
+   "rate": 290.1,
+   "dist_m": 1930
+  },
+  {
+   "item": "Heavy Oil Residue",
+   "src": 18,
+   "dst": 11,
+   "rate": 23.1,
+   "dist_m": 2919
+  },
+  {
+   "item": "Heavy Oil Residue",
+   "src": 21,
+   "dst": 11,
+   "rate": 106.5,
+   "dist_m": 3011
+  },
+  {
+   "item": "Heavy Oil Residue",
+   "src": 28,
+   "dst": 11,
+   "rate": 149.1,
+   "dist_m": 3385
+  },
+  {
+   "item": "Heavy Oil Residue",
+   "src": 29,
+   "dst": 11,
+   "rate": 611.3,
+   "dist_m": 3407
   },
   {
    "item": "Uranium",
@@ -1214,193 +1231,186 @@
    "dist_m": 4614
   },
   {
-   "item": "Concrete",
-   "src": 1,
-   "dst": 8,
-   "rate": 412.0,
-   "dist_m": 782
+   "item": "Caterium Ingot",
+   "src": 15,
+   "dst": 23,
+   "rate": 298.4,
+   "dist_m": 886
   },
   {
-   "item": "Concrete",
-   "src": 3,
-   "dst": 8,
-   "rate": 726.9,
-   "dist_m": 820
-  },
-  {
-   "item": "Concrete",
-   "src": 7,
-   "dst": 8,
-   "rate": 416.1,
-   "dist_m": 939
-  },
-  {
-   "item": "Concrete",
-   "src": 4,
-   "dst": 8,
-   "rate": 858.0,
-   "dist_m": 1229
-  },
-  {
-   "item": "Concrete",
-   "src": 23,
-   "dst": 8,
-   "rate": 459.1,
+   "item": "Caterium Ingot",
+   "src": 8,
+   "dst": 23,
+   "rate": 404.2,
    "dist_m": 1774
   },
   {
    "item": "Concrete",
-   "src": 19,
-   "dst": 8,
-   "rate": 151.4,
-   "dist_m": 2067
+   "src": 13,
+   "dst": 6,
+   "rate": 242.3,
+   "dist_m": 800
+  },
+  {
+   "item": "Concrete",
+   "src": 10,
+   "dst": 6,
+   "rate": 448.7,
+   "dist_m": 967
+  },
+  {
+   "item": "Concrete",
+   "src": 5,
+   "dst": 6,
+   "rate": 796.6,
+   "dist_m": 1078
+  },
+  {
+   "item": "Concrete",
+   "src": 14,
+   "dst": 6,
+   "rate": 351.9,
+   "dist_m": 1599
   },
   {
    "item": "Concrete",
    "src": 20,
-   "dst": 8,
-   "rate": 348.0,
-   "dist_m": 2486
+   "dst": 6,
+   "rate": 393.6,
+   "dist_m": 2285
+  },
+  {
+   "item": "Concrete",
+   "src": 27,
+   "dst": 6,
+   "rate": 84.0,
+   "dist_m": 2292
+  },
+  {
+   "item": "Concrete",
+   "src": 1,
+   "dst": 6,
+   "rate": 412.0,
+   "dist_m": 2423
+  },
+  {
+   "item": "Concrete",
+   "src": 4,
+   "dst": 6,
+   "rate": 316.6,
+   "dist_m": 2529
   },
   {
    "item": "Circuit Board",
-   "src": 14,
-   "dst": 27,
-   "rate": 67.0,
-   "dist_m": 1676
+   "src": 0,
+   "dst": 21,
+   "rate": 1161.6,
+   "dist_m": 4254
   },
   {
-   "item": "Circuit Board",
-   "src": 21,
-   "dst": 27,
-   "rate": 1050.6,
-   "dist_m": 4538
+   "item": "Caterium Ingot",
+   "src": 16,
+   "dst": 21,
+   "rate": 126.7,
+   "dist_m": 2174
+  },
+  {
+   "item": "Rubber",
+   "src": 28,
+   "dst": 21,
+   "rate": 161.1,
+   "dist_m": 868
+  },
+  {
+   "item": "Rubber",
+   "src": 18,
+   "dst": 21,
+   "rate": 32.9,
+   "dist_m": 1209
   },
   {
    "item": "Plastic",
-   "src": 22,
-   "dst": 27,
-   "rate": 679.1,
-   "dist_m": 2611
+   "src": 28,
+   "dst": 21,
+   "rate": 514.6,
+   "dist_m": 868
   },
   {
    "item": "Plastic",
-   "src": 24,
-   "dst": 27,
-   "rate": 694.0,
-   "dist_m": 3220
+   "src": 18,
+   "dst": 21,
+   "rate": 733.0,
+   "dist_m": 1209
   },
   {
    "item": "Plastic",
    "src": 29,
-   "dst": 27,
-   "rate": 912.9,
-   "dist_m": 4374
+   "dst": 21,
+   "rate": 698.8,
+   "dist_m": 4101
   },
   {
-   "item": "Silica",
-   "src": 23,
-   "dst": 14,
-   "rate": 1265.6,
-   "dist_m": 4913
+   "item": "Caterium Ingot",
+   "src": 8,
+   "dst": 23,
+   "rate": 195.4,
+   "dist_m": 1774
+  },
+  {
+   "item": "Caterium Ingot",
+   "src": 13,
+   "dst": 23,
+   "rate": 412.1,
+   "dist_m": 4092
   },
   {
    "item": "Circuit Board",
-   "src": 21,
-   "dst": 14,
+   "src": 0,
+   "dst": 23,
    "rate": 101.2,
-   "dist_m": 3801
+   "dist_m": 4080
   },
   {
-   "item": "Iron Rebar",
-   "src": 27,
-   "dst": 9,
-   "rate": 3.6,
-   "dist_m": 1062
-  },
-  {
-   "item": "Iron Rebar",
-   "src": 6,
-   "dst": 9,
-   "rate": 34.6,
+   "item": "Black Powder",
+   "src": 9,
+   "dst": 6,
+   "rate": 141.6,
    "dist_m": 1607
   },
   {
-   "item": "Iron Rebar",
-   "src": 17,
-   "dst": 9,
-   "rate": 12.6,
-   "dist_m": 2668
+   "item": "Black Powder",
+   "src": 16,
+   "dst": 6,
+   "rate": 300.6,
+   "dist_m": 2776
   },
   {
-   "item": "Iron Rebar",
-   "src": 5,
-   "dst": 9,
-   "rate": 60.9,
-   "dist_m": 2671
+   "item": "Black Powder",
+   "src": 17,
+   "dst": 6,
+   "rate": 42.0,
+   "dist_m": 3176
+  },
+  {
+   "item": "Smokeless Powder",
+   "src": 27,
+   "dst": 0,
+   "rate": 120.0,
+   "dist_m": 899
   },
   {
    "item": "Steel Pipe",
-   "src": 27,
-   "dst": 9,
-   "rate": 38.2,
-   "dist_m": 1062
-  },
-  {
-   "item": "Iron Rebar",
-   "src": 4,
+   "src": 6,
    "dst": 0,
-   "rate": 42.0,
-   "dist_m": 1604
+   "rate": 120.0,
+   "dist_m": 2248
   },
   {
-   "item": "Iron Rebar",
-   "src": 3,
+   "item": "Caterium Ingot",
+   "src": 13,
    "dst": 0,
-   "rate": 53.5,
-   "dist_m": 2373
-  },
-  {
-   "item": "Iron Rebar",
-   "src": 5,
-   "dst": 0,
-   "rate": 7.0,
-   "dist_m": 2947
-  },
-  {
-   "item": "Iron Rebar",
-   "src": 7,
-   "dst": 8,
-   "rate": 29.3,
-   "dist_m": 939
-  },
-  {
-   "item": "Iron Rebar",
-   "src": 20,
-   "dst": 8,
-   "rate": 5.7,
-   "dist_m": 2486
-  },
-  {
-   "item": "Aluminum Scrap",
-   "src": 22,
-   "dst": 11,
-   "rate": 1166.2,
-   "dist_m": 1044
-  },
-  {
-   "item": "Aluminum Scrap",
-   "src": 14,
-   "dst": 11,
-   "rate": 116.3,
-   "dist_m": 1756
-  },
-  {
-   "item": "Aluminum Scrap",
-   "src": 24,
-   "dst": 11,
-   "rate": 1206.2,
-   "dist_m": 1783
+   "rate": 60.0,
+   "dist_m": 2726
   },
   {
    "item": "Silica",
@@ -1410,361 +1420,228 @@
    "dist_m": 3334
   },
   {
-   "item": "Steel Pipe",
-   "src": 7,
-   "dst": 23,
-   "rate": 1148.1,
-   "dist_m": 931
+   "item": "Caterium Ingot",
+   "src": 13,
+   "dst": 6,
+   "rate": 552.3,
+   "dist_m": 800
   },
   {
-   "item": "Steel Pipe",
-   "src": 8,
-   "dst": 23,
-   "rate": 961.0,
-   "dist_m": 1774
+   "item": "Caterium Ingot",
+   "src": 16,
+   "dst": 6,
+   "rate": 467.9,
+   "dist_m": 2776
   },
   {
-   "item": "Steel Pipe",
-   "src": 4,
-   "dst": 23,
-   "rate": 631.1,
-   "dist_m": 2699
+   "item": "Caterium Ingot",
+   "src": 2,
+   "dst": 6,
+   "rate": 212.8,
+   "dist_m": 2909
   },
   {
-   "item": "Steel Pipe",
-   "src": 6,
-   "dst": 23,
-   "rate": 487.3,
-   "dist_m": 3377
-  },
-  {
-   "item": "Nitric Acid",
-   "src": 3,
-   "dst": 23,
-   "rate": 525.0,
-   "dist_m": 2589
-  },
-  {
-   "item": "Nitric Acid",
-   "src": 11,
-   "dst": 23,
-   "rate": 381.8,
+   "item": "Silica",
+   "src": 23,
+   "dst": 11,
+   "rate": 1511.2,
    "dist_m": 3334
   },
   {
-   "item": "Sulfur",
-   "src": 16,
-   "dst": 23,
-   "rate": 204.9,
-   "dist_m": 4614
+   "item": "Sulfuric Acid",
+   "src": 0,
+   "dst": 11,
+   "rate": 567.1,
+   "dist_m": 1285
   },
   {
-   "item": "Sulfur",
+   "item": "Sulfuric Acid",
    "src": 9,
-   "dst": 23,
-   "rate": 43.9,
-   "dist_m": 4696
+   "dst": 11,
+   "rate": 130.4,
+   "dist_m": 1388
+  },
+  {
+   "item": "Sulfuric Acid",
+   "src": 17,
+   "dst": 11,
+   "rate": 26.3,
+   "dist_m": 2177
+  },
+  {
+   "item": "Sulfuric Acid",
+   "src": 3,
+   "dst": 11,
+   "rate": 182.9,
+   "dist_m": 2562
   },
   {
    "item": "Coal",
-   "src": 10,
-   "dst": 9,
-   "rate": 900.0,
-   "dist_m": 720
+   "src": 8,
+   "dst": 7,
+   "rate": 2100.0,
+   "dist_m": 939
   },
   {
    "item": "Coal",
-   "src": 27,
-   "dst": 9,
-   "rate": 1563.5,
-   "dist_m": 1062
-  },
-  {
-   "item": "Coal",
-   "src": 6,
-   "dst": 9,
-   "rate": 995.1,
-   "dist_m": 1607
-  },
-  {
-   "item": "Coal",
-   "src": 2,
-   "dst": 9,
-   "rate": 253.6,
-   "dist_m": 3517
-  },
-  {
-   "item": "Coal",
-   "src": 16,
-   "dst": 9,
-   "rate": 395.6,
-   "dist_m": 3931
+   "src": 4,
+   "dst": 7,
+   "rate": 360.0,
+   "dist_m": 1770
   },
   {
    "item": "Packaged Turbofuel",
    "src": 29,
-   "dst": 9,
+   "dst": 7,
    "rate": 404.0,
-   "dist_m": 4732
+   "dist_m": 1404
   },
   {
    "item": "Quartz Crystal",
    "src": 1,
-   "dst": 8,
+   "dst": 0,
    "rate": 934.0,
-   "dist_m": 782
-  },
-  {
-   "item": "Quartz Crystal",
-   "src": 23,
-   "dst": 8,
-   "rate": 716.3,
-   "dist_m": 1774
-  },
-  {
-   "item": "Quartz Crystal",
-   "src": 0,
-   "dst": 8,
-   "rate": 819.4,
-   "dist_m": 2828
+   "dist_m": 2260
   },
   {
    "item": "Quartz Crystal",
    "src": 13,
-   "dst": 8,
-   "rate": 548.9,
-   "dist_m": 4000
+   "dst": 0,
+   "rate": 745.4,
+   "dist_m": 2726
   },
   {
-   "item": "Reinforced Iron Plate",
-   "src": 3,
-   "dst": 8,
-   "rate": 141.2,
-   "dist_m": 820
-  },
-  {
-   "item": "Reinforced Iron Plate",
-   "src": 4,
-   "dst": 8,
-   "rate": 120.2,
-   "dist_m": 1229
-  },
-  {
-   "item": "Reinforced Iron Plate",
+   "item": "Quartz Crystal",
    "src": 23,
-   "dst": 8,
-   "rate": 1.3,
-   "dist_m": 1774
+   "dst": 0,
+   "rate": 546.1,
+   "dist_m": 4080
   },
   {
-   "item": "Reinforced Iron Plate",
-   "src": 5,
-   "dst": 8,
-   "rate": 156.6,
-   "dist_m": 2840
-  },
-  {
-   "item": "Reinforced Iron Plate",
-   "src": 5,
-   "dst": 20,
-   "rate": 27.0,
-   "dist_m": 1241
-  },
-  {
-   "item": "Reinforced Iron Plate",
-   "src": 6,
-   "dst": 20,
-   "rate": 4.8,
-   "dist_m": 2285
-  },
-  {
-   "item": "Reinforced Iron Plate",
+   "item": "Caterium Ingot",
    "src": 2,
-   "dst": 20,
-   "rate": 116.0,
-   "dist_m": 4122
+   "dst": 0,
+   "rate": 128.1,
+   "dist_m": 4927
   },
   {
-   "item": "Iron Rod",
-   "src": 23,
-   "dst": 20,
-   "rate": 96.4,
-   "dist_m": 1440
-  },
-  {
-   "item": "Iron Rod",
-   "src": 7,
-   "dst": 20,
-   "rate": 66.1,
-   "dist_m": 1607
-  },
-  {
-   "item": "Iron Rod",
-   "src": 13,
-   "dst": 20,
-   "rate": 66.8,
-   "dist_m": 2874
-  },
-  {
-   "item": "Iron Rod",
-   "src": 16,
-   "dst": 20,
-   "rate": 52.2,
-   "dist_m": 3181
-  },
-  {
-   "item": "Iron Rod",
-   "src": 9,
-   "dst": 20,
-   "rate": 40.4,
-   "dist_m": 3820
-  },
-  {
-   "item": "Iron Rod",
-   "src": 14,
-   "dst": 20,
-   "rate": 33.8,
-   "dist_m": 3884
+   "item": "Rubber",
+   "src": 27,
+   "dst": 0,
+   "rate": 426.9,
+   "dist_m": 899
   },
   {
    "item": "Computer",
-   "src": 27,
+   "src": 21,
    "dst": 29,
    "rate": 87.0,
-   "dist_m": 4374
+   "dist_m": 4101
   },
   {
    "item": "AI Limiter",
+   "src": 0,
+   "dst": 29,
+   "rate": 43.5,
+   "dist_m": 3497
+  },
+  {
+   "item": "High-Speed Connector",
    "src": 23,
    "dst": 29,
-   "rate": 18.7,
+   "rate": 65.2,
    "dist_m": 1951
   },
   {
-   "item": "AI Limiter",
-   "src": 19,
-   "dst": 29,
-   "rate": 24.8,
-   "dist_m": 2400
-  },
-  {
-   "item": "High-Speed Connector",
-   "src": 14,
-   "dst": 29,
-   "rate": 65.2,
-   "dist_m": 5162
-  },
-  {
    "item": "Nobelisk",
-   "src": 17,
-   "dst": 0,
-   "rate": 6.0,
-   "dist_m": 1034
-  },
-  {
-   "item": "Nobelisk",
-   "src": 9,
-   "dst": 0,
-   "rate": 24.0,
-   "dist_m": 1653
-  },
-  {
-   "item": "High-Speed Connector",
-   "src": 14,
-   "dst": 2,
-   "rate": 6.0,
-   "dist_m": 2950
-  },
-  {
-   "item": "AI Limiter",
    "src": 6,
-   "dst": 23,
-   "rate": 49.2,
-   "dist_m": 3377
+   "dst": 27,
+   "rate": 90.0,
+   "dist_m": 2292
   },
   {
-   "item": "AI Limiter",
-   "src": 13,
+   "item": "Copper Sheet",
+   "src": 0,
    "dst": 23,
-   "rate": 178.0,
-   "dist_m": 4092
-  },
-  {
-   "item": "AI Limiter",
-   "src": 14,
-   "dst": 23,
-   "rate": 2.6,
-   "dist_m": 4913
-  },
-  {
-   "item": "AI Limiter",
-   "src": 2,
-   "dst": 23,
-   "rate": 45.7,
-   "dist_m": 5551
-  },
-  {
-   "item": "Rotor",
-   "src": 7,
-   "dst": 23,
-   "rate": 33.1,
-   "dist_m": 931
-  },
-  {
-   "item": "Rotor",
-   "src": 20,
-   "dst": 23,
-   "rate": 17.5,
-   "dist_m": 1440
-  },
-  {
-   "item": "Rotor",
-   "src": 5,
-   "dst": 23,
-   "rate": 194.0,
-   "dist_m": 2501
-  },
-  {
-   "item": "Rotor",
-   "src": 3,
-   "dst": 23,
-   "rate": 132.9,
-   "dist_m": 2589
-  },
-  {
-   "item": "Rotor",
-   "src": 4,
-   "dst": 23,
-   "rate": 104.1,
-   "dist_m": 2699
-  },
-  {
-   "item": "Stator",
-   "src": 23,
-   "dst": 8,
-   "rate": 55.5,
-   "dist_m": 1774
-  },
-  {
-   "item": "Nobelisk",
-   "src": 16,
-   "dst": 23,
-   "rate": 32.5,
-   "dist_m": 4614
+   "rate": 24.0,
+   "dist_m": 4080
   },
   {
    "item": "Smokeless Powder",
-   "src": 9,
+   "src": 27,
    "dst": 23,
-   "rate": 65.0,
-   "dist_m": 4696
+   "rate": 16.0,
+   "dist_m": 4779
+  },
+  {
+   "item": "Copper Ore",
+   "src": 16,
+   "dst": 11,
+   "rate": 242.8,
+   "dist_m": 3774
+  },
+  {
+   "item": "Copper Ore",
+   "src": 16,
+   "dst": 11,
+   "rate": 957.2,
+   "dist_m": 3774
+  },
+  {
+   "item": "Copper Ore",
+   "src": 2,
+   "dst": 11,
+   "rate": 769.0,
+   "dist_m": 3850
   },
   {
    "item": "AI Limiter",
+   "src": 0,
+   "dst": 6,
+   "rate": 377.0,
+   "dist_m": 2248
+  },
+  {
+   "item": "Stator",
+   "src": 6,
+   "dst": 0,
+   "rate": 492.0,
+   "dist_m": 2248
+  },
+  {
+   "item": "Caterium Ingot",
    "src": 2,
+   "dst": 6,
+   "rate": 60.5,
+   "dist_m": 2909
+  },
+  {
+   "item": "Rubber",
+   "src": 30,
+   "dst": 6,
+   "rate": 201.8,
+   "dist_m": 937
+  },
+  {
+   "item": "Nobelisk",
+   "src": 6,
+   "dst": 23,
+   "rate": 32.5,
+   "dist_m": 3377
+  },
+  {
+   "item": "Smokeless Powder",
+   "src": 27,
+   "dst": 23,
+   "rate": 65.0,
+   "dist_m": 4779
+  },
+  {
+   "item": "AI Limiter",
+   "src": 0,
    "dst": 23,
    "rate": 39.0,
-   "dist_m": 5551
+   "dist_m": 4080
   },
   {
    "item": "Reanimated SAM",
@@ -1880,808 +1757,395 @@
   },
   {
    "item": "Modular Frame",
-   "src": 16,
-   "dst": 2,
-   "rate": 18.1,
-   "dist_m": 1343
-  },
-  {
-   "item": "Modular Frame",
-   "src": 13,
-   "dst": 2,
-   "rate": 31.2,
-   "dist_m": 2222
-  },
-  {
-   "item": "Modular Frame",
-   "src": 6,
-   "dst": 2,
-   "rate": 85.9,
-   "dist_m": 2909
-  },
-  {
-   "item": "Modular Frame",
-   "src": 14,
-   "dst": 2,
-   "rate": 19.1,
-   "dist_m": 2950
-  },
-  {
-   "item": "Modular Frame",
-   "src": 5,
-   "dst": 2,
-   "rate": 96.0,
-   "dist_m": 3171
-  },
-  {
-   "item": "Modular Frame",
-   "src": 9,
-   "dst": 2,
-   "rate": 21.9,
-   "dist_m": 3517
-  },
-  {
-   "item": "Modular Frame",
-   "src": 20,
-   "dst": 2,
-   "rate": 152.3,
-   "dist_m": 4122
-  },
-  {
-   "item": "Modular Frame",
-   "src": 27,
-   "dst": 2,
-   "rate": 8.1,
-   "dist_m": 4571
-  },
-  {
-   "item": "Modular Frame",
-   "src": 7,
-   "dst": 2,
-   "rate": 77.2,
-   "dist_m": 5405
-  },
-  {
-   "item": "Modular Frame",
-   "src": 4,
-   "dst": 2,
-   "rate": 15.5,
-   "dist_m": 5434
-  },
-  {
-   "item": "Modular Frame",
-   "src": 23,
-   "dst": 2,
-   "rate": 14.1,
-   "dist_m": 5551
-  },
-  {
-   "item": "Modular Frame",
-   "src": 17,
-   "dst": 2,
-   "rate": 2.8,
-   "dist_m": 5943
-  },
-  {
-   "item": "Steel Pipe",
-   "src": 6,
-   "dst": 2,
-   "rate": 493.2,
-   "dist_m": 2909
-  },
-  {
-   "item": "Steel Pipe",
-   "src": 27,
-   "dst": 2,
-   "rate": 380.0,
-   "dist_m": 4571
-  },
-  {
-   "item": "Steel Pipe",
-   "src": 17,
-   "dst": 2,
-   "rate": 653.2,
-   "dist_m": 5943
-  },
-  {
-   "item": "Encased Industrial Beam",
-   "src": 8,
-   "dst": 2,
+   "src": 0,
+   "dst": 6,
    "rate": 546.0,
-   "dist_m": 5964
+   "dist_m": 2248
   },
   {
    "item": "Iron Rod",
-   "src": 14,
-   "dst": 2,
-   "rate": 15.8,
-   "dist_m": 2950
-  },
-  {
-   "item": "Iron Rod",
-   "src": 27,
-   "dst": 2,
-   "rate": 65.4,
-   "dist_m": 4571
-  },
-  {
-   "item": "Iron Rod",
-   "src": 17,
-   "dst": 2,
-   "rate": 108.5,
-   "dist_m": 5943
-  },
-  {
-   "item": "Iron Rod",
-   "src": 19,
-   "dst": 2,
-   "rate": 114.6,
-   "dist_m": 6473
+   "src": 0,
+   "dst": 6,
+   "rate": 3276.0,
+   "dist_m": 2248
   },
   {
    "item": "Crystal Oscillator",
-   "src": 8,
+   "src": 0,
    "dst": 11,
    "rate": 76.2,
-   "dist_m": 2635
+   "dist_m": 1285
   },
   {
    "item": "Computer",
-   "src": 27,
+   "src": 21,
    "dst": 11,
    "rate": 152.4,
-   "dist_m": 1573
+   "dist_m": 3011
   },
   {
-   "item": "Gas Filter",
-   "src": 6,
-   "dst": 11,
-   "rate": 30.0,
-   "dist_m": 1000
-  },
-  {
-   "item": "Crystal Oscillator",
-   "src": 8,
-   "dst": 9,
-   "rate": 6.0,
-   "dist_m": 3974
-  },
-  {
-   "item": "Dark Matter Crystal",
-   "src": 9,
-   "dst": 11,
-   "rate": 54.0,
-   "dist_m": 1388
-  },
-  {
-   "item": "Crystal Oscillator",
-   "src": 8,
-   "dst": 11,
-   "rate": 9.0,
-   "dist_m": 2635
-  },
-  {
-   "item": "Aluminum Casing",
-   "src": 11,
-   "dst": 2,
-   "rate": 18.0,
-   "dist_m": 3850
-  },
-  {
-   "item": "Turbofuel",
-   "src": 29,
-   "dst": 2,
-   "rate": 18.0,
-   "dist_m": 6696
-  },
-  {
-   "item": "Copper Sheet",
-   "src": 4,
-   "dst": 11,
-   "rate": 222.6,
-   "dist_m": 1700
-  },
-  {
-   "item": "Copper Sheet",
-   "src": 17,
-   "dst": 11,
-   "rate": 130.3,
-   "dist_m": 2177
-  },
-  {
-   "item": "Copper Sheet",
-   "src": 3,
-   "dst": 11,
-   "rate": 474.3,
-   "dist_m": 2562
-  },
-  {
-   "item": "Copper Sheet",
+   "item": "Caterium Ingot",
    "src": 2,
-   "dst": 11,
-   "rate": 144.8,
-   "dist_m": 3850
+   "dst": 0,
+   "rate": 48.0,
+   "dist_m": 4927
   },
   {
    "item": "Aluminum Casing",
    "src": 11,
    "dst": 0,
-   "rate": 60.0,
+   "rate": 30.0,
    "dist_m": 1285
   },
   {
-   "item": "Motor",
-   "src": 16,
-   "dst": 30,
-   "rate": 2.5,
-   "dist_m": 1845
+   "item": "Crystal Oscillator",
+   "src": 0,
+   "dst": 6,
+   "rate": 6.0,
+   "dist_m": 2248
   },
   {
-   "item": "Motor",
-   "src": 23,
-   "dst": 30,
-   "rate": 33.5,
-   "dist_m": 3522
-  },
-  {
-   "item": "Rubber",
-   "src": 18,
-   "dst": 30,
-   "rate": 40.5,
-   "dist_m": 1074
-  },
-  {
-   "item": "Smart Plating",
-   "src": 5,
-   "dst": 30,
-   "rate": 7.5,
-   "dist_m": 1033
-  },
-  {
-   "item": "Smart Plating",
-   "src": 2,
-   "dst": 30,
-   "rate": 16.6,
-   "dist_m": 2180
-  },
-  {
-   "item": "Smart Plating",
-   "src": 4,
-   "dst": 30,
-   "rate": 5.3,
-   "dist_m": 3326
-  },
-  {
-   "item": "Smart Plating",
-   "src": 3,
-   "dst": 30,
-   "rate": 6.6,
-   "dist_m": 4065
-  },
-  {
-   "item": "Modular Frame",
-   "src": 3,
-   "dst": 8,
-   "rate": 7.4,
-   "dist_m": 820
-  },
-  {
-   "item": "Modular Frame",
-   "src": 19,
-   "dst": 8,
-   "rate": 1.6,
-   "dist_m": 2067
+   "item": "Dark Matter Crystal",
+   "src": 7,
+   "dst": 11,
+   "rate": 54.0,
+   "dist_m": 2606
   },
   {
    "item": "Crystal Oscillator",
-   "src": 8,
-   "dst": 23,
-   "rate": 46.5,
-   "dist_m": 1774
+   "src": 0,
+   "dst": 11,
+   "rate": 9.0,
+   "dist_m": 1285
   },
   {
-   "item": "Rotor",
-   "src": 4,
-   "dst": 23,
-   "rate": 3.1,
-   "dist_m": 2699
+   "item": "Copper Sheet",
+   "src": 0,
+   "dst": 11,
+   "rate": 972.0,
+   "dist_m": 1285
   },
   {
-   "item": "Rotor",
-   "src": 6,
-   "dst": 23,
-   "rate": 45.6,
-   "dist_m": 3377
+   "item": "Sulfuric Acid",
+   "src": 3,
+   "dst": 16,
+   "rate": 27.7,
+   "dist_m": 5781
   },
   {
-   "item": "Rotor",
-   "src": 19,
-   "dst": 23,
-   "rate": 10.0,
-   "dist_m": 3799
-  },
-  {
-   "item": "Rotor",
-   "src": 13,
-   "dst": 23,
-   "rate": 11.4,
-   "dist_m": 4092
-  },
-  {
-   "item": "Rotor",
-   "src": 17,
-   "dst": 23,
-   "rate": 11.6,
-   "dist_m": 4255
-  },
-  {
-   "item": "Rotor",
-   "src": 16,
-   "dst": 23,
-   "rate": 1.2,
-   "dist_m": 4614
-  },
-  {
-   "item": "Rotor",
-   "src": 9,
-   "dst": 23,
-   "rate": 8.3,
-   "dist_m": 4696
-  },
-  {
-   "item": "Rotor",
-   "src": 27,
-   "dst": 23,
-   "rate": 3.3,
-   "dist_m": 4779
-  },
-  {
-   "item": "Rotor",
-   "src": 14,
-   "dst": 23,
-   "rate": 6.7,
-   "dist_m": 4913
-  },
-  {
-   "item": "Rotor",
-   "src": 2,
-   "dst": 23,
-   "rate": 53.9,
-   "dist_m": 5551
+   "item": "Alumina Solution",
+   "src": 25,
+   "dst": 16,
+   "rate": 119.1,
+   "dist_m": 5439
   },
   {
    "item": "Aluminum Casing",
    "src": 11,
-   "dst": 23,
-   "rate": 372.0,
-   "dist_m": 3334
+   "dst": 16,
+   "rate": 60.0,
+   "dist_m": 3774
   },
   {
-   "item": "Time Crystal",
-   "src": 9,
-   "dst": 11,
-   "rate": 15.0,
-   "dist_m": 1388
+   "item": "Motor",
+   "src": 0,
+   "dst": 29,
+   "rate": 36.0,
+   "dist_m": 3497
+  },
+  {
+   "item": "Smart Plating",
+   "src": 0,
+   "dst": 29,
+   "rate": 36.0,
+   "dist_m": 3497
+  },
+  {
+   "item": "Modular Frame",
+   "src": 0,
+   "dst": 6,
+   "rate": 9.0,
+   "dist_m": 2248
+  },
+  {
+   "item": "Electromagnetic Control Rod",
+   "src": 6,
+   "dst": 23,
+   "rate": 155.0,
+   "dist_m": 3377
+  },
+  {
+   "item": "Crystal Oscillator",
+   "src": 0,
+   "dst": 23,
+   "rate": 46.5,
+   "dist_m": 4080
+  },
+  {
+   "item": "Rotor",
+   "src": 0,
+   "dst": 23,
+   "rate": 155.0,
+   "dist_m": 4080
   },
   {
    "item": "Supercomputer",
    "src": 29,
-   "dst": 11,
+   "dst": 7,
    "rate": 3.0,
-   "dist_m": 3407
+   "dist_m": 1404
+  },
+  {
+   "item": "Ficsite Ingot",
+   "src": 11,
+   "dst": 7,
+   "rate": 15.0,
+   "dist_m": 2606
   },
   {
    "item": "Heavy Modular Frame",
-   "src": 2,
-   "dst": 11,
+   "src": 6,
+   "dst": 31,
    "rate": 68.7,
-   "dist_m": 3850
+   "dist_m": 4359
   },
   {
-   "item": "Nitrogen Gas",
-   "src": 31,
-   "dst": 11,
-   "rate": 244.5,
+   "item": "Aluminum Casing",
+   "src": 11,
+   "dst": 31,
+   "rate": 3435.0,
    "dist_m": 4415
   },
   {
    "item": "Heat Sink",
    "src": 11,
-   "dst": 31,
+   "dst": 3,
    "rate": 264.0,
-   "dist_m": 4415
+   "dist_m": 2562
   },
   {
    "item": "Motor",
-   "src": 23,
-   "dst": 31,
+   "src": 0,
+   "dst": 3,
    "rate": 66.0,
-   "dist_m": 1106
+   "dist_m": 2373
+  },
+  {
+   "item": "Nitrogen Gas",
+   "src": 31,
+   "dst": 3,
+   "rate": 111.0,
+   "dist_m": 3552
   },
   {
    "item": "Circuit Board",
-   "src": 21,
-   "dst": 8,
+   "src": 0,
+   "dst": 6,
    "rate": 52.5,
-   "dist_m": 3545
-  },
-  {
-   "item": "Heavy Modular Frame",
-   "src": 2,
-   "dst": 8,
-   "rate": 10.5,
-   "dist_m": 5964
+   "dist_m": 2248
   },
   {
    "item": "Computer",
-   "src": 27,
-   "dst": 8,
+   "src": 21,
+   "dst": 6,
    "rate": 21.0,
-   "dist_m": 3680
+   "dist_m": 2312
   },
   {
-   "item": "Electromagnetic Control Rod",
-   "src": 23,
-   "dst": 8,
-   "rate": 6.0,
-   "dist_m": 1774
+   "item": "Fused Modular Frame",
+   "src": 31,
+   "dst": 11,
+   "rate": 47.7,
+   "dist_m": 4415
   },
   {
    "item": "Cooling System",
-   "src": 31,
-   "dst": 21,
+   "src": 3,
+   "dst": 29,
    "rate": 84.0,
-   "dist_m": 2966
+   "dist_m": 1193
   },
   {
    "item": "Radio Control Unit",
    "src": 11,
-   "dst": 21,
+   "dst": 29,
    "rate": 42.0,
-   "dist_m": 3011
+   "dist_m": 3407
   },
   {
    "item": "Motor",
-   "src": 23,
-   "dst": 21,
+   "src": 0,
+   "dst": 29,
    "rate": 84.0,
-   "dist_m": 2474
+   "dist_m": 3497
   },
   {
    "item": "Rubber",
-   "src": 28,
-   "dst": 21,
-   "rate": 16.5,
-   "dist_m": 868
+   "src": 24,
+   "dst": 29,
+   "rate": 133.4,
+   "dist_m": 2042
   },
   {
    "item": "Rubber",
-   "src": 18,
-   "dst": 21,
-   "rate": 11.0,
-   "dist_m": 1209
-  },
-  {
-   "item": "Rubber",
-   "src": 27,
-   "dst": 21,
-   "rate": 125.0,
-   "dist_m": 4538
+   "src": 22,
+   "dst": 29,
+   "rate": 28.6,
+   "dist_m": 2905
   },
   {
    "item": "Supercomputer",
    "src": 29,
-   "dst": 8,
+   "dst": 6,
    "rate": 3.8,
-   "dist_m": 777
+   "dist_m": 3969
   },
   {
-   "item": "Magnetic Field Generator",
-   "src": 8,
-   "dst": 11,
-   "rate": 3.0,
-   "dist_m": 2635
-  },
-  {
-   "item": "Modular Engine",
-   "src": 30,
-   "dst": 31,
-   "rate": 15.0,
-   "dist_m": 4354
-  },
-  {
-   "item": "Turbo Motor",
-   "src": 21,
-   "dst": 31,
-   "rate": 6.0,
-   "dist_m": 2966
-  },
-  {
-   "item": "Fused Modular Frame",
-   "src": 11,
-   "dst": 31,
-   "rate": 6.0,
-   "dist_m": 4415
-  },
-  {
-   "item": "Pressure Conversion Cube",
-   "src": 11,
-   "dst": 23,
-   "rate": 18.6,
-   "dist_m": 3334
-  },
-  {
-   "item": "Copper Powder",
-   "src": 16,
-   "dst": 2,
-   "rate": 287.5,
-   "dist_m": 1343
-  },
-  {
-   "item": "Copper Powder",
-   "src": 6,
-   "dst": 2,
-   "rate": 964.5,
-   "dist_m": 2909
-  },
-  {
-   "item": "Copper Powder",
-   "src": 14,
-   "dst": 2,
-   "rate": 147.5,
-   "dist_m": 2950
-  },
-  {
-   "item": "Copper Powder",
-   "src": 5,
-   "dst": 2,
-   "rate": 321.9,
-   "dist_m": 3171
-  },
-  {
-   "item": "Copper Powder",
-   "src": 20,
-   "dst": 2,
-   "rate": 499.7,
-   "dist_m": 4122
-  },
-  {
-   "item": "Copper Powder",
-   "src": 27,
-   "dst": 2,
-   "rate": 93.9,
-   "dist_m": 4571
-  },
-  {
-   "item": "Copper Powder",
+   "item": "Neural-Quantum Processor",
    "src": 7,
-   "dst": 2,
-   "rate": 307.0,
-   "dist_m": 5405
-  },
-  {
-   "item": "Copper Powder",
-   "src": 4,
-   "dst": 2,
-   "rate": 160.7,
-   "dist_m": 5434
-  },
-  {
-   "item": "Copper Powder",
-   "src": 23,
-   "dst": 2,
-   "rate": 100.2,
-   "dist_m": 5551
-  },
-  {
-   "item": "Copper Powder",
-   "src": 17,
-   "dst": 2,
-   "rate": 135.1,
-   "dist_m": 5943
-  },
-  {
-   "item": "Copper Powder",
-   "src": 3,
-   "dst": 2,
-   "rate": 318.7,
-   "dist_m": 6215
-  },
-  {
-   "item": "Copper Powder",
-   "src": 19,
-   "dst": 2,
-   "rate": 130.2,
-   "dist_m": 6473
-  },
-  {
-   "item": "Pressure Conversion Cube",
-   "src": 11,
-   "dst": 2,
-   "rate": 23.1,
-   "dist_m": 3850
-  },
-  {
-   "item": "Dark Matter Crystal",
-   "src": 9,
-   "dst": 2,
-   "rate": 402.0,
-   "dist_m": 3517
-  },
-  {
-   "item": "Iron Plate",
-   "src": 16,
-   "dst": 2,
-   "rate": 94.0,
-   "dist_m": 1343
-  },
-  {
-   "item": "Iron Plate",
-   "src": 13,
-   "dst": 2,
-   "rate": 141.1,
-   "dist_m": 2222
-  },
-  {
-   "item": "Iron Plate",
-   "src": 14,
-   "dst": 2,
-   "rate": 94.3,
-   "dist_m": 2950
-  },
-  {
-   "item": "Iron Plate",
-   "src": 5,
-   "dst": 2,
-   "rate": 358.2,
-   "dist_m": 3171
-  },
-  {
-   "item": "Iron Plate",
-   "src": 9,
-   "dst": 2,
-   "rate": 93.6,
-   "dist_m": 3517
-  },
-  {
-   "item": "Iron Plate",
-   "src": 20,
-   "dst": 2,
-   "rate": 355.3,
-   "dist_m": 4122
-  },
-  {
-   "item": "Iron Plate",
-   "src": 27,
-   "dst": 2,
-   "rate": 83.5,
-   "dist_m": 4571
-  },
-  {
-   "item": "Iron Plate",
-   "src": 7,
-   "dst": 2,
-   "rate": 268.8,
-   "dist_m": 5405
-  },
-  {
-   "item": "Iron Plate",
-   "src": 4,
-   "dst": 2,
-   "rate": 123.8,
-   "dist_m": 5434
-  },
-  {
-   "item": "Iron Plate",
-   "src": 23,
-   "dst": 2,
-   "rate": 128.7,
-   "dist_m": 5551
-  },
-  {
-   "item": "Iron Plate",
-   "src": 17,
-   "dst": 2,
-   "rate": 165.8,
-   "dist_m": 5943
-  },
-  {
-   "item": "Concrete",
-   "src": 16,
-   "dst": 2,
-   "rate": 223.3,
-   "dist_m": 1343
-  },
-  {
-   "item": "Concrete",
-   "src": 13,
-   "dst": 2,
-   "rate": 242.3,
-   "dist_m": 2222
-  },
-  {
-   "item": "Concrete",
-   "src": 6,
-   "dst": 2,
-   "rate": 590.4,
-   "dist_m": 2909
-  },
-  {
-   "item": "Concrete",
-   "src": 14,
-   "dst": 2,
-   "rate": 351.9,
-   "dist_m": 2950
-  },
-  {
-   "item": "Concrete",
-   "src": 5,
-   "dst": 2,
-   "rate": 796.6,
-   "dist_m": 3171
-  },
-  {
-   "item": "Concrete",
-   "src": 10,
-   "dst": 2,
-   "rate": 411.3,
-   "dist_m": 3410
-  },
-  {
-   "item": "Thermal Propulsion Rocket",
-   "src": 31,
-   "dst": 9,
+   "dst": 6,
    "rate": 3.0,
-   "dist_m": 5757
-  },
-  {
-   "item": "Singularity Cell",
-   "src": 2,
-   "dst": 9,
-   "rate": 15.0,
-   "dist_m": 3517
+   "dist_m": 2874
   },
   {
    "item": "Superposition Oscillator",
    "src": 11,
-   "dst": 9,
-   "rate": 6.0,
-   "dist_m": 1388
+   "dst": 6,
+   "rate": 3.0,
+   "dist_m": 1000
   },
   {
-   "item": "Ficsonium",
+   "item": "Cooling System",
+   "src": 3,
+   "dst": 29,
+   "rate": 18.0,
+   "dist_m": 1193
+  },
+  {
+   "item": "Fused Modular Frame",
+   "src": 31,
+   "dst": 29,
+   "rate": 6.0,
+   "dist_m": 2670
+  },
+  {
+   "item": "Ficsite Ingot",
+   "src": 11,
+   "dst": 6,
+   "rate": 20.0,
+   "dist_m": 1000
+  },
+  {
+   "item": "Pressure Conversion Cube",
+   "src": 11,
+   "dst": 0,
+   "rate": 23.1,
+   "dist_m": 1285
+  },
+  {
+   "item": "Dark Matter Crystal",
+   "src": 7,
+   "dst": 0,
+   "rate": 402.0,
+   "dist_m": 3201
+  },
+  {
+   "item": "Concrete",
+   "src": 17,
+   "dst": 0,
+   "rate": 432.1,
+   "dist_m": 1034
+  },
+  {
+   "item": "Concrete",
+   "src": 4,
+   "dst": 0,
+   "rate": 541.4,
+   "dist_m": 1604
+  },
+  {
+   "item": "Concrete",
+   "src": 19,
+   "dst": 0,
+   "rate": 151.4,
+   "dist_m": 1809
+  },
+  {
+   "item": "Concrete",
+   "src": 3,
+   "dst": 0,
+   "rate": 726.9,
+   "dist_m": 2373
+  },
+  {
+   "item": "Concrete",
+   "src": 8,
+   "dst": 0,
+   "rate": 264.6,
+   "dist_m": 2828
+  },
+  {
+   "item": "Concrete",
+   "src": 7,
+   "dst": 0,
+   "rate": 416.1,
+   "dist_m": 3201
+  },
+  {
+   "item": "Concrete",
+   "src": 23,
+   "dst": 0,
+   "rate": 459.1,
+   "dist_m": 4080
+  },
+  {
+   "item": "Concrete",
    "src": 2,
-   "dst": 11,
-   "rate": 186.0,
-   "dist_m": 3850
+   "dst": 0,
+   "rate": 1028.5,
+   "dist_m": 4927
+  },
+  {
+   "item": "Thermal Propulsion Rocket",
+   "src": 29,
+   "dst": 7,
+   "rate": 3.0,
+   "dist_m": 1404
+  },
+  {
+   "item": "Singularity Cell",
+   "src": 0,
+   "dst": 7,
+   "rate": 15.0,
+   "dist_m": 3201
+  },
+  {
+   "item": "Superposition Oscillator",
+   "src": 11,
+   "dst": 7,
+   "rate": 6.0,
+   "dist_m": 2606
   },
   {
    "item": "Electromagnetic Control Rod",
    "src": 6,
-   "dst": 11,
-   "rate": 18.7,
-   "dist_m": 1000
+   "dst": 0,
+   "rate": 186.0,
+   "dist_m": 2248
   },
   {
-   "item": "Electromagnetic Control Rod",
-   "src": 23,
-   "dst": 11,
-   "rate": 114.6,
-   "dist_m": 3334
-  },
-  {
-   "item": "Electromagnetic Control Rod",
-   "src": 16,
-   "dst": 11,
-   "rate": 52.7,
-   "dist_m": 3774
+   "item": "Ficsite Ingot",
+   "src": 11,
+   "dst": 0,
+   "rate": 1240.0,
+   "dist_m": 1285
   }
  ],
  "stats": {
   "complexes": 32,
-  "edges": 262,
+  "edges": 218,
   "machines": 12976,
-  "shipped_per_min": 82541,
+  "shipped_per_min": 141401,
   "unmet_raw": {}
  }
 }

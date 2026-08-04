@@ -16,15 +16,11 @@ Pipeline:
 The single hard constraint is caps (fuel included). Machines fall out; power is not
 minimized. See docs/SPLITTING.md.
 
-KNOWN LIMITATION (flagged, not yet fixed): allocate() fills each product's WORLD
-demand richest-complex-first, which concentrates smelting and leaves smaller sites
-shipping raw ore. Intended fix: complex-first processing (each complex smelts its
-own ore, ships the denser product). Marked TODO below.
-
-Run:  python scripts/engine.py
-Reads public/data/*.json ; writes public/data/plan_graph.json + prints a summary.
+Run:  python scripts/engine.py           writes plan_graph.json + prints a summary
+      python scripts/engine.py --check   also prints coverage, actual caps, top edges
+Reads public/data/*.json ; writes public/data/plan_graph.json.
 """
-import json, os, math
+import json, os, math, sys
 from collections import defaultdict
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "public", "data")
@@ -163,17 +159,12 @@ def classify_ship(prod):
     return ship
 
 # ============================================================ allocation
-def allocate(comps, prod):
-    """Capacitated bottom-up allocation, COMPLEX-FIRST. Each complex's node capacity
-    is finite and CONSUMED on assignment (no double-use). Within each product, world
-    demand is distributed PROPORTIONALLY across every complex that has local inputs,
-    so every ore-bearing complex smelts its own share instead of the richest few
-    cornering demand and leaving smaller sites to ship raw ore.
-
-    KNOWN GAP (next step): only makes a product where all its inputs are ALREADY
-    local, so convergence products (aluminum, silica, computers, nuclear fuel) whose
-    inputs sit in different places are left unmade. The fix is a placement pass that
-    picks a hub for each such product, ships its inputs in, and makes it there."""
+def allocate(comps, prod, ship):
+    """Capacitated bottom-up allocation, COMPLEX-FIRST. Distributes only the SHIPPABLE
+    production (ingots, plates, dense parts) across complexes by their own capacity,
+    consumed on assignment (no double-use). Non-shippable "localize" items (screws,
+    wire, fluids) are NOT made here - route() makes them at their consumers, so they
+    are never produced twice."""
     N = len(comps)
     rem = [dict(c["caps"]) for c in comps]      # remaining raw
     avail = [dict() for _ in comps]             # intermediates made & unspent
@@ -198,6 +189,8 @@ def allocate(comps, prod):
         avail[ci][it] = avail[ci].get(it, 0) + take
 
     for it in sorted(prod, key=lambda i: depth.get(i, 0)):
+        if not ship.get(it, True) and it not in FLUID_ITEMS:
+            continue                      # bulky-expanding: route() makes them at consumers
         d = prod[it]; need = d["rate"]; ins = d["in"]
         localcap = lambda ci: min([have(ci, x) / pu for x, pu in ins.items() if pu > 0] or [1e18])
         # distribute proportionally to local capacity; iterate to soak up remainders
@@ -224,11 +217,11 @@ def route(comps, prod, made, rem, ship):
     edges, make non-shippable inputs on-site, and make the product there. Returns the
     edge list; `made` is updated in place so downstream products can pull from it.
 
-    KNOWN BUG (next fix): a hub makes non-shippable inputs (fluids, bulky-expanding
-    parts) on-site even when that input was already produced at another complex,
-    double-producing it. For fluids this breaches caps (alumina re-made -> bauxite
-    over cap). Fix: pin a convergence product to the complex holding its
-    non-shippable/fluid inputs and consume that production instead of remaking."""
+    Non-shippable inputs are handled by kind: fluids are made once (in the base pass,
+    at their raw site) and imported/consumed here, never re-made, so they cannot
+    double-produce and breach caps; bulky-expanding parts (screws, wire) are made
+    on-site at each consumer. Convergence hubs are pinned to the complex holding a
+    product's fluid inputs first, then to where its shippable inputs gather."""
     N = len(comps)
     depth = {}
     def dep(it, seen=frozenset()):
@@ -264,22 +257,27 @@ def route(comps, prod, made, rem, ship):
         if item == "Water" or qty <= 1: return
         have = pool[item].get(hub, 0); u = min(have, qty); pool[item][hub] -= u; qty -= u
         if qty <= 1: return
-        if item in RAW or ship.get(item, True):
-            imp(item, qty, hub)                       # raw / dense: ship in
-        else:                                          # bulky-expanding: make on-site
+        if item in RAW or ship.get(item, True) or item in FLUID_ITEMS:
+            imp(item, qty, hub)           # raw / dense / fluid: bring from where it's made (never re-make)
+        else:                             # bulky-expanding only: make on-site at the consumer
             for x, pu in prod[item]["in"].items(): ensure(hub, x, pu * qty)
             made[hub][item] = made[hub].get(item, 0) + qty
     for it in sorted(prod, key=lambda i: depth.get(i, 0)):
+        if not ship.get(it, True):
+            continue                       # non-shippable: made on demand by ensure()
         residual = prod[it]["rate"] - sum(made[ci].get(it, 0) for ci in range(N))
         if residual <= 1: continue
-        def score(ci):                                 # hub = where inputs already are
-            s = 0.0
+        def fluid_cover(ci):               # fraction of fluid inputs already present here
+            need = tot = 0.0
             for x, pu in prod[it]["in"].items():
-                if x == "Water": continue
-                w = 2.0 if x in FLUID_ITEMS else 1.0
-                s += min(pool[x].get(ci, 0), pu * residual) * w
-            return s
-        hub = max(range(N), key=score)
+                if x in FLUID_ITEMS and x != "Water":
+                    need += pu * residual; tot += min(pool[x].get(ci, 0), pu * residual)
+            return tot / need if need > 1 else 1.0
+        def ship_gather(ci):               # local availability of shippable inputs (higher=closer)
+            return sum(min(pool[x].get(ci, 0), pu * residual)
+                       for x, pu in prod[it]["in"].items() if x != "Water" and x not in FLUID_ITEMS)
+        # hard-prefer complexes that already hold the fluid inputs; then most local shippables
+        hub = max(range(N), key=lambda ci: (round(fluid_cover(ci), 3), ship_gather(ci)))
         for x, pu in prod[it]["in"].items(): ensure(hub, x, pu * residual)
         made[hub][it] = made[hub].get(it, 0) + residual
         pool[it][hub] = pool[it].get(hub, 0) + residual
@@ -320,7 +318,7 @@ def main():
     # 4-7: recipes are taken as given by the plan here (recipe pass lives in its own
     # step; see docs). classify -> allocate -> edges.
     ship = classify_ship(prod)
-    made, rem = allocate(comps, prod)
+    made, rem = allocate(comps, prod, ship)
     edges = route(comps, prod, made, rem, ship)
 
     # machine + cap summary
@@ -346,19 +344,44 @@ def main():
     with open(os.path.join(DATA, "plan_graph.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, indent=1)
 
+    # ACTUAL raw draw, computed from what is produced (catches any over-production)
+    made_tot = defaultdict(float)
+    for m in made:
+        for k, v in m.items(): made_tot[k] += v
+    draw = defaultdict(float)
+    for k, v in made_tot.items():
+        for x, pu in prod.get(k, {"in": {}})["in"].items():
+            if x in caps: draw[x] += pu * v
+
     print("=== WORLD PLAN ENGINE ===")
     print("complexes: %d | edges: %d | machines(plan clocks): %d | shipped: %d/min"
           % (out["stats"]["complexes"], out["stats"]["edges"], mach, out["stats"]["shipped_per_min"]))
     if unmet: print("UNMET raw demand:", out["stats"]["unmet_raw"])
-    print("\n=== CAPS (raw draw vs cap) ===")
-    for r in sorted(caps, key=lambda r: -(dem.get(r, 0) / caps[r] if caps[r] else 0)):
-        d = dem.get(r, 0); pct = d / caps[r] * 100 if caps[r] else 0
-        flag = "  <-- OVER" if pct > 100 else ""
-        print("  %-14s %8.0f / %-7d %5.1f%%%s" % (r, d, caps[r], pct, flag))
+    print("\n=== CAPS (actual raw draw vs cap) ===")
+    breach = False
+    for r in sorted(caps, key=lambda r: -(draw[r] / caps[r] if caps[r] else 0)):
+        pct = draw[r] / caps[r] * 100 if caps[r] else 0
+        if pct > 100.5: breach = True
+        print("  %-14s %8.0f / %-7d %5.1f%%%s" % (r, draw[r], caps[r], pct, "  <-- OVER" if pct > 100.5 else ""))
+    print("  " + ("*** CAP BREACH ***" if breach else "all under cap"))
     print("\n=== SHIP vs LOCALIZE ===")
     print("  ship: %d items | localize: %d items"
           % (sum(1 for it in prod if ship[it]), sum(1 for it in prod if not ship[it])))
     print("wrote public/data/plan_graph.json")
+
+    if "--check" in sys.argv:
+        print("\n=== COVERAGE (demand vs made) ===")
+        short = [(it, prod[it]["rate"], made_tot.get(it, 0)) for it in prod
+                 if made_tot.get(it, 0) < prod[it]["rate"] - 2]
+        if not short:
+            print("  all products fully made")
+        for it, d, m in sorted(short, key=lambda x: -(x[1] - x[2]))[:20]:
+            print("  SHORT %-24s demand %8.0f made %8.0f" % (it, d, m))
+        print("\n=== BIGGEST EDGES (item, from -> to, rate, dist) ===")
+        for e in sorted(edges, key=lambda e: -e["rate"])[:15]:
+            print("  %-22s %-16s -> %-16s %8.0f (%dm)"
+                  % (e["item"], comps[e["src"]]["region"][:16], comps[e["dst"]]["region"][:16],
+                     e["rate"], e["dist_m"]))
 
 if __name__ == "__main__":
     main()
