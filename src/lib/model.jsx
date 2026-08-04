@@ -64,14 +64,14 @@ export function computeGraph(cxs){const per={};for(const c of cxs)per[c.id]=perI
   for(const c of cxs){needs[c.id]=[];const m=per[c.id];
     for(const it in m){const net=m[it].made-m[it].used;worldNet[it]=(worldNet[it]||0)+net;
       if(net<-TH){const rows=srcList(c,it);
-        for(const rr of rows){if(rr.from&&rr.from!=="raw"){(oblig[rr.from]=oblig[rr.from]||{});
+        for(const rr of rows){if(rr.from&&rr.from!=="raw"&&rr.from!=="local"){(oblig[rr.from]=oblig[rr.from]||{});
           oblig[rr.from][it]=(oblig[rr.from][it]||0)+(rr.q!=null?rr.q:(-net)/rows.length);}}
         needs[c.id].push({item:it,qty:-net,rows});}}}
   const short={},consumers={};
   for(const pid in oblig)for(const it in oblig[pid]){const a=per[pid]&&per[pid][it]?per[pid][it].made-per[pid][it].used:0;
     const sh=oblig[pid][it]-a;if(sh>TH)(short[pid]=short[pid]||{})[it]=sh;}
   for(const c of cxs)for(const n of needs[c.id])for(const rr of n.rows)
-    if(rr.from&&rr.from!=="raw"){(consumers[rr.from]=consumers[rr.from]||{});
+    if(rr.from&&rr.from!=="raw"&&rr.from!=="local"){(consumers[rr.from]=consumers[rr.from]||{});
       (consumers[rr.from][n.item]=consumers[rr.from][n.item]||[]).push({id:c.id,qty:rr.q!=null?rr.q:n.qty/n.rows.length,station:rr.station});}
   const flag={};for(const c of cxs){let f=false;
     for(const n of needs[c.id]){for(const rr of n.rows){if(!rr.from)f=true;else if(short[rr.from]&&short[rr.from][n.item])f=true;}}

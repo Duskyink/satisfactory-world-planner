@@ -44,6 +44,8 @@ FLUID_ITEMS = {"Water","Crude Oil","Nitrogen Gas","Heavy Oil Residue","Fuel","Tu
                "Dissolved Silica","Rocket Fuel","Ionized Fuel"}
 CENTRAL_ITEMS = {"Computer","Supercomputer","Radio Control Unit","High-Speed Connector",
                  "Crystal Oscillator","AI Limiter"}
+# hand-fed / ubiquitous items we never compute or source (treated as free, like water)
+FREE_ITEMS = {"Water", "Biomass"}
 
 # ============================================================ data & demand
 def build_demand(plan, RMAP):
@@ -288,36 +290,63 @@ def route(comps, prod, made, rem, ship):
 
 # ============================================================ emit app-shaped plan
 def emit_app_plan(comps, prod, made, edges):
-    """Convert the engine graph into the app's complex shape so every tab (Dashboard,
-    Complexes, Resources, Transport, Map) renders the engine's world - not the old
-    flat plan. Each complex gets steps (from what it makes), sourcesN (from import
-    edges, keyed by producer id) and dests (from export edges)."""
+    """Convert the engine graph into the app's complex shape so every tab renders the
+    engine world. Emits, per complex: a step for each item it makes; complete sourcesN
+    for each input (a 'local' row for on-site production, 'raw' for raw/free items, and
+    one row per import edge); and dests split into a 'local' row plus one row per
+    external consumer. Quantities are rounded once and reused on both sides so the app's
+    recomputed needs match exactly and don't false-flag. Every row carries a stable key."""
     from collections import Counter
     freq = Counter(c["region"] for c in comps)
     ctr = defaultdict(int); names = []
     for c in comps:
         r = c["region"]; ctr[r] += 1
         names.append(r if freq[r] == 1 else "%s %d" % (r, ctr[r]))
+    imp_by = defaultdict(lambda: defaultdict(list))   # dst -> item -> [(src, rate)]
+    exp_by = defaultdict(lambda: defaultdict(list))   # src -> item -> [(dst, rate)]
+    for e in edges:
+        imp_by[e["dst"]][e["item"]].append((e["src"], e["rate"]))
+        exp_by[e["src"]][e["item"]].append((e["dst"], e["rate"]))
     plan = []
     for i, c in enumerate(comps):
+        M = {k: v for k, v in made[i].items() if v > 0.5 and k not in FREE_ITEMS}
+        cons = defaultdict(float)                     # consumption from what it makes
+        for P, rate in M.items():
+            for x, pu in prod.get(P, {"in": {}})["in"].items():
+                if x not in FREE_ITEMS: cons[x] += pu * rate
         steps = []
-        for j, (item, rate) in enumerate(sorted(made[i].items(), key=lambda x: -x[1])):
-            if rate <= 1: continue
+        for j, (item, rate) in enumerate(sorted(M.items(), key=lambda x: -x[1])):
             rec = prod.get(item, {}).get("recipe")
             if not rec: continue
-            steps.append({"id": "s%d_%d" % (i, j), "recipe": rec, "target": round(rate, 1),
+            steps.append({"id": "s%d_%d" % (i, j), "recipe": rec, "target": round(rate),
                           "clock": 100, "status": "todo", "sec": "PRODUCTION FLOW", "name": ""})
-        srcs, dests = defaultdict(list), defaultdict(list)
-        for e in edges:
-            if e["dst"] == i:
-                srcs[e["item"]].append({"from": "c%d" % e["src"], "q": round(e["rate"], 1), "station": ""})
-            if e["src"] == i:
-                dests[e["item"]].append({"to": "c%d" % e["dst"], "q": round(e["rate"], 1), "station": ""})
+        srcs = {}                                     # inputs: local / raw / import rows
+        for x, u in cons.items():
+            if u <= 0.5: continue
+            if x in RAW or x in FREE_ITEMS:
+                srcs[x] = [{"from": "raw", "q": round(u), "station": "", "key": "c%d|%s|raw" % (i, x)}]
+                continue
+            rows = []
+            local_q = min(M.get(x, 0), u)
+            if local_q > 0.5:
+                rows.append({"from": "local", "q": round(local_q), "station": "", "key": "c%d|%s|local" % (i, x)})
+            for src, rate in imp_by[i].get(x, []):
+                rows.append({"from": "c%d" % src, "q": round(rate), "station": "", "key": "c%d|%s|c%d" % (i, x, src)})
+            if rows: srcs[x] = rows
+        dests = {}                                    # outputs: local + one row per consumer
+        for x, mrate in M.items():
+            rows = []
+            local_q = min(mrate, cons.get(x, 0))
+            if local_q > 0.5:
+                rows.append({"to": "local", "q": round(local_q), "station": "", "key": "c%d|%s|local" % (i, x)})
+            for dst, rate in exp_by[i].get(x, []):
+                rows.append({"to": "c%d" % dst, "q": round(rate), "station": "", "key": "c%d|%s|c%d" % (i, x, dst)})
+            if rows: dests[x] = rows
         res = ", ".join("%s %d" % (k.replace(" Ore", ""), round(v)) for k, v in
                         sorted(c["caps"].items(), key=lambda x: -x[1]))
         plan.append({"id": "c%d" % i, "name": names[i], "region": c["region"], "parent": None,
                      "tier": "", "bstep": "", "tags": "", "status": "To Do", "steps": steps,
-                     "totals": {}, "sourcesN": dict(srcs), "dests": dict(dests), "stations": [],
+                     "totals": {}, "sourcesN": srcs, "dests": dests, "stations": [],
                      "site": {"x": round(c["cx"] * 10), "y": round(c["cy"] * 10)},
                      "desc": "Engine-generated. Nodes: %s. %d recipes." % (res or "none", len(steps))})
     with open(os.path.join(DATA, "app_plan.json"), "w", encoding="utf-8") as f:

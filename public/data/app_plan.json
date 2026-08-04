@@ -12,7 +12,7 @@
    {
     "id": "s0_0",
     "recipe": "Quickwire",
-    "target": 6300.0,
+    "target": 6300,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -21,7 +21,7 @@
    {
     "id": "s0_1",
     "recipe": "Infused Uranium Cell",
-    "target": 1680.0,
+    "target": 1680,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -30,7 +30,7 @@
    {
     "id": "s0_2",
     "recipe": "Pure Quartz Crystal",
-    "target": 973.1,
+    "target": 973,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -39,7 +39,7 @@
    {
     "id": "s0_3",
     "recipe": "Sulfuric Acid",
-    "target": 567.1,
+    "target": 567,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -48,7 +48,7 @@
    {
     "id": "s0_4",
     "recipe": "Reanimated SAM",
-    "target": 78.7,
+    "target": 79,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -57,7 +57,7 @@
    {
     "id": "s0_5",
     "recipe": "Uranium Fuel Unit",
-    "target": 46.5,
+    "target": 46,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -66,133 +66,158 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Uranium": [
+   "Raw Quartz": [
     {
-     "from": "c12",
-     "q": 600.0,
-     "station": ""
-    },
-    {
-     "from": "c10",
-     "q": 300.0,
-     "station": ""
-    },
-    {
-     "from": "c1",
-     "q": 600.0,
-     "station": ""
-    },
-    {
-     "from": "c18",
-     "q": 300.0,
-     "station": ""
-    },
-    {
-     "from": "c15",
-     "q": 300.0,
-     "station": ""
-    }
-   ],
-   "Silica": [
-    {
-     "from": "c23",
-     "q": 1260.0,
-     "station": ""
+     "from": "raw",
+     "q": 1251,
+     "station": "",
+     "key": "c0|Raw Quartz|raw"
     }
    ],
    "Sulfur": [
     {
-     "from": "c17",
-     "q": 167.1,
-     "station": ""
-    },
+     "from": "raw",
+     "q": 2667,
+     "station": "",
+     "key": "c0|Sulfur|raw"
+    }
+   ],
+   "SAM": [
     {
-     "from": "c9",
-     "q": 43.9,
-     "station": ""
-    },
-    {
-     "from": "c3",
-     "q": 778.8,
-     "station": ""
-    },
-    {
-     "from": "c16",
-     "q": 144.4,
-     "station": ""
+     "from": "raw",
+     "q": 315,
+     "station": "",
+     "key": "c0|SAM|raw"
     }
    ],
    "Caterium Ingot": [
     {
      "from": "c19",
-     "q": 585.1,
-     "station": ""
+     "q": 585,
+     "station": "",
+     "key": "c0|Caterium Ingot|c19"
     },
     {
      "from": "c6",
-     "q": 299.9,
-     "station": ""
+     "q": 300,
+     "station": "",
+     "key": "c0|Caterium Ingot|c6"
     },
     {
      "from": "c13",
-     "q": 139.5,
-     "station": ""
+     "q": 140,
+     "station": "",
+     "key": "c0|Caterium Ingot|c13"
     },
     {
      "from": "c8",
-     "q": 235.5,
-     "station": ""
+     "q": 236,
+     "station": "",
+     "key": "c0|Caterium Ingot|c8"
+    }
+   ],
+   "Uranium": [
+    {
+     "from": "raw",
+     "q": 2100,
+     "station": "",
+     "key": "c0|Uranium|raw"
+    }
+   ],
+   "Silica": [
+    {
+     "from": "c23",
+     "q": 1260,
+     "station": "",
+     "key": "c0|Silica|c23"
+    }
+   ],
+   "Quickwire": [
+    {
+     "from": "local",
+     "q": 6300,
+     "station": "",
+     "key": "c0|Quickwire|local"
+    }
+   ],
+   "Encased Uranium Cell": [
+    {
+     "from": "local",
+     "q": 1550,
+     "station": "",
+     "key": "c0|Encased Uranium Cell|local"
     }
    ],
    "Electromagnetic Control Rod": [
     {
      "from": "c9",
-     "q": 155.0,
-     "station": ""
+     "q": 155,
+     "station": "",
+     "key": "c0|Electromagnetic Control Rod|c9"
     }
    ],
    "Crystal Oscillator": [
     {
      "from": "c13",
-     "q": 46.5,
-     "station": ""
+     "q": 46,
+     "station": "",
+     "key": "c0|Crystal Oscillator|c13"
     }
    ],
    "Rotor": [
     {
      "from": "c17",
-     "q": 155.0,
-     "station": ""
+     "q": 155,
+     "station": "",
+     "key": "c0|Rotor|c17"
     }
    ]
   },
   "dests": {
-   "Sulfuric Acid": [
-    {
-     "to": "c11",
-     "q": 567.1,
-     "station": ""
-    }
-   ],
    "Quartz Crystal": [
     {
      "to": "c13",
-     "q": 973.1,
-     "station": ""
+     "q": 973,
+     "station": "",
+     "key": "c0|Quartz Crystal|c13"
     }
    ],
-   "Encased Uranium Cell": [
+   "Sulfuric Acid": [
     {
-     "to": "c31",
-     "q": 130.0,
-     "station": ""
+     "to": "c11",
+     "q": 567,
+     "station": "",
+     "key": "c0|Sulfuric Acid|c11"
     }
    ],
    "Reanimated SAM": [
     {
      "to": "c10",
-     "q": 78.7,
-     "station": ""
+     "q": 79,
+     "station": "",
+     "key": "c0|Reanimated SAM|c10"
+    }
+   ],
+   "Quickwire": [
+    {
+     "to": "local",
+     "q": 6300,
+     "station": "",
+     "key": "c0|Quickwire|local"
+    }
+   ],
+   "Encased Uranium Cell": [
+    {
+     "to": "local",
+     "q": 1550,
+     "station": "",
+     "key": "c0|Encased Uranium Cell|local"
+    },
+    {
+     "to": "c31",
+     "q": 130,
+     "station": "",
+     "key": "c0|Encased Uranium Cell|c31"
     }
    ]
   },
@@ -216,7 +241,7 @@
    {
     "id": "s1_0",
     "recipe": "Pure Iron Ingot",
-    "target": 21585.8,
+    "target": 21586,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -225,7 +250,7 @@
    {
     "id": "s1_1",
     "recipe": "Iron Rod",
-    "target": 21585.8,
+    "target": 21586,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -234,7 +259,7 @@
    {
     "id": "s1_2",
     "recipe": "Pure Quartz Crystal",
-    "target": 934.0,
+    "target": 934,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -243,7 +268,7 @@
    {
     "id": "s1_3",
     "recipe": "Wet Concrete",
-    "target": 412.0,
+    "target": 412,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -252,81 +277,100 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 618,
+     "station": "",
+     "key": "c1|Limestone|raw"
+    }
+   ],
+   "Raw Quartz": [
+    {
+     "from": "raw",
+     "q": 1201,
+     "station": "",
+     "key": "c1|Raw Quartz|raw"
+    }
+   ],
    "Iron Ore": [
     {
-     "from": "c4",
-     "q": 3000.0,
-     "station": ""
-    },
+     "from": "raw",
+     "q": 11623,
+     "station": "",
+     "key": "c1|Iron Ore|raw"
+    }
+   ],
+   "Iron Ingot": [
     {
-     "from": "c7",
-     "q": 3600.0,
-     "station": ""
-    },
-    {
-     "from": "c3",
-     "q": 3600.0,
-     "station": ""
-    },
-    {
-     "from": "c23",
-     "q": 1423.1,
-     "station": ""
+     "from": "local",
+     "q": 21586,
+     "station": "",
+     "key": "c1|Iron Ingot|local"
     }
    ]
   },
   "dests": {
-   "Iron Rod": [
-    {
-     "to": "c10",
-     "q": 420.0,
-     "station": ""
-    },
-    {
-     "to": "c2",
-     "q": 4682.2,
-     "station": ""
-    },
-    {
-     "to": "c17",
-     "q": 4030.0,
-     "station": ""
-    },
-    {
-     "to": "c17",
-     "q": 5037.5,
-     "station": ""
-    },
-    {
-     "to": "c18",
-     "q": 3690.0,
-     "station": ""
-    },
-    {
-     "to": "c18",
-     "q": 3276.0,
-     "station": ""
-    }
-   ],
-   "Uranium": [
-    {
-     "to": "c0",
-     "q": 600.0,
-     "station": ""
-    }
-   ],
    "Concrete": [
     {
      "to": "c8",
-     "q": 412.0,
-     "station": ""
+     "q": 412,
+     "station": "",
+     "key": "c1|Concrete|c8"
     }
    ],
    "Quartz Crystal": [
     {
      "to": "c13",
-     "q": 934.0,
-     "station": ""
+     "q": 934,
+     "station": "",
+     "key": "c1|Quartz Crystal|c13"
+    }
+   ],
+   "Iron Ingot": [
+    {
+     "to": "local",
+     "q": 21586,
+     "station": "",
+     "key": "c1|Iron Ingot|local"
+    }
+   ],
+   "Iron Rod": [
+    {
+     "to": "c10",
+     "q": 420,
+     "station": "",
+     "key": "c1|Iron Rod|c10"
+    },
+    {
+     "to": "c2",
+     "q": 4682,
+     "station": "",
+     "key": "c1|Iron Rod|c2"
+    },
+    {
+     "to": "c17",
+     "q": 4030,
+     "station": "",
+     "key": "c1|Iron Rod|c17"
+    },
+    {
+     "to": "c17",
+     "q": 5038,
+     "station": "",
+     "key": "c1|Iron Rod|c17"
+    },
+    {
+     "to": "c18",
+     "q": 3690,
+     "station": "",
+     "key": "c1|Iron Rod|c18"
+    },
+    {
+     "to": "c18",
+     "q": 3276,
+     "station": "",
+     "key": "c1|Iron Rod|c18"
     }
    ]
   },
@@ -350,7 +394,7 @@
    {
     "id": "s2_0",
     "recipe": "Screws",
-    "target": 18729.0,
+    "target": 18729,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -359,7 +403,7 @@
    {
     "id": "s2_1",
     "recipe": "Pure Iron Ingot",
-    "target": 18145.1,
+    "target": 18145,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -368,7 +412,7 @@
    {
     "id": "s2_2",
     "recipe": "Iron Plate",
-    "target": 12096.8,
+    "target": 12097,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -377,7 +421,7 @@
    {
     "id": "s2_3",
     "recipe": "Reinforced Iron Plate",
-    "target": 1560.8,
+    "target": 1561,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -386,7 +430,7 @@
    {
     "id": "s2_4",
     "recipe": "Wet Concrete",
-    "target": 1404.3,
+    "target": 1404,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -395,7 +439,7 @@
    {
     "id": "s2_5",
     "recipe": "Pure Caterium Ingot",
-    "target": 599.8,
+    "target": 600,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -404,115 +448,164 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 2106,
+     "station": "",
+     "key": "c2|Limestone|raw"
+    }
+   ],
+   "Caterium Ore": [
+    {
+     "from": "raw",
+     "q": 1200,
+     "station": "",
+     "key": "c2|Caterium Ore|raw"
+    }
+   ],
    "Iron Ore": [
     {
-     "from": "c16",
-     "q": 1200.0,
-     "station": ""
-    },
+     "from": "raw",
+     "q": 9770,
+     "station": "",
+     "key": "c2|Iron Ore|raw"
+    }
+   ],
+   "Iron Ingot": [
     {
-     "from": "c13",
-     "q": 1800.0,
-     "station": ""
-    },
-    {
-     "from": "c6",
-     "q": 770.5,
-     "station": ""
+     "from": "local",
+     "q": 18145,
+     "station": "",
+     "key": "c2|Iron Ingot|local"
     }
    ],
    "Iron Rod": [
     {
      "from": "c1",
-     "q": 4682.2,
-     "station": ""
-    }
-   ]
-  },
-  "dests": {
-   "Copper Ore": [
-    {
-     "to": "c5",
-     "q": 1859.4,
-     "station": ""
-    },
-    {
-     "to": "c24",
-     "q": 242.8,
-     "station": ""
-    },
-    {
-     "to": "c25",
-     "q": 1726.2,
-     "station": ""
+     "q": 4682,
+     "station": "",
+     "key": "c2|Iron Rod|c1"
     }
    ],
    "Iron Plate": [
     {
-     "to": "c16",
-     "q": 120.0,
-     "station": ""
-    },
+     "from": "local",
+     "q": 9364,
+     "station": "",
+     "key": "c2|Iron Plate|local"
+    }
+   ],
+   "Screws": [
     {
-     "to": "c11",
-     "q": 302.2,
-     "station": ""
-    },
+     "from": "local",
+     "q": 18729,
+     "station": "",
+     "key": "c2|Screws|local"
+    }
+   ]
+  },
+  "dests": {
+   "Concrete": [
     {
      "to": "c14",
-     "q": 2010.0,
-     "station": ""
+     "q": 1404,
+     "station": "",
+     "key": "c2|Concrete|c14"
     }
    ],
    "Caterium Ingot": [
     {
      "to": "c14",
-     "q": 60.0,
-     "station": ""
+     "q": 60,
+     "station": "",
+     "key": "c2|Caterium Ingot|c14"
     },
     {
      "to": "c15",
-     "q": 152.8,
-     "station": ""
+     "q": 153,
+     "station": "",
+     "key": "c2|Caterium Ingot|c15"
     },
     {
      "to": "c13",
-     "q": 128.1,
-     "station": ""
+     "q": 128,
+     "station": "",
+     "key": "c2|Caterium Ingot|c13"
     },
     {
      "to": "c28",
-     "q": 60.5,
-     "station": ""
+     "q": 60,
+     "station": "",
+     "key": "c2|Caterium Ingot|c28"
     },
     {
      "to": "c26",
-     "q": 48.0,
-     "station": ""
+     "q": 48,
+     "station": "",
+     "key": "c2|Caterium Ingot|c26"
+    }
+   ],
+   "Iron Ingot": [
+    {
+     "to": "local",
+     "q": 18145,
+     "station": "",
+     "key": "c2|Iron Ingot|local"
+    }
+   ],
+   "Iron Plate": [
+    {
+     "to": "local",
+     "q": 9364,
+     "station": "",
+     "key": "c2|Iron Plate|local"
+    },
+    {
+     "to": "c16",
+     "q": 120,
+     "station": "",
+     "key": "c2|Iron Plate|c16"
+    },
+    {
+     "to": "c11",
+     "q": 302,
+     "station": "",
+     "key": "c2|Iron Plate|c11"
+    },
+    {
+     "to": "c14",
+     "q": 2010,
+     "station": "",
+     "key": "c2|Iron Plate|c14"
+    }
+   ],
+   "Screws": [
+    {
+     "to": "local",
+     "q": 18729,
+     "station": "",
+     "key": "c2|Screws|local"
     }
    ],
    "Reinforced Iron Plate": [
     {
      "to": "c13",
-     "q": 419.2,
-     "station": ""
+     "q": 419,
+     "station": "",
+     "key": "c2|Reinforced Iron Plate|c13"
     },
     {
      "to": "c18",
-     "q": 922.5,
-     "station": ""
+     "q": 922,
+     "station": "",
+     "key": "c2|Reinforced Iron Plate|c18"
     },
     {
      "to": "c30",
-     "q": 39.0,
-     "station": ""
-    }
-   ],
-   "Concrete": [
-    {
-     "to": "c14",
-     "q": 1404.3,
-     "station": ""
+     "q": 39,
+     "station": "",
+     "key": "c2|Reinforced Iron Plate|c30"
     }
    ]
   },
@@ -535,8 +628,8 @@
   "steps": [
    {
     "id": "s3_0",
-    "recipe": "Biomass (Mycelia)",
-    "target": 900.0,
+    "recipe": "Wet Concrete",
+    "target": 727,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -544,8 +637,8 @@
    },
    {
     "id": "s3_1",
-    "recipe": "Wet Concrete",
-    "target": 726.9,
+    "recipe": "Sulfuric Acid",
+    "target": 211,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -553,8 +646,8 @@
    },
    {
     "id": "s3_2",
-    "recipe": "Sulfuric Acid",
-    "target": 210.6,
+    "recipe": "Fabric",
+    "target": 180,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -562,17 +655,8 @@
    },
    {
     "id": "s3_3",
-    "recipe": "Fabric",
-    "target": 180.0,
-    "clock": 100,
-    "status": "todo",
-    "sec": "PRODUCTION FLOW",
-    "name": ""
-   },
-   {
-    "id": "s3_4",
     "recipe": "Cooling Device",
-    "target": 132.0,
+    "target": 132,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -581,93 +665,90 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 1090,
+     "station": "",
+     "key": "c3|Limestone|raw"
+    }
+   ],
+   "Sulfur": [
+    {
+     "from": "raw",
+     "q": 211,
+     "station": "",
+     "key": "c3|Sulfur|raw"
+    }
+   ],
    "Heat Sink": [
     {
      "from": "c24",
-     "q": 264.0,
-     "station": ""
+     "q": 264,
+     "station": "",
+     "key": "c3|Heat Sink|c24"
     }
    ],
    "Motor": [
     {
      "from": "c17",
-     "q": 66.0,
-     "station": ""
+     "q": 66,
+     "station": "",
+     "key": "c3|Motor|c17"
     }
    ],
    "Nitrogen Gas": [
     {
-     "from": "c31",
-     "q": 111.0,
-     "station": ""
+     "from": "raw",
+     "q": 1584,
+     "station": "",
+     "key": "c3|Nitrogen Gas|raw"
     }
    ]
   },
   "dests": {
-   "Iron Ore": [
-    {
-     "to": "c1",
-     "q": 3600.0,
-     "station": ""
-    }
-   ],
-   "Copper Ore": [
-    {
-     "to": "c4",
-     "q": 1200.0,
-     "station": ""
-    }
-   ],
-   "Fabric": [
-    {
-     "to": "c16",
-     "q": 120.0,
-     "station": ""
-    }
-   ],
-   "Nitrogen Gas": [
-    {
-     "to": "c11",
-     "q": 627.0,
-     "station": ""
-    }
-   ],
-   "Sulfur": [
-    {
-     "to": "c0",
-     "q": 778.8,
-     "station": ""
-    }
-   ],
    "Concrete": [
     {
      "to": "c8",
-     "q": 726.9,
-     "station": ""
+     "q": 727,
+     "station": "",
+     "key": "c3|Concrete|c8"
     }
    ],
    "Sulfuric Acid": [
     {
      "to": "c11",
-     "q": 182.9,
-     "station": ""
+     "q": 183,
+     "station": "",
+     "key": "c3|Sulfuric Acid|c11"
     },
     {
      "to": "c16",
-     "q": 27.7,
-     "station": ""
+     "q": 28,
+     "station": "",
+     "key": "c3|Sulfuric Acid|c16"
+    }
+   ],
+   "Fabric": [
+    {
+     "to": "c16",
+     "q": 120,
+     "station": "",
+     "key": "c3|Fabric|c16"
     }
    ],
    "Cooling System": [
     {
      "to": "c29",
-     "q": 84.0,
-     "station": ""
+     "q": 84,
+     "station": "",
+     "key": "c3|Cooling System|c29"
     },
     {
      "to": "c22",
-     "q": 18.0,
-     "station": ""
+     "q": 18,
+     "station": "",
+     "key": "c3|Cooling System|c22"
     }
    ]
   },
@@ -676,7 +757,7 @@
    "x": -1523,
    "y": 1520
   },
-  "desc": "Engine-generated. Nodes: Iron 3600, Limestone 2400, Nitrogen Gas 2100, Copper 1200, Sulfur 1200. 5 recipes."
+  "desc": "Engine-generated. Nodes: Iron 3600, Limestone 2400, Nitrogen Gas 2100, Copper 1200, Sulfur 1200. 4 recipes."
  },
  {
   "id": "c4",
@@ -691,7 +772,7 @@
    {
     "id": "s4_0",
     "recipe": "Pure Copper Ingot",
-    "target": 12928.4,
+    "target": 12928,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -700,7 +781,7 @@
    {
     "id": "s4_1",
     "recipe": "Copper Sheet",
-    "target": 6464.2,
+    "target": 6464,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -709,7 +790,7 @@
    {
     "id": "s4_2",
     "recipe": "Wet Concrete",
-    "target": 858.0,
+    "target": 858,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -718,7 +799,7 @@
    {
     "id": "s4_3",
     "recipe": "Reanimated SAM",
-    "target": 300.0,
+    "target": 300,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -727,93 +808,88 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 1287,
+     "station": "",
+     "key": "c4|Limestone|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 1200,
+     "station": "",
+     "key": "c4|SAM|raw"
+    }
+   ],
    "Copper Ore": [
     {
-     "from": "c3",
-     "q": 1200.0,
-     "station": ""
-    },
+     "from": "raw",
+     "q": 5171,
+     "station": "",
+     "key": "c4|Copper Ore|raw"
+    }
+   ],
+   "Copper Ingot": [
     {
-     "from": "c19",
-     "q": 600.0,
-     "station": ""
-    },
-    {
-     "from": "c17",
-     "q": 600.0,
-     "station": ""
-    },
-    {
-     "from": "c7",
-     "q": 1200.0,
-     "station": ""
-    },
-    {
-     "from": "c27",
-     "q": 600.0,
-     "station": ""
-    },
-    {
-     "from": "c6",
-     "q": 371.4,
-     "station": ""
+     "from": "local",
+     "q": 12928,
+     "station": "",
+     "key": "c4|Copper Ingot|local"
     }
    ]
   },
   "dests": {
-   "Iron Ore": [
-    {
-     "to": "c1",
-     "q": 3000.0,
-     "station": ""
-    }
-   ],
-   "Coal": [
-    {
-     "to": "c6",
-     "q": 879.2,
-     "station": ""
-    },
-    {
-     "to": "c7",
-     "q": 360.0,
-     "station": ""
-    }
-   ],
-   "Copper Sheet": [
-    {
-     "to": "c21",
-     "q": 2750.7,
-     "station": ""
-    },
-    {
-     "to": "c9",
-     "q": 2447.5,
-     "station": ""
-    },
-    {
-     "to": "c22",
-     "q": 24.0,
-     "station": ""
-    },
-    {
-     "to": "c24",
-     "q": 972.0,
-     "station": ""
-    }
-   ],
    "Concrete": [
     {
      "to": "c8",
-     "q": 858.0,
-     "station": ""
+     "q": 858,
+     "station": "",
+     "key": "c4|Concrete|c8"
     }
    ],
    "Reanimated SAM": [
     {
      "to": "c10",
-     "q": 300.0,
-     "station": ""
+     "q": 300,
+     "station": "",
+     "key": "c4|Reanimated SAM|c10"
+    }
+   ],
+   "Copper Ingot": [
+    {
+     "to": "local",
+     "q": 12928,
+     "station": "",
+     "key": "c4|Copper Ingot|local"
+    }
+   ],
+   "Copper Sheet": [
+    {
+     "to": "c21",
+     "q": 2751,
+     "station": "",
+     "key": "c4|Copper Sheet|c21"
+    },
+    {
+     "to": "c9",
+     "q": 2448,
+     "station": "",
+     "key": "c4|Copper Sheet|c9"
+    },
+    {
+     "to": "c22",
+     "q": 24,
+     "station": "",
+     "key": "c4|Copper Sheet|c22"
+    },
+    {
+     "to": "c24",
+     "q": 972,
+     "station": "",
+     "key": "c4|Copper Sheet|c24"
     }
    ]
   },
@@ -837,7 +913,7 @@
    {
     "id": "s5_0",
     "recipe": "Pure Copper Ingot",
-    "target": 27720.0,
+    "target": 27720,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -846,7 +922,7 @@
    {
     "id": "s5_1",
     "recipe": "Copper Powder",
-    "target": 4620.0,
+    "target": 4620,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -855,7 +931,7 @@
    {
     "id": "s5_2",
     "recipe": "Wet Concrete",
-    "target": 796.6,
+    "target": 797,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -864,7 +940,7 @@
    {
     "id": "s5_3",
     "recipe": "Nuclear Pasta",
-    "target": 23.1,
+    "target": 23,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -873,73 +949,78 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 1195,
+     "station": "",
+     "key": "c5|Limestone|raw"
+    }
+   ],
    "Copper Ore": [
     {
-     "from": "c6",
-     "q": 3228.6,
-     "station": ""
-    },
+     "from": "raw",
+     "q": 11088,
+     "station": "",
+     "key": "c5|Copper Ore|raw"
+    }
+   ],
+   "Copper Ingot": [
     {
-     "from": "c20",
-     "q": 2400.0,
-     "station": ""
-    },
+     "from": "local",
+     "q": 27720,
+     "station": "",
+     "key": "c5|Copper Ingot|local"
+    }
+   ],
+   "Copper Powder": [
     {
-     "from": "c23",
-     "q": 600.0,
-     "station": ""
-    },
-    {
-     "from": "c16",
-     "q": 1200.0,
-     "station": ""
-    },
-    {
-     "from": "c14",
-     "q": 600.0,
-     "station": ""
-    },
-    {
-     "from": "c2",
-     "q": 1859.4,
-     "station": ""
+     "from": "local",
+     "q": 4620,
+     "station": "",
+     "key": "c5|Copper Powder|local"
     }
    ],
    "Pressure Conversion Cube": [
     {
      "from": "c20",
-     "q": 23.1,
-     "station": ""
+     "q": 23,
+     "station": "",
+     "key": "c5|Pressure Conversion Cube|c20"
     }
    ]
   },
   "dests": {
-   "Limestone": [
+   "Concrete": [
     {
-     "to": "c23",
-     "q": 610.1,
-     "station": ""
+     "to": "c14",
+     "q": 797,
+     "station": "",
+     "key": "c5|Concrete|c14"
     }
    ],
-   "Iron Ore": [
+   "Copper Ingot": [
     {
-     "to": "c6",
-     "q": 3784.9,
-     "station": ""
+     "to": "local",
+     "q": 27720,
+     "station": "",
+     "key": "c5|Copper Ingot|local"
+    }
+   ],
+   "Copper Powder": [
+    {
+     "to": "local",
+     "q": 4620,
+     "station": "",
+     "key": "c5|Copper Powder|local"
     }
    ],
    "Nuclear Pasta": [
     {
      "to": "c14",
-     "q": 20.1,
-     "station": ""
-    }
-   ],
-   "Concrete": [
-    {
-     "to": "c14",
-     "q": 796.6,
-     "station": ""
+     "q": 20,
+     "station": "",
+     "key": "c5|Nuclear Pasta|c14"
     }
    ]
   },
@@ -963,7 +1044,7 @@
    {
     "id": "s6_0",
     "recipe": "Solid Steel Ingot",
-    "target": 18426.0,
+    "target": 18426,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -972,7 +1053,7 @@
    {
     "id": "s6_1",
     "recipe": "Pure Iron Ingot",
-    "target": 12284.0,
+    "target": 12284,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -981,7 +1062,7 @@
    {
     "id": "s6_2",
     "recipe": "Steel Pipe",
-    "target": 6668.0,
+    "target": 6668,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -990,7 +1071,7 @@
    {
     "id": "s6_3",
     "recipe": "Wet Concrete",
-    "target": 590.4,
+    "target": 590,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -999,7 +1080,7 @@
    {
     "id": "s6_4",
     "recipe": "Pure Caterium Ingot",
-    "target": 299.9,
+    "target": 300,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1008,7 +1089,7 @@
    {
     "id": "s6_5",
     "recipe": "Reanimated SAM",
-    "target": 74.9,
+    "target": 75,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1017,114 +1098,134 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 886,
+     "station": "",
+     "key": "c6|Limestone|raw"
+    }
+   ],
+   "Caterium Ore": [
+    {
+     "from": "raw",
+     "q": 600,
+     "station": "",
+     "key": "c6|Caterium Ore|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 300,
+     "station": "",
+     "key": "c6|SAM|raw"
+    }
+   ],
    "Iron Ore": [
     {
-     "from": "c5",
-     "q": 3784.9,
-     "station": ""
+     "from": "raw",
+     "q": 6614,
+     "station": "",
+     "key": "c6|Iron Ore|raw"
+    }
+   ],
+   "Iron Ingot": [
+    {
+     "from": "local",
+     "q": 12284,
+     "station": "",
+     "key": "c6|Iron Ingot|local"
     }
    ],
    "Coal": [
     {
-     "from": "c10",
-     "q": 900.0,
-     "station": ""
-    },
-    {
-     "from": "c22",
-     "q": 600.0,
-     "station": ""
-    },
-    {
-     "from": "c9",
-     "q": 2704.8,
-     "station": ""
-    },
-    {
-     "from": "c24",
-     "q": 600.0,
-     "station": ""
-    },
-    {
-     "from": "c27",
-     "q": 2400.0,
-     "station": ""
-    },
-    {
-     "from": "c4",
-     "q": 879.2,
-     "station": ""
-    }
-   ]
-  },
-  "dests": {
-   "Iron Ore": [
-    {
-     "to": "c2",
-     "q": 770.5,
-     "station": ""
-    }
-   ],
-   "Copper Ore": [
-    {
-     "to": "c4",
-     "q": 371.4,
-     "station": ""
-    },
-    {
-     "to": "c5",
-     "q": 3228.6,
-     "station": ""
+     "from": "raw",
+     "q": 12284,
+     "station": "",
+     "key": "c6|Coal|raw"
     }
    ],
    "Steel Ingot": [
     {
-     "to": "c8",
-     "q": 8424.0,
-     "station": ""
+     "from": "local",
+     "q": 10002,
+     "station": "",
+     "key": "c6|Steel Ingot|local"
+    }
+   ]
+  },
+  "dests": {
+   "Concrete": [
+    {
+     "to": "c14",
+     "q": 590,
+     "station": "",
+     "key": "c6|Concrete|c14"
     }
    ],
    "Caterium Ingot": [
     {
      "to": "c0",
-     "q": 299.9,
-     "station": ""
-    }
-   ],
-   "Steel Pipe": [
-    {
-     "to": "c16",
-     "q": 485.0,
-     "station": ""
-    },
-    {
-     "to": "c13",
-     "q": 120.0,
-     "station": ""
-    },
-    {
-     "to": "c15",
-     "q": 3699.0,
-     "station": ""
-    },
-    {
-     "to": "c18",
-     "q": 2184.0,
-     "station": ""
+     "q": 300,
+     "station": "",
+     "key": "c6|Caterium Ingot|c0"
     }
    ],
    "Reanimated SAM": [
     {
      "to": "c10",
-     "q": 74.9,
-     "station": ""
+     "q": 75,
+     "station": "",
+     "key": "c6|Reanimated SAM|c10"
     }
    ],
-   "Concrete": [
+   "Iron Ingot": [
     {
-     "to": "c14",
-     "q": 590.4,
-     "station": ""
+     "to": "local",
+     "q": 12284,
+     "station": "",
+     "key": "c6|Iron Ingot|local"
+    }
+   ],
+   "Steel Ingot": [
+    {
+     "to": "local",
+     "q": 10002,
+     "station": "",
+     "key": "c6|Steel Ingot|local"
+    },
+    {
+     "to": "c8",
+     "q": 8424,
+     "station": "",
+     "key": "c6|Steel Ingot|c8"
+    }
+   ],
+   "Steel Pipe": [
+    {
+     "to": "c16",
+     "q": 485,
+     "station": "",
+     "key": "c6|Steel Pipe|c16"
+    },
+    {
+     "to": "c13",
+     "q": 120,
+     "station": "",
+     "key": "c6|Steel Pipe|c13"
+    },
+    {
+     "to": "c15",
+     "q": 3699,
+     "station": "",
+     "key": "c6|Steel Pipe|c15"
+    },
+    {
+     "to": "c18",
+     "q": 2184,
+     "station": "",
+     "key": "c6|Steel Pipe|c18"
     }
    ]
   },
@@ -1148,7 +1249,7 @@
    {
     "id": "s7_0",
     "recipe": "Sloppy Alumina",
-    "target": 719.4,
+    "target": 719,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1157,7 +1258,7 @@
    {
     "id": "s7_1",
     "recipe": "Turbo Diamonds",
-    "target": 606.0,
+    "target": 606,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1165,8 +1266,8 @@
    },
    {
     "id": "s7_2",
-    "recipe": "Biomass (Mycelia)",
-    "target": 600.0,
+    "recipe": "Dark Matter Crystal",
+    "target": 576,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1174,8 +1275,8 @@
    },
    {
     "id": "s7_3",
-    "recipe": "Dark Matter Crystal",
-    "target": 576.0,
+    "recipe": "Wet Concrete",
+    "target": 416,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1183,17 +1284,8 @@
    },
    {
     "id": "s7_4",
-    "recipe": "Wet Concrete",
-    "target": 416.1,
-    "clock": 100,
-    "status": "todo",
-    "sec": "PRODUCTION FLOW",
-    "name": ""
-   },
-   {
-    "id": "s7_5",
     "recipe": "Solid Biofuel",
-    "target": 300.0,
+    "target": 300,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1202,84 +1294,96 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 624,
+     "station": "",
+     "key": "c7|Limestone|raw"
+    }
+   ],
+   "Bauxite": [
+    {
+     "from": "raw",
+     "q": 599,
+     "station": "",
+     "key": "c7|Bauxite|raw"
+    }
+   ],
    "Coal": [
     {
-     "from": "c8",
-     "q": 2100.0,
-     "station": ""
-    },
-    {
-     "from": "c4",
-     "q": 360.0,
-     "station": ""
+     "from": "raw",
+     "q": 6060,
+     "station": "",
+     "key": "c7|Coal|raw"
     }
    ],
    "Packaged Turbofuel": [
     {
      "from": "c29",
-     "q": 404.0,
-     "station": ""
+     "q": 404,
+     "station": "",
+     "key": "c7|Packaged Turbofuel|c29"
+    }
+   ],
+   "Diamonds": [
+    {
+     "from": "local",
+     "q": 576,
+     "station": "",
+     "key": "c7|Diamonds|local"
     }
    ]
   },
   "dests": {
-   "Limestone": [
+   "Concrete": [
     {
-     "to": "c23",
-     "q": 551.8,
-     "station": ""
-    }
-   ],
-   "Iron Ore": [
-    {
-     "to": "c1",
-     "q": 3600.0,
-     "station": ""
-    }
-   ],
-   "Copper Ore": [
-    {
-     "to": "c4",
-     "q": 1200.0,
-     "station": ""
+     "to": "c8",
+     "q": 416,
+     "station": "",
+     "key": "c7|Concrete|c8"
     }
    ],
    "Alumina Solution": [
     {
      "to": "c11",
-     "q": 719.4,
-     "station": ""
-    }
-   ],
-   "Concrete": [
-    {
-     "to": "c8",
-     "q": 416.1,
-     "station": ""
+     "q": 719,
+     "station": "",
+     "key": "c7|Alumina Solution|c11"
     }
    ],
    "Diamonds": [
     {
+     "to": "local",
+     "q": 576,
+     "station": "",
+     "key": "c7|Diamonds|local"
+    },
+    {
      "to": "c19",
-     "q": 30.0,
-     "station": ""
+     "q": 30,
+     "station": "",
+     "key": "c7|Diamonds|c19"
     }
    ],
    "Dark Matter Crystal": [
     {
      "to": "c19",
-     "q": 54.0,
-     "station": ""
+     "q": 54,
+     "station": "",
+     "key": "c7|Dark Matter Crystal|c19"
     },
     {
      "to": "c14",
-     "q": 402.0,
-     "station": ""
+     "q": 402,
+     "station": "",
+     "key": "c7|Dark Matter Crystal|c14"
     },
     {
      "to": "c26",
-     "q": 120.0,
-     "station": ""
+     "q": 120,
+     "station": "",
+     "key": "c7|Dark Matter Crystal|c26"
     }
    ]
   },
@@ -1288,7 +1392,7 @@
    "x": -1445,
    "y": -192
   },
-  "desc": "Engine-generated. Nodes: Coal 3600, Iron 3600, Limestone 1800, Copper 1200, Bauxite 600. 6 recipes."
+  "desc": "Engine-generated. Nodes: Coal 3600, Iron 3600, Limestone 1800, Copper 1200, Bauxite 600. 5 recipes."
  },
  {
   "id": "c8",
@@ -1303,7 +1407,7 @@
    {
     "id": "s8_0",
     "recipe": "Steel Beam",
-    "target": 2106.0,
+    "target": 2106,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1312,7 +1416,7 @@
    {
     "id": "s8_1",
     "recipe": "Sloppy Alumina",
-    "target": 1439.3,
+    "target": 1439,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1321,7 +1425,7 @@
    {
     "id": "s8_2",
     "recipe": "Encased Industrial Beam",
-    "target": 606.0,
+    "target": 606,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1330,7 +1434,7 @@
    {
     "id": "s8_3",
     "recipe": "Pure Caterium Ingot",
-    "target": 599.5,
+    "target": 600,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1339,7 +1443,7 @@
    {
     "id": "s8_4",
     "recipe": "Wet Concrete",
-    "target": 264.6,
+    "target": 265,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1348,7 +1452,7 @@
    {
     "id": "s8_5",
     "recipe": "Reanimated SAM",
-    "target": 224.2,
+    "target": 224,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1357,109 +1461,170 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 397,
+     "station": "",
+     "key": "c8|Limestone|raw"
+    }
+   ],
+   "Caterium Ore": [
+    {
+     "from": "raw",
+     "q": 1199,
+     "station": "",
+     "key": "c8|Caterium Ore|raw"
+    }
+   ],
+   "Bauxite": [
+    {
+     "from": "raw",
+     "q": 1199,
+     "station": "",
+     "key": "c8|Bauxite|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 897,
+     "station": "",
+     "key": "c8|SAM|raw"
+    }
+   ],
    "Steel Ingot": [
     {
      "from": "c6",
-     "q": 8424.0,
-     "station": ""
+     "q": 8424,
+     "station": "",
+     "key": "c8|Steel Ingot|c6"
+    }
+   ],
+   "Steel Beam": [
+    {
+     "from": "local",
+     "q": 1818,
+     "station": "",
+     "key": "c8|Steel Beam|local"
     }
    ],
    "Concrete": [
     {
+     "from": "local",
+     "q": 265,
+     "station": "",
+     "key": "c8|Concrete|local"
+    },
+    {
      "from": "c1",
-     "q": 412.0,
-     "station": ""
+     "q": 412,
+     "station": "",
+     "key": "c8|Concrete|c1"
     },
     {
      "from": "c3",
-     "q": 726.9,
-     "station": ""
+     "q": 727,
+     "station": "",
+     "key": "c8|Concrete|c3"
     },
     {
      "from": "c7",
-     "q": 416.1,
-     "station": ""
+     "q": 416,
+     "station": "",
+     "key": "c8|Concrete|c7"
     },
     {
      "from": "c4",
-     "q": 858.0,
-     "station": ""
+     "q": 858,
+     "station": "",
+     "key": "c8|Concrete|c4"
     },
     {
      "from": "c23",
-     "q": 459.1,
-     "station": ""
+     "q": 459,
+     "station": "",
+     "key": "c8|Concrete|c23"
     },
     {
      "from": "c19",
-     "q": 151.4,
-     "station": ""
+     "q": 151,
+     "station": "",
+     "key": "c8|Concrete|c19"
     },
     {
      "from": "c20",
-     "q": 348.0,
-     "station": ""
+     "q": 348,
+     "station": "",
+     "key": "c8|Concrete|c20"
     }
    ]
   },
   "dests": {
-   "Limestone": [
+   "Concrete": [
     {
-     "to": "c23",
-     "q": 406.1,
-     "station": ""
-    }
-   ],
-   "Alumina Solution": [
-    {
-     "to": "c11",
-     "q": 1439.3,
-     "station": ""
+     "to": "local",
+     "q": 265,
+     "station": "",
+     "key": "c8|Concrete|local"
     }
    ],
    "Caterium Ingot": [
     {
      "to": "c0",
-     "q": 235.5,
-     "station": ""
+     "q": 236,
+     "station": "",
+     "key": "c8|Caterium Ingot|c0"
     },
     {
      "to": "c27",
-     "q": 126.7,
-     "station": ""
+     "q": 127,
+     "station": "",
+     "key": "c8|Caterium Ingot|c27"
     },
     {
      "to": "c12",
-     "q": 237.3,
-     "station": ""
+     "q": 237,
+     "station": "",
+     "key": "c8|Caterium Ingot|c12"
     }
    ],
-   "Coal": [
+   "Alumina Solution": [
     {
-     "to": "c7",
-     "q": 2100.0,
-     "station": ""
+     "to": "c11",
+     "q": 1439,
+     "station": "",
+     "key": "c8|Alumina Solution|c11"
     }
    ],
    "Reanimated SAM": [
     {
      "to": "c10",
-     "q": 224.2,
-     "station": ""
+     "q": 224,
+     "station": "",
+     "key": "c8|Reanimated SAM|c10"
+    }
+   ],
+   "Steel Beam": [
+    {
+     "to": "local",
+     "q": 1818,
+     "station": "",
+     "key": "c8|Steel Beam|local"
+    },
+    {
+     "to": "c19",
+     "q": 108,
+     "station": "",
+     "key": "c8|Steel Beam|c19"
     }
    ],
    "Encased Industrial Beam": [
     {
      "to": "c18",
-     "q": 546.0,
-     "station": ""
-    }
-   ],
-   "Steel Beam": [
-    {
-     "to": "c19",
-     "q": 108.0,
-     "station": ""
+     "q": 546,
+     "station": "",
+     "key": "c8|Encased Industrial Beam|c18"
     }
    ]
   },
@@ -1483,7 +1648,7 @@
    {
     "id": "s9_0",
     "recipe": "Quickwire",
-    "target": 9790.0,
+    "target": 9790,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1492,7 +1657,7 @@
    {
     "id": "s9_1",
     "recipe": "Black Powder",
-    "target": 522.6,
+    "target": 523,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1501,7 +1666,7 @@
    {
     "id": "s9_2",
     "recipe": "AI Limiter",
-    "target": 489.5,
+    "target": 490,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1510,7 +1675,7 @@
    {
     "id": "s9_3",
     "recipe": "Electromagnetic Control Rod",
-    "target": 377.0,
+    "target": 377,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1519,7 +1684,7 @@
    {
     "id": "s9_4",
     "recipe": "Compacted Coal",
-    "target": 186.3,
+    "target": 186,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1528,7 +1693,7 @@
    {
     "id": "s9_5",
     "recipe": "Reanimated SAM",
-    "target": 150.0,
+    "target": 150,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1537,7 +1702,7 @@
    {
     "id": "s9_6",
     "recipe": "Sulfuric Acid",
-    "target": 130.4,
+    "target": 130,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1546,113 +1711,168 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Copper Sheet": [
+   "Coal": [
     {
-     "from": "c4",
-     "q": 2447.5,
-     "station": ""
+     "from": "raw",
+     "q": 448,
+     "station": "",
+     "key": "c9|Coal|raw"
+    }
+   ],
+   "Sulfur": [
+    {
+     "from": "raw",
+     "q": 578,
+     "station": "",
+     "key": "c9|Sulfur|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 600,
+     "station": "",
+     "key": "c9|SAM|raw"
     }
    ],
    "Caterium Ingot": [
     {
      "from": "c14",
-     "q": 598.8,
-     "station": ""
+     "q": 599,
+     "station": "",
+     "key": "c9|Caterium Ingot|c14"
     },
     {
      "from": "c11",
-     "q": 299.3,
-     "station": ""
+     "q": 299,
+     "station": "",
+     "key": "c9|Caterium Ingot|c11"
     },
     {
      "from": "c13",
-     "q": 1059.9,
-     "station": ""
+     "q": 1060,
+     "station": "",
+     "key": "c9|Caterium Ingot|c13"
+    }
+   ],
+   "Copper Sheet": [
+    {
+     "from": "c4",
+     "q": 2448,
+     "station": "",
+     "key": "c9|Copper Sheet|c4"
+    }
+   ],
+   "Quickwire": [
+    {
+     "from": "local",
+     "q": 9790,
+     "station": "",
+     "key": "c9|Quickwire|local"
     }
    ],
    "Stator": [
     {
      "from": "c15",
-     "q": 565.5,
-     "station": ""
+     "q": 566,
+     "station": "",
+     "key": "c9|Stator|c15"
+    }
+   ],
+   "AI Limiter": [
+    {
+     "from": "local",
+     "q": 377,
+     "station": "",
+     "key": "c9|AI Limiter|local"
     }
    ]
   },
   "dests": {
-   "Coal": [
-    {
-     "to": "c6",
-     "q": 2704.8,
-     "station": ""
-    }
-   ],
-   "Compacted Coal": [
-    {
-     "to": "c29",
-     "q": 186.3,
-     "station": ""
-    }
-   ],
    "Black Powder": [
     {
      "to": "c27",
-     "q": 381.0,
-     "station": ""
+     "q": 381,
+     "station": "",
+     "key": "c9|Black Powder|c27"
     },
     {
      "to": "c16",
-     "q": 141.6,
-     "station": ""
-    }
-   ],
-   "Sulfur": [
-    {
-     "to": "c0",
-     "q": 43.9,
-     "station": ""
+     "q": 142,
+     "station": "",
+     "key": "c9|Black Powder|c16"
     }
    ],
    "Sulfuric Acid": [
     {
      "to": "c11",
-     "q": 130.4,
-     "station": ""
+     "q": 130,
+     "station": "",
+     "key": "c9|Sulfuric Acid|c11"
     }
    ],
-   "AI Limiter": [
+   "Compacted Coal": [
     {
      "to": "c29",
-     "q": 43.5,
-     "station": ""
-    },
-    {
-     "to": "c31",
-     "q": 39.0,
-     "station": ""
+     "q": 186,
+     "station": "",
+     "key": "c9|Compacted Coal|c29"
     }
    ],
    "Reanimated SAM": [
     {
      "to": "c10",
-     "q": 150.0,
-     "station": ""
+     "q": 150,
+     "station": "",
+     "key": "c9|Reanimated SAM|c10"
+    }
+   ],
+   "Quickwire": [
+    {
+     "to": "local",
+     "q": 9790,
+     "station": "",
+     "key": "c9|Quickwire|local"
+    }
+   ],
+   "AI Limiter": [
+    {
+     "to": "local",
+     "q": 377,
+     "station": "",
+     "key": "c9|AI Limiter|local"
+    },
+    {
+     "to": "c29",
+     "q": 44,
+     "station": "",
+     "key": "c9|AI Limiter|c29"
+    },
+    {
+     "to": "c31",
+     "q": 39,
+     "station": "",
+     "key": "c9|AI Limiter|c31"
     }
    ],
    "Electromagnetic Control Rod": [
     {
      "to": "c0",
-     "q": 155.0,
-     "station": ""
+     "q": 155,
+     "station": "",
+     "key": "c9|Electromagnetic Control Rod|c0"
     },
     {
      "to": "c19",
-     "q": 6.0,
-     "station": ""
+     "q": 6,
+     "station": "",
+     "key": "c9|Electromagnetic Control Rod|c19"
     },
     {
      "to": "c26",
-     "q": 186.0,
-     "station": ""
+     "q": 186,
+     "station": "",
+     "key": "c9|Electromagnetic Control Rod|c26"
     }
    ]
   },
@@ -1676,7 +1896,7 @@
    {
     "id": "s10_0",
     "recipe": "Ficsite Ingot (Aluminum)",
-    "target": 1275.0,
+    "target": 1275,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1685,7 +1905,7 @@
    {
     "id": "s10_1",
     "recipe": "Sloppy Alumina",
-    "target": 1079.4,
+    "target": 1079,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1694,7 +1914,7 @@
    {
     "id": "s10_2",
     "recipe": "Wet Concrete",
-    "target": 448.7,
+    "target": 449,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1703,7 +1923,7 @@
    {
     "id": "s10_3",
     "recipe": "Iron Rebar",
-    "target": 420.0,
+    "target": 420,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1712,7 +1932,7 @@
    {
     "id": "s10_4",
     "recipe": "Reanimated SAM",
-    "target": 375.0,
+    "target": 375,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1721,164 +1941,214 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 673,
+     "station": "",
+     "key": "c10|Limestone|raw"
+    }
+   ],
+   "Bauxite": [
+    {
+     "from": "raw",
+     "q": 900,
+     "station": "",
+     "key": "c10|Bauxite|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 1500,
+     "station": "",
+     "key": "c10|SAM|raw"
+    }
+   ],
    "Iron Rod": [
     {
      "from": "c1",
-     "q": 420.0,
-     "station": ""
+     "q": 420,
+     "station": "",
+     "key": "c10|Iron Rod|c1"
     }
    ],
    "Reanimated SAM": [
     {
+     "from": "local",
+     "q": 375,
+     "station": "",
+     "key": "c10|Reanimated SAM|local"
+    },
+    {
      "from": "c9",
-     "q": 150.0,
-     "station": ""
+     "q": 150,
+     "station": "",
+     "key": "c10|Reanimated SAM|c9"
     },
     {
      "from": "c11",
-     "q": 74.8,
-     "station": ""
+     "q": 75,
+     "station": "",
+     "key": "c10|Reanimated SAM|c11"
     },
     {
      "from": "c6",
-     "q": 74.9,
-     "station": ""
+     "q": 75,
+     "station": "",
+     "key": "c10|Reanimated SAM|c6"
     },
     {
      "from": "c13",
-     "q": 74.6,
-     "station": ""
+     "q": 75,
+     "station": "",
+     "key": "c10|Reanimated SAM|c13"
     },
     {
      "from": "c27",
-     "q": 75.0,
-     "station": ""
+     "q": 75,
+     "station": "",
+     "key": "c10|Reanimated SAM|c27"
     },
     {
      "from": "c0",
-     "q": 78.7,
-     "station": ""
+     "q": 79,
+     "station": "",
+     "key": "c10|Reanimated SAM|c0"
     },
     {
      "from": "c22",
-     "q": 149.3,
-     "station": ""
+     "q": 149,
+     "station": "",
+     "key": "c10|Reanimated SAM|c22"
     },
     {
      "from": "c4",
-     "q": 300.0,
-     "station": ""
+     "q": 300,
+     "station": "",
+     "key": "c10|Reanimated SAM|c4"
     },
     {
      "from": "c24",
-     "q": 75.0,
-     "station": ""
+     "q": 75,
+     "station": "",
+     "key": "c10|Reanimated SAM|c24"
     },
     {
      "from": "c17",
-     "q": 150.0,
-     "station": ""
+     "q": 150,
+     "station": "",
+     "key": "c10|Reanimated SAM|c17"
     },
     {
      "from": "c21",
-     "q": 300.0,
-     "station": ""
+     "q": 300,
+     "station": "",
+     "key": "c10|Reanimated SAM|c21"
     },
     {
      "from": "c8",
-     "q": 224.2,
-     "station": ""
+     "q": 224,
+     "station": "",
+     "key": "c10|Reanimated SAM|c8"
     },
     {
      "from": "c16",
-     "q": 74.3,
-     "station": ""
+     "q": 74,
+     "station": "",
+     "key": "c10|Reanimated SAM|c16"
     },
     {
      "from": "c26",
-     "q": 149.3,
-     "station": ""
+     "q": 149,
+     "station": "",
+     "key": "c10|Reanimated SAM|c26"
     },
     {
      "from": "c28",
-     "q": 75.0,
-     "station": ""
+     "q": 75,
+     "station": "",
+     "key": "c10|Reanimated SAM|c28"
     },
     {
      "from": "c23",
-     "q": 150.0,
-     "station": ""
+     "q": 150,
+     "station": "",
+     "key": "c10|Reanimated SAM|c23"
     }
    ],
    "Aluminum Ingot": [
     {
      "from": "c11",
-     "q": 5100.0,
-     "station": ""
+     "q": 5100,
+     "station": "",
+     "key": "c10|Aluminum Ingot|c11"
     }
    ]
   },
   "dests": {
-   "Coal": [
+   "Concrete": [
     {
-     "to": "c6",
-     "q": 900.0,
-     "station": ""
+     "to": "c14",
+     "q": 449,
+     "station": "",
+     "key": "c10|Concrete|c14"
     }
    ],
    "Alumina Solution": [
     {
      "to": "c11",
-     "q": 1079.4,
-     "station": ""
+     "q": 1079,
+     "station": "",
+     "key": "c10|Alumina Solution|c11"
     }
    ],
-   "Uranium": [
+   "Reanimated SAM": [
     {
-     "to": "c0",
-     "q": 300.0,
-     "station": ""
+     "to": "local",
+     "q": 375,
+     "station": "",
+     "key": "c10|Reanimated SAM|local"
     }
    ],
    "Iron Rebar": [
     {
      "to": "c13",
-     "q": 120.0,
-     "station": ""
+     "q": 120,
+     "station": "",
+     "key": "c10|Iron Rebar|c13"
     },
     {
      "to": "c13",
-     "q": 120.0,
-     "station": ""
+     "q": 120,
+     "station": "",
+     "key": "c10|Iron Rebar|c13"
     },
     {
      "to": "c14",
-     "q": 60.0,
-     "station": ""
+     "q": 60,
+     "station": "",
+     "key": "c10|Iron Rebar|c14"
     }
    ],
    "Ficsite Ingot": [
     {
      "to": "c19",
-     "q": 15.0,
-     "station": ""
+     "q": 15,
+     "station": "",
+     "key": "c10|Ficsite Ingot|c19"
     },
     {
      "to": "c26",
-     "q": 20.0,
-     "station": ""
+     "q": 20,
+     "station": "",
+     "key": "c10|Ficsite Ingot|c26"
     },
     {
      "to": "c26",
-     "q": 1240.0,
-     "station": ""
-    }
-   ],
-   "Concrete": [
-    {
-     "to": "c14",
-     "q": 448.7,
-     "station": ""
+     "q": 1240,
+     "station": "",
+     "key": "c10|Ficsite Ingot|c26"
     }
    ]
   },
@@ -1902,7 +2172,7 @@
    {
     "id": "s11_0",
     "recipe": "Electrode Aluminum Scrap",
-    "target": 23373.3,
+    "target": 23373,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1911,7 +2181,7 @@
    {
     "id": "s11_1",
     "recipe": "Aluminum Ingot",
-    "target": 15582.2,
+    "target": 15582,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1920,7 +2190,7 @@
    {
     "id": "s11_2",
     "recipe": "Petroleum Coke",
-    "target": 4674.7,
+    "target": 4675,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1929,7 +2199,7 @@
    {
     "id": "s11_3",
     "recipe": "Non-Fissile Uranium",
-    "target": 3022.5,
+    "target": 3022,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1938,7 +2208,7 @@
    {
     "id": "s11_4",
     "recipe": "Sloppy Alumina",
-    "target": 2878.5,
+    "target": 2878,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1947,7 +2217,7 @@
    {
     "id": "s11_5",
     "recipe": "Nitric Acid",
-    "target": 906.8,
+    "target": 907,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1956,7 +2226,7 @@
    {
     "id": "s11_6",
     "recipe": "Pure Caterium Ingot",
-    "target": 299.3,
+    "target": 299,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1965,7 +2235,7 @@
    {
     "id": "s11_7",
     "recipe": "Reanimated SAM",
-    "target": 74.8,
+    "target": 75,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1974,141 +2244,220 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Caterium Ore": [
+    {
+     "from": "raw",
+     "q": 599,
+     "station": "",
+     "key": "c11|Caterium Ore|raw"
+    }
+   ],
+   "Bauxite": [
+    {
+     "from": "raw",
+     "q": 2399,
+     "station": "",
+     "key": "c11|Bauxite|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 299,
+     "station": "",
+     "key": "c11|SAM|raw"
+    }
+   ],
    "Nitrogen Gas": [
     {
-     "from": "c3",
-     "q": 627.0,
-     "station": ""
+     "from": "raw",
+     "q": 3627,
+     "station": "",
+     "key": "c11|Nitrogen Gas|raw"
     }
    ],
    "Iron Plate": [
     {
      "from": "c2",
-     "q": 302.2,
-     "station": ""
-    }
-   ],
-   "Alumina Solution": [
-    {
-     "from": "c12",
-     "q": 2154.8,
-     "station": ""
-    },
-    {
-     "from": "c10",
-     "q": 1079.4,
-     "station": ""
-    },
-    {
-     "from": "c22",
-     "q": 699.7,
-     "station": ""
-    },
-    {
-     "from": "c14",
-     "q": 2501.1,
-     "station": ""
-    },
-    {
-     "from": "c24",
-     "q": 1376.7,
-     "station": ""
-    },
-    {
-     "from": "c7",
-     "q": 719.4,
-     "station": ""
-    },
-    {
-     "from": "c8",
-     "q": 1439.3,
-     "station": ""
-    },
-    {
-     "from": "c25",
-     "q": 1175.0,
-     "station": ""
+     "q": 302,
+     "station": "",
+     "key": "c11|Iron Plate|c2"
     }
    ],
    "Heavy Oil Residue": [
     {
      "from": "c22",
-     "q": 108.0,
-     "station": ""
+     "q": 108,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c22"
     },
     {
      "from": "c27",
-     "q": 178.6,
-     "station": ""
+     "q": 179,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c27"
     },
     {
      "from": "c14",
-     "q": 8.0,
-     "station": ""
+     "q": 8,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c14"
     },
     {
      "from": "c24",
-     "q": 82.9,
-     "station": ""
+     "q": 83,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c24"
     },
     {
      "from": "c30",
-     "q": 290.1,
-     "station": ""
+     "q": 290,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c30"
     },
     {
      "from": "c18",
-     "q": 23.1,
-     "station": ""
+     "q": 23,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c18"
     },
     {
      "from": "c21",
-     "q": 106.5,
-     "station": ""
+     "q": 106,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c21"
     },
     {
      "from": "c28",
-     "q": 149.1,
-     "station": ""
+     "q": 149,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c28"
     },
     {
      "from": "c29",
-     "q": 611.3,
-     "station": ""
+     "q": 611,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c29"
+    }
+   ],
+   "Alumina Solution": [
+    {
+     "from": "local",
+     "q": 2878,
+     "station": "",
+     "key": "c11|Alumina Solution|local"
+    },
+    {
+     "from": "c12",
+     "q": 2155,
+     "station": "",
+     "key": "c11|Alumina Solution|c12"
+    },
+    {
+     "from": "c10",
+     "q": 1079,
+     "station": "",
+     "key": "c11|Alumina Solution|c10"
+    },
+    {
+     "from": "c22",
+     "q": 700,
+     "station": "",
+     "key": "c11|Alumina Solution|c22"
+    },
+    {
+     "from": "c14",
+     "q": 2501,
+     "station": "",
+     "key": "c11|Alumina Solution|c14"
+    },
+    {
+     "from": "c24",
+     "q": 1377,
+     "station": "",
+     "key": "c11|Alumina Solution|c24"
+    },
+    {
+     "from": "c7",
+     "q": 719,
+     "station": "",
+     "key": "c11|Alumina Solution|c7"
+    },
+    {
+     "from": "c8",
+     "q": 1439,
+     "station": "",
+     "key": "c11|Alumina Solution|c8"
+    },
+    {
+     "from": "c25",
+     "q": 1175,
+     "station": "",
+     "key": "c11|Alumina Solution|c25"
+    }
+   ],
+   "Petroleum Coke": [
+    {
+     "from": "local",
+     "q": 4675,
+     "station": "",
+     "key": "c11|Petroleum Coke|local"
+    }
+   ],
+   "Aluminum Scrap": [
+    {
+     "from": "local",
+     "q": 23373,
+     "station": "",
+     "key": "c11|Aluminum Scrap|local"
     }
    ],
    "Silica": [
     {
      "from": "c23",
-     "q": 19477.8,
-     "station": ""
+     "q": 19478,
+     "station": "",
+     "key": "c11|Silica|c23"
     },
     {
      "from": "c23",
-     "q": 1511.2,
-     "station": ""
+     "q": 1511,
+     "station": "",
+     "key": "c11|Silica|c23"
+    }
+   ],
+   "Nitric Acid": [
+    {
+     "from": "local",
+     "q": 907,
+     "station": "",
+     "key": "c11|Nitric Acid|local"
     }
    ],
    "Sulfuric Acid": [
     {
      "from": "c0",
-     "q": 567.1,
-     "station": ""
+     "q": 567,
+     "station": "",
+     "key": "c11|Sulfuric Acid|c0"
     },
     {
      "from": "c9",
-     "q": 130.4,
-     "station": ""
+     "q": 130,
+     "station": "",
+     "key": "c11|Sulfuric Acid|c9"
     },
     {
      "from": "c17",
-     "q": 26.3,
-     "station": ""
+     "q": 26,
+     "station": "",
+     "key": "c11|Sulfuric Acid|c17"
     },
     {
      "from": "c3",
-     "q": 182.9,
-     "station": ""
+     "q": 183,
+     "station": "",
+     "key": "c11|Sulfuric Acid|c3"
     }
    ]
   },
@@ -2116,49 +2465,89 @@
    "Caterium Ingot": [
     {
      "to": "c9",
-     "q": 299.3,
-     "station": ""
+     "q": 299,
+     "station": "",
+     "key": "c11|Caterium Ingot|c9"
     }
    ],
-   "Aluminum Ingot": [
+   "Alumina Solution": [
     {
-     "to": "c24",
-     "q": 1821.0,
-     "station": ""
-    },
-    {
-     "to": "c25",
-     "q": 8631.2,
-     "station": ""
-    },
-    {
-     "to": "c26",
-     "q": 30.0,
-     "station": ""
-    },
-    {
-     "to": "c10",
-     "q": 5100.0,
-     "station": ""
-    }
-   ],
-   "Non-Fissile Uranium": [
-    {
-     "to": "c31",
-     "q": 232.5,
-     "station": ""
-    },
-    {
-     "to": "c28",
-     "q": 2790.0,
-     "station": ""
+     "to": "local",
+     "q": 2878,
+     "station": "",
+     "key": "c11|Alumina Solution|local"
     }
    ],
    "Reanimated SAM": [
     {
      "to": "c10",
-     "q": 74.8,
-     "station": ""
+     "q": 75,
+     "station": "",
+     "key": "c11|Reanimated SAM|c10"
+    }
+   ],
+   "Nitric Acid": [
+    {
+     "to": "local",
+     "q": 907,
+     "station": "",
+     "key": "c11|Nitric Acid|local"
+    }
+   ],
+   "Petroleum Coke": [
+    {
+     "to": "local",
+     "q": 4675,
+     "station": "",
+     "key": "c11|Petroleum Coke|local"
+    }
+   ],
+   "Aluminum Scrap": [
+    {
+     "to": "local",
+     "q": 23373,
+     "station": "",
+     "key": "c11|Aluminum Scrap|local"
+    }
+   ],
+   "Aluminum Ingot": [
+    {
+     "to": "c24",
+     "q": 1821,
+     "station": "",
+     "key": "c11|Aluminum Ingot|c24"
+    },
+    {
+     "to": "c25",
+     "q": 8631,
+     "station": "",
+     "key": "c11|Aluminum Ingot|c25"
+    },
+    {
+     "to": "c26",
+     "q": 30,
+     "station": "",
+     "key": "c11|Aluminum Ingot|c26"
+    },
+    {
+     "to": "c10",
+     "q": 5100,
+     "station": "",
+     "key": "c11|Aluminum Ingot|c10"
+    }
+   ],
+   "Non-Fissile Uranium": [
+    {
+     "to": "c31",
+     "q": 232,
+     "station": "",
+     "key": "c11|Non-Fissile Uranium|c31"
+    },
+    {
+     "to": "c28",
+     "q": 2790,
+     "station": "",
+     "key": "c11|Non-Fissile Uranium|c28"
     }
    ]
   },
@@ -2182,7 +2571,7 @@
    {
     "id": "s12_0",
     "recipe": "Quickwire",
-    "target": 3037.5,
+    "target": 3038,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2191,7 +2580,7 @@
    {
     "id": "s12_1",
     "recipe": "Sloppy Alumina",
-    "target": 2154.8,
+    "target": 2155,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2200,7 +2589,7 @@
    {
     "id": "s12_2",
     "recipe": "Silicon High-Speed Connector",
-    "target": 101.2,
+    "target": 101,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2209,30 +2598,50 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Bauxite": [
+    {
+     "from": "raw",
+     "q": 1796,
+     "station": "",
+     "key": "c12|Bauxite|raw"
+    }
+   ],
    "Caterium Ingot": [
     {
      "from": "c8",
-     "q": 237.3,
-     "station": ""
+     "q": 237,
+     "station": "",
+     "key": "c12|Caterium Ingot|c8"
     },
     {
      "from": "c23",
-     "q": 370.2,
-     "station": ""
+     "q": 370,
+     "station": "",
+     "key": "c12|Caterium Ingot|c23"
+    }
+   ],
+   "Quickwire": [
+    {
+     "from": "local",
+     "q": 3038,
+     "station": "",
+     "key": "c12|Quickwire|local"
     }
    ],
    "Silica": [
     {
      "from": "c23",
-     "q": 1265.6,
-     "station": ""
+     "q": 1266,
+     "station": "",
+     "key": "c12|Silica|c23"
     }
    ],
    "Circuit Board": [
     {
      "from": "c21",
-     "q": 101.2,
-     "station": ""
+     "q": 101,
+     "station": "",
+     "key": "c12|Circuit Board|c21"
     }
    ]
   },
@@ -2240,27 +2649,31 @@
    "Alumina Solution": [
     {
      "to": "c11",
-     "q": 2154.8,
-     "station": ""
+     "q": 2155,
+     "station": "",
+     "key": "c12|Alumina Solution|c11"
     }
    ],
-   "Uranium": [
+   "Quickwire": [
     {
-     "to": "c0",
-     "q": 600.0,
-     "station": ""
+     "to": "local",
+     "q": 3038,
+     "station": "",
+     "key": "c12|Quickwire|local"
     }
    ],
    "High-Speed Connector": [
     {
      "to": "c29",
-     "q": 65.2,
-     "station": ""
+     "q": 65,
+     "station": "",
+     "key": "c12|High-Speed Connector|c29"
     },
     {
      "to": "c22",
-     "q": 6.0,
-     "station": ""
+     "q": 6,
+     "station": "",
+     "key": "c12|High-Speed Connector|c22"
     }
    ]
   },
@@ -2284,7 +2697,7 @@
    {
     "id": "s13_0",
     "recipe": "Quickwire Cable",
-    "target": 2347.8,
+    "target": 2348,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2293,7 +2706,7 @@
    {
     "id": "s13_1",
     "recipe": "Pure Caterium Ingot",
-    "target": 1199.4,
+    "target": 1199,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2302,7 +2715,7 @@
    {
     "id": "s13_2",
     "recipe": "Pure Quartz Crystal",
-    "target": 745.4,
+    "target": 745,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2311,7 +2724,7 @@
    {
     "id": "s13_3",
     "recipe": "Quickwire",
-    "target": 640.3,
+    "target": 640,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2320,7 +2733,7 @@
    {
     "id": "s13_4",
     "recipe": "Wet Concrete",
-    "target": 242.3,
+    "target": 242,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2329,7 +2742,7 @@
    {
     "id": "s13_5",
     "recipe": "Crystal Oscillator",
-    "target": 167.7,
+    "target": 168,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2338,7 +2751,7 @@
    {
     "id": "s13_6",
     "recipe": "Reanimated SAM",
-    "target": 74.6,
+    "target": 75,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2347,7 +2760,7 @@
    {
     "id": "s13_7",
     "recipe": "Explosive Rebar",
-    "target": 60.0,
+    "target": 60,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2356,7 +2769,7 @@
    {
     "id": "s13_8",
     "recipe": "Shatter Rebar",
-    "target": 60.0,
+    "target": 60,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2365,140 +2778,244 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 363,
+     "station": "",
+     "key": "c13|Limestone|raw"
+    }
+   ],
+   "Raw Quartz": [
+    {
+     "from": "raw",
+     "q": 958,
+     "station": "",
+     "key": "c13|Raw Quartz|raw"
+    }
+   ],
+   "Caterium Ore": [
+    {
+     "from": "raw",
+     "q": 2399,
+     "station": "",
+     "key": "c13|Caterium Ore|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 298,
+     "station": "",
+     "key": "c13|SAM|raw"
+    }
+   ],
    "Iron Rebar": [
     {
      "from": "c10",
-     "q": 120.0,
-     "station": ""
+     "q": 120,
+     "station": "",
+     "key": "c13|Iron Rebar|c10"
     },
     {
      "from": "c10",
-     "q": 120.0,
-     "station": ""
+     "q": 120,
+     "station": "",
+     "key": "c13|Iron Rebar|c10"
     }
    ],
    "Smokeless Powder": [
     {
      "from": "c27",
-     "q": 120.0,
-     "station": ""
+     "q": 120,
+     "station": "",
+     "key": "c13|Smokeless Powder|c27"
     }
    ],
    "Steel Pipe": [
     {
      "from": "c6",
-     "q": 120.0,
-     "station": ""
+     "q": 120,
+     "station": "",
+     "key": "c13|Steel Pipe|c6"
     }
    ],
    "Quartz Crystal": [
     {
+     "from": "local",
+     "q": 745,
+     "station": "",
+     "key": "c13|Quartz Crystal|local"
+    },
+    {
      "from": "c0",
-     "q": 973.1,
-     "station": ""
+     "q": 973,
+     "station": "",
+     "key": "c13|Quartz Crystal|c0"
     },
     {
      "from": "c1",
-     "q": 934.0,
-     "station": ""
+     "q": 934,
+     "station": "",
+     "key": "c13|Quartz Crystal|c1"
     },
     {
      "from": "c23",
-     "q": 546.1,
-     "station": ""
+     "q": 546,
+     "station": "",
+     "key": "c13|Quartz Crystal|c23"
     }
    ],
    "Caterium Ingot": [
     {
+     "from": "local",
+     "q": 128,
+     "station": "",
+     "key": "c13|Caterium Ingot|local"
+    },
+    {
      "from": "c2",
-     "q": 128.1,
-     "station": ""
+     "q": 128,
+     "station": "",
+     "key": "c13|Caterium Ingot|c2"
+    }
+   ],
+   "Quickwire": [
+    {
+     "from": "local",
+     "q": 640,
+     "station": "",
+     "key": "c13|Quickwire|local"
     }
    ],
    "Rubber": [
     {
      "from": "c30",
-     "q": 229.5,
-     "station": ""
+     "q": 230,
+     "station": "",
+     "key": "c13|Rubber|c30"
     },
     {
      "from": "c14",
-     "q": 18.0,
-     "station": ""
+     "q": 18,
+     "station": "",
+     "key": "c13|Rubber|c14"
     },
     {
      "from": "c18",
-     "q": 51.5,
-     "station": ""
+     "q": 52,
+     "station": "",
+     "key": "c13|Rubber|c18"
     },
     {
      "from": "c22",
-     "q": 127.9,
-     "station": ""
+     "q": 128,
+     "station": "",
+     "key": "c13|Rubber|c22"
+    }
+   ],
+   "Cable": [
+    {
+     "from": "local",
+     "q": 2348,
+     "station": "",
+     "key": "c13|Cable|local"
     }
    ],
    "Reinforced Iron Plate": [
     {
      "from": "c2",
-     "q": 419.2,
-     "station": ""
+     "q": 419,
+     "station": "",
+     "key": "c13|Reinforced Iron Plate|c2"
     }
    ]
   },
   "dests": {
-   "Iron Ore": [
+   "Concrete": [
     {
-     "to": "c2",
-     "q": 1800.0,
-     "station": ""
+     "to": "c14",
+     "q": 242,
+     "station": "",
+     "key": "c13|Concrete|c14"
+    }
+   ],
+   "Quartz Crystal": [
+    {
+     "to": "local",
+     "q": 745,
+     "station": "",
+     "key": "c13|Quartz Crystal|local"
     }
    ],
    "Caterium Ingot": [
     {
+     "to": "local",
+     "q": 128,
+     "station": "",
+     "key": "c13|Caterium Ingot|local"
+    },
+    {
      "to": "c9",
-     "q": 1059.9,
-     "station": ""
+     "q": 1060,
+     "station": "",
+     "key": "c13|Caterium Ingot|c9"
     },
     {
      "to": "c0",
-     "q": 139.5,
-     "station": ""
+     "q": 140,
+     "station": "",
+     "key": "c13|Caterium Ingot|c0"
     }
    ],
    "Reanimated SAM": [
     {
      "to": "c10",
-     "q": 74.6,
-     "station": ""
+     "q": 75,
+     "station": "",
+     "key": "c13|Reanimated SAM|c10"
+    }
+   ],
+   "Quickwire": [
+    {
+     "to": "local",
+     "q": 640,
+     "station": "",
+     "key": "c13|Quickwire|local"
+    }
+   ],
+   "Cable": [
+    {
+     "to": "local",
+     "q": 2348,
+     "station": "",
+     "key": "c13|Cable|local"
     }
    ],
    "Crystal Oscillator": [
     {
      "to": "c20",
-     "q": 76.2,
-     "station": ""
+     "q": 76,
+     "station": "",
+     "key": "c13|Crystal Oscillator|c20"
     },
     {
      "to": "c30",
-     "q": 6.0,
-     "station": ""
+     "q": 6,
+     "station": "",
+     "key": "c13|Crystal Oscillator|c30"
     },
     {
      "to": "c19",
-     "q": 9.0,
-     "station": ""
+     "q": 9,
+     "station": "",
+     "key": "c13|Crystal Oscillator|c19"
     },
     {
      "to": "c0",
-     "q": 46.5,
-     "station": ""
-    }
-   ],
-   "Concrete": [
-    {
-     "to": "c14",
-     "q": 242.3,
-     "station": ""
+     "q": 46,
+     "station": "",
+     "key": "c13|Crystal Oscillator|c0"
     }
    ]
   },
@@ -2522,7 +3039,7 @@
    {
     "id": "s14_0",
     "recipe": "Sloppy Alumina",
-    "target": 2501.1,
+    "target": 2501,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2531,7 +3048,7 @@
    {
     "id": "s14_1",
     "recipe": "Pure Caterium Ingot",
-    "target": 598.8,
+    "target": 599,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2540,7 +3057,7 @@
    {
     "id": "s14_2",
     "recipe": "Wet Concrete",
-    "target": 351.9,
+    "target": 352,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2549,7 +3066,7 @@
    {
     "id": "s14_3",
     "recipe": "Quickwire",
-    "target": 300.0,
+    "target": 300,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2558,7 +3075,7 @@
    {
     "id": "s14_4",
     "recipe": "Plastic",
-    "target": 276.6,
+    "target": 277,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2567,7 +3084,7 @@
    {
     "id": "s14_5",
     "recipe": "Singularity Cell",
-    "target": 201.0,
+    "target": 201,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2576,7 +3093,7 @@
    {
     "id": "s14_6",
     "recipe": "Ficsonium",
-    "target": 186.0,
+    "target": 186,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2585,7 +3102,7 @@
    {
     "id": "s14_7",
     "recipe": "Stun Rebar",
-    "target": 60.0,
+    "target": 60,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2594,7 +3111,7 @@
    {
     "id": "s14_8",
     "recipe": "Rubber",
-    "target": 18.0,
+    "target": 18,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2603,7 +3120,7 @@
    {
     "id": "s14_9",
     "recipe": "Adaptive Control Unit",
-    "target": 10.5,
+    "target": 10,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2612,7 +3129,7 @@
    {
     "id": "s14_10",
     "recipe": "Heavy Oil Residue",
-    "target": 8.0,
+    "target": 8,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2621,7 +3138,7 @@
    {
     "id": "s14_11",
     "recipe": "Assembly Director System",
-    "target": 3.8,
+    "target": 4,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2630,7 +3147,7 @@
    {
     "id": "s14_12",
     "recipe": "Fuel",
-    "target": 1.0,
+    "target": 1,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2639,176 +3156,298 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Iron Rebar": [
+   "Limestone": [
     {
-     "from": "c10",
-     "q": 60.0,
-     "station": ""
+     "from": "raw",
+     "q": 528,
+     "station": "",
+     "key": "c14|Limestone|raw"
+    }
+   ],
+   "Crude Oil": [
+    {
+     "from": "raw",
+     "q": 450,
+     "station": "",
+     "key": "c14|Crude Oil|raw"
+    }
+   ],
+   "Caterium Ore": [
+    {
+     "from": "raw",
+     "q": 1198,
+     "station": "",
+     "key": "c14|Caterium Ore|raw"
+    }
+   ],
+   "Bauxite": [
+    {
+     "from": "raw",
+     "q": 2084,
+     "station": "",
+     "key": "c14|Bauxite|raw"
     }
    ],
    "Caterium Ingot": [
     {
+     "from": "local",
+     "q": 60,
+     "station": "",
+     "key": "c14|Caterium Ingot|local"
+    },
+    {
      "from": "c2",
-     "q": 60.0,
-     "station": ""
+     "q": 60,
+     "station": "",
+     "key": "c14|Caterium Ingot|c2"
+    }
+   ],
+   "Iron Rebar": [
+    {
+     "from": "c10",
+     "q": 60,
+     "station": "",
+     "key": "c14|Iron Rebar|c10"
+    }
+   ],
+   "Quickwire": [
+    {
+     "from": "local",
+     "q": 300,
+     "station": "",
+     "key": "c14|Quickwire|local"
     }
    ],
    "Automated Wiring": [
     {
      "from": "c28",
-     "q": 52.5,
-     "station": ""
+     "q": 52,
+     "station": "",
+     "key": "c14|Automated Wiring|c28"
     }
    ],
    "Circuit Board": [
     {
      "from": "c21",
-     "q": 52.5,
-     "station": ""
+     "q": 52,
+     "station": "",
+     "key": "c14|Circuit Board|c21"
     }
    ],
    "Heavy Modular Frame": [
     {
      "from": "c18",
-     "q": 10.5,
-     "station": ""
+     "q": 10,
+     "station": "",
+     "key": "c14|Heavy Modular Frame|c18"
     }
    ],
    "Computer": [
     {
      "from": "c27",
-     "q": 21.0,
-     "station": ""
+     "q": 21,
+     "station": "",
+     "key": "c14|Computer|c27"
+    }
+   ],
+   "Adaptive Control Unit": [
+    {
+     "from": "local",
+     "q": 8,
+     "station": "",
+     "key": "c14|Adaptive Control Unit|local"
     }
    ],
    "Supercomputer": [
     {
      "from": "c29",
-     "q": 3.8,
-     "station": ""
+     "q": 4,
+     "station": "",
+     "key": "c14|Supercomputer|c29"
     }
    ],
    "Nuclear Pasta": [
     {
      "from": "c5",
-     "q": 20.1,
-     "station": ""
+     "q": 20,
+     "station": "",
+     "key": "c14|Nuclear Pasta|c5"
     }
    ],
    "Dark Matter Crystal": [
     {
      "from": "c7",
-     "q": 402.0,
-     "station": ""
+     "q": 402,
+     "station": "",
+     "key": "c14|Dark Matter Crystal|c7"
     }
    ],
    "Iron Plate": [
     {
      "from": "c2",
-     "q": 2010.0,
-     "station": ""
+     "q": 2010,
+     "station": "",
+     "key": "c14|Iron Plate|c2"
     }
    ],
    "Concrete": [
     {
+     "from": "local",
+     "q": 352,
+     "station": "",
+     "key": "c14|Concrete|local"
+    },
+    {
      "from": "c10",
-     "q": 448.7,
-     "station": ""
+     "q": 449,
+     "station": "",
+     "key": "c14|Concrete|c10"
     },
     {
      "from": "c13",
-     "q": 242.3,
-     "station": ""
+     "q": 242,
+     "station": "",
+     "key": "c14|Concrete|c13"
     },
     {
      "from": "c6",
-     "q": 590.4,
-     "station": ""
+     "q": 590,
+     "station": "",
+     "key": "c14|Concrete|c6"
     },
     {
      "from": "c27",
-     "q": 84.0,
-     "station": ""
+     "q": 84,
+     "station": "",
+     "key": "c14|Concrete|c27"
     },
     {
      "from": "c5",
-     "q": 796.6,
-     "station": ""
+     "q": 797,
+     "station": "",
+     "key": "c14|Concrete|c5"
     },
     {
      "from": "c2",
-     "q": 1404.3,
-     "station": ""
+     "q": 1404,
+     "station": "",
+     "key": "c14|Concrete|c2"
     },
     {
      "from": "c17",
-     "q": 101.8,
-     "station": ""
+     "q": 102,
+     "station": "",
+     "key": "c14|Concrete|c17"
+    }
+   ],
+   "Singularity Cell": [
+    {
+     "from": "local",
+     "q": 186,
+     "station": "",
+     "key": "c14|Singularity Cell|local"
     }
    ]
   },
   "dests": {
-   "Fuel": [
+   "Concrete": [
     {
-     "to": "c29",
-     "q": 1.0,
-     "station": ""
-    }
-   ],
-   "Copper Ore": [
-    {
-     "to": "c5",
-     "q": 600.0,
-     "station": ""
-    }
-   ],
-   "Caterium Ingot": [
-    {
-     "to": "c9",
-     "q": 598.8,
-     "station": ""
-    }
-   ],
-   "Alumina Solution": [
-    {
-     "to": "c11",
-     "q": 2501.1,
-     "station": ""
-    }
-   ],
-   "Heavy Oil Residue": [
-    {
-     "to": "c11",
-     "q": 8.0,
-     "station": ""
+     "to": "local",
+     "q": 352,
+     "station": "",
+     "key": "c14|Concrete|local"
     }
    ],
    "Plastic": [
     {
      "to": "c27",
-     "q": 276.6,
-     "station": ""
+     "q": 277,
+     "station": "",
+     "key": "c14|Plastic|c27"
     }
    ],
    "Rubber": [
     {
      "to": "c13",
-     "q": 18.0,
-     "station": ""
+     "q": 18,
+     "station": "",
+     "key": "c14|Rubber|c13"
+    }
+   ],
+   "Heavy Oil Residue": [
+    {
+     "to": "c11",
+     "q": 8,
+     "station": "",
+     "key": "c14|Heavy Oil Residue|c11"
+    }
+   ],
+   "Fuel": [
+    {
+     "to": "c29",
+     "q": 1,
+     "station": "",
+     "key": "c14|Fuel|c29"
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "to": "local",
+     "q": 60,
+     "station": "",
+     "key": "c14|Caterium Ingot|local"
+    },
+    {
+     "to": "c9",
+     "q": 599,
+     "station": "",
+     "key": "c14|Caterium Ingot|c9"
+    }
+   ],
+   "Alumina Solution": [
+    {
+     "to": "c11",
+     "q": 2501,
+     "station": "",
+     "key": "c14|Alumina Solution|c11"
+    }
+   ],
+   "Quickwire": [
+    {
+     "to": "local",
+     "q": 300,
+     "station": "",
+     "key": "c14|Quickwire|local"
+    }
+   ],
+   "Adaptive Control Unit": [
+    {
+     "to": "local",
+     "q": 8,
+     "station": "",
+     "key": "c14|Adaptive Control Unit|local"
     }
    ],
    "Singularity Cell": [
     {
+     "to": "local",
+     "q": 186,
+     "station": "",
+     "key": "c14|Singularity Cell|local"
+    },
+    {
      "to": "c26",
-     "q": 15.0,
-     "station": ""
+     "q": 15,
+     "station": "",
+     "key": "c14|Singularity Cell|c26"
     }
    ],
    "Ficsonium": [
     {
      "to": "c26",
-     "q": 186.0,
-     "station": ""
+     "q": 186,
+     "station": "",
+     "key": "c14|Ficsonium|c26"
     }
    ]
   },
@@ -2832,7 +3471,7 @@
    {
     "id": "s15_0",
     "recipe": "Caterium Wire",
-    "target": 9864.0,
+    "target": 9864,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2841,7 +3480,7 @@
    {
     "id": "s15_1",
     "recipe": "Stator",
-    "target": 1233.0,
+    "target": 1233,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2850,7 +3489,7 @@
    {
     "id": "s15_2",
     "recipe": "Pure Caterium Ingot",
-    "target": 298.4,
+    "target": 298,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2859,54 +3498,92 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Steel Pipe": [
+   "Caterium Ore": [
     {
-     "from": "c6",
-     "q": 3699.0,
-     "station": ""
+     "from": "raw",
+     "q": 597,
+     "station": "",
+     "key": "c15|Caterium Ore|raw"
     }
    ],
    "Caterium Ingot": [
     {
+     "from": "local",
+     "q": 298,
+     "station": "",
+     "key": "c15|Caterium Ingot|local"
+    },
+    {
      "from": "c23",
-     "q": 187.2,
-     "station": ""
+     "q": 187,
+     "station": "",
+     "key": "c15|Caterium Ingot|c23"
     },
     {
      "from": "c16",
-     "q": 594.6,
-     "station": ""
+     "q": 595,
+     "station": "",
+     "key": "c15|Caterium Ingot|c16"
     },
     {
      "from": "c2",
-     "q": 152.8,
-     "station": ""
+     "q": 153,
+     "station": "",
+     "key": "c15|Caterium Ingot|c2"
+    }
+   ],
+   "Steel Pipe": [
+    {
+     "from": "c6",
+     "q": 3699,
+     "station": "",
+     "key": "c15|Steel Pipe|c6"
+    }
+   ],
+   "Wire": [
+    {
+     "from": "local",
+     "q": 9864,
+     "station": "",
+     "key": "c15|Wire|local"
     }
    ]
   },
   "dests": {
-   "Uranium": [
+   "Caterium Ingot": [
     {
-     "to": "c0",
-     "q": 300.0,
-     "station": ""
+     "to": "local",
+     "q": 298,
+     "station": "",
+     "key": "c15|Caterium Ingot|local"
+    }
+   ],
+   "Wire": [
+    {
+     "to": "local",
+     "q": 9864,
+     "station": "",
+     "key": "c15|Wire|local"
     }
    ],
    "Stator": [
     {
      "to": "c9",
-     "q": 565.5,
-     "station": ""
+     "q": 566,
+     "station": "",
+     "key": "c15|Stator|c9"
     },
     {
      "to": "c17",
-     "q": 492.0,
-     "station": ""
+     "q": 492,
+     "station": "",
+     "key": "c15|Stator|c17"
     },
     {
      "to": "c28",
-     "q": 55.5,
-     "station": ""
+     "q": 56,
+     "station": "",
+     "key": "c15|Stator|c28"
     }
    ]
   },
@@ -2930,7 +3607,7 @@
    {
     "id": "s16_0",
     "recipe": "Pure Caterium Ingot",
-    "target": 594.6,
+    "target": 595,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2939,7 +3616,7 @@
    {
     "id": "s16_1",
     "recipe": "Black Powder",
-    "target": 300.6,
+    "target": 301,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2948,7 +3625,7 @@
    {
     "id": "s16_2",
     "recipe": "Nobelisk",
-    "target": 242.5,
+    "target": 242,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2957,7 +3634,7 @@
    {
     "id": "s16_3",
     "recipe": "Wet Concrete",
-    "target": 223.3,
+    "target": 223,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2966,7 +3643,7 @@
    {
     "id": "s16_4",
     "recipe": "Compacted Coal",
-    "target": 131.5,
+    "target": 131,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2975,7 +3652,7 @@
    {
     "id": "s16_5",
     "recipe": "Sulfuric Acid",
-    "target": 121.6,
+    "target": 122,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2984,7 +3661,7 @@
    {
     "id": "s16_6",
     "recipe": "Reanimated SAM",
-    "target": 74.3,
+    "target": 74,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2993,7 +3670,7 @@
    {
     "id": "s16_7",
     "recipe": "Gas Filter",
-    "target": 60.0,
+    "target": 60,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3002,7 +3679,7 @@
    {
     "id": "s16_8",
     "recipe": "Battery",
-    "target": 60.0,
+    "target": 60,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3011,131 +3688,194 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 335,
+     "station": "",
+     "key": "c16|Limestone|raw"
+    }
+   ],
+   "Coal": [
+    {
+     "from": "raw",
+     "q": 522,
+     "station": "",
+     "key": "c16|Coal|raw"
+    }
+   ],
+   "Sulfur": [
+    {
+     "from": "raw",
+     "q": 403,
+     "station": "",
+     "key": "c16|Sulfur|raw"
+    }
+   ],
+   "Caterium Ore": [
+    {
+     "from": "raw",
+     "q": 1189,
+     "station": "",
+     "key": "c16|Caterium Ore|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 297,
+     "station": "",
+     "key": "c16|SAM|raw"
+    }
+   ],
    "Fabric": [
     {
      "from": "c3",
-     "q": 120.0,
-     "station": ""
+     "q": 120,
+     "station": "",
+     "key": "c16|Fabric|c3"
     }
    ],
    "Iron Plate": [
     {
      "from": "c2",
-     "q": 120.0,
-     "station": ""
+     "q": 120,
+     "station": "",
+     "key": "c16|Iron Plate|c2"
     }
    ],
    "Black Powder": [
     {
+     "from": "local",
+     "q": 301,
+     "station": "",
+     "key": "c16|Black Powder|local"
+    },
+    {
      "from": "c9",
-     "q": 141.6,
-     "station": ""
+     "q": 142,
+     "station": "",
+     "key": "c16|Black Powder|c9"
     },
     {
      "from": "c17",
-     "q": 42.0,
-     "station": ""
+     "q": 42,
+     "station": "",
+     "key": "c16|Black Powder|c17"
     }
    ],
    "Steel Pipe": [
     {
      "from": "c6",
-     "q": 485.0,
-     "station": ""
+     "q": 485,
+     "station": "",
+     "key": "c16|Steel Pipe|c6"
     }
    ],
    "Sulfuric Acid": [
     {
+     "from": "local",
+     "q": 122,
+     "station": "",
+     "key": "c16|Sulfuric Acid|local"
+    },
+    {
      "from": "c3",
-     "q": 27.7,
-     "station": ""
+     "q": 28,
+     "station": "",
+     "key": "c16|Sulfuric Acid|c3"
     }
    ],
    "Alumina Solution": [
     {
      "from": "c25",
-     "q": 119.1,
-     "station": ""
+     "q": 119,
+     "station": "",
+     "key": "c16|Alumina Solution|c25"
     }
    ],
    "Aluminum Casing": [
     {
      "from": "c25",
-     "q": 60.0,
-     "station": ""
+     "q": 60,
+     "station": "",
+     "key": "c16|Aluminum Casing|c25"
     }
    ]
   },
   "dests": {
-   "Iron Ore": [
+   "Black Powder": [
     {
-     "to": "c2",
-     "q": 1200.0,
-     "station": ""
-    }
-   ],
-   "Compacted Coal": [
-    {
-     "to": "c29",
-     "q": 131.5,
-     "station": ""
-    }
-   ],
-   "Copper Ore": [
-    {
-     "to": "c5",
-     "q": 1200.0,
-     "station": ""
-    }
-   ],
-   "Sulfur": [
-    {
-     "to": "c0",
-     "q": 144.4,
-     "station": ""
+     "to": "local",
+     "q": 301,
+     "station": "",
+     "key": "c16|Black Powder|local"
     }
    ],
    "Caterium Ingot": [
     {
      "to": "c15",
-     "q": 594.6,
-     "station": ""
+     "q": 595,
+     "station": "",
+     "key": "c16|Caterium Ingot|c15"
     }
    ],
-   "Nobelisk": [
+   "Sulfuric Acid": [
     {
-     "to": "c19",
-     "q": 90.0,
-     "station": ""
-    },
+     "to": "local",
+     "q": 122,
+     "station": "",
+     "key": "c16|Sulfuric Acid|local"
+    }
+   ],
+   "Compacted Coal": [
     {
-     "to": "c20",
-     "q": 30.0,
-     "station": ""
-    },
-    {
-     "to": "c31",
-     "q": 32.5,
-     "station": ""
-    },
-    {
-     "to": "c30",
-     "q": 30.0,
-     "station": ""
+     "to": "c29",
+     "q": 132,
+     "station": "",
+     "key": "c16|Compacted Coal|c29"
     }
    ],
    "Reanimated SAM": [
     {
      "to": "c10",
-     "q": 74.3,
-     "station": ""
+     "q": 74,
+     "station": "",
+     "key": "c16|Reanimated SAM|c10"
     }
    ],
    "Gas Filter": [
     {
      "to": "c26",
-     "q": 30.0,
-     "station": ""
+     "q": 30,
+     "station": "",
+     "key": "c16|Gas Filter|c26"
+    }
+   ],
+   "Nobelisk": [
+    {
+     "to": "c19",
+     "q": 90,
+     "station": "",
+     "key": "c16|Nobelisk|c19"
+    },
+    {
+     "to": "c20",
+     "q": 30,
+     "station": "",
+     "key": "c16|Nobelisk|c20"
+    },
+    {
+     "to": "c31",
+     "q": 32,
+     "station": "",
+     "key": "c16|Nobelisk|c31"
+    },
+    {
+     "to": "c30",
+     "q": 30,
+     "station": "",
+     "key": "c16|Nobelisk|c30"
     }
    ]
   },
@@ -3159,7 +3899,7 @@
    {
     "id": "s17_0",
     "recipe": "Screws",
-    "target": 20150.0,
+    "target": 20150,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3168,7 +3908,7 @@
    {
     "id": "s17_1",
     "recipe": "Rotor",
-    "target": 806.0,
+    "target": 806,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3177,7 +3917,7 @@
    {
     "id": "s17_2",
     "recipe": "Wet Concrete",
-    "target": 432.1,
+    "target": 432,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3186,7 +3926,7 @@
    {
     "id": "s17_3",
     "recipe": "Motor",
-    "target": 246.0,
+    "target": 246,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3195,7 +3935,7 @@
    {
     "id": "s17_4",
     "recipe": "Reanimated SAM",
-    "target": 150.0,
+    "target": 150,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3204,7 +3944,7 @@
    {
     "id": "s17_5",
     "recipe": "Black Powder",
-    "target": 42.0,
+    "target": 42,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3213,7 +3953,7 @@
    {
     "id": "s17_6",
     "recipe": "Sulfuric Acid",
-    "target": 26.3,
+    "target": 26,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3222,7 +3962,7 @@
    {
     "id": "s17_7",
     "recipe": "Compacted Coal",
-    "target": 19.2,
+    "target": 19,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3231,103 +3971,164 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 648,
+     "station": "",
+     "key": "c17|Limestone|raw"
+    }
+   ],
+   "Coal": [
+    {
+     "from": "raw",
+     "q": 40,
+     "station": "",
+     "key": "c17|Coal|raw"
+    }
+   ],
+   "Sulfur": [
+    {
+     "from": "raw",
+     "q": 66,
+     "station": "",
+     "key": "c17|Sulfur|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 600,
+     "station": "",
+     "key": "c17|SAM|raw"
+    }
+   ],
    "Iron Rod": [
     {
      "from": "c1",
-     "q": 4030.0,
-     "station": ""
+     "q": 4030,
+     "station": "",
+     "key": "c17|Iron Rod|c1"
     },
     {
      "from": "c1",
-     "q": 5037.5,
-     "station": ""
+     "q": 5038,
+     "station": "",
+     "key": "c17|Iron Rod|c1"
+    }
+   ],
+   "Screws": [
+    {
+     "from": "local",
+     "q": 20150,
+     "station": "",
+     "key": "c17|Screws|local"
+    }
+   ],
+   "Rotor": [
+    {
+     "from": "local",
+     "q": 492,
+     "station": "",
+     "key": "c17|Rotor|local"
     }
    ],
    "Stator": [
     {
      "from": "c15",
-     "q": 492.0,
-     "station": ""
+     "q": 492,
+     "station": "",
+     "key": "c17|Stator|c15"
     }
    ]
   },
   "dests": {
-   "Compacted Coal": [
+   "Concrete": [
     {
-     "to": "c29",
-     "q": 19.2,
-     "station": ""
-    }
-   ],
-   "Copper Ore": [
-    {
-     "to": "c4",
-     "q": 600.0,
-     "station": ""
-    }
-   ],
-   "Sulfur": [
-    {
-     "to": "c0",
-     "q": 167.1,
-     "station": ""
+     "to": "c14",
+     "q": 102,
+     "station": "",
+     "key": "c17|Concrete|c14"
     }
    ],
    "Black Powder": [
     {
      "to": "c16",
-     "q": 42.0,
-     "station": ""
+     "q": 42,
+     "station": "",
+     "key": "c17|Black Powder|c16"
     }
    ],
    "Sulfuric Acid": [
     {
      "to": "c11",
-     "q": 26.3,
-     "station": ""
+     "q": 26,
+     "station": "",
+     "key": "c17|Sulfuric Acid|c11"
     }
    ],
-   "Rotor": [
+   "Compacted Coal": [
     {
-     "to": "c30",
-     "q": 39.0,
-     "station": ""
-    },
-    {
-     "to": "c0",
-     "q": 155.0,
-     "station": ""
+     "to": "c29",
+     "q": 19,
+     "station": "",
+     "key": "c17|Compacted Coal|c29"
     }
    ],
    "Reanimated SAM": [
     {
      "to": "c10",
-     "q": 150.0,
-     "station": ""
+     "q": 150,
+     "station": "",
+     "key": "c17|Reanimated SAM|c10"
+    }
+   ],
+   "Screws": [
+    {
+     "to": "local",
+     "q": 20150,
+     "station": "",
+     "key": "c17|Screws|local"
+    }
+   ],
+   "Rotor": [
+    {
+     "to": "local",
+     "q": 492,
+     "station": "",
+     "key": "c17|Rotor|local"
+    },
+    {
+     "to": "c30",
+     "q": 39,
+     "station": "",
+     "key": "c17|Rotor|c30"
+    },
+    {
+     "to": "c0",
+     "q": 155,
+     "station": "",
+     "key": "c17|Rotor|c0"
     }
    ],
    "Motor": [
     {
      "to": "c22",
-     "q": 36.0,
-     "station": ""
+     "q": 36,
+     "station": "",
+     "key": "c17|Motor|c22"
     },
     {
      "to": "c3",
-     "q": 66.0,
-     "station": ""
+     "q": 66,
+     "station": "",
+     "key": "c17|Motor|c3"
     },
     {
      "to": "c29",
-     "q": 84.0,
-     "station": ""
-    }
-   ],
-   "Concrete": [
-    {
-     "to": "c14",
-     "q": 101.8,
-     "station": ""
+     "q": 84,
+     "station": "",
+     "key": "c17|Motor|c29"
     }
    ]
   },
@@ -3351,7 +4152,7 @@
    {
     "id": "s18_0",
     "recipe": "Screws",
-    "target": 13104.0,
+    "target": 13104,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3360,7 +4161,7 @@
    {
     "id": "s18_1",
     "recipe": "Plastic",
-    "target": 733.0,
+    "target": 733,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3369,7 +4170,7 @@
    {
     "id": "s18_2",
     "recipe": "Modular Frame",
-    "target": 615.0,
+    "target": 615,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3378,7 +4179,7 @@
    {
     "id": "s18_3",
     "recipe": "Heavy Modular Frame",
-    "target": 109.2,
+    "target": 109,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3387,7 +4188,7 @@
    {
     "id": "s18_4",
     "recipe": "Rubber",
-    "target": 51.5,
+    "target": 52,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3396,7 +4197,7 @@
    {
     "id": "s18_5",
     "recipe": "Heavy Oil Residue",
-    "target": 23.1,
+    "target": 23,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3405,7 +4206,7 @@
    {
     "id": "s18_6",
     "recipe": "Fuel",
-    "target": 3.0,
+    "target": 3,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3414,93 +4215,136 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Crude Oil": [
+    {
+     "from": "raw",
+     "q": 1199,
+     "station": "",
+     "key": "c18|Crude Oil|raw"
+    }
+   ],
    "Reinforced Iron Plate": [
     {
      "from": "c2",
-     "q": 922.5,
-     "station": ""
+     "q": 922,
+     "station": "",
+     "key": "c18|Reinforced Iron Plate|c2"
     }
    ],
    "Iron Rod": [
     {
      "from": "c1",
-     "q": 3690.0,
-     "station": ""
+     "q": 3690,
+     "station": "",
+     "key": "c18|Iron Rod|c1"
     },
     {
      "from": "c1",
-     "q": 3276.0,
-     "station": ""
+     "q": 3276,
+     "station": "",
+     "key": "c18|Iron Rod|c1"
+    }
+   ],
+   "Modular Frame": [
+    {
+     "from": "local",
+     "q": 546,
+     "station": "",
+     "key": "c18|Modular Frame|local"
     }
    ],
    "Steel Pipe": [
     {
      "from": "c6",
-     "q": 2184.0,
-     "station": ""
+     "q": 2184,
+     "station": "",
+     "key": "c18|Steel Pipe|c6"
     }
    ],
    "Encased Industrial Beam": [
     {
      "from": "c8",
-     "q": 546.0,
-     "station": ""
+     "q": 546,
+     "station": "",
+     "key": "c18|Encased Industrial Beam|c8"
+    }
+   ],
+   "Screws": [
+    {
+     "from": "local",
+     "q": 13104,
+     "station": "",
+     "key": "c18|Screws|local"
     }
    ]
   },
   "dests": {
-   "Fuel": [
-    {
-     "to": "c29",
-     "q": 3.0,
-     "station": ""
-    }
-   ],
    "Plastic": [
     {
      "to": "c21",
-     "q": 733.0,
-     "station": ""
-    }
-   ],
-   "Heavy Oil Residue": [
-    {
-     "to": "c11",
-     "q": 23.1,
-     "station": ""
-    }
-   ],
-   "Uranium": [
-    {
-     "to": "c0",
-     "q": 300.0,
-     "station": ""
+     "q": 733,
+     "station": "",
+     "key": "c18|Plastic|c21"
     }
    ],
    "Rubber": [
     {
      "to": "c13",
-     "q": 51.5,
-     "station": ""
+     "q": 52,
+     "station": "",
+     "key": "c18|Rubber|c13"
+    }
+   ],
+   "Heavy Oil Residue": [
+    {
+     "to": "c11",
+     "q": 23,
+     "station": "",
+     "key": "c18|Heavy Oil Residue|c11"
+    }
+   ],
+   "Fuel": [
+    {
+     "to": "c29",
+     "q": 3,
+     "station": "",
+     "key": "c18|Fuel|c29"
     }
    ],
    "Modular Frame": [
     {
+     "to": "local",
+     "q": 546,
+     "station": "",
+     "key": "c18|Modular Frame|local"
+    },
+    {
      "to": "c19",
-     "q": 9.0,
-     "station": ""
+     "q": 9,
+     "station": "",
+     "key": "c18|Modular Frame|c19"
+    }
+   ],
+   "Screws": [
+    {
+     "to": "local",
+     "q": 13104,
+     "station": "",
+     "key": "c18|Screws|local"
     }
    ],
    "Heavy Modular Frame": [
     {
      "to": "c31",
-     "q": 68.7,
-     "station": ""
+     "q": 69,
+     "station": "",
+     "key": "c18|Heavy Modular Frame|c31"
     },
     {
      "to": "c14",
-     "q": 10.5,
-     "station": ""
+     "q": 10,
+     "station": "",
+     "key": "c18|Heavy Modular Frame|c14"
     }
    ]
   },
@@ -3524,7 +4368,7 @@
    {
     "id": "s19_0",
     "recipe": "Pure Caterium Ingot",
-    "target": 585.1,
+    "target": 585,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3533,7 +4377,7 @@
    {
     "id": "s19_1",
     "recipe": "Wet Concrete",
-    "target": 151.4,
+    "target": 151,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3542,7 +4386,7 @@
    {
     "id": "s19_2",
     "recipe": "Ficsite Trigon",
-    "target": 45.0,
+    "target": 45,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3551,7 +4395,7 @@
    {
     "id": "s19_3",
     "recipe": "Cluster Nobelisk",
-    "target": 30.0,
+    "target": 30,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3560,7 +4404,7 @@
    {
     "id": "s19_4",
     "recipe": "Versatile Framework",
-    "target": 18.0,
+    "target": 18,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3569,7 +4413,7 @@
    {
     "id": "s19_5",
     "recipe": "Time Crystal",
-    "target": 15.0,
+    "target": 15,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3578,7 +4422,7 @@
    {
     "id": "s19_6",
     "recipe": "Superposition Oscillator",
-    "target": 9.0,
+    "target": 9,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3587,7 +4431,7 @@
    {
     "id": "s19_7",
     "recipe": "Magnetic Field Generator",
-    "target": 6.0,
+    "target": 6,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3596,7 +4440,7 @@
    {
     "id": "s19_8",
     "recipe": "Neural-Quantum Processor",
-    "target": 3.0,
+    "target": 3,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3605,130 +4449,204 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 227,
+     "station": "",
+     "key": "c19|Limestone|raw"
+    }
+   ],
+   "Caterium Ore": [
+    {
+     "from": "raw",
+     "q": 1170,
+     "station": "",
+     "key": "c19|Caterium Ore|raw"
+    }
+   ],
    "Nobelisk": [
     {
      "from": "c16",
-     "q": 90.0,
-     "station": ""
+     "q": 90,
+     "station": "",
+     "key": "c19|Nobelisk|c16"
     }
    ],
    "Smokeless Powder": [
     {
      "from": "c27",
-     "q": 120.0,
-     "station": ""
+     "q": 120,
+     "station": "",
+     "key": "c19|Smokeless Powder|c27"
     }
    ],
    "Diamonds": [
     {
      "from": "c7",
-     "q": 30.0,
-     "station": ""
+     "q": 30,
+     "station": "",
+     "key": "c19|Diamonds|c7"
     }
    ],
    "Dark Matter Crystal": [
     {
      "from": "c7",
-     "q": 54.0,
-     "station": ""
+     "q": 54,
+     "station": "",
+     "key": "c19|Dark Matter Crystal|c7"
     }
    ],
    "Crystal Oscillator": [
     {
      "from": "c13",
-     "q": 9.0,
-     "station": ""
+     "q": 9,
+     "station": "",
+     "key": "c19|Crystal Oscillator|c13"
     }
    ],
    "Alclad Aluminum Sheet": [
     {
      "from": "c24",
-     "q": 81.0,
-     "station": ""
+     "q": 81,
+     "station": "",
+     "key": "c19|Alclad Aluminum Sheet|c24"
     }
    ],
    "Modular Frame": [
     {
      "from": "c18",
-     "q": 9.0,
-     "station": ""
+     "q": 9,
+     "station": "",
+     "key": "c19|Modular Frame|c18"
     }
    ],
    "Steel Beam": [
     {
      "from": "c8",
-     "q": 108.0,
-     "station": ""
-    }
-   ],
-   "Supercomputer": [
-    {
-     "from": "c29",
-     "q": 3.0,
-     "station": ""
+     "q": 108,
+     "station": "",
+     "key": "c19|Steel Beam|c8"
     }
    ],
    "Ficsite Ingot": [
     {
      "from": "c10",
-     "q": 15.0,
-     "station": ""
+     "q": 15,
+     "station": "",
+     "key": "c19|Ficsite Ingot|c10"
+    }
+   ],
+   "Time Crystal": [
+    {
+     "from": "local",
+     "q": 15,
+     "station": "",
+     "key": "c19|Time Crystal|local"
+    }
+   ],
+   "Supercomputer": [
+    {
+     "from": "c29",
+     "q": 3,
+     "station": "",
+     "key": "c19|Supercomputer|c29"
+    }
+   ],
+   "Ficsite Trigon": [
+    {
+     "from": "local",
+     "q": 45,
+     "station": "",
+     "key": "c19|Ficsite Trigon|local"
+    }
+   ],
+   "Versatile Framework": [
+    {
+     "from": "local",
+     "q": 15,
+     "station": "",
+     "key": "c19|Versatile Framework|local"
     }
    ],
    "Electromagnetic Control Rod": [
     {
      "from": "c9",
-     "q": 6.0,
-     "station": ""
+     "q": 6,
+     "station": "",
+     "key": "c19|Electromagnetic Control Rod|c9"
     }
    ]
   },
   "dests": {
-   "Copper Ore": [
+   "Concrete": [
     {
-     "to": "c4",
-     "q": 600.0,
-     "station": ""
+     "to": "c8",
+     "q": 151,
+     "station": "",
+     "key": "c19|Concrete|c8"
     }
    ],
    "Caterium Ingot": [
     {
      "to": "c0",
-     "q": 585.1,
-     "station": ""
+     "q": 585,
+     "station": "",
+     "key": "c19|Caterium Ingot|c0"
     }
    ],
-   "Concrete": [
+   "Time Crystal": [
     {
-     "to": "c8",
-     "q": 151.4,
-     "station": ""
-    }
-   ],
-   "Magnetic Field Generator": [
-    {
-     "to": "c26",
-     "q": 3.0,
-     "station": ""
-    }
-   ],
-   "Neural-Quantum Processor": [
-    {
-     "to": "c26",
-     "q": 3.0,
-     "station": ""
+     "to": "local",
+     "q": 15,
+     "station": "",
+     "key": "c19|Time Crystal|local"
     }
    ],
    "Superposition Oscillator": [
     {
      "to": "c26",
-     "q": 3.0,
-     "station": ""
+     "q": 3,
+     "station": "",
+     "key": "c19|Superposition Oscillator|c26"
     },
     {
      "to": "c26",
-     "q": 6.0,
-     "station": ""
+     "q": 6,
+     "station": "",
+     "key": "c19|Superposition Oscillator|c26"
+    }
+   ],
+   "Versatile Framework": [
+    {
+     "to": "local",
+     "q": 15,
+     "station": "",
+     "key": "c19|Versatile Framework|local"
+    }
+   ],
+   "Ficsite Trigon": [
+    {
+     "to": "local",
+     "q": 45,
+     "station": "",
+     "key": "c19|Ficsite Trigon|local"
+    }
+   ],
+   "Neural-Quantum Processor": [
+    {
+     "to": "c26",
+     "q": 3,
+     "station": "",
+     "key": "c19|Neural-Quantum Processor|c26"
+    }
+   ],
+   "Magnetic Field Generator": [
+    {
+     "to": "c26",
+     "q": 3,
+     "station": "",
+     "key": "c19|Magnetic Field Generator|c26"
     }
    ]
   },
@@ -3752,7 +4670,7 @@
    {
     "id": "s20_0",
     "recipe": "Wet Concrete",
-    "target": 393.6,
+    "target": 394,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3760,8 +4678,8 @@
    },
    {
     "id": "s20_1",
-    "recipe": "Biomass (Mycelia)",
-    "target": 300.0,
+    "recipe": "Radio Control Unit",
+    "target": 152,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3769,8 +4687,8 @@
    },
    {
     "id": "s20_2",
-    "recipe": "Radio Control Unit",
-    "target": 152.4,
+    "recipe": "Pressure Conversion Cube",
+    "target": 48,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3778,17 +4696,8 @@
    },
    {
     "id": "s20_3",
-    "recipe": "Pressure Conversion Cube",
-    "target": 47.7,
-    "clock": 100,
-    "status": "todo",
-    "sec": "PRODUCTION FLOW",
-    "name": ""
-   },
-   {
-    "id": "s20_4",
     "recipe": "Gas Nobelisk",
-    "target": 30.0,
+    "target": 30,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3797,81 +4706,98 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 590,
+     "station": "",
+     "key": "c20|Limestone|raw"
+    }
+   ],
    "Nobelisk": [
     {
      "from": "c16",
-     "q": 30.0,
-     "station": ""
+     "q": 30,
+     "station": "",
+     "key": "c20|Nobelisk|c16"
     }
    ],
    "Aluminum Casing": [
     {
      "from": "c25",
-     "q": 2438.4,
-     "station": ""
+     "q": 2438,
+     "station": "",
+     "key": "c20|Aluminum Casing|c25"
     }
    ],
    "Crystal Oscillator": [
     {
      "from": "c13",
-     "q": 76.2,
-     "station": ""
+     "q": 76,
+     "station": "",
+     "key": "c20|Crystal Oscillator|c13"
     }
    ],
    "Computer": [
     {
      "from": "c27",
-     "q": 152.4,
-     "station": ""
+     "q": 152,
+     "station": "",
+     "key": "c20|Computer|c27"
     }
    ],
    "Fused Modular Frame": [
     {
      "from": "c31",
-     "q": 47.7,
-     "station": ""
-    }
-   ]
-  },
-  "dests": {
-   "Limestone": [
-    {
-     "to": "c23",
-     "q": 1219.2,
-     "station": ""
-    }
-   ],
-   "Copper Ore": [
-    {
-     "to": "c5",
-     "q": 2400.0,
-     "station": ""
-    }
-   ],
-   "Concrete": [
-    {
-     "to": "c8",
-     "q": 348.0,
-     "station": ""
+     "q": 48,
+     "station": "",
+     "key": "c20|Fused Modular Frame|c31"
     }
    ],
    "Radio Control Unit": [
     {
+     "from": "local",
+     "q": 95,
+     "station": "",
+     "key": "c20|Radio Control Unit|local"
+    }
+   ]
+  },
+  "dests": {
+   "Concrete": [
+    {
+     "to": "c8",
+     "q": 348,
+     "station": "",
+     "key": "c20|Concrete|c8"
+    }
+   ],
+   "Radio Control Unit": [
+    {
+     "to": "local",
+     "q": 95,
+     "station": "",
+     "key": "c20|Radio Control Unit|local"
+    },
+    {
      "to": "c29",
-     "q": 42.0,
-     "station": ""
+     "q": 42,
+     "station": "",
+     "key": "c20|Radio Control Unit|c29"
     }
    ],
    "Pressure Conversion Cube": [
     {
      "to": "c28",
-     "q": 18.6,
-     "station": ""
+     "q": 19,
+     "station": "",
+     "key": "c20|Pressure Conversion Cube|c28"
     },
     {
      "to": "c5",
-     "q": 23.1,
-     "station": ""
+     "q": 23,
+     "station": "",
+     "key": "c20|Pressure Conversion Cube|c5"
     }
    ]
   },
@@ -3880,7 +4806,7 @@
    "x": -400,
    "y": -1412
   },
-  "desc": "Engine-generated. Nodes: Iron 4800, Copper 2400, Limestone 2400. 5 recipes."
+  "desc": "Engine-generated. Nodes: Iron 4800, Copper 2400, Limestone 2400. 4 recipes."
  },
  {
   "id": "c21",
@@ -3895,7 +4821,7 @@
    {
     "id": "s21_0",
     "recipe": "Plastic",
-    "target": 2700.0,
+    "target": 2700,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3904,7 +4830,7 @@
    {
     "id": "s21_1",
     "recipe": "Circuit Board",
-    "target": 1375.3,
+    "target": 1375,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3913,7 +4839,7 @@
    {
     "id": "s21_2",
     "recipe": "Reanimated SAM",
-    "target": 300.0,
+    "target": 300,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3922,7 +4848,7 @@
    {
     "id": "s21_3",
     "recipe": "Rubber",
-    "target": 228.3,
+    "target": 228,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3931,7 +4857,7 @@
    {
     "id": "s21_4",
     "recipe": "Heavy Oil Residue",
-    "target": 106.5,
+    "target": 106,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3940,7 +4866,7 @@
    {
     "id": "s21_5",
     "recipe": "Fuel",
-    "target": 17.0,
+    "target": 17,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3949,85 +4875,128 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Crude Oil": [
+    {
+     "from": "raw",
+     "q": 4498,
+     "station": "",
+     "key": "c21|Crude Oil|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 1200,
+     "station": "",
+     "key": "c21|SAM|raw"
+    }
+   ],
    "Copper Sheet": [
     {
      "from": "c4",
-     "q": 2750.7,
-     "station": ""
+     "q": 2751,
+     "station": "",
+     "key": "c21|Copper Sheet|c4"
     }
    ],
    "Plastic": [
     {
+     "from": "local",
+     "q": 2700,
+     "station": "",
+     "key": "c21|Plastic|local"
+    },
+    {
      "from": "c28",
-     "q": 514.6,
-     "station": ""
+     "q": 515,
+     "station": "",
+     "key": "c21|Plastic|c28"
     },
     {
      "from": "c18",
-     "q": 733.0,
-     "station": ""
+     "q": 733,
+     "station": "",
+     "key": "c21|Plastic|c18"
     },
     {
      "from": "c30",
-     "q": 601.0,
-     "station": ""
+     "q": 601,
+     "station": "",
+     "key": "c21|Plastic|c30"
     },
     {
      "from": "c22",
-     "q": 952.8,
-     "station": ""
+     "q": 953,
+     "station": "",
+     "key": "c21|Plastic|c22"
     }
    ]
   },
   "dests": {
-   "Fuel": [
+   "Plastic": [
     {
-     "to": "c29",
-     "q": 17.0,
-     "station": ""
-    }
-   ],
-   "Heavy Oil Residue": [
-    {
-     "to": "c11",
-     "q": 106.5,
-     "station": ""
-    }
-   ],
-   "Circuit Board": [
-    {
-     "to": "c27",
-     "q": 1161.6,
-     "station": ""
-    },
-    {
-     "to": "c12",
-     "q": 101.2,
-     "station": ""
-    },
-    {
-     "to": "c14",
-     "q": 52.5,
-     "station": ""
+     "to": "local",
+     "q": 2700,
+     "station": "",
+     "key": "c21|Plastic|local"
     }
    ],
    "Rubber": [
     {
      "to": "c28",
-     "q": 40.7,
-     "station": ""
+     "q": 41,
+     "station": "",
+     "key": "c21|Rubber|c28"
     },
     {
      "to": "c22",
-     "q": 66.9,
-     "station": ""
+     "q": 67,
+     "station": "",
+     "key": "c21|Rubber|c22"
+    }
+   ],
+   "Heavy Oil Residue": [
+    {
+     "to": "c11",
+     "q": 106,
+     "station": "",
+     "key": "c21|Heavy Oil Residue|c11"
+    }
+   ],
+   "Fuel": [
+    {
+     "to": "c29",
+     "q": 17,
+     "station": "",
+     "key": "c21|Fuel|c29"
     }
    ],
    "Reanimated SAM": [
     {
      "to": "c10",
-     "q": 300.0,
-     "station": ""
+     "q": 300,
+     "station": "",
+     "key": "c21|Reanimated SAM|c10"
+    }
+   ],
+   "Circuit Board": [
+    {
+     "to": "c27",
+     "q": 1162,
+     "station": "",
+     "key": "c21|Circuit Board|c27"
+    },
+    {
+     "to": "c12",
+     "q": 101,
+     "station": "",
+     "key": "c21|Circuit Board|c12"
+    },
+    {
+     "to": "c14",
+     "q": 52,
+     "station": "",
+     "key": "c21|Circuit Board|c14"
     }
    ]
   },
@@ -4051,7 +5020,7 @@
    {
     "id": "s22_0",
     "recipe": "Plastic",
-    "target": 1327.6,
+    "target": 1328,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4060,7 +5029,7 @@
    {
     "id": "s22_1",
     "recipe": "Sloppy Alumina",
-    "target": 699.7,
+    "target": 700,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4069,7 +5038,7 @@
    {
     "id": "s22_2",
     "recipe": "Rubber",
-    "target": 197.6,
+    "target": 198,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4078,7 +5047,7 @@
    {
     "id": "s22_3",
     "recipe": "Reanimated SAM",
-    "target": 149.3,
+    "target": 149,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4087,7 +5056,7 @@
    {
     "id": "s22_4",
     "recipe": "Rifle Ammo",
-    "target": 120.0,
+    "target": 120,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4096,7 +5065,7 @@
    {
     "id": "s22_5",
     "recipe": "Heavy Oil Residue",
-    "target": 108.0,
+    "target": 108,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4105,7 +5074,7 @@
    {
     "id": "s22_6",
     "recipe": "Homing Rifle Ammo",
-    "target": 60.0,
+    "target": 60,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4114,7 +5083,7 @@
    {
     "id": "s22_7",
     "recipe": "Fuel",
-    "target": 18.9,
+    "target": 19,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4123,7 +5092,7 @@
    {
     "id": "s22_8",
     "recipe": "Modular Engine",
-    "target": 18.0,
+    "target": 18,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4132,7 +5101,7 @@
    {
     "id": "s22_9",
     "recipe": "Thermal Propulsion Rocket",
-    "target": 6.0,
+    "target": 6,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4141,135 +5110,214 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Crude Oil": [
+    {
+     "from": "raw",
+     "q": 2397,
+     "station": "",
+     "key": "c22|Crude Oil|raw"
+    }
+   ],
+   "Bauxite": [
+    {
+     "from": "raw",
+     "q": 583,
+     "station": "",
+     "key": "c22|Bauxite|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 597,
+     "station": "",
+     "key": "c22|SAM|raw"
+    }
+   ],
    "Copper Sheet": [
     {
      "from": "c4",
-     "q": 24.0,
-     "station": ""
+     "q": 24,
+     "station": "",
+     "key": "c22|Copper Sheet|c4"
     }
    ],
    "Smokeless Powder": [
     {
      "from": "c27",
-     "q": 16.0,
-     "station": ""
+     "q": 16,
+     "station": "",
+     "key": "c22|Smokeless Powder|c27"
+    }
+   ],
+   "Rifle Ammo": [
+    {
+     "from": "local",
+     "q": 120,
+     "station": "",
+     "key": "c22|Rifle Ammo|local"
     }
    ],
    "High-Speed Connector": [
     {
      "from": "c12",
-     "q": 6.0,
-     "station": ""
+     "q": 6,
+     "station": "",
+     "key": "c22|High-Speed Connector|c12"
     }
    ],
    "Motor": [
     {
      "from": "c17",
-     "q": 36.0,
-     "station": ""
+     "q": 36,
+     "station": "",
+     "key": "c22|Motor|c17"
     }
    ],
    "Rubber": [
     {
+     "from": "local",
+     "q": 198,
+     "station": "",
+     "key": "c22|Rubber|local"
+    },
+    {
      "from": "c24",
-     "q": 133.4,
-     "station": ""
+     "q": 133,
+     "station": "",
+     "key": "c22|Rubber|c24"
     },
     {
      "from": "c21",
-     "q": 66.9,
-     "station": ""
+     "q": 67,
+     "station": "",
+     "key": "c22|Rubber|c21"
     }
    ],
    "Smart Plating": [
     {
      "from": "c30",
-     "q": 36.0,
-     "station": ""
+     "q": 36,
+     "station": "",
+     "key": "c22|Smart Plating|c30"
+    }
+   ],
+   "Modular Engine": [
+    {
+     "from": "local",
+     "q": 15,
+     "station": "",
+     "key": "c22|Modular Engine|local"
     }
    ],
    "Turbo Motor": [
     {
      "from": "c29",
-     "q": 6.0,
-     "station": ""
+     "q": 6,
+     "station": "",
+     "key": "c22|Turbo Motor|c29"
     }
    ],
    "Cooling System": [
     {
      "from": "c3",
-     "q": 18.0,
-     "station": ""
+     "q": 18,
+     "station": "",
+     "key": "c22|Cooling System|c3"
     }
    ],
    "Fused Modular Frame": [
     {
      "from": "c31",
-     "q": 6.0,
-     "station": ""
+     "q": 6,
+     "station": "",
+     "key": "c22|Fused Modular Frame|c31"
     }
    ]
   },
   "dests": {
-   "Coal": [
-    {
-     "to": "c6",
-     "q": 600.0,
-     "station": ""
-    }
-   ],
-   "Fuel": [
-    {
-     "to": "c29",
-     "q": 18.9,
-     "station": ""
-    }
-   ],
    "Plastic": [
     {
      "to": "c21",
-     "q": 952.8,
-     "station": ""
+     "q": 953,
+     "station": "",
+     "key": "c22|Plastic|c21"
     },
     {
      "to": "c27",
-     "q": 374.8,
-     "station": ""
+     "q": 375,
+     "station": "",
+     "key": "c22|Plastic|c27"
     }
    ],
-   "Alumina Solution": [
+   "Rubber": [
     {
-     "to": "c11",
-     "q": 699.7,
-     "station": ""
+     "to": "local",
+     "q": 198,
+     "station": "",
+     "key": "c22|Rubber|local"
+    },
+    {
+     "to": "c13",
+     "q": 128,
+     "station": "",
+     "key": "c22|Rubber|c13"
     }
    ],
    "Heavy Oil Residue": [
     {
      "to": "c11",
-     "q": 108.0,
-     "station": ""
+     "q": 108,
+     "station": "",
+     "key": "c22|Heavy Oil Residue|c11"
     }
    ],
-   "Rubber": [
+   "Fuel": [
     {
-     "to": "c13",
-     "q": 127.9,
-     "station": ""
+     "to": "c29",
+     "q": 19,
+     "station": "",
+     "key": "c22|Fuel|c29"
+    }
+   ],
+   "Alumina Solution": [
+    {
+     "to": "c11",
+     "q": 700,
+     "station": "",
+     "key": "c22|Alumina Solution|c11"
     }
    ],
    "Reanimated SAM": [
     {
      "to": "c10",
-     "q": 149.3,
-     "station": ""
+     "q": 149,
+     "station": "",
+     "key": "c22|Reanimated SAM|c10"
+    }
+   ],
+   "Rifle Ammo": [
+    {
+     "to": "local",
+     "q": 120,
+     "station": "",
+     "key": "c22|Rifle Ammo|local"
+    }
+   ],
+   "Modular Engine": [
+    {
+     "to": "local",
+     "q": 15,
+     "station": "",
+     "key": "c22|Modular Engine|local"
     }
    ],
    "Thermal Propulsion Rocket": [
     {
      "to": "c26",
-     "q": 3.0,
-     "station": ""
+     "q": 3,
+     "station": "",
+     "key": "c22|Thermal Propulsion Rocket|c26"
     }
    ]
   },
@@ -4293,7 +5341,7 @@
    {
     "id": "s23_0",
     "recipe": "Distilled Silica",
-    "target": 23814.6,
+    "target": 23815,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4302,7 +5350,7 @@
    {
     "id": "s23_1",
     "recipe": "Pure Quartz Crystal",
-    "target": 725.2,
+    "target": 725,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4311,7 +5359,7 @@
    {
     "id": "s23_2",
     "recipe": "Pure Caterium Ingot",
-    "target": 557.4,
+    "target": 557,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4320,7 +5368,7 @@
    {
     "id": "s23_3",
     "recipe": "Wet Concrete",
-    "target": 459.1,
+    "target": 459,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4329,7 +5377,7 @@
    {
     "id": "s23_4",
     "recipe": "Reanimated SAM",
-    "target": 150.0,
+    "target": 150,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4340,95 +5388,100 @@
   "sourcesN": {
    "Limestone": [
     {
-     "from": "c7",
-     "q": 551.8,
-     "station": ""
-    },
+     "from": "raw",
+     "q": 5099,
+     "station": "",
+     "key": "c23|Limestone|raw"
+    }
+   ],
+   "Raw Quartz": [
     {
-     "from": "c20",
-     "q": 1219.2,
-     "station": ""
-    },
+     "from": "raw",
+     "q": 932,
+     "station": "",
+     "key": "c23|Raw Quartz|raw"
+    }
+   ],
+   "Caterium Ore": [
     {
-     "from": "c8",
-     "q": 406.1,
-     "station": ""
-    },
+     "from": "raw",
+     "q": 1115,
+     "station": "",
+     "key": "c23|Caterium Ore|raw"
+    }
+   ],
+   "SAM": [
     {
-     "from": "c5",
-     "q": 610.1,
-     "station": ""
+     "from": "raw",
+     "q": 600,
+     "station": "",
+     "key": "c23|SAM|raw"
     }
    ]
   },
   "dests": {
-   "Iron Ore": [
-    {
-     "to": "c1",
-     "q": 1423.1,
-     "station": ""
-    }
-   ],
-   "Copper Ore": [
-    {
-     "to": "c5",
-     "q": 600.0,
-     "station": ""
-    }
-   ],
-   "Silica": [
-    {
-     "to": "c0",
-     "q": 1260.0,
-     "station": ""
-    },
-    {
-     "to": "c12",
-     "q": 1265.6,
-     "station": ""
-    },
-    {
-     "to": "c11",
-     "q": 19477.8,
-     "station": ""
-    },
-    {
-     "to": "c11",
-     "q": 1511.2,
-     "station": ""
-    }
-   ],
    "Concrete": [
     {
      "to": "c8",
-     "q": 459.1,
-     "station": ""
-    }
-   ],
-   "Caterium Ingot": [
-    {
-     "to": "c12",
-     "q": 370.2,
-     "station": ""
-    },
-    {
-     "to": "c15",
-     "q": 187.2,
-     "station": ""
+     "q": 459,
+     "station": "",
+     "key": "c23|Concrete|c8"
     }
    ],
    "Quartz Crystal": [
     {
      "to": "c13",
-     "q": 546.1,
-     "station": ""
+     "q": 546,
+     "station": "",
+     "key": "c23|Quartz Crystal|c13"
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "to": "c12",
+     "q": 370,
+     "station": "",
+     "key": "c23|Caterium Ingot|c12"
+    },
+    {
+     "to": "c15",
+     "q": 187,
+     "station": "",
+     "key": "c23|Caterium Ingot|c15"
     }
    ],
    "Reanimated SAM": [
     {
      "to": "c10",
-     "q": 150.0,
-     "station": ""
+     "q": 150,
+     "station": "",
+     "key": "c23|Reanimated SAM|c10"
+    }
+   ],
+   "Silica": [
+    {
+     "to": "c0",
+     "q": 1260,
+     "station": "",
+     "key": "c23|Silica|c0"
+    },
+    {
+     "to": "c12",
+     "q": 1266,
+     "station": "",
+     "key": "c23|Silica|c12"
+    },
+    {
+     "to": "c11",
+     "q": 19478,
+     "station": "",
+     "key": "c23|Silica|c11"
+    },
+    {
+     "to": "c11",
+     "q": 1511,
+     "station": "",
+     "key": "c23|Silica|c11"
     }
    ]
   },
@@ -4452,7 +5505,7 @@
    {
     "id": "s24_0",
     "recipe": "Alclad Aluminum Sheet",
-    "target": 1821.0,
+    "target": 1821,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4461,7 +5514,7 @@
    {
     "id": "s24_1",
     "recipe": "Sloppy Alumina",
-    "target": 1376.7,
+    "target": 1377,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4470,7 +5523,7 @@
    {
     "id": "s24_2",
     "recipe": "Plastic",
-    "target": 707.4,
+    "target": 707,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4479,7 +5532,7 @@
    {
     "id": "s24_3",
     "recipe": "Pure Copper Ingot",
-    "target": 607.0,
+    "target": 607,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4488,7 +5541,7 @@
    {
     "id": "s24_4",
     "recipe": "Heat Sink",
-    "target": 324.0,
+    "target": 324,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4497,7 +5550,7 @@
    {
     "id": "s24_5",
     "recipe": "Rubber",
-    "target": 133.4,
+    "target": 133,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4506,7 +5559,7 @@
    {
     "id": "s24_6",
     "recipe": "Heavy Oil Residue",
-    "target": 82.9,
+    "target": 83,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4515,7 +5568,7 @@
    {
     "id": "s24_7",
     "recipe": "Reanimated SAM",
-    "target": 75.0,
+    "target": 75,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4524,7 +5577,7 @@
    {
     "id": "s24_8",
     "recipe": "Fuel",
-    "target": 16.0,
+    "target": 16,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4533,90 +5586,148 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Aluminum Ingot": [
+   "Crude Oil": [
     {
-     "from": "c11",
-     "q": 1821.0,
-     "station": ""
+     "from": "raw",
+     "q": 1347,
+     "station": "",
+     "key": "c24|Crude Oil|raw"
+    }
+   ],
+   "Bauxite": [
+    {
+     "from": "raw",
+     "q": 1147,
+     "station": "",
+     "key": "c24|Bauxite|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 300,
+     "station": "",
+     "key": "c24|SAM|raw"
     }
    ],
    "Copper Ore": [
     {
-     "from": "c2",
-     "q": 242.8,
-     "station": ""
+     "from": "raw",
+     "q": 243,
+     "station": "",
+     "key": "c24|Copper Ore|raw"
+    }
+   ],
+   "Aluminum Ingot": [
+    {
+     "from": "c11",
+     "q": 1821,
+     "station": "",
+     "key": "c24|Aluminum Ingot|c11"
+    }
+   ],
+   "Copper Ingot": [
+    {
+     "from": "local",
+     "q": 607,
+     "station": "",
+     "key": "c24|Copper Ingot|local"
+    }
+   ],
+   "Alclad Aluminum Sheet": [
+    {
+     "from": "local",
+     "q": 1620,
+     "station": "",
+     "key": "c24|Alclad Aluminum Sheet|local"
     }
    ],
    "Copper Sheet": [
     {
      "from": "c4",
-     "q": 972.0,
-     "station": ""
+     "q": 972,
+     "station": "",
+     "key": "c24|Copper Sheet|c4"
     }
    ]
   },
   "dests": {
-   "Coal": [
-    {
-     "to": "c6",
-     "q": 600.0,
-     "station": ""
-    }
-   ],
-   "Fuel": [
-    {
-     "to": "c29",
-     "q": 16.0,
-     "station": ""
-    }
-   ],
-   "Alumina Solution": [
-    {
-     "to": "c11",
-     "q": 1376.7,
-     "station": ""
-    }
-   ],
-   "Heavy Oil Residue": [
-    {
-     "to": "c11",
-     "q": 82.9,
-     "station": ""
-    }
-   ],
    "Plastic": [
     {
      "to": "c27",
-     "q": 707.4,
-     "station": ""
-    }
-   ],
-   "Reanimated SAM": [
-    {
-     "to": "c10",
-     "q": 75.0,
-     "station": ""
-    }
-   ],
-   "Alclad Aluminum Sheet": [
-    {
-     "to": "c19",
-     "q": 81.0,
-     "station": ""
+     "q": 707,
+     "station": "",
+     "key": "c24|Plastic|c27"
     }
    ],
    "Rubber": [
     {
      "to": "c22",
-     "q": 133.4,
-     "station": ""
+     "q": 133,
+     "station": "",
+     "key": "c24|Rubber|c22"
+    }
+   ],
+   "Heavy Oil Residue": [
+    {
+     "to": "c11",
+     "q": 83,
+     "station": "",
+     "key": "c24|Heavy Oil Residue|c11"
+    }
+   ],
+   "Fuel": [
+    {
+     "to": "c29",
+     "q": 16,
+     "station": "",
+     "key": "c24|Fuel|c29"
+    }
+   ],
+   "Alumina Solution": [
+    {
+     "to": "c11",
+     "q": 1377,
+     "station": "",
+     "key": "c24|Alumina Solution|c11"
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "to": "c10",
+     "q": 75,
+     "station": "",
+     "key": "c24|Reanimated SAM|c10"
+    }
+   ],
+   "Copper Ingot": [
+    {
+     "to": "local",
+     "q": 607,
+     "station": "",
+     "key": "c24|Copper Ingot|local"
+    }
+   ],
+   "Alclad Aluminum Sheet": [
+    {
+     "to": "local",
+     "q": 1620,
+     "station": "",
+     "key": "c24|Alclad Aluminum Sheet|local"
+    },
+    {
+     "to": "c19",
+     "q": 81,
+     "station": "",
+     "key": "c24|Alclad Aluminum Sheet|c19"
     }
    ],
    "Heat Sink": [
     {
      "to": "c3",
-     "q": 264.0,
-     "station": ""
+     "q": 264,
+     "station": "",
+     "key": "c24|Heat Sink|c3"
     }
    ]
   },
@@ -4640,7 +5751,7 @@
    {
     "id": "s25_0",
     "recipe": "Alclad Casing",
-    "target": 6473.4,
+    "target": 6473,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4649,7 +5760,7 @@
    {
     "id": "s25_1",
     "recipe": "Pure Copper Ingot",
-    "target": 4315.6,
+    "target": 4316,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4658,7 +5769,7 @@
    {
     "id": "s25_2",
     "recipe": "Sloppy Alumina",
-    "target": 1294.2,
+    "target": 1294,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4667,18 +5778,36 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Aluminum Ingot": [
+   "Bauxite": [
     {
-     "from": "c11",
-     "q": 8631.2,
-     "station": ""
+     "from": "raw",
+     "q": 1078,
+     "station": "",
+     "key": "c25|Bauxite|raw"
     }
    ],
    "Copper Ore": [
     {
-     "from": "c2",
-     "q": 1726.2,
-     "station": ""
+     "from": "raw",
+     "q": 1726,
+     "station": "",
+     "key": "c25|Copper Ore|raw"
+    }
+   ],
+   "Aluminum Ingot": [
+    {
+     "from": "c11",
+     "q": 8631,
+     "station": "",
+     "key": "c25|Aluminum Ingot|c11"
+    }
+   ],
+   "Copper Ingot": [
+    {
+     "from": "local",
+     "q": 4316,
+     "station": "",
+     "key": "c25|Copper Ingot|local"
     }
    ]
   },
@@ -4686,40 +5815,55 @@
    "Alumina Solution": [
     {
      "to": "c11",
-     "q": 1175.0,
-     "station": ""
+     "q": 1175,
+     "station": "",
+     "key": "c25|Alumina Solution|c11"
     },
     {
      "to": "c16",
-     "q": 119.1,
-     "station": ""
+     "q": 119,
+     "station": "",
+     "key": "c25|Alumina Solution|c16"
+    }
+   ],
+   "Copper Ingot": [
+    {
+     "to": "local",
+     "q": 4316,
+     "station": "",
+     "key": "c25|Copper Ingot|local"
     }
    ],
    "Aluminum Casing": [
     {
      "to": "c20",
-     "q": 2438.4,
-     "station": ""
+     "q": 2438,
+     "station": "",
+     "key": "c25|Aluminum Casing|c20"
     },
     {
      "to": "c26",
-     "q": 30.0,
-     "station": ""
+     "q": 30,
+     "station": "",
+     "key": "c25|Aluminum Casing|c26"
     },
     {
      "to": "c16",
-     "q": 60.0,
-     "station": ""
+     "q": 60,
+     "station": "",
+     "key": "c25|Aluminum Casing|c16"
     },
     {
      "to": "c28",
-     "q": 372.0,
-     "station": ""
+     "q": 372,
+     "station": "",
+     "key": "c25|Aluminum Casing|c28"
     },
     {
      "to": "c31",
-     "q": 3435.0,
-     "station": ""
+     "q": 3435,
+     "station": "",
+     "key": "c25|Aluminum Casing|c31"
     }
    ]
   },
@@ -4743,7 +5887,7 @@
    {
     "id": "s26_0",
     "recipe": "Ficsite Trigon",
-    "target": 3780.0,
+    "target": 3780,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4752,7 +5896,7 @@
    {
     "id": "s26_1",
     "recipe": "Quickwire",
-    "target": 240.0,
+    "target": 240,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4761,7 +5905,7 @@
    {
     "id": "s26_2",
     "recipe": "Reanimated SAM",
-    "target": 149.3,
+    "target": 149,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4770,7 +5914,7 @@
    {
     "id": "s26_3",
     "recipe": "Ficsonium Fuel Rod",
-    "target": 93.0,
+    "target": 93,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4779,7 +5923,7 @@
    {
     "id": "s26_4",
     "recipe": "Empty Fluid Tank",
-    "target": 30.0,
+    "target": 30,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4788,7 +5932,7 @@
    {
     "id": "s26_5",
     "recipe": "Iodine-Infused Filter",
-    "target": 30.0,
+    "target": 30,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4797,7 +5941,7 @@
    {
     "id": "s26_6",
     "recipe": "AI Expansion Server",
-    "target": 3.0,
+    "target": 3,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4806,7 +5950,7 @@
    {
     "id": "s26_7",
     "recipe": "Biochemical Sculptor",
-    "target": 3.0,
+    "target": 3,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4815,7 +5959,7 @@
    {
     "id": "s26_8",
     "recipe": "Ballistic Warp Drive",
-    "target": 3.0,
+    "target": 3,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4824,105 +5968,144 @@
   ],
   "totals": {},
   "sourcesN": {
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 597,
+     "station": "",
+     "key": "c26|SAM|raw"
+    }
+   ],
    "Aluminum Ingot": [
     {
      "from": "c11",
-     "q": 30.0,
-     "station": ""
-    }
-   ],
-   "Gas Filter": [
-    {
-     "from": "c16",
-     "q": 30.0,
-     "station": ""
+     "q": 30,
+     "station": "",
+     "key": "c26|Aluminum Ingot|c11"
     }
    ],
    "Caterium Ingot": [
     {
      "from": "c2",
-     "q": 48.0,
-     "station": ""
+     "q": 48,
+     "station": "",
+     "key": "c26|Caterium Ingot|c2"
+    }
+   ],
+   "Gas Filter": [
+    {
+     "from": "c16",
+     "q": 30,
+     "station": "",
+     "key": "c26|Gas Filter|c16"
+    }
+   ],
+   "Quickwire": [
+    {
+     "from": "local",
+     "q": 240,
+     "station": "",
+     "key": "c26|Quickwire|local"
     }
    ],
    "Aluminum Casing": [
     {
      "from": "c25",
-     "q": 30.0,
-     "station": ""
+     "q": 30,
+     "station": "",
+     "key": "c26|Aluminum Casing|c25"
     }
    ],
    "Magnetic Field Generator": [
     {
      "from": "c19",
-     "q": 3.0,
-     "station": ""
+     "q": 3,
+     "station": "",
+     "key": "c26|Magnetic Field Generator|c19"
     }
    ],
    "Neural-Quantum Processor": [
     {
      "from": "c19",
-     "q": 3.0,
-     "station": ""
+     "q": 3,
+     "station": "",
+     "key": "c26|Neural-Quantum Processor|c19"
     }
    ],
    "Superposition Oscillator": [
     {
      "from": "c19",
-     "q": 3.0,
-     "station": ""
+     "q": 3,
+     "station": "",
+     "key": "c26|Superposition Oscillator|c19"
     },
     {
      "from": "c19",
-     "q": 6.0,
-     "station": ""
+     "q": 6,
+     "station": "",
+     "key": "c26|Superposition Oscillator|c19"
     }
    ],
    "Ficsite Ingot": [
     {
      "from": "c10",
-     "q": 20.0,
-     "station": ""
+     "q": 20,
+     "station": "",
+     "key": "c26|Ficsite Ingot|c10"
     },
     {
      "from": "c10",
-     "q": 1240.0,
-     "station": ""
+     "q": 1240,
+     "station": "",
+     "key": "c26|Ficsite Ingot|c10"
+    }
+   ],
+   "Ficsite Trigon": [
+    {
+     "from": "local",
+     "q": 3780,
+     "station": "",
+     "key": "c26|Ficsite Trigon|local"
     }
    ],
    "Thermal Propulsion Rocket": [
     {
      "from": "c22",
-     "q": 3.0,
-     "station": ""
+     "q": 3,
+     "station": "",
+     "key": "c26|Thermal Propulsion Rocket|c22"
     }
    ],
    "Singularity Cell": [
     {
      "from": "c14",
-     "q": 15.0,
-     "station": ""
+     "q": 15,
+     "station": "",
+     "key": "c26|Singularity Cell|c14"
     }
    ],
    "Dark Matter Crystal": [
     {
      "from": "c7",
-     "q": 120.0,
-     "station": ""
+     "q": 120,
+     "station": "",
+     "key": "c26|Dark Matter Crystal|c7"
     }
    ],
    "Ficsonium": [
     {
      "from": "c14",
-     "q": 186.0,
-     "station": ""
+     "q": 186,
+     "station": "",
+     "key": "c26|Ficsonium|c14"
     }
    ],
    "Electromagnetic Control Rod": [
     {
      "from": "c9",
-     "q": 186.0,
-     "station": ""
+     "q": 186,
+     "station": "",
+     "key": "c26|Electromagnetic Control Rod|c9"
     }
    ]
   },
@@ -4930,8 +6113,25 @@
    "Reanimated SAM": [
     {
      "to": "c10",
-     "q": 149.3,
-     "station": ""
+     "q": 149,
+     "station": "",
+     "key": "c26|Reanimated SAM|c10"
+    }
+   ],
+   "Quickwire": [
+    {
+     "to": "local",
+     "q": 240,
+     "station": "",
+     "key": "c26|Quickwire|local"
+    }
+   ],
+   "Ficsite Trigon": [
+    {
+     "to": "local",
+     "q": 3780,
+     "station": "",
+     "key": "c26|Ficsite Trigon|local"
     }
    ]
   },
@@ -4955,7 +6155,7 @@
    {
     "id": "s27_0",
     "recipe": "Plastic",
-    "target": 2582.2,
+    "target": 2582,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4964,7 +6164,7 @@
    {
     "id": "s27_1",
     "recipe": "Quickwire Cable",
-    "target": 2323.2,
+    "target": 2323,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4973,7 +6173,7 @@
    {
     "id": "s27_2",
     "recipe": "Quickwire",
-    "target": 633.6,
+    "target": 634,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4982,7 +6182,7 @@
    {
     "id": "s27_3",
     "recipe": "Rubber",
-    "target": 547.4,
+    "target": 547,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -4991,7 +6191,7 @@
    {
     "id": "s27_4",
     "recipe": "Smokeless Powder",
-    "target": 381.0,
+    "target": 381,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5000,7 +6200,7 @@
    {
     "id": "s27_5",
     "recipe": "Heavy Oil Residue",
-    "target": 369.1,
+    "target": 369,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5009,7 +6209,7 @@
    {
     "id": "s27_6",
     "recipe": "Computer",
-    "target": 290.4,
+    "target": 290,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5018,7 +6218,7 @@
    {
     "id": "s27_7",
     "recipe": "Wet Concrete",
-    "target": 84.0,
+    "target": 84,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5027,7 +6227,7 @@
    {
     "id": "s27_8",
     "recipe": "Fuel",
-    "target": 76.4,
+    "target": 76,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5036,7 +6236,7 @@
    {
     "id": "s27_9",
     "recipe": "Reanimated SAM",
-    "target": 75.0,
+    "target": 75,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5045,130 +6245,234 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 126,
+     "station": "",
+     "key": "c27|Limestone|raw"
+    }
+   ],
+   "Crude Oil": [
+    {
+     "from": "raw",
+     "q": 5086,
+     "station": "",
+     "key": "c27|Crude Oil|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 300,
+     "station": "",
+     "key": "c27|SAM|raw"
+    }
+   ],
    "Black Powder": [
     {
      "from": "c9",
-     "q": 381.0,
-     "station": ""
+     "q": 381,
+     "station": "",
+     "key": "c27|Black Powder|c9"
     }
    ],
-   "Circuit Board": [
+   "Heavy Oil Residue": [
     {
-     "from": "c21",
-     "q": 1161.6,
-     "station": ""
+     "from": "local",
+     "q": 190,
+     "station": "",
+     "key": "c27|Heavy Oil Residue|local"
     }
    ],
    "Caterium Ingot": [
     {
      "from": "c8",
-     "q": 126.7,
-     "station": ""
+     "q": 127,
+     "station": "",
+     "key": "c27|Caterium Ingot|c8"
+    }
+   ],
+   "Quickwire": [
+    {
+     "from": "local",
+     "q": 634,
+     "station": "",
+     "key": "c27|Quickwire|local"
+    }
+   ],
+   "Rubber": [
+    {
+     "from": "local",
+     "q": 422,
+     "station": "",
+     "key": "c27|Rubber|local"
+    }
+   ],
+   "Circuit Board": [
+    {
+     "from": "c21",
+     "q": 1162,
+     "station": "",
+     "key": "c27|Circuit Board|c21"
+    }
+   ],
+   "Cable": [
+    {
+     "from": "local",
+     "q": 2323,
+     "station": "",
+     "key": "c27|Cable|local"
     }
    ],
    "Plastic": [
     {
+     "from": "local",
+     "q": 2582,
+     "station": "",
+     "key": "c27|Plastic|local"
+    },
+    {
      "from": "c14",
-     "q": 276.6,
-     "station": ""
+     "q": 277,
+     "station": "",
+     "key": "c27|Plastic|c14"
     },
     {
      "from": "c22",
-     "q": 374.8,
-     "station": ""
+     "q": 375,
+     "station": "",
+     "key": "c27|Plastic|c22"
     },
     {
      "from": "c24",
-     "q": 707.4,
-     "station": ""
+     "q": 707,
+     "station": "",
+     "key": "c27|Plastic|c24"
     },
     {
      "from": "c29",
-     "q": 705.4,
-     "station": ""
+     "q": 705,
+     "station": "",
+     "key": "c27|Plastic|c29"
     }
    ]
   },
   "dests": {
-   "Coal": [
+   "Concrete": [
     {
-     "to": "c6",
-     "q": 2400.0,
-     "station": ""
+     "to": "c14",
+     "q": 84,
+     "station": "",
+     "key": "c27|Concrete|c14"
+    }
+   ],
+   "Plastic": [
+    {
+     "to": "local",
+     "q": 2582,
+     "station": "",
+     "key": "c27|Plastic|local"
+    }
+   ],
+   "Rubber": [
+    {
+     "to": "local",
+     "q": 422,
+     "station": "",
+     "key": "c27|Rubber|local"
+    }
+   ],
+   "Heavy Oil Residue": [
+    {
+     "to": "local",
+     "q": 190,
+     "station": "",
+     "key": "c27|Heavy Oil Residue|local"
+    },
+    {
+     "to": "c11",
+     "q": 179,
+     "station": "",
+     "key": "c27|Heavy Oil Residue|c11"
     }
    ],
    "Fuel": [
     {
      "to": "c29",
-     "q": 76.4,
-     "station": ""
-    }
-   ],
-   "Copper Ore": [
-    {
-     "to": "c4",
-     "q": 600.0,
-     "station": ""
-    }
-   ],
-   "Heavy Oil Residue": [
-    {
-     "to": "c11",
-     "q": 178.6,
-     "station": ""
-    }
-   ],
-   "Smokeless Powder": [
-    {
-     "to": "c13",
-     "q": 120.0,
-     "station": ""
-    },
-    {
-     "to": "c19",
-     "q": 120.0,
-     "station": ""
-    },
-    {
-     "to": "c22",
-     "q": 16.0,
-     "station": ""
-    },
-    {
-     "to": "c31",
-     "q": 65.0,
-     "station": ""
-    }
-   ],
-   "Computer": [
-    {
-     "to": "c29",
-     "q": 87.0,
-     "station": ""
-    },
-    {
-     "to": "c20",
-     "q": 152.4,
-     "station": ""
-    },
-    {
-     "to": "c14",
-     "q": 21.0,
-     "station": ""
+     "q": 76,
+     "station": "",
+     "key": "c27|Fuel|c29"
     }
    ],
    "Reanimated SAM": [
     {
      "to": "c10",
-     "q": 75.0,
-     "station": ""
+     "q": 75,
+     "station": "",
+     "key": "c27|Reanimated SAM|c10"
     }
    ],
-   "Concrete": [
+   "Smokeless Powder": [
+    {
+     "to": "c13",
+     "q": 120,
+     "station": "",
+     "key": "c27|Smokeless Powder|c13"
+    },
+    {
+     "to": "c19",
+     "q": 120,
+     "station": "",
+     "key": "c27|Smokeless Powder|c19"
+    },
+    {
+     "to": "c22",
+     "q": 16,
+     "station": "",
+     "key": "c27|Smokeless Powder|c22"
+    },
+    {
+     "to": "c31",
+     "q": 65,
+     "station": "",
+     "key": "c27|Smokeless Powder|c31"
+    }
+   ],
+   "Quickwire": [
+    {
+     "to": "local",
+     "q": 634,
+     "station": "",
+     "key": "c27|Quickwire|local"
+    }
+   ],
+   "Cable": [
+    {
+     "to": "local",
+     "q": 2323,
+     "station": "",
+     "key": "c27|Cable|local"
+    }
+   ],
+   "Computer": [
+    {
+     "to": "c29",
+     "q": 87,
+     "station": "",
+     "key": "c27|Computer|c29"
+    },
+    {
+     "to": "c20",
+     "q": 152,
+     "station": "",
+     "key": "c27|Computer|c20"
+    },
     {
      "to": "c14",
-     "q": 84.0,
-     "station": ""
+     "q": 21,
+     "station": "",
+     "key": "c27|Computer|c14"
     }
    ]
   },
@@ -5192,7 +6496,7 @@
    {
     "id": "s28_0",
     "recipe": "Quickwire Cable",
-    "target": 1110.0,
+    "target": 1110,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5201,7 +6505,7 @@
    {
     "id": "s28_1",
     "recipe": "Plastic",
-    "target": 514.6,
+    "target": 515,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5210,7 +6514,7 @@
    {
     "id": "s28_2",
     "recipe": "Instant Plutonium Cell",
-    "target": 372.0,
+    "target": 372,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5219,7 +6523,7 @@
    {
     "id": "s28_3",
     "recipe": "Quickwire",
-    "target": 302.7,
+    "target": 303,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5228,7 +6532,7 @@
    {
     "id": "s28_4",
     "recipe": "Rubber",
-    "target": 161.1,
+    "target": 161,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5237,7 +6541,7 @@
    {
     "id": "s28_5",
     "recipe": "Heavy Oil Residue",
-    "target": 149.1,
+    "target": 149,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5246,7 +6550,7 @@
    {
     "id": "s28_6",
     "recipe": "Reanimated SAM",
-    "target": 75.0,
+    "target": 75,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5255,7 +6559,7 @@
    {
     "id": "s28_7",
     "recipe": "Automated Wiring",
-    "target": 55.5,
+    "target": 56,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5264,7 +6568,7 @@
    {
     "id": "s28_8",
     "recipe": "Fuel",
-    "target": 41.8,
+    "target": 42,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5273,7 +6577,7 @@
    {
     "id": "s28_9",
     "recipe": "Plutonium Fuel Unit",
-    "target": 18.6,
+    "target": 19,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5282,83 +6586,172 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Stator": [
+   "Crude Oil": [
     {
-     "from": "c15",
-     "q": 55.5,
-     "station": ""
+     "from": "raw",
+     "q": 1188,
+     "station": "",
+     "key": "c28|Crude Oil|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 300,
+     "station": "",
+     "key": "c28|SAM|raw"
     }
    ],
    "Caterium Ingot": [
     {
      "from": "c2",
-     "q": 60.5,
-     "station": ""
+     "q": 60,
+     "station": "",
+     "key": "c28|Caterium Ingot|c2"
+    }
+   ],
+   "Quickwire": [
+    {
+     "from": "local",
+     "q": 303,
+     "station": "",
+     "key": "c28|Quickwire|local"
     }
    ],
    "Rubber": [
     {
+     "from": "local",
+     "q": 161,
+     "station": "",
+     "key": "c28|Rubber|local"
+    },
+    {
      "from": "c21",
-     "q": 40.7,
-     "station": ""
+     "q": 41,
+     "station": "",
+     "key": "c28|Rubber|c21"
+    }
+   ],
+   "Stator": [
+    {
+     "from": "c15",
+     "q": 56,
+     "station": "",
+     "key": "c28|Stator|c15"
+    }
+   ],
+   "Cable": [
+    {
+     "from": "local",
+     "q": 1110,
+     "station": "",
+     "key": "c28|Cable|local"
     }
    ],
    "Non-Fissile Uranium": [
     {
      "from": "c11",
-     "q": 2790.0,
-     "station": ""
+     "q": 2790,
+     "station": "",
+     "key": "c28|Non-Fissile Uranium|c11"
     }
    ],
    "Aluminum Casing": [
     {
      "from": "c25",
-     "q": 372.0,
-     "station": ""
+     "q": 372,
+     "station": "",
+     "key": "c28|Aluminum Casing|c25"
+    }
+   ],
+   "Encased Plutonium Cell": [
+    {
+     "from": "local",
+     "q": 372,
+     "station": "",
+     "key": "c28|Encased Plutonium Cell|local"
     }
    ],
    "Pressure Conversion Cube": [
     {
      "from": "c20",
-     "q": 18.6,
-     "station": ""
+     "q": 19,
+     "station": "",
+     "key": "c28|Pressure Conversion Cube|c20"
     }
    ]
   },
   "dests": {
-   "Fuel": [
-    {
-     "to": "c29",
-     "q": 41.8,
-     "station": ""
-    }
-   ],
    "Plastic": [
     {
      "to": "c21",
-     "q": 514.6,
-     "station": ""
+     "q": 515,
+     "station": "",
+     "key": "c28|Plastic|c21"
+    }
+   ],
+   "Rubber": [
+    {
+     "to": "local",
+     "q": 161,
+     "station": "",
+     "key": "c28|Rubber|local"
     }
    ],
    "Heavy Oil Residue": [
     {
      "to": "c11",
-     "q": 149.1,
-     "station": ""
+     "q": 149,
+     "station": "",
+     "key": "c28|Heavy Oil Residue|c11"
+    }
+   ],
+   "Fuel": [
+    {
+     "to": "c29",
+     "q": 42,
+     "station": "",
+     "key": "c28|Fuel|c29"
     }
    ],
    "Reanimated SAM": [
     {
      "to": "c10",
-     "q": 75.0,
-     "station": ""
+     "q": 75,
+     "station": "",
+     "key": "c28|Reanimated SAM|c10"
+    }
+   ],
+   "Quickwire": [
+    {
+     "to": "local",
+     "q": 303,
+     "station": "",
+     "key": "c28|Quickwire|local"
+    }
+   ],
+   "Cable": [
+    {
+     "to": "local",
+     "q": 1110,
+     "station": "",
+     "key": "c28|Cable|local"
     }
    ],
    "Automated Wiring": [
     {
      "to": "c14",
-     "q": 52.5,
-     "station": ""
+     "q": 52,
+     "station": "",
+     "key": "c28|Automated Wiring|c14"
+    }
+   ],
+   "Encased Plutonium Cell": [
+    {
+     "to": "local",
+     "q": 372,
+     "station": "",
+     "key": "c28|Encased Plutonium Cell|local"
     }
    ]
   },
@@ -5382,7 +6775,7 @@
    {
     "id": "s29_0",
     "recipe": "Plastic",
-    "target": 1845.4,
+    "target": 1845,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5391,7 +6784,7 @@
    {
     "id": "s29_1",
     "recipe": "Rubber",
-    "target": 612.0,
+    "target": 612,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5400,7 +6793,7 @@
    {
     "id": "s29_2",
     "recipe": "Heavy Oil Residue",
-    "target": 611.3,
+    "target": 611,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5409,7 +6802,7 @@
    {
     "id": "s29_3",
     "recipe": "Turbofuel",
-    "target": 422.0,
+    "target": 422,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5418,7 +6811,7 @@
    {
     "id": "s29_4",
     "recipe": "Empty Canister",
-    "target": 404.0,
+    "target": 404,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5427,7 +6820,7 @@
    {
     "id": "s29_5",
     "recipe": "Packaged Turbofuel",
-    "target": 404.0,
+    "target": 404,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5436,7 +6829,7 @@
    {
     "id": "s29_6",
     "recipe": "Fuel",
-    "target": 192.0,
+    "target": 192,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5445,7 +6838,7 @@
    {
     "id": "s29_7",
     "recipe": "Supercomputer",
-    "target": 21.8,
+    "target": 22,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5454,7 +6847,7 @@
    {
     "id": "s29_8",
     "recipe": "Turbo Motor",
-    "target": 21.0,
+    "target": 21,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5463,147 +6856,254 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Crude Oil": [
+    {
+     "from": "raw",
+     "q": 4433,
+     "station": "",
+     "key": "c29|Crude Oil|raw"
+    }
+   ],
    "Fuel": [
     {
+     "from": "local",
+     "q": 192,
+     "station": "",
+     "key": "c29|Fuel|local"
+    },
+    {
      "from": "c24",
-     "q": 16.0,
-     "station": ""
+     "q": 16,
+     "station": "",
+     "key": "c29|Fuel|c24"
     },
     {
      "from": "c22",
-     "q": 18.9,
-     "station": ""
+     "q": 19,
+     "station": "",
+     "key": "c29|Fuel|c22"
     },
     {
      "from": "c28",
-     "q": 41.8,
-     "station": ""
+     "q": 42,
+     "station": "",
+     "key": "c29|Fuel|c28"
     },
     {
      "from": "c21",
-     "q": 17.0,
-     "station": ""
+     "q": 17,
+     "station": "",
+     "key": "c29|Fuel|c21"
     },
     {
      "from": "c27",
-     "q": 76.4,
-     "station": ""
+     "q": 76,
+     "station": "",
+     "key": "c29|Fuel|c27"
     },
     {
      "from": "c30",
-     "q": 139.4,
-     "station": ""
+     "q": 139,
+     "station": "",
+     "key": "c29|Fuel|c30"
     },
     {
      "from": "c18",
-     "q": 3.0,
-     "station": ""
+     "q": 3,
+     "station": "",
+     "key": "c29|Fuel|c18"
     },
     {
      "from": "c14",
-     "q": 1.0,
-     "station": ""
+     "q": 1,
+     "station": "",
+     "key": "c29|Fuel|c14"
     }
    ],
    "Compacted Coal": [
     {
      "from": "c17",
-     "q": 19.2,
-     "station": ""
+     "q": 19,
+     "station": "",
+     "key": "c29|Compacted Coal|c17"
     },
     {
      "from": "c9",
-     "q": 186.3,
-     "station": ""
+     "q": 186,
+     "station": "",
+     "key": "c29|Compacted Coal|c9"
     },
     {
      "from": "c16",
-     "q": 131.5,
-     "station": ""
+     "q": 132,
+     "station": "",
+     "key": "c29|Compacted Coal|c16"
+    }
+   ],
+   "Plastic": [
+    {
+     "from": "local",
+     "q": 811,
+     "station": "",
+     "key": "c29|Plastic|local"
+    }
+   ],
+   "Turbofuel": [
+    {
+     "from": "local",
+     "q": 404,
+     "station": "",
+     "key": "c29|Turbofuel|local"
+    }
+   ],
+   "Empty Canister": [
+    {
+     "from": "local",
+     "q": 404,
+     "station": "",
+     "key": "c29|Empty Canister|local"
     }
    ],
    "Computer": [
     {
      "from": "c27",
-     "q": 87.0,
-     "station": ""
+     "q": 87,
+     "station": "",
+     "key": "c29|Computer|c27"
     }
    ],
    "AI Limiter": [
     {
      "from": "c9",
-     "q": 43.5,
-     "station": ""
+     "q": 44,
+     "station": "",
+     "key": "c29|AI Limiter|c9"
     }
    ],
    "High-Speed Connector": [
     {
      "from": "c12",
-     "q": 65.2,
-     "station": ""
+     "q": 65,
+     "station": "",
+     "key": "c29|High-Speed Connector|c12"
     }
    ],
    "Cooling System": [
     {
      "from": "c3",
-     "q": 84.0,
-     "station": ""
+     "q": 84,
+     "station": "",
+     "key": "c29|Cooling System|c3"
     }
    ],
    "Radio Control Unit": [
     {
      "from": "c20",
-     "q": 42.0,
-     "station": ""
+     "q": 42,
+     "station": "",
+     "key": "c29|Radio Control Unit|c20"
     }
    ],
    "Motor": [
     {
      "from": "c17",
-     "q": 84.0,
-     "station": ""
+     "q": 84,
+     "station": "",
+     "key": "c29|Motor|c17"
+    }
+   ],
+   "Rubber": [
+    {
+     "from": "local",
+     "q": 504,
+     "station": "",
+     "key": "c29|Rubber|local"
     }
    ]
   },
   "dests": {
+   "Plastic": [
+    {
+     "to": "local",
+     "q": 811,
+     "station": "",
+     "key": "c29|Plastic|local"
+    },
+    {
+     "to": "c27",
+     "q": 705,
+     "station": "",
+     "key": "c29|Plastic|c27"
+    }
+   ],
+   "Rubber": [
+    {
+     "to": "local",
+     "q": 504,
+     "station": "",
+     "key": "c29|Rubber|local"
+    }
+   ],
    "Heavy Oil Residue": [
     {
      "to": "c11",
-     "q": 611.3,
-     "station": ""
+     "q": 611,
+     "station": "",
+     "key": "c29|Heavy Oil Residue|c11"
     }
    ],
-   "Plastic": [
+   "Fuel": [
     {
-     "to": "c27",
-     "q": 705.4,
-     "station": ""
+     "to": "local",
+     "q": 192,
+     "station": "",
+     "key": "c29|Fuel|local"
+    }
+   ],
+   "Turbofuel": [
+    {
+     "to": "local",
+     "q": 404,
+     "station": "",
+     "key": "c29|Turbofuel|local"
+    }
+   ],
+   "Empty Canister": [
+    {
+     "to": "local",
+     "q": 404,
+     "station": "",
+     "key": "c29|Empty Canister|local"
     }
    ],
    "Packaged Turbofuel": [
     {
      "to": "c7",
-     "q": 404.0,
-     "station": ""
+     "q": 404,
+     "station": "",
+     "key": "c29|Packaged Turbofuel|c7"
     }
    ],
    "Supercomputer": [
     {
      "to": "c19",
-     "q": 3.0,
-     "station": ""
+     "q": 3,
+     "station": "",
+     "key": "c29|Supercomputer|c19"
     },
     {
      "to": "c14",
-     "q": 3.8,
-     "station": ""
+     "q": 4,
+     "station": "",
+     "key": "c29|Supercomputer|c14"
     }
    ],
    "Turbo Motor": [
     {
      "to": "c22",
-     "q": 6.0,
-     "station": ""
+     "q": 6,
+     "station": "",
+     "key": "c29|Turbo Motor|c22"
     }
    ]
   },
@@ -5627,7 +7127,7 @@
    {
     "id": "s30_0",
     "recipe": "Plastic",
-    "target": 601.0,
+    "target": 601,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5636,7 +7136,7 @@
    {
     "id": "s30_1",
     "recipe": "Heavy Oil Residue",
-    "target": 290.1,
+    "target": 290,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5645,7 +7145,7 @@
    {
     "id": "s30_2",
     "recipe": "Rubber",
-    "target": 229.5,
+    "target": 229,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5654,7 +7154,7 @@
    {
     "id": "s30_3",
     "recipe": "Fuel",
-    "target": 139.4,
+    "target": 139,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5663,7 +7163,7 @@
    {
     "id": "s30_4",
     "recipe": "Smart Plating",
-    "target": 39.0,
+    "target": 39,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5672,7 +7172,7 @@
    {
     "id": "s30_5",
     "recipe": "Pulse Nobelisk",
-    "target": 30.0,
+    "target": 30,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5681,69 +7181,86 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Crude Oil": [
+    {
+     "from": "raw",
+     "q": 1672,
+     "station": "",
+     "key": "c30|Crude Oil|raw"
+    }
+   ],
    "Reinforced Iron Plate": [
     {
      "from": "c2",
-     "q": 39.0,
-     "station": ""
+     "q": 39,
+     "station": "",
+     "key": "c30|Reinforced Iron Plate|c2"
     }
    ],
    "Rotor": [
     {
      "from": "c17",
-     "q": 39.0,
-     "station": ""
+     "q": 39,
+     "station": "",
+     "key": "c30|Rotor|c17"
     }
    ],
    "Nobelisk": [
     {
      "from": "c16",
-     "q": 30.0,
-     "station": ""
+     "q": 30,
+     "station": "",
+     "key": "c30|Nobelisk|c16"
     }
    ],
    "Crystal Oscillator": [
     {
      "from": "c13",
-     "q": 6.0,
-     "station": ""
+     "q": 6,
+     "station": "",
+     "key": "c30|Crystal Oscillator|c13"
     }
    ]
   },
   "dests": {
-   "Fuel": [
-    {
-     "to": "c29",
-     "q": 139.4,
-     "station": ""
-    }
-   ],
    "Plastic": [
     {
      "to": "c21",
-     "q": 601.0,
-     "station": ""
-    }
-   ],
-   "Heavy Oil Residue": [
-    {
-     "to": "c11",
-     "q": 290.1,
-     "station": ""
+     "q": 601,
+     "station": "",
+     "key": "c30|Plastic|c21"
     }
    ],
    "Rubber": [
     {
      "to": "c13",
-     "q": 229.5,
-     "station": ""
+     "q": 230,
+     "station": "",
+     "key": "c30|Rubber|c13"
+    }
+   ],
+   "Heavy Oil Residue": [
+    {
+     "to": "c11",
+     "q": 290,
+     "station": "",
+     "key": "c30|Heavy Oil Residue|c11"
+    }
+   ],
+   "Fuel": [
+    {
+     "to": "c29",
+     "q": 139,
+     "station": "",
+     "key": "c30|Fuel|c29"
     }
    ],
    "Smart Plating": [
     {
      "to": "c22",
-     "q": 36.0,
-     "station": ""
+     "q": 36,
+     "station": "",
+     "key": "c30|Smart Plating|c22"
     }
    ]
   },
@@ -5767,7 +7284,7 @@
    {
     "id": "s31_0",
     "recipe": "Plutonium Pellet",
-    "target": 69.8,
+    "target": 70,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5776,7 +7293,7 @@
    {
     "id": "s31_1",
     "recipe": "Fused Modular Frame",
-    "target": 68.7,
+    "target": 69,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5785,7 +7302,7 @@
    {
     "id": "s31_2",
     "recipe": "Nuke Nobelisk",
-    "target": 6.5,
+    "target": 6,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5797,71 +7314,81 @@
    "Nobelisk": [
     {
      "from": "c16",
-     "q": 32.5,
-     "station": ""
+     "q": 32,
+     "station": "",
+     "key": "c31|Nobelisk|c16"
     }
    ],
    "Encased Uranium Cell": [
     {
      "from": "c0",
-     "q": 130.0,
-     "station": ""
+     "q": 130,
+     "station": "",
+     "key": "c31|Encased Uranium Cell|c0"
     }
    ],
    "Smokeless Powder": [
     {
      "from": "c27",
-     "q": 65.0,
-     "station": ""
+     "q": 65,
+     "station": "",
+     "key": "c31|Smokeless Powder|c27"
     }
    ],
    "AI Limiter": [
     {
      "from": "c9",
-     "q": 39.0,
-     "station": ""
+     "q": 39,
+     "station": "",
+     "key": "c31|AI Limiter|c9"
     }
    ],
    "Non-Fissile Uranium": [
     {
      "from": "c11",
-     "q": 232.5,
-     "station": ""
+     "q": 232,
+     "station": "",
+     "key": "c31|Non-Fissile Uranium|c11"
     }
    ],
    "Heavy Modular Frame": [
     {
      "from": "c18",
-     "q": 68.7,
-     "station": ""
+     "q": 69,
+     "station": "",
+     "key": "c31|Heavy Modular Frame|c18"
     }
    ],
    "Aluminum Casing": [
     {
      "from": "c25",
-     "q": 3435.0,
-     "station": ""
+     "q": 3435,
+     "station": "",
+     "key": "c31|Aluminum Casing|c25"
+    }
+   ],
+   "Nitrogen Gas": [
+    {
+     "from": "raw",
+     "q": 1718,
+     "station": "",
+     "key": "c31|Nitrogen Gas|raw"
     }
    ]
   },
   "dests": {
-   "Nitrogen Gas": [
-    {
-     "to": "c3",
-     "q": 111.0,
-     "station": ""
-    }
-   ],
    "Fused Modular Frame": [
     {
      "to": "c20",
-     "q": 47.7,
-     "station": ""
+     "q": 48,
+     "station": "",
+     "key": "c31|Fused Modular Frame|c20"
     },
     {
      "to": "c22",
-     "q": 6.0,
-     "station": ""
+     "q": 6,
+     "station": "",
+     "key": "c31|Fused Modular Frame|c22"
     }
    ]
   },
