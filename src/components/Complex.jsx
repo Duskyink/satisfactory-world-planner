@@ -5,6 +5,8 @@ function Complex({c,kids,graph,nm,go,cxs,stName,producersOf,consumersNeeding,edi
   const t=c.totals||{},m=graph.per[c.id]||{};
   const mach=cxMach(c),pow=cxPow(c),shards=cxShards(c),st=cxStatus(c);
   const ins=allInputs(c);
+  const genMW=c.steps.reduce((a,s)=>{const cs=computeStep(s);return a+cs.outputs.filter(o=>o[0]==="Power").reduce((x,o)=>x+o[1],0);},0);
+  const prog=c.steps.length?Math.round(c.steps.filter(x=>x.status==="done").length/c.steps.length*100):0;
   const outs=Object.keys(m).filter(it=>m[it].made>0.01&&it!=="Power").map(it=>({it,made:m[it].made,net:m[it].made-m[it].used})).sort((a,b)=>b.made-a.made);
   const groups=[];let cur=null;
   c.steps.forEach(s=>{const sec=s.sec||"PRODUCTION";if(!cur||cur.sec!==sec){cur={sec,items:[]};groups.push(cur);}cur.items.push(s);});
@@ -25,8 +27,9 @@ function Complex({c,kids,graph,nm,go,cxs,stName,producersOf,consumersNeeding,edi
           {c.site&&c.site.x!=null&&<span className="placedchip" title="placed on the map">placed / {c.site.r||300}m reach</span>}</label>
         <label>BUILD STEP<input className="bin2" value={c.bstep||""} placeholder="1.1" onChange={e=>up(c.id,x=>({...x,bstep:e.target.value}))}/></label>
       </div>
-      <div className="cxstats"><span>{mach} machines</span><i/><span className={pow<0?"ok":""}>{fmt(pow)} MW</span><i/><span>{shards} shards</span>
-        {t.extBld!=null&&<><i/><span>{t.extBld} extractors</span></>}</div>
+      <div className="cxstats"><span>{mach} machines</span><i/><span>{fmt(pow)} MW draw</span>
+        {genMW>0.5&&<><i/><span className="ok">+{fmt(genMW)} MW generated</span></>}<i/><span>{shards} shards</span>
+        {t.extBld!=null&&<><i/><span>{t.extBld} extractors</span></>}<i/><span>{prog}% done</span></div>
     </div><div className="cxact"><button onClick={addSub}>+ sub-complex</button><button onClick={addStation}>+ station</button><button className="del" onClick={del}>remove</button></div></div>
 
     <div className="secband">STATIONS <Info w="330px" t="Create a named dock (e.g. \u2018Steel Pipe Out\u2019), set its vehicle and how many cars, then attach items. Outputs and inputs elsewhere can then route via this station by name."/><span>name each dock so parts can be routed by name</span></div>

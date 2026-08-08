@@ -17,11 +17,11 @@ function App(){
   const[q,setQ]=React.useState(""),[saved,setSaved]=React.useState(""),[modal,setModal]=React.useState(null);
   const[goals,setGoalsS]=React.useState(GOALS);
   React.useEffect(()=>{(async()=>{
-    try{const r=await window.storage.get("plan_v9",true);setCxs(r&&r.value?JSON.parse(r.value):APP_PLAN);}catch(e){setCxs(APP_PLAN);}
+    try{const r=await window.storage.get("plan_v10",true);setCxs(r&&r.value?JSON.parse(r.value):APP_PLAN);}catch(e){setCxs(APP_PLAN);}
     try{const w=await window.storage.get("worldname_v8",true);setWname(w&&w.value?w.value:"My Satisfactory World");}catch(e){setWname("My Satisfactory World");}
     try{const g=await window.storage.get("goals_v8",true);if(g&&g.value)setGoalsS(JSON.parse(g.value));}catch(e){}
   })();},[]);
-  const persist=async next=>{setCxs(next);try{await window.storage.set("plan_v9",JSON.stringify(next),true);setSaved("saved");setTimeout(()=>setSaved(""),900);}catch(e){}};
+  const persist=async next=>{setCxs(next);try{await window.storage.set("plan_v10",JSON.stringify(next),true);setSaved("saved");setTimeout(()=>setSaved(""),900);}catch(e){}};
   const saveName=async v=>{setWname(v);try{await window.storage.set("worldname_v8",v,true);}catch(e){}};
   const setGoals=async g=>{setGoalsS(g);try{await window.storage.set("goals_v8",JSON.stringify(g),true);}catch(e){}};
   const world=React.useMemo(()=>cxs?computeWorld(cxs):null,[cxs]);
@@ -31,7 +31,7 @@ function App(){
   const nm=id=>{const c=cxs.find(x=>x.id===id);return c?c.name:"";};
   const stName=(cid,sid)=>{const c=cxs.find(x=>x.id===cid);if(!c)return"";const s=(c.stations||[]).find(y=>y.id===sid);return s?s.name:"";};
   const match=c=>!q||(c.name+" "+(c.tags||"")+" "+(c.region||"")).toLowerCase().includes(q.toLowerCase());
-  const tops=cxs.filter(c=>!c.parent);
+  const tops=cxs.filter(c=>!c.parent).sort((a,b)=>String(a.bstep||"9.9").localeCompare(String(b.bstep||"9.9"),undefined,{numeric:true}));
   const selCx=cxs.find(c=>c.id===sel);
   const up=(id,fn)=>persist(cxs.map(c=>c.id===id?fn(c):c));
   const editStep=(cid,sid,p)=>up(cid,c=>({...c,steps:c.steps.map(s=>s.id===sid?{...s,...p}:s)}));

@@ -327,14 +327,14 @@ def emit_app_plan(comps, prod, made, edges, RMAP):
             rec = prod.get(item, {}).get("recipe")
             if not rec: continue
             steps.append({"id": "s%d_%d" % (i, j), "recipe": rec, "target": round(rate),
-                          "clock": 100, "status": "todo", "sec": "PRODUCTION FLOW", "name": ""})
+                          "clock": 100, "status": "todo", "sec": "PRODUCTION FLOW", "name": item})
         burned = {}                                   # fuels consumed on-site by generators
         for fuel, (rname, qin, pout) in BURN.items():
             R = made[i].get(fuel, 0)
             if R <= 0.5: continue
             steps.append({"id": "g%d_%d" % (i, len(steps)), "recipe": rname,
-                          "target": round(R * pout / qin), "clock": 100,
-                          "status": "todo", "sec": "POWER", "name": ""})
+                          "target": round(R * pout / qin), "clock": 100, "status": "todo",
+                          "sec": "POWER", "name": "Power \u2014 " + fuel.replace(" Fuel Rod", "")})
             burned[fuel] = R
         srcs = {}                                     # inputs: local / raw / import rows
         for x, u in cons.items():
@@ -366,11 +366,31 @@ def emit_app_plan(comps, prod, made, edges, RMAP):
                 dests[fuel] = rows
         res = ", ".join("%s %d" % (k.replace(" Ore", ""), round(v)) for k, v in
                         sorted(c["caps"].items(), key=lambda x: -x[1]))
+        phase = 1                                     # build phase from the most-advanced thing made
+        for item in M:
+            b = RMAP.get(prod.get(item, {}).get("recipe", ""), {}).get("b", "")
+            if "Fuel Rod" in item or "Ficsonium" in item or "Plutonium" in item or "Uranium" in item or b == "Nuclear Plant":
+                p = 5
+            elif b in ("Quantum Encoder", "Converter"): p = 6
+            elif b in ("Particle Accelerator", "Blender", "Manufacturer"): p = 4
+            elif item == "Rocket Fuel" or b == "Fuel Gen": p = 3
+            elif b == "Coal Gen": p = 1
+            else: p = 2
+            phase = max(phase, p)
         plan.append({"id": "c%d" % i, "name": names[i], "region": c["region"], "parent": None,
                      "tier": "", "bstep": "", "tags": "", "status": "To Do", "steps": steps,
                      "totals": {}, "sourcesN": srcs, "dests": dests, "stations": [],
                      "site": {"x": round(c["cx"] * 10), "y": round(c["cy"] * 10)},
+                     "_phase": phase, "_vol": sum(M.values()),
                      "desc": "Engine-generated. Nodes: %s. %d recipes." % (res or "none", len(steps))})
+    # order by build phase (then production volume) and assign tier + build-step numbers
+    TIER = {1: "T1", 2: "T2", 3: "T3", 4: "T5", 5: "T7", 6: "T8"}
+    plan.sort(key=lambda c: (c["_phase"], -c["_vol"]))
+    seq = defaultdict(int)
+    for c in plan:
+        ph = c.pop("_phase"); c.pop("_vol"); seq[ph] += 1
+        c["tier"] = TIER.get(ph, "T2")
+        c["bstep"] = "%d.%d" % (ph, seq[ph])
     with open(os.path.join(DATA, "app_plan.json"), "w", encoding="utf-8") as f:
         json.dump(plan, f, indent=1)
     return plan
