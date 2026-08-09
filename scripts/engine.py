@@ -48,19 +48,29 @@ CENTRAL_ITEMS = {"Computer","Supercomputer","Radio Control Unit","High-Speed Con
 FREE_ITEMS = {"Water", "Biomass", "Mycelia"}
 
 # ============================================================ recipe selection
-def select_recipes(RMAP, caps, demand, plan_recipes):
+def select_recipes(RMAP, caps, demand):
     """For each product, pick the best recipe from all candidates.
-    Rule: use raw-efficient recipes where a cap is tight; fewest-machine recipe
-    where resources are abundant. Prefer the plan's existing recipe when it doesn't
-    cause a cap breach — only override when needed."""
-    # group recipes by primary output item
+    Rule: raw-efficient recipes where a cap is tight; fewest-machine recipe
+    where resources are abundant. No locked recipes — the engine decides everything."""
     by_output = defaultdict(list)
     for r in RMAP.values():
         if not r["o"]: continue
         if not r.get("b"): continue
         po = r["o"][0][0]
         if po in FREE_ITEMS or po == "Power": continue
+        # exclude unpackage recipes (they need the packaged item, not primary production)
+        if r["n"].startswith("Unpackage"): continue
         by_output[po].append(r)
+    # detect circular recipes (A needs B, B needs A) and exclude them as sole options
+    circular = set()
+    for item, cands in by_output.items():
+        for r in cands:
+            for it, _ in r["i"]:
+                if it in by_output:
+                    for r2 in by_output[it]:
+                        if any(i2[0] == item for i2 in r2["i"]):
+                            circular.add(r["n"])
+                            circular.add(r2["n"])
     pressure = {}
     for res, cap in caps.items():
         if cap > 0:
@@ -72,6 +82,7 @@ def select_recipes(RMAP, caps, demand, plan_recipes):
             pu = q / base
             if it in RAW and it != "Water":
                 p = pressure.get(it, 0.1)
+                # quadratic penalty on scarce resources
                 cost += pu * (1.0 + p * p * 100)
             elif it in FLUID_ITEMS:
                 cost += pu * 0.3
@@ -81,14 +92,11 @@ def select_recipes(RMAP, caps, demand, plan_recipes):
         return cost
     selected = {}
     for item, candidates in by_output.items():
-        if len(candidates) == 1:
-            selected[item] = candidates[0]["n"]
-        elif item in plan_recipes:
-            # plan already chose a recipe — keep it unless it breaches caps
-            selected[item] = plan_recipes[item]
-        else:
-            best = min(candidates, key=recipe_score)
-            selected[item] = best["n"]
+        # prefer non-circular recipes; only use circular if it's the only option
+        non_circ = [c for c in candidates if c["n"] not in circular]
+        pool = non_circ if non_circ else candidates
+        best = min(pool, key=recipe_score)
+        selected[item] = best["n"]
     return selected
 
 # ============================================================ data & demand
@@ -406,15 +414,10 @@ def route(comps, prod, made, rem, ship, RMAP):
 
 # ============================================================ emit app-shaped plan
 def emit_app_plan(comps, prod, made, edges, RMAP, caps):
-    """Convert the engine graph into the app's complex shape so every tab renders the
-    engine world. Emits, per complex: a step for each item it makes; generator steps
-    that burn produced fuels into Power (so fuel rods / rocket fuel get a real consumer
-    and the dashboard shows generation); complete sourcesN for each input (a 'local' row
-    for on-site production, 'raw' for raw/free items, and one row per import edge); and
-    dests split into a 'local' row plus one row per external consumer. Quantities are
-    rounded once and reused on both sides. Every row carries a stable key."""
+    """Convert engine graph -> app complex shape. No auto-steps — the engine handles
+    all production. Emit just honestly represents what the engine computed: steps from
+    made[], sourcing from edges + local production + byproducts."""
     from collections import Counter
-    # fuel -> (burn recipe, fuel-in per unit, Power out) for every power recipe
     BURN = {}
     for r in RMAP.values():
         if any(o[0] == "Power" for o in r["o"]):
@@ -426,35 +429,29 @@ def emit_app_plan(comps, prod, made, edges, RMAP, caps):
     for c in comps:
         r = c["region"]; ctr[r] += 1
         names.append(r if freq[r] == 1 else "%s %d" % (r, ctr[r]))
-    imp_by = defaultdict(lambda: defaultdict(list))   # dst -> item -> [(src, rate)]
-    exp_by = defaultdict(lambda: defaultdict(list))   # src -> item -> [(dst, rate)]
+    imp_by = defaultdict(lambda: defaultdict(list))
+    exp_by = defaultdict(lambda: defaultdict(list))
     for e in edges:
         imp_by[e["dst"]][e["item"]].append((e["src"], e["rate"]))
         exp_by[e["src"]][e["item"]].append((e["dst"], e["rate"]))
-    # Build recipe lookup: for any item, which recipe produces it?
-    # Prefer recipes where the item is a primary output; fall back to byproduct sources
-    produces = {}  # item -> recipe name
+    produces = {}
     for r in RMAP.values():
         for oi, (it, q) in enumerate(r["o"]):
             if it not in FREE_ITEMS and it != "Power":
-                if it not in produces or oi == 0:  # primary output wins
+                if it not in produces or oi == 0:
                     produces[it] = r["n"]
+    # build per-complex byproduct output map (all recipe outputs across all complexes)
+    all_local_out = [defaultdict(float) for _ in comps]
     plan = []
-    all_steps = {}
-    auto_remote_steps = {}                            # ci -> [steps to add at remote complexes]
     for i, c in enumerate(comps):
         M = {k: v for k, v in made[i].items() if v > 0.5 and k not in FREE_ITEMS}
-        cons = defaultdict(float)                     # consumption from what it makes
-        for P, rate in M.items():
-            for x, pu in prod.get(P, {"in": {}})["in"].items():
-                if x not in FREE_ITEMS: cons[x] += pu * rate
         steps = []
         for j, (item, rate) in enumerate(sorted(M.items(), key=lambda x: -x[1])):
             rec = prod.get(item, {}).get("recipe")
             if not rec: continue
             steps.append({"id": "s%d_%d" % (i, j), "recipe": rec, "target": round(rate),
                           "clock": 100, "status": "todo", "sec": "PRODUCTION FLOW", "name": item})
-        burned = {}                                   # fuels consumed on-site by generators
+        burned = {}
         for fuel, (rname, qin, pout) in BURN.items():
             R = made[i].get(fuel, 0)
             if R <= 0.5: continue
@@ -462,19 +459,18 @@ def emit_app_plan(comps, prod, made, edges, RMAP, caps):
                           "target": round(R * pout / qin), "clock": 100, "status": "todo",
                           "sec": "POWER", "name": "Power \u2014 " + fuel.replace(" Fuel Rod", "")})
             burned[fuel] = R
-        # derive needs from the ACTUAL steps (same way the app does), not just from M
-        needs = defaultdict(float)                    # total input consumption from all steps
-        local_out = defaultdict(float)                # total output from all steps
+        # compute needs and local_out from actual steps
+        needs = defaultdict(float)
+        local_out = defaultdict(float)
         for s in steps:
             r = RMAP.get(s["recipe"])
             if not r: continue
             base = r["o"][0][1] or 1
-            for it, q in r["i"]:
-                needs[it] += q / base * s["target"]
-            for it, q in r["o"]:
-                local_out[it] += q / base * s["target"]
-        all_steps[i] = steps
-        srcs = {}                                     # inputs: local / raw / import rows
+            for it, q in r["i"]: needs[it] += q / base * s["target"]
+            for it, q in r["o"]: local_out[it] += q / base * s["target"]
+        all_local_out[i] = local_out
+        # build source rows: raw, local, import — no auto-steps
+        srcs = {}
         for x, u in needs.items():
             if u <= 0.5 or x in FREE_ITEMS: continue
             if x in RAW:
@@ -482,179 +478,17 @@ def emit_app_plan(comps, prod, made, edges, RMAP, caps):
                 continue
             rows = []
             lo = local_out.get(x, 0)
-            imp_q = sum(rate for _, rate in imp_by[i].get(x, []))
             if lo > 0.5:
-                # local production covers this need (partially or fully)
                 rows.append({"from": "local", "q": round(min(lo, u)), "station": "", "key": "c%d|%s|local" % (i, x)})
             for src, rate in imp_by[i].get(x, []):
                 rows.append({"from": "c%d" % src, "q": round(rate), "station": "", "key": "c%d|%s|c%d" % (i, x, src)})
-            # ensure total sourced >= need (fix rounding shortfalls)
             if rows:
                 total_sourced = sum(r["q"] for r in rows)
                 if total_sourced < round(u) and rows:
                     rows[0]["q"] += round(u) - total_sourced
             if rows: srcs[x] = rows
-        # VERIFY: any input still unsourced? Check local byproduct output first,
-        # then look across all complexes for a producer and create an import link.
-        # Build per-complex byproduct output map
-        bp_map = defaultdict(lambda: defaultdict(float))  # item -> ci -> rate
-        for ci2 in range(len(comps)):
-            for s2 in all_steps.get(ci2, []):
-                r2 = RMAP.get(s2["recipe"])
-                if not r2: continue
-                base2 = r2["o"][0][1] or 1
-                for oi2 in range(len(r2["o"])):
-                    it2, q2 = r2["o"][oi2]
-                    if it2 not in FREE_ITEMS and it2 != "Power":
-                        bp_map[it2][ci2] += q2 / base2 * s2["target"]
-        for x, u in list(needs.items()):
-            if x in FREE_ITEMS or x in RAW or x in srcs: continue
-            if u <= 0.5: continue
-            lo = local_out.get(x, 0)
-            if lo > 0.5:
-                srcs[x] = [{"from": "local", "q": round(min(lo, u)), "station": "", "key": "c%d|%s|local" % (i, x)}]
-            elif bp_map[x]:
-                # find nearest complex that produces this byproduct
-                rows = []
-                rem_need = u
-                for sci in sorted(bp_map[x], key=lambda c: _dist(comps[c], comps[i]) if c != i else -1):
-                    if rem_need <= 0.5: break
-                    avail = bp_map[x][sci]
-                    take = min(avail, rem_need)
-                    bp_map[x][sci] -= take; rem_need -= take
-                    if sci == i:
-                        rows.append({"from": "local", "q": round(take), "station": "", "key": "c%d|%s|local" % (i, x)})
-                    else:
-                        rows.append({"from": "c%d" % sci, "q": round(take), "station": "", "key": "c%d|%s|c%d" % (i, x, sci)})
-                # if byproducts didn't cover the full need, add a producing step for the remainder
-                if rem_need > 1 and x in produces:
-                    rname = produces[x]
-                    r = RMAP.get(rname)
-                    if r:
-                        base = r["o"][0][1] or 1
-                        oq = next((q for it2, q in r["o"] if it2 == x), base)
-                        target_rate = round(rem_need * base / oq) if oq > 0 else round(rem_need)
-                        raw_needs_r = {it2: q2 / base * target_rate for it2, q2 in r["i"] if it2 in RAW}
-                        # check world feasibility — don't auto-add if raw demand exceeds world cap
-                        world_feasible = all(caps.get(rn, 0) >= rq for rn, rq in raw_needs_r.items())
-                        if not world_feasible:
-                            pass  # infeasible recipe chain — can't auto-fix, leave gap visible
-                        elif not r["i"]:
-                            # zero-input recipe (e.g., Excited Photonic Matter) — add locally
-                            steps.append({"id": "a%d_%d" % (i, len(steps)), "recipe": rname,
-                                          "target": target_rate, "clock": 100, "status": "todo",
-                                          "sec": "PRODUCTION FLOW", "name": x})
-                            for it2, q2 in r["o"]:
-                                local_out[it2] += q2 / base * target_rate
-                            rows.append({"from": "local", "q": round(rem_need), "station": "", "key": "c%d|%s|local" % (i, x)})
-                        else:
-                            # find complex with best raw resource coverage
-                            if raw_needs_r:
-                                best_ci = max(range(len(comps)),
-                                              key=lambda ci: min(comps[ci]["caps"].get(rn, 0) / (rq or 1)
-                                                                for rn, rq in raw_needs_r.items()))
-                            else:
-                                best_ci = i  # no raw needs, place locally
-                            if best_ci == i:
-                                steps.append({"id": "a%d_%d" % (i, len(steps)), "recipe": rname,
-                                              "target": target_rate, "clock": 100, "status": "todo",
-                                              "sec": "PRODUCTION FLOW", "name": x})
-                                for it2, q2 in r["o"]:
-                                    local_out[it2] += q2 / base * target_rate
-                                for it2, q2 in r["i"]:
-                                    needs[it2] = needs.get(it2, 0) + q2 / base * target_rate
-                                rows.append({"from": "local", "q": round(rem_need), "station": "", "key": "c%d|%s|local" % (i, x)})
-                            else:
-                                rows.append({"from": "c%d" % best_ci, "q": round(rem_need), "station": "", "key": "c%d|%s|c%d" % (i, x, best_ci)})
-                                auto_remote = auto_remote_steps.setdefault(best_ci, [])
-                                auto_remote.append({"id": "a%d_%d" % (best_ci, len(auto_remote)), "recipe": rname,
-                                                    "target": target_rate, "clock": 100, "status": "todo",
-                                                    "sec": "PRODUCTION FLOW", "name": x})
-                if rows: srcs[x] = rows
-            elif x in produces:
-                # No complex produces this item — find or add a producing recipe
-                rname = produces[x]
-                r = RMAP.get(rname)
-                if r:
-                    base = r["o"][0][1] or 1
-                    oq = next((q for it2, q in r["o"] if it2 == x), base)
-                    target_rate = round(u * base / oq) if oq > 0 else round(u)
-                    # check if recipe needs raw resources this complex doesn't have enough of
-                    raw_needs = {it2: q2 / base * target_rate for it2, q2 in r["i"] if it2 in RAW}
-                    can_local = all(comps[i]["caps"].get(rn, 0) >= rq * 0.5 for rn, rq in raw_needs.items()) if raw_needs else True
-                    if can_local or not r["i"]:
-                        # place here (zero-input or has local resources)
-                        sid = "a%d_%d" % (i, len(steps))
-                        steps.append({"id": sid, "recipe": rname, "target": target_rate,
-                                      "clock": 100, "status": "todo", "sec": "PRODUCTION FLOW",
-                                      "name": x})
-                        for it2, q2 in r["o"]:
-                            local_out[it2] += q2 / base * target_rate
-                        for it2, q2 in r["i"]:
-                            needs[it2] = needs.get(it2, 0) + q2 / base * target_rate
-                        srcs[x] = [{"from": "local", "q": round(u), "station": "", "key": "c%d|%s|local" % (i, x)}]
-                    else:
-                        # place at a complex that has the raw resources, import the output
-                        best_ci = max(range(len(comps)),
-                                      key=lambda ci: min(comps[ci]["caps"].get(rn, 0) / (rq or 1) for rn, rq in raw_needs.items()) if raw_needs else 1e18)
-                        if best_ci != i:
-                            # add step at best complex (will be picked up when we process that complex)
-                            # for now, create import source row
-                            srcs[x] = [{"from": "c%d" % best_ci, "q": round(u), "station": "", "key": "c%d|%s|c%d" % (i, x, best_ci)}]
-                            # also add the step to that complex's pending auto-steps
-                            auto_remote = auto_remote_steps.setdefault(best_ci, [])
-                            auto_remote.append({"id": "a%d_%d" % (best_ci, len(auto_remote)), "recipe": rname,
-                                                "target": target_rate, "clock": 100, "status": "todo",
-                                                "sec": "PRODUCTION FLOW", "name": x})
-        # after adding auto-steps, re-source any new needs — iterate until stable
-        for _pass in range(10):
-            added = False
-            for x, u in list(needs.items()):
-                if x in FREE_ITEMS: continue
-                if u <= 0.5: continue
-                existing = sum(r.get("q", 0) for r in srcs.get(x, []))
-                if existing >= u - 5: continue  # fully sourced
-                added = True
-                shortfall = u - existing
-                if x in RAW:
-                    # update or create raw source row to match total need
-                    srcs[x] = [{"from": "raw", "q": round(u), "station": "", "key": "c%d|%s|raw" % (i, x)}]
-                elif local_out.get(x, 0) > 0.5:
-                    srcs[x] = [{"from": "local", "q": round(min(local_out[x], u)), "station": "", "key": "c%d|%s|local" % (i, x)}]
-                elif any(v > 0.5 for v in bp_map[x].values()):
-                    rows = []
-                    rem_need = u
-                    for sci in sorted(bp_map[x], key=lambda c: _dist(comps[c], comps[i]) if c != i else -1):
-                        if rem_need <= 0.5: break
-                        avail_bp = bp_map[x][sci]
-                        take = min(avail_bp, rem_need)
-                        bp_map[x][sci] -= take; rem_need -= take
-                        if sci == i:
-                            rows.append({"from": "local", "q": round(take), "station": "", "key": "c%d|%s|local" % (i, x)})
-                        else:
-                            rows.append({"from": "c%d" % sci, "q": round(take), "station": "", "key": "c%d|%s|c%d" % (i, x, sci)})
-                    if rows: srcs[x] = rows
-                elif x in produces:
-                    rname = produces[x]
-                    r = RMAP.get(rname)
-                    if r:
-                        base = r["o"][0][1] or 1
-                        oq = next((q for it2, q in r["o"] if it2 == x), base)
-                        target_rate = round(u * base / oq) if oq > 0 else round(u)
-                        steps.append({"id": "a%d_%d" % (i, len(steps)), "recipe": rname,
-                                      "target": target_rate, "clock": 100, "status": "todo",
-                                      "sec": "PRODUCTION FLOW", "name": x})
-                        for it2, q2 in r["o"]:
-                            local_out[it2] += q2 / base * target_rate
-                        for it2, q2 in r["i"]:
-                            needs[it2] = needs.get(it2, 0) + q2 / base * target_rate
-                        srcs[x] = [{"from": "local", "q": round(u), "station": "", "key": "c%d|%s|local" % (i, x)}]
-            if not added: break
-        # append any remote auto-steps assigned to this complex by other complexes
-        for rs in auto_remote_steps.get(i, []):
-            steps.append(rs)
-        all_steps[i] = steps
-        dests = {}                                    # outputs: local + one row per consumer
+        # build dest rows: local + per consumer
+        dests = {}
         for x, mrate in M.items():
             rows = []
             local_q = min(mrate, needs.get(x, 0))
@@ -663,7 +497,7 @@ def emit_app_plan(comps, prod, made, edges, RMAP, caps):
             for dst, rate in exp_by[i].get(x, []):
                 rows.append({"to": "c%d" % dst, "q": round(rate), "station": "", "key": "c%d|%s|c%d" % (i, x, dst)})
             if rows: dests[x] = rows
-        for fuel, R in burned.items():                # burned on-site -> local destination
+        for fuel, R in burned.items():
             rows = dests.get(fuel, [])
             if not any(rw["to"] == "local" for rw in rows):
                 rows.insert(0, {"to": "local", "q": round(R), "station": "",
@@ -671,7 +505,7 @@ def emit_app_plan(comps, prod, made, edges, RMAP, caps):
                 dests[fuel] = rows
         res = ", ".join("%s %d" % (k.replace(" Ore", ""), round(v)) for k, v in
                         sorted(c["caps"].items(), key=lambda x: -x[1]))
-        phase = 1                                     # build phase from the most-advanced thing made
+        phase = 1
         for item in M:
             b = RMAP.get(prod.get(item, {}).get("recipe", ""), {}).get("b", "")
             if "Fuel Rod" in item or "Ficsonium" in item or "Plutonium" in item or "Uranium" in item or b == "Nuclear Plant":
@@ -688,7 +522,31 @@ def emit_app_plan(comps, prod, made, edges, RMAP, caps):
                      "site": {"x": round(c["cx"] * 10), "y": round(c["cy"] * 10)},
                      "_phase": phase, "_vol": sum(M.values()),
                      "desc": "Engine-generated. Nodes: %s. %d recipes." % (res or "none", len(steps))})
-    # order by build phase (then production volume) and assign tier + build-step numbers
+    # second pass: source unsourced byproducts from other complexes
+    for ci, cx in enumerate(plan):
+        needs2 = defaultdict(float)
+        for s in cx["steps"]:
+            r = RMAP.get(s["recipe"])
+            if not r: continue
+            base = r["o"][0][1] or 1
+            for it, q in r["i"]: needs2[it] += q / base * s["target"]
+        srcs = cx["sourcesN"]
+        for x, u in needs2.items():
+            if x in FREE_ITEMS or x in RAW or x in srcs: continue
+            if u <= 0.5: continue
+            lo = all_local_out[ci].get(x, 0)
+            if lo > 0.5:
+                srcs[x] = [{"from": "local", "q": round(min(lo, u)), "station": "", "key": "c%d|%s|local" % (ci, x)}]
+                continue
+            rows = []
+            rem = u
+            for ci2 in range(len(plan)):
+                if ci2 == ci: continue
+                avail = all_local_out[ci2].get(x, 0)
+                if avail > 0.5 and rem > 0.5:
+                    take = min(avail, rem); all_local_out[ci2][x] -= take; rem -= take
+                    rows.append({"from": "c%d" % ci2, "q": round(take), "station": "", "key": "c%d|%s|c%d" % (ci, x, ci2)})
+            if rows: srcs[x] = rows
     TIER = {1: "T1", 2: "T2", 3: "T3", 4: "T5", 5: "T7", 6: "T8"}
     plan.sort(key=lambda c: (c["_phase"], -c["_vol"]))
     seq = defaultdict(int)
@@ -698,7 +556,7 @@ def emit_app_plan(comps, prod, made, edges, RMAP, caps):
         c["bstep"] = "%d.%d" % (ph, seq[ph])
     with open(os.path.join(DATA, "app_plan.json"), "w", encoding="utf-8") as f:
         json.dump(plan, f, indent=1)
-    return plan
+
 
 # ============================================================ driver
 def region_namer(mapbg):
@@ -715,21 +573,36 @@ def main():
     RMAP = {r["n"]: r for r in recipes}
     region = region_namer(mapbg)
 
-    # build plan's existing recipe choices (item -> recipe name)
-    plan_recipes = {}
-    for c in plan:
-        for s in c.get("steps", []):
-            r = RMAP.get(s["recipe"])
-            if r and r["o"]:
-                plan_recipes[r["o"][0][0]] = s["recipe"]
-    # first pass: get raw demand from plan's static recipes to compute pressure
-    pre_prod, _ = build_demand(plan, RMAP, plan_recipes)
-    pre_dem = raw_demand(pre_prod)
-    # engine selects recipes based on resource pressure (prefers plan choices)
-    selected = select_recipes(RMAP, caps, pre_dem, plan_recipes)
-    # rebuild demand with engine-selected recipes
-    prod, byproduct_rate = build_demand(plan, RMAP, selected)
-    dem = raw_demand(prod)
+    # iterative recipe selection: pick recipes, compute draw, re-score until caps converge
+    dem = {}
+    selected = {}
+    for _iter in range(5):
+        selected = select_recipes(RMAP, caps, dem)
+        prod, byproduct_rate = build_demand(plan, RMAP, selected)
+        # ensure every consumed item has a producing recipe in prod
+        # (catches byproduct-chain items like Dissolved Silica, Excited Photonic Matter)
+        changed = True
+        while changed:
+            changed = False
+            all_inputs = set()
+            for d in prod.values():
+                all_inputs |= set(d["in"].keys())
+            for it in all_inputs:
+                if it in prod or it in RAW or it in FREE_ITEMS: continue
+                # this item is consumed but not produced — find a recipe for it
+                rname = selected.get(it)
+                if not rname: continue
+                r = RMAP.get(rname)
+                if not r: continue
+                # compute how much is needed (sum across all consumers)
+                need = sum(d["in"].get(it, 0) * d["rate"] for d in prod.values())
+                if need <= 1: continue
+                oq = r["o"][0][1] or 1
+                prod[it] = {"in": {x: q / oq for x, q in r["i"]}, "rate": need, "recipe": rname}
+                changed = True
+        new_dem = raw_demand(prod)
+        if new_dem == dem: break
+        dem = new_dem
 
     # 1-3: solid claim + fluid claims, then merge into complexes
     link = CLUSTER_LINK_M / 10; diam = COMPLEX_DIAM_M / 10
