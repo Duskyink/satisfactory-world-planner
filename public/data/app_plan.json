@@ -66,42 +66,10 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Limestone": [
-    {
-     "from": "raw",
-     "q": 2106,
-     "station": "",
-     "key": "c2|Limestone|raw"
-    }
-   ],
-   "Caterium Ore": [
-    {
-     "from": "raw",
-     "q": 1200,
-     "station": "",
-     "key": "c2|Caterium Ore|raw"
-    }
-   ],
-   "Iron Ore": [
-    {
-     "from": "raw",
-     "q": 9770,
-     "station": "",
-     "key": "c2|Iron Ore|raw"
-    }
-   ],
-   "Iron Ingot": [
-    {
-     "from": "local",
-     "q": 18145,
-     "station": "",
-     "key": "c2|Iron Ingot|local"
-    }
-   ],
    "Iron Rod": [
     {
      "from": "c1",
-     "q": 4682,
+     "q": 4683,
      "station": "",
      "key": "c2|Iron Rod|c1"
     },
@@ -124,10 +92,26 @@
      "key": "c2|Iron Rod|c1"
     }
    ],
+   "Iron Ore": [
+    {
+     "from": "raw",
+     "q": 9770,
+     "station": "",
+     "key": "c2|Iron Ore|raw"
+    }
+   ],
+   "Iron Ingot": [
+    {
+     "from": "local",
+     "q": 18146,
+     "station": "",
+     "key": "c2|Iron Ingot|local"
+    }
+   ],
    "Iron Plate": [
     {
      "from": "local",
-     "q": 9364,
+     "q": 9366,
      "station": "",
      "key": "c2|Iron Plate|local"
     }
@@ -135,9 +119,25 @@
    "Screws": [
     {
      "from": "local",
-     "q": 18729,
+     "q": 18732,
      "station": "",
      "key": "c2|Screws|local"
+    }
+   ],
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 2106,
+     "station": "",
+     "key": "c2|Limestone|raw"
+    }
+   ],
+   "Caterium Ore": [
+    {
+     "from": "raw",
+     "q": 1200,
+     "station": "",
+     "key": "c2|Caterium Ore|raw"
     }
    ]
   },
@@ -259,7 +259,7 @@
    "Iron Plate": [
     {
      "to": "local",
-     "q": 9364,
+     "q": 9366,
      "station": "",
      "key": "c2|Iron Plate|local"
     },
@@ -285,7 +285,7 @@
    "Screws": [
     {
      "to": "local",
-     "q": 18729,
+     "q": 18732,
      "station": "",
      "key": "c2|Screws|local"
     }
@@ -367,22 +367,6 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Limestone": [
-    {
-     "from": "raw",
-     "q": 618,
-     "station": "",
-     "key": "c1|Limestone|raw"
-    }
-   ],
-   "Raw Quartz": [
-    {
-     "from": "raw",
-     "q": 1201,
-     "station": "",
-     "key": "c1|Raw Quartz|raw"
-    }
-   ],
    "Iron Ore": [
     {
      "from": "raw",
@@ -397,6 +381,22 @@
      "q": 21586,
      "station": "",
      "key": "c1|Iron Ingot|local"
+    }
+   ],
+   "Raw Quartz": [
+    {
+     "from": "raw",
+     "q": 1201,
+     "station": "",
+     "key": "c1|Raw Quartz|raw"
+    }
+   ],
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 618,
+     "station": "",
+     "key": "c1|Limestone|raw"
     }
    ]
   },
@@ -598,10 +598,42 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Iron Ingot": [
+    {
+     "from": "local",
+     "q": 12284,
+     "station": "",
+     "key": "c6|Iron Ingot|local"
+    }
+   ],
+   "Coal": [
+    {
+     "from": "raw",
+     "q": 12284,
+     "station": "",
+     "key": "c6|Coal|raw"
+    }
+   ],
+   "Iron Ore": [
+    {
+     "from": "raw",
+     "q": 6614,
+     "station": "",
+     "key": "c6|Iron Ore|raw"
+    }
+   ],
+   "Steel Ingot": [
+    {
+     "from": "local",
+     "q": 10002,
+     "station": "",
+     "key": "c6|Steel Ingot|local"
+    }
+   ],
    "Limestone": [
     {
      "from": "raw",
-     "q": 886,
+     "q": 885,
      "station": "",
      "key": "c6|Limestone|raw"
     }
@@ -620,38 +652,6 @@
      "q": 300,
      "station": "",
      "key": "c6|SAM|raw"
-    }
-   ],
-   "Iron Ore": [
-    {
-     "from": "raw",
-     "q": 6614,
-     "station": "",
-     "key": "c6|Iron Ore|raw"
-    }
-   ],
-   "Iron Ingot": [
-    {
-     "from": "local",
-     "q": 12284,
-     "station": "",
-     "key": "c6|Iron Ingot|local"
-    }
-   ],
-   "Coal": [
-    {
-     "from": "raw",
-     "q": 12284,
-     "station": "",
-     "key": "c6|Coal|raw"
-    }
-   ],
-   "Steel Ingot": [
-    {
-     "from": "local",
-     "q": 10002,
-     "station": "",
-     "key": "c6|Steel Ingot|local"
     }
    ]
   },
@@ -821,38 +821,6 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Limestone": [
-    {
-     "from": "raw",
-     "q": 648,
-     "station": "",
-     "key": "c17|Limestone|raw"
-    }
-   ],
-   "Coal": [
-    {
-     "from": "raw",
-     "q": 40,
-     "station": "",
-     "key": "c17|Coal|raw"
-    }
-   ],
-   "Sulfur": [
-    {
-     "from": "raw",
-     "q": 66,
-     "station": "",
-     "key": "c17|Sulfur|raw"
-    }
-   ],
-   "SAM": [
-    {
-     "from": "raw",
-     "q": 600,
-     "station": "",
-     "key": "c17|SAM|raw"
-    }
-   ],
    "Iron Rod": [
     {
      "from": "c1",
@@ -899,6 +867,14 @@
      "key": "c17|Screws|local"
     }
    ],
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 648,
+     "station": "",
+     "key": "c17|Limestone|raw"
+    }
+   ],
    "Rotor": [
     {
      "from": "local",
@@ -913,6 +889,30 @@
      "q": 492,
      "station": "",
      "key": "c17|Stator|c15"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 600,
+     "station": "",
+     "key": "c17|SAM|raw"
+    }
+   ],
+   "Coal": [
+    {
+     "from": "raw",
+     "q": 40,
+     "station": "",
+     "key": "c17|Coal|raw"
+    }
+   ],
+   "Sulfur": [
+    {
+     "from": "raw",
+     "q": 66,
+     "station": "",
+     "key": "c17|Sulfur|raw"
     }
    ]
   },
@@ -1062,22 +1062,6 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Limestone": [
-    {
-     "from": "raw",
-     "q": 1287,
-     "station": "",
-     "key": "c4|Limestone|raw"
-    }
-   ],
-   "SAM": [
-    {
-     "from": "raw",
-     "q": 1200,
-     "station": "",
-     "key": "c4|SAM|raw"
-    }
-   ],
    "Copper Ore": [
     {
      "from": "raw",
@@ -1092,6 +1076,22 @@
      "q": 12928,
      "station": "",
      "key": "c4|Copper Ingot|local"
+    }
+   ],
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 1287,
+     "station": "",
+     "key": "c4|Limestone|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 1200,
+     "station": "",
+     "key": "c4|SAM|raw"
     }
    ]
   },
@@ -1206,22 +1206,6 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Bauxite": [
-    {
-     "from": "raw",
-     "q": 1078,
-     "station": "",
-     "key": "c25|Bauxite|raw"
-    }
-   ],
-   "Copper Ore": [
-    {
-     "from": "raw",
-     "q": 1726,
-     "station": "",
-     "key": "c25|Copper Ore|raw"
-    }
-   ],
    "Aluminum Ingot": [
     {
      "from": "c11",
@@ -1233,9 +1217,25 @@
    "Copper Ingot": [
     {
      "from": "local",
-     "q": 4316,
+     "q": 4315,
      "station": "",
      "key": "c25|Copper Ingot|local"
+    }
+   ],
+   "Copper Ore": [
+    {
+     "from": "raw",
+     "q": 1726,
+     "station": "",
+     "key": "c25|Copper Ore|raw"
+    }
+   ],
+   "Bauxite": [
+    {
+     "from": "raw",
+     "q": 1078,
+     "station": "",
+     "key": "c25|Bauxite|raw"
     }
    ]
   },
@@ -1257,7 +1257,7 @@
    "Copper Ingot": [
     {
      "to": "local",
-     "q": 4316,
+     "q": 4315,
      "station": "",
      "key": "c25|Copper Ingot|local"
     }
@@ -1348,14 +1348,6 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Caterium Ore": [
-    {
-     "from": "raw",
-     "q": 597,
-     "station": "",
-     "key": "c15|Caterium Ore|raw"
-    }
-   ],
    "Caterium Ingot": [
     {
      "from": "local",
@@ -1402,6 +1394,14 @@
      "q": 9864,
      "station": "",
      "key": "c15|Wire|local"
+    }
+   ],
+   "Caterium Ore": [
+    {
+     "from": "raw",
+     "q": 596,
+     "station": "",
+     "key": "c15|Caterium Ore|raw"
     }
    ]
   },
@@ -1526,34 +1526,10 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Coal": [
-    {
-     "from": "raw",
-     "q": 448,
-     "station": "",
-     "key": "c9|Coal|raw"
-    }
-   ],
-   "Sulfur": [
-    {
-     "from": "raw",
-     "q": 578,
-     "station": "",
-     "key": "c9|Sulfur|raw"
-    }
-   ],
-   "SAM": [
-    {
-     "from": "raw",
-     "q": 600,
-     "station": "",
-     "key": "c9|SAM|raw"
-    }
-   ],
    "Caterium Ingot": [
     {
      "from": "c14",
-     "q": 599,
+     "q": 600,
      "station": "",
      "key": "c9|Caterium Ingot|c14"
     },
@@ -1594,10 +1570,26 @@
      "key": "c9|Caterium Ingot|c2"
     }
    ],
+   "Coal": [
+    {
+     "from": "raw",
+     "q": 448,
+     "station": "",
+     "key": "c9|Coal|raw"
+    }
+   ],
+   "Sulfur": [
+    {
+     "from": "raw",
+     "q": 578,
+     "station": "",
+     "key": "c9|Sulfur|raw"
+    }
+   ],
    "Copper Sheet": [
     {
      "from": "c4",
-     "q": 2448,
+     "q": 2450,
      "station": "",
      "key": "c9|Copper Sheet|c4"
     }
@@ -1605,7 +1597,7 @@
    "Quickwire": [
     {
      "from": "local",
-     "q": 9790,
+     "q": 9800,
      "station": "",
      "key": "c9|Quickwire|local"
     }
@@ -1624,6 +1616,14 @@
      "q": 377,
      "station": "",
      "key": "c9|AI Limiter|local"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 600,
+     "station": "",
+     "key": "c9|SAM|raw"
     }
    ]
   },
@@ -1669,7 +1669,7 @@
    "Quickwire": [
     {
      "to": "local",
-     "q": 9790,
+     "q": 9800,
      "station": "",
      "key": "c9|Quickwire|local"
     }
@@ -1789,20 +1789,12 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Limestone": [
+   "Steel Ingot": [
     {
-     "from": "raw",
-     "q": 397,
+     "from": "c6",
+     "q": 8424,
      "station": "",
-     "key": "c8|Limestone|raw"
-    }
-   ],
-   "Caterium Ore": [
-    {
-     "from": "raw",
-     "q": 1199,
-     "station": "",
-     "key": "c8|Caterium Ore|raw"
+     "key": "c8|Steel Ingot|c6"
     }
    ],
    "Bauxite": [
@@ -1811,22 +1803,6 @@
      "q": 1199,
      "station": "",
      "key": "c8|Bauxite|raw"
-    }
-   ],
-   "SAM": [
-    {
-     "from": "raw",
-     "q": 897,
-     "station": "",
-     "key": "c8|SAM|raw"
-    }
-   ],
-   "Steel Ingot": [
-    {
-     "from": "c6",
-     "q": 8424,
-     "station": "",
-     "key": "c8|Steel Ingot|c6"
     }
    ],
    "Steel Beam": [
@@ -1885,6 +1861,30 @@
      "q": 348,
      "station": "",
      "key": "c8|Concrete|c20"
+    }
+   ],
+   "Caterium Ore": [
+    {
+     "from": "raw",
+     "q": 1200,
+     "station": "",
+     "key": "c8|Caterium Ore|raw"
+    }
+   ],
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 398,
+     "station": "",
+     "key": "c8|Limestone|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 896,
+     "station": "",
+     "key": "c8|SAM|raw"
     }
    ]
   },
@@ -2057,38 +2057,6 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Crude Oil": [
-    {
-     "from": "raw",
-     "q": 1347,
-     "station": "",
-     "key": "c24|Crude Oil|raw"
-    }
-   ],
-   "Bauxite": [
-    {
-     "from": "raw",
-     "q": 1147,
-     "station": "",
-     "key": "c24|Bauxite|raw"
-    }
-   ],
-   "SAM": [
-    {
-     "from": "raw",
-     "q": 300,
-     "station": "",
-     "key": "c24|SAM|raw"
-    }
-   ],
-   "Copper Ore": [
-    {
-     "from": "raw",
-     "q": 243,
-     "station": "",
-     "key": "c24|Copper Ore|raw"
-    }
-   ],
    "Aluminum Ingot": [
     {
      "from": "c11",
@@ -2105,6 +2073,30 @@
      "key": "c24|Copper Ingot|local"
     }
    ],
+   "Bauxite": [
+    {
+     "from": "raw",
+     "q": 1148,
+     "station": "",
+     "key": "c24|Bauxite|raw"
+    }
+   ],
+   "Crude Oil": [
+    {
+     "from": "raw",
+     "q": 1346,
+     "station": "",
+     "key": "c24|Crude Oil|raw"
+    }
+   ],
+   "Copper Ore": [
+    {
+     "from": "raw",
+     "q": 243,
+     "station": "",
+     "key": "c24|Copper Ore|raw"
+    }
+   ],
    "Alclad Aluminum Sheet": [
     {
      "from": "local",
@@ -2119,6 +2111,14 @@
      "q": 972,
      "station": "",
      "key": "c24|Copper Sheet|c4"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 300,
+     "station": "",
+     "key": "c24|SAM|raw"
     }
    ]
   },
@@ -2279,17 +2279,9 @@
    "Crude Oil": [
     {
      "from": "raw",
-     "q": 4498,
+     "q": 4497,
      "station": "",
      "key": "c21|Crude Oil|raw"
-    }
-   ],
-   "SAM": [
-    {
-     "from": "raw",
-     "q": 1200,
-     "station": "",
-     "key": "c21|SAM|raw"
     }
    ],
    "Copper Sheet": [
@@ -2330,6 +2322,14 @@
      "q": 953,
      "station": "",
      "key": "c21|Plastic|c22"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 1200,
+     "station": "",
+     "key": "c21|SAM|raw"
     }
    ]
   },
@@ -2490,7 +2490,7 @@
    "Crude Oil": [
     {
      "from": "raw",
-     "q": 1672,
+     "q": 1671,
      "station": "",
      "key": "c30|Crude Oil|raw"
     }
@@ -2626,14 +2626,6 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Limestone": [
-    {
-     "from": "raw",
-     "q": 1195,
-     "station": "",
-     "key": "c5|Limestone|raw"
-    }
-   ],
    "Copper Ore": [
     {
      "from": "raw",
@@ -2650,10 +2642,18 @@
      "key": "c5|Copper Ingot|local"
     }
    ],
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 1196,
+     "station": "",
+     "key": "c5|Limestone|raw"
+    }
+   ],
    "Copper Powder": [
     {
      "from": "local",
-     "q": 4620,
+     "q": 4600,
      "station": "",
      "key": "c5|Copper Powder|local"
     }
@@ -2687,7 +2687,7 @@
    "Copper Powder": [
     {
      "to": "local",
-     "q": 4620,
+     "q": 4600,
      "station": "",
      "key": "c5|Copper Powder|local"
     }
@@ -2785,7 +2785,7 @@
    "Caterium Ore": [
     {
      "from": "raw",
-     "q": 1115,
+     "q": 1114,
      "station": "",
      "key": "c23|Caterium Ore|raw"
     }
@@ -2948,26 +2948,10 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Crude Oil": [
-    {
-     "from": "raw",
-     "q": 1199,
-     "station": "",
-     "key": "c18|Crude Oil|raw"
-    }
-   ],
-   "Reinforced Iron Plate": [
-    {
-     "from": "c2",
-     "q": 922,
-     "station": "",
-     "key": "c18|Reinforced Iron Plate|c2"
-    }
-   ],
    "Iron Rod": [
     {
      "from": "c1",
-     "q": 3690,
+     "q": 3691,
      "station": "",
      "key": "c18|Iron Rod|c1"
     },
@@ -2996,10 +2980,26 @@
      "key": "c18|Iron Rod|c1"
     }
    ],
+   "Crude Oil": [
+    {
+     "from": "raw",
+     "q": 1199,
+     "station": "",
+     "key": "c18|Crude Oil|raw"
+    }
+   ],
+   "Reinforced Iron Plate": [
+    {
+     "from": "c2",
+     "q": 922,
+     "station": "",
+     "key": "c18|Reinforced Iron Plate|c2"
+    }
+   ],
    "Modular Frame": [
     {
      "from": "local",
-     "q": 546,
+     "q": 545,
      "station": "",
      "key": "c18|Modular Frame|local"
     }
@@ -3023,7 +3023,7 @@
    "Screws": [
     {
      "from": "local",
-     "q": 13104,
+     "q": 13080,
      "station": "",
      "key": "c18|Screws|local"
     }
@@ -3065,7 +3065,7 @@
    "Modular Frame": [
     {
      "to": "local",
-     "q": 546,
+     "q": 545,
      "station": "",
      "key": "c18|Modular Frame|local"
     },
@@ -3079,7 +3079,7 @@
    "Screws": [
     {
      "to": "local",
-     "q": 13104,
+     "q": 13080,
      "station": "",
      "key": "c18|Screws|local"
     }
@@ -3209,28 +3209,36 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Limestone": [
-    {
-     "from": "raw",
-     "q": 126,
-     "station": "",
-     "key": "c27|Limestone|raw"
-    }
-   ],
    "Crude Oil": [
     {
      "from": "raw",
-     "q": 5086,
+     "q": 5084,
      "station": "",
      "key": "c27|Crude Oil|raw"
     }
    ],
-   "SAM": [
+   "Quickwire": [
     {
-     "from": "raw",
-     "q": 300,
+     "from": "local",
+     "q": 661,
      "station": "",
-     "key": "c27|SAM|raw"
+     "key": "c27|Quickwire|local"
+    }
+   ],
+   "Rubber": [
+    {
+     "from": "local",
+     "q": 441,
+     "station": "",
+     "key": "c27|Rubber|local"
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "from": "c8",
+     "q": 132,
+     "station": "",
+     "key": "c27|Caterium Ingot|c8"
     }
    ],
    "Black Powder": [
@@ -3249,30 +3257,6 @@
      "key": "c27|Heavy Oil Residue|local"
     }
    ],
-   "Caterium Ingot": [
-    {
-     "from": "c8",
-     "q": 127,
-     "station": "",
-     "key": "c27|Caterium Ingot|c8"
-    }
-   ],
-   "Quickwire": [
-    {
-     "from": "local",
-     "q": 660,
-     "station": "",
-     "key": "c27|Quickwire|local"
-    }
-   ],
-   "Rubber": [
-    {
-     "from": "local",
-     "q": 441,
-     "station": "",
-     "key": "c27|Rubber|local"
-    }
-   ],
    "Circuit Board": [
     {
      "from": "c21",
@@ -3284,7 +3268,7 @@
    "Cable": [
     {
      "from": "local",
-     "q": 2323,
+     "q": 2320,
      "station": "",
      "key": "c27|Cable|local"
     }
@@ -3319,6 +3303,22 @@
      "q": 705,
      "station": "",
      "key": "c27|Plastic|c29"
+    }
+   ],
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 126,
+     "station": "",
+     "key": "c27|Limestone|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 300,
+     "station": "",
+     "key": "c27|SAM|raw"
     }
    ]
   },
@@ -3438,7 +3438,7 @@
    "Cable": [
     {
      "to": "local",
-     "q": 2323,
+     "q": 2320,
      "station": "",
      "key": "c27|Cable|local"
     }
@@ -3565,118 +3565,10 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Limestone": [
-    {
-     "from": "raw",
-     "q": 363,
-     "station": "",
-     "key": "c13|Limestone|raw"
-    }
-   ],
-   "Raw Quartz": [
-    {
-     "from": "raw",
-     "q": 958,
-     "station": "",
-     "key": "c13|Raw Quartz|raw"
-    }
-   ],
-   "Caterium Ore": [
-    {
-     "from": "raw",
-     "q": 2399,
-     "station": "",
-     "key": "c13|Caterium Ore|raw"
-    }
-   ],
-   "SAM": [
-    {
-     "from": "raw",
-     "q": 298,
-     "station": "",
-     "key": "c13|SAM|raw"
-    }
-   ],
-   "Iron Rebar": [
-    {
-     "from": "c10",
-     "q": 120,
-     "station": "",
-     "key": "c13|Iron Rebar|c10"
-    },
-    {
-     "from": "c10",
-     "q": 120,
-     "station": "",
-     "key": "c13|Iron Rebar|c10"
-    }
-   ],
-   "Smokeless Powder": [
-    {
-     "from": "c27",
-     "q": 120,
-     "station": "",
-     "key": "c13|Smokeless Powder|c27"
-    }
-   ],
-   "Steel Pipe": [
-    {
-     "from": "c6",
-     "q": 120,
-     "station": "",
-     "key": "c13|Steel Pipe|c6"
-    }
-   ],
-   "Quartz Crystal": [
-    {
-     "from": "local",
-     "q": 745,
-     "station": "",
-     "key": "c13|Quartz Crystal|local"
-    },
-    {
-     "from": "c0",
-     "q": 973,
-     "station": "",
-     "key": "c13|Quartz Crystal|c0"
-    },
-    {
-     "from": "c1",
-     "q": 934,
-     "station": "",
-     "key": "c13|Quartz Crystal|c1"
-    },
-    {
-     "from": "c23",
-     "q": 546,
-     "station": "",
-     "key": "c13|Quartz Crystal|c23"
-    }
-   ],
-   "Caterium Ingot": [
-    {
-     "from": "local",
-     "q": 137,
-     "station": "",
-     "key": "c13|Caterium Ingot|local"
-    },
-    {
-     "from": "c2",
-     "q": 128,
-     "station": "",
-     "key": "c13|Caterium Ingot|c2"
-    },
-    {
-     "from": "c2",
-     "q": 3,
-     "station": "",
-     "key": "c13|Caterium Ingot|c2"
-    }
-   ],
    "Quickwire": [
     {
      "from": "local",
-     "q": 686,
+     "q": 687,
      "station": "",
      "key": "c13|Quickwire|local"
     }
@@ -3725,10 +3617,80 @@
      "key": "c13|Rubber|c27"
     }
    ],
+   "Caterium Ore": [
+    {
+     "from": "raw",
+     "q": 2398,
+     "station": "",
+     "key": "c13|Caterium Ore|raw"
+    }
+   ],
+   "Raw Quartz": [
+    {
+     "from": "raw",
+     "q": 958,
+     "station": "",
+     "key": "c13|Raw Quartz|raw"
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "from": "local",
+     "q": 137,
+     "station": "",
+     "key": "c13|Caterium Ingot|local"
+    },
+    {
+     "from": "c2",
+     "q": 128,
+     "station": "",
+     "key": "c13|Caterium Ingot|c2"
+    },
+    {
+     "from": "c2",
+     "q": 3,
+     "station": "",
+     "key": "c13|Caterium Ingot|c2"
+    }
+   ],
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 363,
+     "station": "",
+     "key": "c13|Limestone|raw"
+    }
+   ],
+   "Quartz Crystal": [
+    {
+     "from": "local",
+     "q": 751,
+     "station": "",
+     "key": "c13|Quartz Crystal|local"
+    },
+    {
+     "from": "c0",
+     "q": 973,
+     "station": "",
+     "key": "c13|Quartz Crystal|c0"
+    },
+    {
+     "from": "c1",
+     "q": 934,
+     "station": "",
+     "key": "c13|Quartz Crystal|c1"
+    },
+    {
+     "from": "c23",
+     "q": 546,
+     "station": "",
+     "key": "c13|Quartz Crystal|c23"
+    }
+   ],
    "Cable": [
     {
      "from": "local",
-     "q": 2348,
+     "q": 2352,
      "station": "",
      "key": "c13|Cable|local"
     }
@@ -3736,9 +3698,47 @@
    "Reinforced Iron Plate": [
     {
      "from": "c2",
-     "q": 419,
+     "q": 420,
      "station": "",
      "key": "c13|Reinforced Iron Plate|c2"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 300,
+     "station": "",
+     "key": "c13|SAM|raw"
+    }
+   ],
+   "Iron Rebar": [
+    {
+     "from": "c10",
+     "q": 120,
+     "station": "",
+     "key": "c13|Iron Rebar|c10"
+    },
+    {
+     "from": "c10",
+     "q": 120,
+     "station": "",
+     "key": "c13|Iron Rebar|c10"
+    }
+   ],
+   "Smokeless Powder": [
+    {
+     "from": "c27",
+     "q": 120,
+     "station": "",
+     "key": "c13|Smokeless Powder|c27"
+    }
+   ],
+   "Steel Pipe": [
+    {
+     "from": "c6",
+     "q": 120,
+     "station": "",
+     "key": "c13|Steel Pipe|c6"
     }
    ]
   },
@@ -3798,7 +3798,7 @@
    "Cable": [
     {
      "to": "local",
-     "q": 2348,
+     "q": 2352,
      "station": "",
      "key": "c13|Cable|local"
     }
@@ -3877,18 +3877,10 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Bauxite": [
-    {
-     "from": "raw",
-     "q": 1796,
-     "station": "",
-     "key": "c12|Bauxite|raw"
-    }
-   ],
    "Caterium Ingot": [
     {
      "from": "c8",
-     "q": 237,
+     "q": 238,
      "station": "",
      "key": "c12|Caterium Ingot|c8"
     },
@@ -3911,10 +3903,18 @@
      "key": "c12|Caterium Ingot|c2"
     }
    ],
+   "Bauxite": [
+    {
+     "from": "raw",
+     "q": 1796,
+     "station": "",
+     "key": "c12|Bauxite|raw"
+    }
+   ],
    "Quickwire": [
     {
      "from": "local",
-     "q": 3038,
+     "q": 3030,
      "station": "",
      "key": "c12|Quickwire|local"
     }
@@ -3948,7 +3948,7 @@
    "Quickwire": [
     {
      "to": "local",
-     "q": 3038,
+     "q": 3030,
      "station": "",
      "key": "c12|Quickwire|local"
     }
@@ -4090,15 +4090,23 @@
    "Crude Oil": [
     {
      "from": "raw",
-     "q": 4433,
+     "q": 4432,
      "station": "",
      "key": "c29|Crude Oil|raw"
+    }
+   ],
+   "Plastic": [
+    {
+     "from": "local",
+     "q": 848,
+     "station": "",
+     "key": "c29|Plastic|local"
     }
    ],
    "Fuel": [
     {
      "from": "local",
-     "q": 192,
+     "q": 193,
      "station": "",
      "key": "c29|Fuel|local"
     },
@@ -4154,7 +4162,7 @@
    "Compacted Coal": [
     {
      "from": "c17",
-     "q": 19,
+     "q": 20,
      "station": "",
      "key": "c29|Compacted Coal|c17"
     },
@@ -4169,14 +4177,6 @@
      "q": 132,
      "station": "",
      "key": "c29|Compacted Coal|c16"
-    }
-   ],
-   "Plastic": [
-    {
-     "from": "local",
-     "q": 841,
-     "station": "",
-     "key": "c29|Plastic|local"
     }
    ],
    "Turbofuel": [
@@ -4195,10 +4195,34 @@
      "key": "c29|Empty Canister|local"
     }
    ],
+   "Rifle Ammo": [
+    {
+     "from": "local",
+     "q": 150,
+     "station": "",
+     "key": "c29|Rifle Ammo|local"
+    }
+   ],
+   "Aluminum Casing": [
+    {
+     "from": "c25",
+     "q": 18,
+     "station": "",
+     "key": "c29|Aluminum Casing|c25"
+    }
+   ],
+   "Copper Sheet": [
+    {
+     "from": "c4",
+     "q": 30,
+     "station": "",
+     "key": "c29|Copper Sheet|c4"
+    }
+   ],
    "Computer": [
     {
      "from": "c27",
-     "q": 87,
+     "q": 88,
      "station": "",
      "key": "c29|Computer|c27"
     }
@@ -4214,7 +4238,7 @@
    "High-Speed Connector": [
     {
      "from": "c12",
-     "q": 65,
+     "q": 66,
      "station": "",
      "key": "c29|High-Speed Connector|c12"
     }
@@ -4250,37 +4274,13 @@
      "station": "",
      "key": "c29|Rubber|local"
     }
-   ],
-   "Copper Sheet": [
-    {
-     "from": "c4",
-     "q": 30,
-     "station": "",
-     "key": "c29|Copper Sheet|c4"
-    }
-   ],
-   "Rifle Ammo": [
-    {
-     "from": "local",
-     "q": 150,
-     "station": "",
-     "key": "c29|Rifle Ammo|local"
-    }
-   ],
-   "Aluminum Casing": [
-    {
-     "from": "c25",
-     "q": 18,
-     "station": "",
-     "key": "c29|Aluminum Casing|c25"
-    }
    ]
   },
   "dests": {
    "Plastic": [
     {
      "to": "local",
-     "q": 841,
+     "q": 848,
      "station": "",
      "key": "c29|Plastic|local"
     },
@@ -4483,7 +4483,7 @@
    "Crude Oil": [
     {
      "from": "raw",
-     "q": 2397,
+     "q": 2398,
      "station": "",
      "key": "c22|Crude Oil|raw"
     }
@@ -4494,14 +4494,6 @@
      "q": 583,
      "station": "",
      "key": "c22|Bauxite|raw"
-    }
-   ],
-   "SAM": [
-    {
-     "from": "raw",
-     "q": 597,
-     "station": "",
-     "key": "c22|SAM|raw"
     }
    ],
    "Copper Sheet": [
@@ -4530,6 +4522,14 @@
      "q": 60,
      "station": "",
      "key": "c22|Smokeless Powder|c27"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 596,
+     "station": "",
+     "key": "c22|SAM|raw"
     }
    ],
    "Rifle Ammo": [
@@ -4768,14 +4768,6 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Limestone": [
-    {
-     "from": "raw",
-     "q": 624,
-     "station": "",
-     "key": "c7|Limestone|raw"
-    }
-   ],
    "Bauxite": [
     {
      "from": "raw",
@@ -4806,6 +4798,14 @@
      "q": 576,
      "station": "",
      "key": "c7|Diamonds|local"
+    }
+   ],
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 624,
+     "station": "",
+     "key": "c7|Limestone|raw"
     }
    ]
   },
@@ -4962,12 +4962,12 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Limestone": [
+   "Caterium Ore": [
     {
      "from": "raw",
-     "q": 335,
+     "q": 1190,
      "station": "",
-     "key": "c16|Limestone|raw"
+     "key": "c16|Caterium Ore|raw"
     }
    ],
    "Coal": [
@@ -4981,41 +4981,9 @@
    "Sulfur": [
     {
      "from": "raw",
-     "q": 403,
+     "q": 404,
      "station": "",
      "key": "c16|Sulfur|raw"
-    }
-   ],
-   "Caterium Ore": [
-    {
-     "from": "raw",
-     "q": 1189,
-     "station": "",
-     "key": "c16|Caterium Ore|raw"
-    }
-   ],
-   "SAM": [
-    {
-     "from": "raw",
-     "q": 297,
-     "station": "",
-     "key": "c16|SAM|raw"
-    }
-   ],
-   "Fabric": [
-    {
-     "from": "c3",
-     "q": 120,
-     "station": "",
-     "key": "c16|Fabric|c3"
-    }
-   ],
-   "Iron Plate": [
-    {
-     "from": "c2",
-     "q": 120,
-     "station": "",
-     "key": "c16|Iron Plate|c2"
     }
    ],
    "Black Powder": [
@@ -5046,6 +5014,38 @@
      "key": "c16|Steel Pipe|c6"
     }
    ],
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 334,
+     "station": "",
+     "key": "c16|Limestone|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 296,
+     "station": "",
+     "key": "c16|SAM|raw"
+    }
+   ],
+   "Fabric": [
+    {
+     "from": "c3",
+     "q": 120,
+     "station": "",
+     "key": "c16|Fabric|c3"
+    }
+   ],
+   "Iron Plate": [
+    {
+     "from": "c2",
+     "q": 120,
+     "station": "",
+     "key": "c16|Iron Plate|c2"
+    }
+   ],
    "Sulfuric Acid": [
     {
      "from": "local",
@@ -5063,7 +5063,7 @@
    "Alumina Solution": [
     {
      "from": "c25",
-     "q": 119,
+     "q": 120,
      "station": "",
      "key": "c16|Alumina Solution|c25"
     }
@@ -5355,17 +5355,9 @@
    "Limestone": [
     {
      "from": "raw",
-     "q": 590,
+     "q": 591,
      "station": "",
      "key": "c20|Limestone|raw"
-    }
-   ],
-   "Nobelisk": [
-    {
-     "from": "c16",
-     "q": 30,
-     "station": "",
-     "key": "c20|Nobelisk|c16"
     }
    ],
    "Aluminum Casing": [
@@ -5403,9 +5395,17 @@
    "Radio Control Unit": [
     {
      "from": "local",
-     "q": 95,
+     "q": 96,
      "station": "",
      "key": "c20|Radio Control Unit|local"
+    }
+   ],
+   "Nobelisk": [
+    {
+     "from": "c16",
+     "q": 30,
+     "station": "",
+     "key": "c20|Nobelisk|c16"
     }
    ]
   },
@@ -5421,7 +5421,7 @@
    "Radio Control Unit": [
     {
      "to": "local",
-     "q": 95,
+     "q": 96,
      "station": "",
      "key": "c20|Radio Control Unit|local"
     },
@@ -5539,106 +5539,10 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Caterium Ore": [
-    {
-     "from": "raw",
-     "q": 599,
-     "station": "",
-     "key": "c11|Caterium Ore|raw"
-    }
-   ],
-   "Bauxite": [
-    {
-     "from": "raw",
-     "q": 2399,
-     "station": "",
-     "key": "c11|Bauxite|raw"
-    }
-   ],
-   "SAM": [
-    {
-     "from": "raw",
-     "q": 299,
-     "station": "",
-     "key": "c11|SAM|raw"
-    }
-   ],
-   "Nitrogen Gas": [
-    {
-     "from": "raw",
-     "q": 3627,
-     "station": "",
-     "key": "c11|Nitrogen Gas|raw"
-    }
-   ],
-   "Iron Plate": [
-    {
-     "from": "c2",
-     "q": 302,
-     "station": "",
-     "key": "c11|Iron Plate|c2"
-    }
-   ],
-   "Heavy Oil Residue": [
-    {
-     "from": "c22",
-     "q": 108,
-     "station": "",
-     "key": "c11|Heavy Oil Residue|c22"
-    },
-    {
-     "from": "c27",
-     "q": 179,
-     "station": "",
-     "key": "c11|Heavy Oil Residue|c27"
-    },
-    {
-     "from": "c14",
-     "q": 8,
-     "station": "",
-     "key": "c11|Heavy Oil Residue|c14"
-    },
-    {
-     "from": "c24",
-     "q": 83,
-     "station": "",
-     "key": "c11|Heavy Oil Residue|c24"
-    },
-    {
-     "from": "c30",
-     "q": 290,
-     "station": "",
-     "key": "c11|Heavy Oil Residue|c30"
-    },
-    {
-     "from": "c18",
-     "q": 23,
-     "station": "",
-     "key": "c11|Heavy Oil Residue|c18"
-    },
-    {
-     "from": "c21",
-     "q": 106,
-     "station": "",
-     "key": "c11|Heavy Oil Residue|c21"
-    },
-    {
-     "from": "c28",
-     "q": 149,
-     "station": "",
-     "key": "c11|Heavy Oil Residue|c28"
-    },
-    {
-     "from": "c29",
-     "q": 611,
-     "station": "",
-     "key": "c11|Heavy Oil Residue|c29"
-    }
-   ],
    "Alumina Solution": [
     {
      "from": "local",
-     "q": 2878,
+     "q": 2879,
      "station": "",
      "key": "c11|Alumina Solution|local"
     },
@@ -5721,6 +5625,62 @@
      "key": "c11|Silica|c23"
     }
    ],
+   "Heavy Oil Residue": [
+    {
+     "from": "c22",
+     "q": 109,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c22"
+    },
+    {
+     "from": "c27",
+     "q": 179,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c27"
+    },
+    {
+     "from": "c14",
+     "q": 8,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c14"
+    },
+    {
+     "from": "c24",
+     "q": 83,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c24"
+    },
+    {
+     "from": "c30",
+     "q": 290,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c30"
+    },
+    {
+     "from": "c18",
+     "q": 23,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c18"
+    },
+    {
+     "from": "c21",
+     "q": 106,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c21"
+    },
+    {
+     "from": "c28",
+     "q": 149,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c28"
+    },
+    {
+     "from": "c29",
+     "q": 611,
+     "station": "",
+     "key": "c11|Heavy Oil Residue|c29"
+    }
+   ],
    "Nitric Acid": [
     {
      "from": "local",
@@ -5732,7 +5692,7 @@
    "Sulfuric Acid": [
     {
      "from": "c0",
-     "q": 567,
+     "q": 568,
      "station": "",
      "key": "c11|Sulfuric Acid|c0"
     },
@@ -5753,6 +5713,46 @@
      "q": 183,
      "station": "",
      "key": "c11|Sulfuric Acid|c3"
+    }
+   ],
+   "Bauxite": [
+    {
+     "from": "raw",
+     "q": 2398,
+     "station": "",
+     "key": "c11|Bauxite|raw"
+    }
+   ],
+   "Nitrogen Gas": [
+    {
+     "from": "raw",
+     "q": 3628,
+     "station": "",
+     "key": "c11|Nitrogen Gas|raw"
+    }
+   ],
+   "Iron Plate": [
+    {
+     "from": "c2",
+     "q": 302,
+     "station": "",
+     "key": "c11|Iron Plate|c2"
+    }
+   ],
+   "Caterium Ore": [
+    {
+     "from": "raw",
+     "q": 598,
+     "station": "",
+     "key": "c11|Caterium Ore|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 300,
+     "station": "",
+     "key": "c11|SAM|raw"
     }
    ]
   },
@@ -5929,30 +5929,6 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Raw Quartz": [
-    {
-     "from": "raw",
-     "q": 1251,
-     "station": "",
-     "key": "c0|Raw Quartz|raw"
-    }
-   ],
-   "Sulfur": [
-    {
-     "from": "raw",
-     "q": 2667,
-     "station": "",
-     "key": "c0|Sulfur|raw"
-    }
-   ],
-   "SAM": [
-    {
-     "from": "raw",
-     "q": 315,
-     "station": "",
-     "key": "c0|SAM|raw"
-    }
-   ],
    "Caterium Ingot": [
     {
      "from": "c19",
@@ -6013,6 +5989,14 @@
      "key": "c0|Silica|c23"
     }
    ],
+   "Sulfur": [
+    {
+     "from": "raw",
+     "q": 2667,
+     "station": "",
+     "key": "c0|Sulfur|raw"
+    }
+   ],
    "Quickwire": [
     {
      "from": "local",
@@ -6021,10 +6005,26 @@
      "key": "c0|Quickwire|local"
     }
    ],
+   "Raw Quartz": [
+    {
+     "from": "raw",
+     "q": 1251,
+     "station": "",
+     "key": "c0|Raw Quartz|raw"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 316,
+     "station": "",
+     "key": "c0|SAM|raw"
+    }
+   ],
    "Encased Uranium Cell": [
     {
      "from": "local",
-     "q": 1550,
+     "q": 1533,
      "station": "",
      "key": "c0|Encased Uranium Cell|local"
     }
@@ -6051,6 +6051,14 @@
      "q": 155,
      "station": "",
      "key": "c0|Rotor|c17"
+    }
+   ],
+   "Uranium Fuel Rod": [
+    {
+     "from": "local",
+     "q": 47,
+     "station": "",
+     "key": "c0|Uranium Fuel Rod|local"
     }
    ]
   },
@@ -6090,7 +6098,7 @@
    "Encased Uranium Cell": [
     {
      "to": "local",
-     "q": 1550,
+     "q": 1533,
      "station": "",
      "key": "c0|Encased Uranium Cell|local"
     },
@@ -6106,7 +6114,7 @@
      "to": "local",
      "q": 46,
      "station": "",
-     "key": "c0|Uranium Fuel Rod|gen"
+     "key": "c0|Uranium Fuel Rod|local"
     }
    ]
   },
@@ -6247,20 +6255,12 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Limestone": [
+   "Bauxite": [
     {
      "from": "raw",
-     "q": 528,
+     "q": 2084,
      "station": "",
-     "key": "c14|Limestone|raw"
-    }
-   ],
-   "Crude Oil": [
-    {
-     "from": "raw",
-     "q": 450,
-     "station": "",
-     "key": "c14|Crude Oil|raw"
+     "key": "c14|Bauxite|raw"
     }
    ],
    "Caterium Ore": [
@@ -6271,12 +6271,12 @@
      "key": "c14|Caterium Ore|raw"
     }
    ],
-   "Bauxite": [
+   "Limestone": [
     {
      "from": "raw",
-     "q": 2084,
+     "q": 528,
      "station": "",
-     "key": "c14|Bauxite|raw"
+     "key": "c14|Limestone|raw"
     }
    ],
    "Caterium Ingot": [
@@ -6293,68 +6293,12 @@
      "key": "c14|Caterium Ingot|c2"
     }
    ],
-   "Iron Rebar": [
+   "Crude Oil": [
     {
-     "from": "c10",
-     "q": 60,
+     "from": "raw",
+     "q": 450,
      "station": "",
-     "key": "c14|Iron Rebar|c10"
-    }
-   ],
-   "Quickwire": [
-    {
-     "from": "local",
-     "q": 300,
-     "station": "",
-     "key": "c14|Quickwire|local"
-    }
-   ],
-   "Automated Wiring": [
-    {
-     "from": "c28",
-     "q": 52,
-     "station": "",
-     "key": "c14|Automated Wiring|c28"
-    }
-   ],
-   "Circuit Board": [
-    {
-     "from": "c21",
-     "q": 52,
-     "station": "",
-     "key": "c14|Circuit Board|c21"
-    }
-   ],
-   "Heavy Modular Frame": [
-    {
-     "from": "c18",
-     "q": 10,
-     "station": "",
-     "key": "c14|Heavy Modular Frame|c18"
-    }
-   ],
-   "Computer": [
-    {
-     "from": "c27",
-     "q": 21,
-     "station": "",
-     "key": "c14|Computer|c27"
-    }
-   ],
-   "Adaptive Control Unit": [
-    {
-     "from": "local",
-     "q": 8,
-     "station": "",
-     "key": "c14|Adaptive Control Unit|local"
-    }
-   ],
-   "Supercomputer": [
-    {
-     "from": "c29",
-     "q": 4,
-     "station": "",
-     "key": "c14|Supercomputer|c29"
+     "key": "c14|Crude Oil|raw"
     }
    ],
    "Nuclear Pasta": [
@@ -6437,6 +6381,70 @@
      "q": 186,
      "station": "",
      "key": "c14|Singularity Cell|local"
+    }
+   ],
+   "Iron Rebar": [
+    {
+     "from": "c10",
+     "q": 60,
+     "station": "",
+     "key": "c14|Iron Rebar|c10"
+    }
+   ],
+   "Quickwire": [
+    {
+     "from": "local",
+     "q": 300,
+     "station": "",
+     "key": "c14|Quickwire|local"
+    }
+   ],
+   "Automated Wiring": [
+    {
+     "from": "c28",
+     "q": 52,
+     "station": "",
+     "key": "c14|Automated Wiring|c28"
+    }
+   ],
+   "Circuit Board": [
+    {
+     "from": "c21",
+     "q": 52,
+     "station": "",
+     "key": "c14|Circuit Board|c21"
+    }
+   ],
+   "Heavy Modular Frame": [
+    {
+     "from": "c18",
+     "q": 10,
+     "station": "",
+     "key": "c14|Heavy Modular Frame|c18"
+    }
+   ],
+   "Computer": [
+    {
+     "from": "c27",
+     "q": 21,
+     "station": "",
+     "key": "c14|Computer|c27"
+    }
+   ],
+   "Adaptive Control Unit": [
+    {
+     "from": "local",
+     "q": 8,
+     "station": "",
+     "key": "c14|Adaptive Control Unit|local"
+    }
+   ],
+   "Supercomputer": [
+    {
+     "from": "c29",
+     "q": 4,
+     "station": "",
+     "key": "c14|Supercomputer|c29"
     }
    ]
   },
@@ -6661,30 +6669,6 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Crude Oil": [
-    {
-     "from": "raw",
-     "q": 1188,
-     "station": "",
-     "key": "c28|Crude Oil|raw"
-    }
-   ],
-   "SAM": [
-    {
-     "from": "raw",
-     "q": 300,
-     "station": "",
-     "key": "c28|SAM|raw"
-    }
-   ],
-   "Caterium Ingot": [
-    {
-     "from": "c2",
-     "q": 60,
-     "station": "",
-     "key": "c28|Caterium Ingot|c2"
-    }
-   ],
    "Quickwire": [
     {
      "from": "local",
@@ -6719,20 +6703,12 @@
      "key": "c28|Rubber|c21"
     }
    ],
-   "Stator": [
+   "Crude Oil": [
     {
-     "from": "c15",
-     "q": 56,
+     "from": "raw",
+     "q": 1189,
      "station": "",
-     "key": "c28|Stator|c15"
-    }
-   ],
-   "Cable": [
-    {
-     "from": "local",
-     "q": 1110,
-     "station": "",
-     "key": "c28|Cable|local"
+     "key": "c28|Crude Oil|raw"
     }
    ],
    "Non-Fissile Uranium": [
@@ -6751,10 +6727,42 @@
      "key": "c28|Aluminum Casing|c25"
     }
    ],
+   "Caterium Ingot": [
+    {
+     "from": "c2",
+     "q": 62,
+     "station": "",
+     "key": "c28|Caterium Ingot|c2"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 300,
+     "station": "",
+     "key": "c28|SAM|raw"
+    }
+   ],
+   "Stator": [
+    {
+     "from": "c15",
+     "q": 56,
+     "station": "",
+     "key": "c28|Stator|c15"
+    }
+   ],
+   "Cable": [
+    {
+     "from": "local",
+     "q": 1120,
+     "station": "",
+     "key": "c28|Cable|local"
+    }
+   ],
    "Encased Plutonium Cell": [
     {
      "from": "local",
-     "q": 372,
+     "q": 380,
      "station": "",
      "key": "c28|Encased Plutonium Cell|local"
     }
@@ -6765,6 +6773,14 @@
      "q": 19,
      "station": "",
      "key": "c28|Pressure Conversion Cube|c20"
+    }
+   ],
+   "Plutonium Fuel Rod": [
+    {
+     "from": "local",
+     "q": 19,
+     "station": "",
+     "key": "c28|Plutonium Fuel Rod|local"
     }
    ]
   },
@@ -6820,7 +6836,7 @@
    "Cable": [
     {
      "to": "local",
-     "q": 1110,
+     "q": 1120,
      "station": "",
      "key": "c28|Cable|local"
     }
@@ -6846,7 +6862,7 @@
      "to": "local",
      "q": 19,
      "station": "",
-     "key": "c28|Plutonium Fuel Rod|gen"
+     "key": "c28|Plutonium Fuel Rod|local"
     }
    ]
   },
@@ -6897,6 +6913,38 @@
   ],
   "totals": {},
   "sourcesN": {
+   "Non-Fissile Uranium": [
+    {
+     "from": "c11",
+     "q": 233,
+     "station": "",
+     "key": "c31|Non-Fissile Uranium|c11"
+    }
+   ],
+   "Heavy Modular Frame": [
+    {
+     "from": "c18",
+     "q": 69,
+     "station": "",
+     "key": "c31|Heavy Modular Frame|c18"
+    }
+   ],
+   "Aluminum Casing": [
+    {
+     "from": "c25",
+     "q": 3450,
+     "station": "",
+     "key": "c31|Aluminum Casing|c25"
+    }
+   ],
+   "Nitrogen Gas": [
+    {
+     "from": "raw",
+     "q": 1725,
+     "station": "",
+     "key": "c31|Nitrogen Gas|raw"
+    }
+   ],
    "Nobelisk": [
     {
      "from": "c16",
@@ -6927,38 +6975,6 @@
      "q": 39,
      "station": "",
      "key": "c31|AI Limiter|c9"
-    }
-   ],
-   "Non-Fissile Uranium": [
-    {
-     "from": "c11",
-     "q": 232,
-     "station": "",
-     "key": "c31|Non-Fissile Uranium|c11"
-    }
-   ],
-   "Heavy Modular Frame": [
-    {
-     "from": "c18",
-     "q": 69,
-     "station": "",
-     "key": "c31|Heavy Modular Frame|c18"
-    }
-   ],
-   "Aluminum Casing": [
-    {
-     "from": "c25",
-     "q": 3435,
-     "station": "",
-     "key": "c31|Aluminum Casing|c25"
-    }
-   ],
-   "Nitrogen Gas": [
-    {
-     "from": "raw",
-     "q": 1718,
-     "station": "",
-     "key": "c31|Nitrogen Gas|raw"
     }
    ]
   },
@@ -7088,20 +7104,18 @@
   ],
   "totals": {},
   "sourcesN": {
-   "SAM": [
+   "Ficsite Ingot": [
     {
-     "from": "raw",
-     "q": 597,
+     "from": "c10",
+     "q": 20,
      "station": "",
-     "key": "c26|SAM|raw"
-    }
-   ],
-   "Aluminum Ingot": [
+     "key": "c26|Ficsite Ingot|c10"
+    },
     {
-     "from": "c11",
-     "q": 30,
+     "from": "c10",
+     "q": 1240,
      "station": "",
-     "key": "c26|Aluminum Ingot|c11"
+     "key": "c26|Ficsite Ingot|c10"
     }
    ],
    "Caterium Ingot": [
@@ -7110,6 +7124,46 @@
      "q": 48,
      "station": "",
      "key": "c26|Caterium Ingot|c2"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 596,
+     "station": "",
+     "key": "c26|SAM|raw"
+    }
+   ],
+   "Ficsonium": [
+    {
+     "from": "c14",
+     "q": 186,
+     "station": "",
+     "key": "c26|Ficsonium|c14"
+    }
+   ],
+   "Electromagnetic Control Rod": [
+    {
+     "from": "c9",
+     "q": 186,
+     "station": "",
+     "key": "c26|Electromagnetic Control Rod|c9"
+    }
+   ],
+   "Ficsite Trigon": [
+    {
+     "from": "local",
+     "q": 3780,
+     "station": "",
+     "key": "c26|Ficsite Trigon|local"
+    }
+   ],
+   "Aluminum Ingot": [
+    {
+     "from": "c11",
+     "q": 30,
+     "station": "",
+     "key": "c26|Aluminum Ingot|c11"
     }
    ],
    "Gas Filter": [
@@ -7166,28 +7220,6 @@
      "key": "c26|Superposition Oscillator|c19"
     }
    ],
-   "Ficsite Ingot": [
-    {
-     "from": "c10",
-     "q": 20,
-     "station": "",
-     "key": "c26|Ficsite Ingot|c10"
-    },
-    {
-     "from": "c10",
-     "q": 1240,
-     "station": "",
-     "key": "c26|Ficsite Ingot|c10"
-    }
-   ],
-   "Ficsite Trigon": [
-    {
-     "from": "local",
-     "q": 3780,
-     "station": "",
-     "key": "c26|Ficsite Trigon|local"
-    }
-   ],
    "Thermal Propulsion Rocket": [
     {
      "from": "c22",
@@ -7212,20 +7244,12 @@
      "key": "c26|Dark Matter Crystal|c7"
     }
    ],
-   "Ficsonium": [
+   "Ficsonium Fuel Rod": [
     {
-     "from": "c14",
-     "q": 186,
+     "from": "local",
+     "q": 93,
      "station": "",
-     "key": "c26|Ficsonium|c14"
-    }
-   ],
-   "Electromagnetic Control Rod": [
-    {
-     "from": "c9",
-     "q": 186,
-     "station": "",
-     "key": "c26|Electromagnetic Control Rod|c9"
+     "key": "c26|Ficsonium Fuel Rod|local"
     }
    ]
   },
@@ -7259,7 +7283,7 @@
      "to": "local",
      "q": 93,
      "station": "",
-     "key": "c26|Ficsonium Fuel Rod|gen"
+     "key": "c26|Ficsonium Fuel Rod|local"
     }
    ]
   },
@@ -7328,38 +7352,6 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Limestone": [
-    {
-     "from": "raw",
-     "q": 673,
-     "station": "",
-     "key": "c10|Limestone|raw"
-    }
-   ],
-   "Bauxite": [
-    {
-     "from": "raw",
-     "q": 900,
-     "station": "",
-     "key": "c10|Bauxite|raw"
-    }
-   ],
-   "SAM": [
-    {
-     "from": "raw",
-     "q": 1500,
-     "station": "",
-     "key": "c10|SAM|raw"
-    }
-   ],
-   "Iron Rod": [
-    {
-     "from": "c1",
-     "q": 420,
-     "station": "",
-     "key": "c10|Iron Rod|c1"
-    }
-   ],
    "Reanimated SAM": [
     {
      "from": "local",
@@ -7470,6 +7462,38 @@
      "q": 5100,
      "station": "",
      "key": "c10|Aluminum Ingot|c11"
+    }
+   ],
+   "Bauxite": [
+    {
+     "from": "raw",
+     "q": 899,
+     "station": "",
+     "key": "c10|Bauxite|raw"
+    }
+   ],
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 674,
+     "station": "",
+     "key": "c10|Limestone|raw"
+    }
+   ],
+   "Iron Rod": [
+    {
+     "from": "c1",
+     "q": 420,
+     "station": "",
+     "key": "c10|Iron Rod|c1"
+    }
+   ],
+   "SAM": [
+    {
+     "from": "raw",
+     "q": 1500,
+     "station": "",
+     "key": "c10|SAM|raw"
     }
    ]
   },
@@ -7640,20 +7664,28 @@
   ],
   "totals": {},
   "sourcesN": {
-   "Limestone": [
-    {
-     "from": "raw",
-     "q": 227,
-     "station": "",
-     "key": "c19|Limestone|raw"
-    }
-   ],
    "Caterium Ore": [
     {
      "from": "raw",
      "q": 1170,
      "station": "",
      "key": "c19|Caterium Ore|raw"
+    }
+   ],
+   "Limestone": [
+    {
+     "from": "raw",
+     "q": 226,
+     "station": "",
+     "key": "c19|Limestone|raw"
+    }
+   ],
+   "Ficsite Ingot": [
+    {
+     "from": "c10",
+     "q": 15,
+     "station": "",
+     "key": "c19|Ficsite Ingot|c10"
     }
    ],
    "Nobelisk": [
@@ -7670,6 +7702,22 @@
      "q": 120,
      "station": "",
      "key": "c19|Smokeless Powder|c27"
+    }
+   ],
+   "Modular Frame": [
+    {
+     "from": "c18",
+     "q": 9,
+     "station": "",
+     "key": "c19|Modular Frame|c18"
+    }
+   ],
+   "Steel Beam": [
+    {
+     "from": "c8",
+     "q": 108,
+     "station": "",
+     "key": "c19|Steel Beam|c8"
     }
    ],
    "Diamonds": [
@@ -7704,28 +7752,20 @@
      "key": "c19|Alclad Aluminum Sheet|c24"
     }
    ],
-   "Modular Frame": [
+   "Versatile Framework": [
     {
-     "from": "c18",
-     "q": 9,
-     "station": "",
-     "key": "c19|Modular Frame|c18"
-    }
-   ],
-   "Steel Beam": [
-    {
-     "from": "c8",
-     "q": 108,
-     "station": "",
-     "key": "c19|Steel Beam|c8"
-    }
-   ],
-   "Ficsite Ingot": [
-    {
-     "from": "c10",
+     "from": "local",
      "q": 15,
      "station": "",
-     "key": "c19|Ficsite Ingot|c10"
+     "key": "c19|Versatile Framework|local"
+    }
+   ],
+   "Electromagnetic Control Rod": [
+    {
+     "from": "c9",
+     "q": 6,
+     "station": "",
+     "key": "c19|Electromagnetic Control Rod|c9"
     }
    ],
    "Time Crystal": [
@@ -7750,22 +7790,6 @@
      "q": 45,
      "station": "",
      "key": "c19|Ficsite Trigon|local"
-    }
-   ],
-   "Versatile Framework": [
-    {
-     "from": "local",
-     "q": 15,
-     "station": "",
-     "key": "c19|Versatile Framework|local"
-    }
-   ],
-   "Electromagnetic Control Rod": [
-    {
-     "from": "c9",
-     "q": 6,
-     "station": "",
-     "key": "c19|Electromagnetic Control Rod|c9"
     }
    ]
   },

@@ -45,7 +45,7 @@ FLUID_ITEMS = {"Water","Crude Oil","Nitrogen Gas","Heavy Oil Residue","Fuel","Tu
 CENTRAL_ITEMS = {"Computer","Supercomputer","Radio Control Unit","High-Speed Connector",
                  "Crystal Oscillator","AI Limiter"}
 # hand-fed / ubiquitous items we never compute or source (treated as free, like water)
-FREE_ITEMS = {"Water", "Biomass"}
+FREE_ITEMS = {"Water", "Biomass", "Mycelia"}
 
 # ============================================================ data & demand
 def build_demand(plan, RMAP):
@@ -112,6 +112,8 @@ def claim(sites, need):
     score = lambda s: sum(min(s["caps"].get(r, 0), rem[r]) / tot[r]
                           for r in rem if tot[r] > 0)
     while any(v > 1 for v in rem.values()):
+        if not avail:
+            break
         best = max(avail, key=score)
         if score(best) <= 0:
             break
@@ -380,23 +382,50 @@ def emit_app_plan(comps, prod, made, edges, RMAP):
                           "target": round(R * pout / qin), "clock": 100, "status": "todo",
                           "sec": "POWER", "name": "Power \u2014 " + fuel.replace(" Fuel Rod", "")})
             burned[fuel] = R
+        # derive needs from the ACTUAL steps (same way the app does), not just from M
+        needs = defaultdict(float)                    # total input consumption from all steps
+        local_out = defaultdict(float)                # total output from all steps
+        for s in steps:
+            r = RMAP.get(s["recipe"])
+            if not r: continue
+            base = r["o"][0][1] or 1
+            for it, q in r["i"]:
+                needs[it] += q / base * s["target"]
+            for it, q in r["o"]:
+                local_out[it] += q / base * s["target"]
         srcs = {}                                     # inputs: local / raw / import rows
-        for x, u in cons.items():
-            if u <= 0.5: continue
-            if x in RAW or x in FREE_ITEMS:
+        for x, u in needs.items():
+            if u <= 0.5 or x in FREE_ITEMS: continue
+            if x in RAW:
                 srcs[x] = [{"from": "raw", "q": round(u), "station": "", "key": "c%d|%s|raw" % (i, x)}]
                 continue
             rows = []
-            local_q = min(M.get(x, 0), u)
-            if local_q > 0.5:
-                rows.append({"from": "local", "q": round(local_q), "station": "", "key": "c%d|%s|local" % (i, x)})
+            lo = local_out.get(x, 0)
+            imp_q = sum(rate for _, rate in imp_by[i].get(x, []))
+            if lo > 0.5:
+                # local production covers this need (partially or fully)
+                rows.append({"from": "local", "q": round(min(lo, u)), "station": "", "key": "c%d|%s|local" % (i, x)})
             for src, rate in imp_by[i].get(x, []):
                 rows.append({"from": "c%d" % src, "q": round(rate), "station": "", "key": "c%d|%s|c%d" % (i, x, src)})
+            # ensure total sourced >= need (fix rounding shortfalls)
+            if rows:
+                total_sourced = sum(r["q"] for r in rows)
+                if total_sourced < round(u) and rows:
+                    rows[0]["q"] += round(u) - total_sourced
             if rows: srcs[x] = rows
+        # VERIFY: any input still unsourced? If this complex produces it (even as a
+        # byproduct from another recipe), add a local source row. This catches byproducts
+        # like Dissolved Silica, Dark Matter Residue, Uranium Waste, etc.
+        for x, u in needs.items():
+            if x in FREE_ITEMS or x in RAW or x in srcs: continue
+            if u <= 0.5: continue
+            lo = local_out.get(x, 0)
+            if lo > 0.5:
+                srcs[x] = [{"from": "local", "q": round(min(lo, u)), "station": "", "key": "c%d|%s|local" % (i, x)}]
         dests = {}                                    # outputs: local + one row per consumer
         for x, mrate in M.items():
             rows = []
-            local_q = min(mrate, cons.get(x, 0))
+            local_q = min(mrate, needs.get(x, 0))
             if local_q > 0.5:
                 rows.append({"to": "local", "q": round(local_q), "station": "", "key": "c%d|%s|local" % (i, x)})
             for dst, rate in exp_by[i].get(x, []):
