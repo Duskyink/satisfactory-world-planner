@@ -2861,7 +2861,7 @@
    "Raw Quartz": [
     {
      "from": "raw",
-     "q": 932,
+     "q": 22102,
      "station": "",
      "key": "c23|Raw Quartz|raw"
     }
@@ -2893,7 +2893,7 @@
    "Nitric Acid": [
     {
      "from": "c11",
-     "q": 907,
+     "q": 0,
      "station": "",
      "key": "c23|Nitric Acid|c11"
     }
@@ -5178,6 +5178,15 @@
     "status": "todo",
     "sec": "PRODUCTION FLOW",
     "name": "Empty Fluid Tank"
+   },
+   {
+    "id": "a28_7",
+    "recipe": "Dark Matter Residue",
+    "target": 2505,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": "Dark Matter Residue"
    }
   ],
   "totals": {},
@@ -5220,6 +5229,20 @@
      "q": 375,
      "station": "",
      "key": "c28|Dark Matter Residue|c20"
+    },
+    {
+     "from": "local",
+     "q": 2505,
+     "station": "",
+     "key": "c28|Dark Matter Residue|local"
+    }
+   ],
+   "Reanimated SAM": [
+    {
+     "from": "local",
+     "q": 75,
+     "station": "",
+     "key": "c28|Reanimated SAM|local"
     }
    ]
   },
@@ -5249,6 +5272,12 @@
     }
    ],
    "Reanimated SAM": [
+    {
+     "to": "local",
+     "q": 75,
+     "station": "",
+     "key": "c28|Reanimated SAM|local"
+    },
     {
      "to": "c10",
      "q": 75,
@@ -5282,7 +5311,7 @@
    "x": -423,
    "y": -2253
   },
-  "desc": "Engine-generated. Nodes: Crude Oil 1200, SAM 300. 7 recipes."
+  "desc": "Engine-generated. Nodes: Crude Oil 1200, SAM 300. 8 recipes."
  },
  {
   "id": "c31",
@@ -6248,6 +6277,15 @@
     "status": "todo",
     "sec": "POWER",
     "name": "Power \u2014 Ficsonium"
+   },
+   {
+    "id": "a30_14",
+    "recipe": "Excited Photonic Matter",
+    "target": 1485,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": "Excited Photonic Matter"
    }
   ],
   "totals": {},
@@ -6440,6 +6478,12 @@
      "q": 375,
      "station": "",
      "key": "c30|Excited Photonic Matter|c20"
+    },
+    {
+     "from": "local",
+     "q": 1485,
+     "station": "",
+     "key": "c30|Excited Photonic Matter|local"
     }
    ]
   },
@@ -6538,7 +6582,7 @@
    "x": 1725,
    "y": -925
   },
-  "desc": "Engine-generated. Nodes: Crude Oil 1800. 14 recipes."
+  "desc": "Engine-generated. Nodes: Crude Oil 1800. 15 recipes."
  },
  {
   "id": "c14",
