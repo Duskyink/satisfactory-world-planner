@@ -50,8 +50,10 @@ FREE_ITEMS = {"Water", "Biomass", "Mycelia"}
 # ============================================================ data & demand
 def build_demand(plan, RMAP):
     """From the plan's steps, derive per-product recipe (per-unit inputs) and total
-    demanded rate, plus total raw draw. This is the goal demand the engine fills."""
+    demanded rate. Only primary outputs drive demand and routing. Byproducts are tracked
+    separately so emit_app_plan knows they exist locally, but they don't inflate demand."""
     prod = {}
+    byproduct_rate = defaultdict(float)   # item -> total byproduct rate across the plan
     for c in plan:
         for s in c.get("steps", []):
             r = RMAP.get(s["recipe"])
@@ -63,11 +65,17 @@ def build_demand(plan, RMAP):
             m = math.ceil(tgt / (base * maxcl)) if tgt > 0 else 0
             cl = maxcl if (s.get("mode") == "full" or m == 0) else tgt / (m * base)
             po = r["o"][0][0]
-            d = prod.setdefault(po, {"in": {}, "rate": 0.0, "recipe": s["recipe"]})
-            d["rate"] += r["o"][0][1] * cl * m
-            for it, q in r["i"]:
-                d["in"][it] = q / (r["o"][0][1] or 1)
-    return prod
+            if po not in FREE_ITEMS and po != "Power":
+                d = prod.setdefault(po, {"in": {}, "rate": 0.0, "recipe": s["recipe"]})
+                d["rate"] += r["o"][0][1] * cl * m
+                for it, q in r["i"]:
+                    d["in"][it] = q / (r["o"][0][1] or 1)
+            # track byproducts (secondary outputs) — they're available but don't drive demand
+            for oi in range(1, len(r["o"])):
+                bp, bq = r["o"][oi]
+                if bp not in FREE_ITEMS and bp != "Power":
+                    byproduct_rate[bp] += bq * cl * m
+    return prod, byproduct_rate
 
 def raw_demand(prod):
     dem = defaultdict(float)
@@ -483,7 +491,7 @@ def main():
     RMAP = {r["n"]: r for r in recipes}
     region = region_namer(mapbg)
 
-    prod = build_demand(plan, RMAP)
+    prod, byproduct_rate = build_demand(plan, RMAP)
     dem = raw_demand(prod)
 
     # 1-3: solid claim + fluid claims, then merge into complexes
