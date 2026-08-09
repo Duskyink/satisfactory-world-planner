@@ -222,7 +222,7 @@ def allocate(comps, prod, ship):
     return made, rem
 
 # ============================================================ routing (placement)
-def route(comps, prod, made, rem, ship):
+def route(comps, prod, made, rem, ship, RMAP):
     """Convergence-placement + routing. After the complex-first pass has distributed
     what it can, this fills the residual: for each still-unmet product (bottom-up),
     pick the hub where its inputs are cheapest to gather, import shippable inputs as
@@ -244,15 +244,28 @@ def route(comps, prod, made, rem, ship):
     for it in prod: dep(it)
 
     # export pool: net surplus per item per complex after the local pass
+    # includes byproducts: secondary outputs of recipes whose primary output is in made
     cons = [defaultdict(float) for _ in comps]
+    byprod = [defaultdict(float) for _ in comps]   # byproduct production per complex
     for ci in range(N):
         for it, q in made[ci].items():
-            for x, pu in prod[it]["in"].items():
-                if x != "Water": cons[ci][x] += pu * q
+            if it in prod:
+                for x, pu in prod[it]["in"].items():
+                    if x != "Water": cons[ci][x] += pu * q
+                # compute byproduct output from this recipe
+                rname = prod[it].get("recipe", "")
+                r = RMAP.get(rname)
+                if r and len(r["o"]) > 1:
+                    base = r["o"][0][1] or 1
+                    for oi in range(1, len(r["o"])):
+                        bp, bq = r["o"][oi]
+                        if bp not in FREE_ITEMS and bp != "Power":
+                            byprod[ci][bp] += bq / base * q
     pool = defaultdict(lambda: defaultdict(float))
     for ci in range(N):
-        for it in set(made[ci]) | set(rem[ci]):
-            net = made[ci].get(it, 0) + (rem[ci].get(it, 0) if it in RAW else 0) - cons[ci].get(it, 0)
+        for it in set(made[ci]) | set(rem[ci]) | set(byprod[ci]):
+            net = (made[ci].get(it, 0) + byprod[ci].get(it, 0)
+                   + (rem[ci].get(it, 0) if it in RAW else 0) - cons[ci].get(it, 0))
             if net > 1: pool[it][ci] = net
     edges = []
     def imp(item, qty, dst):
@@ -370,6 +383,7 @@ def emit_app_plan(comps, prod, made, edges, RMAP):
         imp_by[e["dst"]][e["item"]].append((e["src"], e["rate"]))
         exp_by[e["src"]][e["item"]].append((e["dst"], e["rate"]))
     plan = []
+    all_steps = {}                                    # ci -> list of steps (built first pass)
     for i, c in enumerate(comps):
         M = {k: v for k, v in made[i].items() if v > 0.5 and k not in FREE_ITEMS}
         cons = defaultdict(float)                     # consumption from what it makes
@@ -401,6 +415,7 @@ def emit_app_plan(comps, prod, made, edges, RMAP):
                 needs[it] += q / base * s["target"]
             for it, q in r["o"]:
                 local_out[it] += q / base * s["target"]
+        all_steps[i] = steps
         srcs = {}                                     # inputs: local / raw / import rows
         for x, u in needs.items():
             if u <= 0.5 or x in FREE_ITEMS: continue
@@ -421,15 +436,39 @@ def emit_app_plan(comps, prod, made, edges, RMAP):
                 if total_sourced < round(u) and rows:
                     rows[0]["q"] += round(u) - total_sourced
             if rows: srcs[x] = rows
-        # VERIFY: any input still unsourced? If this complex produces it (even as a
-        # byproduct from another recipe), add a local source row. This catches byproducts
-        # like Dissolved Silica, Dark Matter Residue, Uranium Waste, etc.
+        # VERIFY: any input still unsourced? Check local byproduct output first,
+        # then look across all complexes for a producer and create an import link.
+        # Build per-complex byproduct output map
+        bp_map = defaultdict(lambda: defaultdict(float))  # item -> ci -> rate
+        for ci2 in range(len(comps)):
+            for s2 in all_steps.get(ci2, []):
+                r2 = RMAP.get(s2["recipe"])
+                if not r2: continue
+                base2 = r2["o"][0][1] or 1
+                for oi2 in range(len(r2["o"])):
+                    it2, q2 = r2["o"][oi2]
+                    if it2 not in FREE_ITEMS and it2 != "Power":
+                        bp_map[it2][ci2] += q2 / base2 * s2["target"]
         for x, u in needs.items():
             if x in FREE_ITEMS or x in RAW or x in srcs: continue
             if u <= 0.5: continue
             lo = local_out.get(x, 0)
             if lo > 0.5:
                 srcs[x] = [{"from": "local", "q": round(min(lo, u)), "station": "", "key": "c%d|%s|local" % (i, x)}]
+            elif bp_map[x]:
+                # find nearest complex that produces this byproduct
+                rows = []
+                rem_need = u
+                for sci in sorted(bp_map[x], key=lambda c: _dist(comps[c], comps[i]) if c != i else -1):
+                    if rem_need <= 0.5: break
+                    avail = bp_map[x][sci]
+                    take = min(avail, rem_need)
+                    bp_map[x][sci] -= take; rem_need -= take
+                    if sci == i:
+                        rows.append({"from": "local", "q": round(take), "station": "", "key": "c%d|%s|local" % (i, x)})
+                    else:
+                        rows.append({"from": "c%d" % sci, "q": round(take), "station": "", "key": "c%d|%s|c%d" % (i, x, sci)})
+                if rows: srcs[x] = rows
         dests = {}                                    # outputs: local + one row per consumer
         for x, mrate in M.items():
             rows = []
@@ -512,7 +551,7 @@ def main():
     # step; see docs). classify -> allocate -> edges.
     ship = classify_ship(prod)
     made, rem = allocate(comps, prod, ship)
-    edges = route(comps, prod, made, rem, ship)
+    edges = route(comps, prod, made, rem, ship, RMAP)
     emit_app_plan(comps, prod, made, edges, RMAP)   # write app_plan.json for the whole UI
 
     # machine + cap summary
