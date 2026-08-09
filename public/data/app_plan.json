@@ -12,7 +12,7 @@
    {
     "id": "s2_0",
     "recipe": "Screws",
-    "target": 18729,
+    "target": 18916,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -104,6 +104,24 @@
      "q": 4682,
      "station": "",
      "key": "c2|Iron Rod|c1"
+    },
+    {
+     "from": "c1",
+     "q": 33,
+     "station": "",
+     "key": "c2|Iron Rod|c1"
+    },
+    {
+     "from": "c1",
+     "q": 10,
+     "station": "",
+     "key": "c2|Iron Rod|c1"
+    },
+    {
+     "from": "c1",
+     "q": 3,
+     "station": "",
+     "key": "c2|Iron Rod|c1"
     }
    ],
    "Iron Plate": [
@@ -162,6 +180,72 @@
      "q": 48,
      "station": "",
      "key": "c2|Caterium Ingot|c26"
+    },
+    {
+     "to": "c9",
+     "q": 35,
+     "station": "",
+     "key": "c2|Caterium Ingot|c9"
+    },
+    {
+     "to": "c0",
+     "q": 12,
+     "station": "",
+     "key": "c2|Caterium Ingot|c0"
+    },
+    {
+     "to": "c12",
+     "q": 4,
+     "station": "",
+     "key": "c2|Caterium Ingot|c12"
+    },
+    {
+     "to": "c9",
+     "q": 10,
+     "station": "",
+     "key": "c2|Caterium Ingot|c9"
+    },
+    {
+     "to": "c0",
+     "q": 4,
+     "station": "",
+     "key": "c2|Caterium Ingot|c0"
+    },
+    {
+     "to": "c12",
+     "q": 1,
+     "station": "",
+     "key": "c2|Caterium Ingot|c12"
+    },
+    {
+     "to": "c9",
+     "q": 3,
+     "station": "",
+     "key": "c2|Caterium Ingot|c9"
+    },
+    {
+     "to": "c0",
+     "q": 1,
+     "station": "",
+     "key": "c2|Caterium Ingot|c0"
+    },
+    {
+     "to": "c9",
+     "q": 1,
+     "station": "",
+     "key": "c2|Caterium Ingot|c9"
+    },
+    {
+     "to": "c15",
+     "q": 75,
+     "station": "",
+     "key": "c2|Caterium Ingot|c15"
+    },
+    {
+     "to": "c13",
+     "q": 3,
+     "station": "",
+     "key": "c2|Caterium Ingot|c13"
     }
    ],
    "Iron Ingot": [
@@ -377,6 +461,66 @@
      "q": 3276,
      "station": "",
      "key": "c1|Iron Rod|c18"
+    },
+    {
+     "to": "c17",
+     "q": 58,
+     "station": "",
+     "key": "c1|Iron Rod|c17"
+    },
+    {
+     "to": "c2",
+     "q": 33,
+     "station": "",
+     "key": "c1|Iron Rod|c2"
+    },
+    {
+     "to": "c18",
+     "q": 15,
+     "station": "",
+     "key": "c1|Iron Rod|c18"
+    },
+    {
+     "to": "c17",
+     "q": 17,
+     "station": "",
+     "key": "c1|Iron Rod|c17"
+    },
+    {
+     "to": "c2",
+     "q": 10,
+     "station": "",
+     "key": "c1|Iron Rod|c2"
+    },
+    {
+     "to": "c18",
+     "q": 4,
+     "station": "",
+     "key": "c1|Iron Rod|c18"
+    },
+    {
+     "to": "c17",
+     "q": 5,
+     "station": "",
+     "key": "c1|Iron Rod|c17"
+    },
+    {
+     "to": "c2",
+     "q": 3,
+     "station": "",
+     "key": "c1|Iron Rod|c2"
+    },
+    {
+     "to": "c18",
+     "q": 1,
+     "station": "",
+     "key": "c1|Iron Rod|c18"
+    },
+    {
+     "to": "c17",
+     "q": 2,
+     "station": "",
+     "key": "c1|Iron Rod|c17"
     }
    ]
   },
@@ -605,7 +749,7 @@
    {
     "id": "s17_0",
     "recipe": "Screws",
-    "target": 20150,
+    "target": 20479,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -719,6 +863,30 @@
     {
      "from": "c1",
      "q": 5038,
+     "station": "",
+     "key": "c17|Iron Rod|c1"
+    },
+    {
+     "from": "c1",
+     "q": 58,
+     "station": "",
+     "key": "c17|Iron Rod|c1"
+    },
+    {
+     "from": "c1",
+     "q": 17,
+     "station": "",
+     "key": "c17|Iron Rod|c1"
+    },
+    {
+     "from": "c1",
+     "q": 5,
+     "station": "",
+     "key": "c17|Iron Rod|c1"
+    },
+    {
+     "from": "c1",
+     "q": 2,
      "station": "",
      "key": "c17|Iron Rod|c1"
     }
@@ -976,6 +1144,18 @@
      "q": 972,
      "station": "",
      "key": "c4|Copper Sheet|c24"
+    },
+    {
+     "to": "c22",
+     "q": 90,
+     "station": "",
+     "key": "c4|Copper Sheet|c22"
+    },
+    {
+     "to": "c29",
+     "q": 30,
+     "station": "",
+     "key": "c4|Copper Sheet|c29"
     }
    ]
   },
@@ -1112,6 +1292,12 @@
      "q": 3435,
      "station": "",
      "key": "c25|Aluminum Casing|c31"
+    },
+    {
+     "to": "c29",
+     "q": 18,
+     "station": "",
+     "key": "c25|Aluminum Casing|c29"
     }
    ]
   },
@@ -1123,9 +1309,9 @@
   "desc": "Engine-generated. Nodes: Bauxite 1200. 3 recipes."
  },
  {
-  "id": "c9",
-  "name": "Eastern Dune Forest 2",
-  "region": "Eastern Dune Forest",
+  "id": "c15",
+  "name": "Rocky Desert 2",
+  "region": "Rocky Desert",
   "parent": null,
   "tier": "T2",
   "bstep": "2.7",
@@ -1133,9 +1319,151 @@
   "status": "To Do",
   "steps": [
    {
+    "id": "s15_0",
+    "recipe": "Caterium Wire",
+    "target": 10464,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": "Wire"
+   },
+   {
+    "id": "s15_1",
+    "recipe": "Stator",
+    "target": 1233,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": "Stator"
+   },
+   {
+    "id": "s15_2",
+    "recipe": "Pure Caterium Ingot",
+    "target": 298,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": "Caterium Ingot"
+   }
+  ],
+  "totals": {},
+  "sourcesN": {
+   "Caterium Ore": [
+    {
+     "from": "raw",
+     "q": 597,
+     "station": "",
+     "key": "c15|Caterium Ore|raw"
+    }
+   ],
+   "Caterium Ingot": [
+    {
+     "from": "local",
+     "q": 298,
+     "station": "",
+     "key": "c15|Caterium Ingot|local"
+    },
+    {
+     "from": "c23",
+     "q": 187,
+     "station": "",
+     "key": "c15|Caterium Ingot|c23"
+    },
+    {
+     "from": "c16",
+     "q": 595,
+     "station": "",
+     "key": "c15|Caterium Ingot|c16"
+    },
+    {
+     "from": "c2",
+     "q": 153,
+     "station": "",
+     "key": "c15|Caterium Ingot|c2"
+    },
+    {
+     "from": "c2",
+     "q": 75,
+     "station": "",
+     "key": "c15|Caterium Ingot|c2"
+    }
+   ],
+   "Steel Pipe": [
+    {
+     "from": "c6",
+     "q": 3699,
+     "station": "",
+     "key": "c15|Steel Pipe|c6"
+    }
+   ],
+   "Wire": [
+    {
+     "from": "local",
+     "q": 9864,
+     "station": "",
+     "key": "c15|Wire|local"
+    }
+   ]
+  },
+  "dests": {
+   "Caterium Ingot": [
+    {
+     "to": "local",
+     "q": 298,
+     "station": "",
+     "key": "c15|Caterium Ingot|local"
+    }
+   ],
+   "Wire": [
+    {
+     "to": "local",
+     "q": 9864,
+     "station": "",
+     "key": "c15|Wire|local"
+    }
+   ],
+   "Stator": [
+    {
+     "to": "c9",
+     "q": 566,
+     "station": "",
+     "key": "c15|Stator|c9"
+    },
+    {
+     "to": "c17",
+     "q": 492,
+     "station": "",
+     "key": "c15|Stator|c17"
+    },
+    {
+     "to": "c28",
+     "q": 56,
+     "station": "",
+     "key": "c15|Stator|c28"
+    }
+   ]
+  },
+  "stations": [],
+  "site": {
+   "x": -1340,
+   "y": -1815
+  },
+  "desc": "Engine-generated. Nodes: Caterium 600, Uranium 300. 3 recipes."
+ },
+ {
+  "id": "c9",
+  "name": "Eastern Dune Forest 2",
+  "region": "Eastern Dune Forest",
+  "parent": null,
+  "tier": "T2",
+  "bstep": "2.8",
+  "tags": "",
+  "status": "To Do",
+  "steps": [
+   {
     "id": "s9_0",
     "recipe": "Quickwire",
-    "target": 9790,
+    "target": 10041,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -1240,6 +1568,30 @@
      "q": 1060,
      "station": "",
      "key": "c9|Caterium Ingot|c13"
+    },
+    {
+     "from": "c2",
+     "q": 35,
+     "station": "",
+     "key": "c9|Caterium Ingot|c2"
+    },
+    {
+     "from": "c2",
+     "q": 10,
+     "station": "",
+     "key": "c9|Caterium Ingot|c2"
+    },
+    {
+     "from": "c2",
+     "q": 3,
+     "station": "",
+     "key": "c9|Caterium Ingot|c2"
+    },
+    {
+     "from": "c2",
+     "q": 1,
+     "station": "",
+     "key": "c9|Caterium Ingot|c2"
     }
    ],
    "Copper Sheet": [
@@ -1369,142 +1721,6 @@
    "y": 1349
   },
   "desc": "Engine-generated. Nodes: Coal 3600, Iron 1200, Sulfur 1200, SAM 600. 7 recipes."
- },
- {
-  "id": "c15",
-  "name": "Rocky Desert 2",
-  "region": "Rocky Desert",
-  "parent": null,
-  "tier": "T2",
-  "bstep": "2.8",
-  "tags": "",
-  "status": "To Do",
-  "steps": [
-   {
-    "id": "s15_0",
-    "recipe": "Caterium Wire",
-    "target": 9864,
-    "clock": 100,
-    "status": "todo",
-    "sec": "PRODUCTION FLOW",
-    "name": "Wire"
-   },
-   {
-    "id": "s15_1",
-    "recipe": "Stator",
-    "target": 1233,
-    "clock": 100,
-    "status": "todo",
-    "sec": "PRODUCTION FLOW",
-    "name": "Stator"
-   },
-   {
-    "id": "s15_2",
-    "recipe": "Pure Caterium Ingot",
-    "target": 298,
-    "clock": 100,
-    "status": "todo",
-    "sec": "PRODUCTION FLOW",
-    "name": "Caterium Ingot"
-   }
-  ],
-  "totals": {},
-  "sourcesN": {
-   "Caterium Ore": [
-    {
-     "from": "raw",
-     "q": 597,
-     "station": "",
-     "key": "c15|Caterium Ore|raw"
-    }
-   ],
-   "Caterium Ingot": [
-    {
-     "from": "local",
-     "q": 298,
-     "station": "",
-     "key": "c15|Caterium Ingot|local"
-    },
-    {
-     "from": "c23",
-     "q": 187,
-     "station": "",
-     "key": "c15|Caterium Ingot|c23"
-    },
-    {
-     "from": "c16",
-     "q": 595,
-     "station": "",
-     "key": "c15|Caterium Ingot|c16"
-    },
-    {
-     "from": "c2",
-     "q": 153,
-     "station": "",
-     "key": "c15|Caterium Ingot|c2"
-    }
-   ],
-   "Steel Pipe": [
-    {
-     "from": "c6",
-     "q": 3699,
-     "station": "",
-     "key": "c15|Steel Pipe|c6"
-    }
-   ],
-   "Wire": [
-    {
-     "from": "local",
-     "q": 9864,
-     "station": "",
-     "key": "c15|Wire|local"
-    }
-   ]
-  },
-  "dests": {
-   "Caterium Ingot": [
-    {
-     "to": "local",
-     "q": 298,
-     "station": "",
-     "key": "c15|Caterium Ingot|local"
-    }
-   ],
-   "Wire": [
-    {
-     "to": "local",
-     "q": 9864,
-     "station": "",
-     "key": "c15|Wire|local"
-    }
-   ],
-   "Stator": [
-    {
-     "to": "c9",
-     "q": 566,
-     "station": "",
-     "key": "c15|Stator|c9"
-    },
-    {
-     "to": "c17",
-     "q": 492,
-     "station": "",
-     "key": "c15|Stator|c17"
-    },
-    {
-     "to": "c28",
-     "q": 56,
-     "station": "",
-     "key": "c15|Stator|c28"
-    }
-   ]
-  },
-  "stations": [],
-  "site": {
-   "x": -1340,
-   "y": -1815
-  },
-  "desc": "Engine-generated. Nodes: Caterium 600, Uranium 300. 3 recipes."
  },
  {
   "id": "c8",
@@ -2138,6 +2354,18 @@
      "q": 67,
      "station": "",
      "key": "c21|Rubber|c22"
+    },
+    {
+     "to": "c28",
+     "q": 4,
+     "station": "",
+     "key": "c21|Rubber|c28"
+    },
+    {
+     "to": "c28",
+     "q": 1,
+     "station": "",
+     "key": "c21|Rubber|c28"
     }
    ],
    "Heavy Oil Residue": [
@@ -2657,7 +2885,7 @@
    {
     "id": "s18_0",
     "recipe": "Screws",
-    "target": 13104,
+    "target": 13187,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2746,6 +2974,24 @@
     {
      "from": "c1",
      "q": 3276,
+     "station": "",
+     "key": "c18|Iron Rod|c1"
+    },
+    {
+     "from": "c1",
+     "q": 15,
+     "station": "",
+     "key": "c18|Iron Rod|c1"
+    },
+    {
+     "from": "c1",
+     "q": 4,
+     "station": "",
+     "key": "c18|Iron Rod|c1"
+    },
+    {
+     "from": "c1",
+     "q": 1,
      "station": "",
      "key": "c18|Iron Rod|c1"
     }
@@ -2882,7 +3128,7 @@
    {
     "id": "s27_1",
     "recipe": "Quickwire Cable",
-    "target": 2323,
+    "target": 2424,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -2891,7 +3137,7 @@
    {
     "id": "s27_2",
     "recipe": "Quickwire",
-    "target": 634,
+    "target": 660,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3014,7 +3260,7 @@
    "Quickwire": [
     {
      "from": "local",
-     "q": 634,
+     "q": 660,
      "station": "",
      "key": "c27|Quickwire|local"
     }
@@ -3022,7 +3268,7 @@
    "Rubber": [
     {
      "from": "local",
-     "q": 422,
+     "q": 441,
      "station": "",
      "key": "c27|Rubber|local"
     }
@@ -3096,9 +3342,27 @@
    "Rubber": [
     {
      "to": "local",
-     "q": 422,
+     "q": 441,
      "station": "",
      "key": "c27|Rubber|local"
+    },
+    {
+     "to": "c13",
+     "q": 22,
+     "station": "",
+     "key": "c27|Rubber|c13"
+    },
+    {
+     "to": "c13",
+     "q": 6,
+     "station": "",
+     "key": "c27|Rubber|c13"
+    },
+    {
+     "to": "c13",
+     "q": 2,
+     "station": "",
+     "key": "c27|Rubber|c13"
     }
    ],
    "Heavy Oil Residue": [
@@ -3155,12 +3419,18 @@
      "q": 65,
      "station": "",
      "key": "c27|Smokeless Powder|c31"
+    },
+    {
+     "to": "c22",
+     "q": 60,
+     "station": "",
+     "key": "c27|Smokeless Powder|c22"
     }
    ],
    "Quickwire": [
     {
      "to": "local",
-     "q": 634,
+     "q": 660,
      "station": "",
      "key": "c27|Quickwire|local"
     }
@@ -3214,7 +3484,7 @@
    {
     "id": "s13_0",
     "recipe": "Quickwire Cable",
-    "target": 2348,
+    "target": 2519,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3241,7 +3511,7 @@
    {
     "id": "s13_3",
     "recipe": "Quickwire",
-    "target": 640,
+    "target": 686,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3386,7 +3656,7 @@
    "Caterium Ingot": [
     {
      "from": "local",
-     "q": 128,
+     "q": 137,
      "station": "",
      "key": "c13|Caterium Ingot|local"
     },
@@ -3395,12 +3665,18 @@
      "q": 128,
      "station": "",
      "key": "c13|Caterium Ingot|c2"
+    },
+    {
+     "from": "c2",
+     "q": 3,
+     "station": "",
+     "key": "c13|Caterium Ingot|c2"
     }
    ],
    "Quickwire": [
     {
      "from": "local",
-     "q": 640,
+     "q": 686,
      "station": "",
      "key": "c13|Quickwire|local"
     }
@@ -3429,6 +3705,24 @@
      "q": 128,
      "station": "",
      "key": "c13|Rubber|c22"
+    },
+    {
+     "from": "c27",
+     "q": 22,
+     "station": "",
+     "key": "c13|Rubber|c27"
+    },
+    {
+     "from": "c27",
+     "q": 6,
+     "station": "",
+     "key": "c13|Rubber|c27"
+    },
+    {
+     "from": "c27",
+     "q": 2,
+     "station": "",
+     "key": "c13|Rubber|c27"
     }
    ],
    "Cable": [
@@ -3468,7 +3762,7 @@
    "Caterium Ingot": [
     {
      "to": "local",
-     "q": 128,
+     "q": 137,
      "station": "",
      "key": "c13|Caterium Ingot|local"
     },
@@ -3496,7 +3790,7 @@
    "Quickwire": [
     {
      "to": "local",
-     "q": 640,
+     "q": 686,
      "station": "",
      "key": "c13|Quickwire|local"
     }
@@ -3556,7 +3850,7 @@
    {
     "id": "s12_0",
     "recipe": "Quickwire",
-    "target": 3038,
+    "target": 3067,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -3603,6 +3897,18 @@
      "q": 370,
      "station": "",
      "key": "c12|Caterium Ingot|c23"
+    },
+    {
+     "from": "c2",
+     "q": 4,
+     "station": "",
+     "key": "c12|Caterium Ingot|c2"
+    },
+    {
+     "from": "c2",
+     "q": 1,
+     "station": "",
+     "key": "c12|Caterium Ingot|c2"
     }
    ],
    "Quickwire": [
@@ -3708,21 +4014,21 @@
    },
    {
     "id": "s29_3",
+    "recipe": "Empty Canister",
+    "target": 464,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": "Empty Canister"
+   },
+   {
+    "id": "s29_4",
     "recipe": "Turbofuel",
     "target": 422,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
     "name": "Turbofuel"
-   },
-   {
-    "id": "s29_4",
-    "recipe": "Empty Canister",
-    "target": 404,
-    "clock": 100,
-    "status": "todo",
-    "sec": "PRODUCTION FLOW",
-    "name": "Empty Canister"
    },
    {
     "id": "s29_5",
@@ -3735,6 +4041,15 @@
    },
    {
     "id": "s29_6",
+    "recipe": "Turbo Rifle Ammo",
+    "target": 300,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": "Turbo Rifle Ammo"
+   },
+   {
+    "id": "s29_7",
     "recipe": "Fuel",
     "target": 192,
     "clock": 100,
@@ -3743,7 +4058,16 @@
     "name": "Fuel"
    },
    {
-    "id": "s29_7",
+    "id": "s29_8",
+    "recipe": "Rifle Ammo",
+    "target": 150,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": "Rifle Ammo"
+   },
+   {
+    "id": "s29_9",
     "recipe": "Supercomputer",
     "target": 22,
     "clock": 100,
@@ -3752,7 +4076,7 @@
     "name": "Supercomputer"
    },
    {
-    "id": "s29_8",
+    "id": "s29_10",
     "recipe": "Turbo Motor",
     "target": 21,
     "clock": 100,
@@ -3850,7 +4174,7 @@
    "Plastic": [
     {
      "from": "local",
-     "q": 811,
+     "q": 841,
      "station": "",
      "key": "c29|Plastic|local"
     }
@@ -3858,7 +4182,7 @@
    "Turbofuel": [
     {
      "from": "local",
-     "q": 404,
+     "q": 422,
      "station": "",
      "key": "c29|Turbofuel|local"
     }
@@ -3926,13 +4250,37 @@
      "station": "",
      "key": "c29|Rubber|local"
     }
+   ],
+   "Copper Sheet": [
+    {
+     "from": "c4",
+     "q": 30,
+     "station": "",
+     "key": "c29|Copper Sheet|c4"
+    }
+   ],
+   "Rifle Ammo": [
+    {
+     "from": "local",
+     "q": 150,
+     "station": "",
+     "key": "c29|Rifle Ammo|local"
+    }
+   ],
+   "Aluminum Casing": [
+    {
+     "from": "c25",
+     "q": 18,
+     "station": "",
+     "key": "c29|Aluminum Casing|c25"
+    }
    ]
   },
   "dests": {
    "Plastic": [
     {
      "to": "local",
-     "q": 811,
+     "q": 841,
      "station": "",
      "key": "c29|Plastic|local"
     },
@@ -3970,7 +4318,7 @@
    "Turbofuel": [
     {
      "to": "local",
-     "q": 404,
+     "q": 422,
      "station": "",
      "key": "c29|Turbofuel|local"
     }
@@ -4012,6 +4360,14 @@
      "station": "",
      "key": "c29|Turbo Motor|c22"
     }
+   ],
+   "Rifle Ammo": [
+    {
+     "to": "local",
+     "q": 150,
+     "station": "",
+     "key": "c29|Rifle Ammo|local"
+    }
    ]
   },
   "stations": [],
@@ -4019,7 +4375,7 @@
    "x": -2458,
    "y": 780
   },
-  "desc": "Engine-generated. Nodes: Crude Oil 4500. 9 recipes."
+  "desc": "Engine-generated. Nodes: Crude Oil 4500. 11 recipes."
  },
  {
   "id": "c22",
@@ -4051,6 +4407,15 @@
    },
    {
     "id": "s22_2",
+    "recipe": "Rifle Ammo",
+    "target": 570,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": "Rifle Ammo"
+   },
+   {
+    "id": "s22_3",
     "recipe": "Rubber",
     "target": 198,
     "clock": 100,
@@ -4059,22 +4424,13 @@
     "name": "Rubber"
    },
    {
-    "id": "s22_3",
+    "id": "s22_4",
     "recipe": "Reanimated SAM",
     "target": 149,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
     "name": "Reanimated SAM"
-   },
-   {
-    "id": "s22_4",
-    "recipe": "Rifle Ammo",
-    "target": 120,
-    "clock": 100,
-    "status": "todo",
-    "sec": "PRODUCTION FLOW",
-    "name": "Rifle Ammo"
    },
    {
     "id": "s22_5",
@@ -4154,12 +4510,24 @@
      "q": 24,
      "station": "",
      "key": "c22|Copper Sheet|c4"
+    },
+    {
+     "from": "c4",
+     "q": 90,
+     "station": "",
+     "key": "c22|Copper Sheet|c4"
     }
    ],
    "Smokeless Powder": [
     {
      "from": "c27",
      "q": 16,
+     "station": "",
+     "key": "c22|Smokeless Powder|c27"
+    },
+    {
+     "from": "c27",
+     "q": 60,
      "station": "",
      "key": "c22|Smokeless Powder|c27"
     }
@@ -5498,7 +5866,7 @@
    {
     "id": "s0_0",
     "recipe": "Quickwire",
-    "target": 6300,
+    "target": 6387,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -5609,6 +5977,24 @@
      "q": 236,
      "station": "",
      "key": "c0|Caterium Ingot|c8"
+    },
+    {
+     "from": "c2",
+     "q": 12,
+     "station": "",
+     "key": "c0|Caterium Ingot|c2"
+    },
+    {
+     "from": "c2",
+     "q": 4,
+     "station": "",
+     "key": "c0|Caterium Ingot|c2"
+    },
+    {
+     "from": "c2",
+     "q": 1,
+     "station": "",
+     "key": "c0|Caterium Ingot|c2"
     }
    ],
    "Uranium": [
@@ -5771,7 +6157,7 @@
    {
     "id": "s14_3",
     "recipe": "Quickwire",
-    "target": 300,
+    "target": 302,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -6176,7 +6562,7 @@
    {
     "id": "s28_0",
     "recipe": "Quickwire Cable",
-    "target": 1110,
+    "target": 1138,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -6203,7 +6589,7 @@
    {
     "id": "s28_3",
     "recipe": "Quickwire",
-    "target": 303,
+    "target": 310,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",
@@ -6302,7 +6688,7 @@
    "Quickwire": [
     {
      "from": "local",
-     "q": 303,
+     "q": 310,
      "station": "",
      "key": "c28|Quickwire|local"
     }
@@ -6317,6 +6703,18 @@
     {
      "from": "c21",
      "q": 41,
+     "station": "",
+     "key": "c28|Rubber|c21"
+    },
+    {
+     "from": "c21",
+     "q": 4,
+     "station": "",
+     "key": "c28|Rubber|c21"
+    },
+    {
+     "from": "c21",
+     "q": 1,
      "station": "",
      "key": "c28|Rubber|c21"
     }
@@ -6414,7 +6812,7 @@
    "Quickwire": [
     {
      "to": "local",
-     "q": 303,
+     "q": 310,
      "station": "",
      "key": "c28|Quickwire|local"
     }
@@ -6609,7 +7007,7 @@
    {
     "id": "s26_1",
     "recipe": "Quickwire",
-    "target": 240,
+    "target": 241,
     "clock": 100,
     "status": "todo",
     "sec": "PRODUCTION FLOW",

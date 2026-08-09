@@ -286,6 +286,50 @@ def route(comps, prod, made, rem, ship):
         made[hub][it] = made[hub].get(it, 0) + residual
         pool[it][hub] = pool[it].get(hub, 0) + residual
         assigned[hub] += residual
+    # second pass: non-shippable items (localize + terminal) left short by the first pass.
+    # Place residual at the complexes that consume them (proportional to consumption),
+    # or if nothing consumes them (terminal), at the best hub. Iterate to soak remainders.
+    for it in sorted(prod, key=lambda i: depth.get(i, 0)):
+        for _round in range(N + 2):
+            residual = prod[it]["rate"] - sum(made[ci].get(it, 0) for ci in range(N))
+            if residual <= 1: break
+            ins = prod[it]["in"]
+            # find where this item is consumed (by anything that uses it as input)
+            consumers = defaultdict(float)
+            for P, d in prod.items():
+                if it in d["in"]:
+                    pu = d["in"][it]
+                    for ci in range(N):
+                        consumers[ci] += made[ci].get(P, 0) * pu
+            elig = {ci: q for ci, q in consumers.items() if q > 1}
+            if not elig:
+                # terminal item: pick hub with best fluid coverage (like main loop),
+                # then ensure() will import/make what's needed
+                def _fc(ci):
+                    need = tot = 0.0
+                    for x, pu in ins.items():
+                        if x in FLUID_ITEMS and x != "Water":
+                            need += pu * residual; tot += min(pool[x].get(ci, 0), pu * residual)
+                    return tot / need if need > 1 else 1.0
+                def _sc(ci):
+                    return sum(min(pool[x].get(ci, 0), pu * residual)
+                               for x, pu in ins.items() if x != "Water" and x not in FLUID_ITEMS)
+                best = max(range(N), key=lambda ci: (round(_fc(ci), 3), _sc(ci)))
+                for x, pu in ins.items(): ensure(best, x, pu * residual)
+                made[best][it] = made[best].get(it, 0) + residual
+                pool[it][best] = pool[it].get(best, 0) + residual
+                break
+            tot_e = sum(elig.values())
+            moved = 0.0
+            for ci, w in sorted(elig.items(), key=lambda kv: -kv[1]):
+                if residual <= 1: break
+                take = min(residual, residual * w / tot_e)
+                if take <= 0.5: continue
+                for x, pu in ins.items(): ensure(ci, x, pu * take)
+                made[ci][it] = made[ci].get(it, 0) + take
+                pool[it][ci] = pool[it].get(ci, 0) + take
+                residual -= take; moved += take
+            if moved < 1: break
     return edges
 
 # ============================================================ emit app-shaped plan

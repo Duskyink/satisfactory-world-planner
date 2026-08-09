@@ -13,7 +13,7 @@
     "Quartz Crystal": 973.1,
     "Sulfuric Acid": 567.1,
     "Reanimated SAM": 78.7,
-    "Quickwire": 6300.0,
+    "Quickwire": 6386.8,
     "Encased Uranium Cell": 1680.0,
     "Uranium Fuel Rod": 46.5
    }
@@ -50,7 +50,7 @@
     "Caterium Ingot": 599.8,
     "Iron Ingot": 18145.1,
     "Iron Plate": 12096.8,
-    "Screws": 18729.0,
+    "Screws": 18915.8,
     "Reinforced Iron Plate": 1560.8
    }
   },
@@ -183,7 +183,7 @@
     "Sulfuric Acid": 130.4,
     "Compacted Coal": 186.3,
     "Reanimated SAM": 150.0,
-    "Quickwire": 9790.0,
+    "Quickwire": 10040.9,
     "AI Limiter": 489.5,
     "Electromagnetic Control Rod": 377.0
    }
@@ -238,7 +238,7 @@
    },
    "makes": {
     "Alumina Solution": 2154.8,
-    "Quickwire": 3037.5,
+    "Quickwire": 3066.8,
     "High-Speed Connector": 101.2
    }
   },
@@ -260,8 +260,8 @@
     "Reanimated SAM": 74.6,
     "Explosive Rebar": 60.0,
     "Shatter Rebar": 60.0,
-    "Quickwire": 640.3,
-    "Cable": 2347.8,
+    "Quickwire": 685.8,
+    "Cable": 2518.5,
     "Crystal Oscillator": 167.7
    }
   },
@@ -285,7 +285,7 @@
     "Fuel": 1.0,
     "Caterium Ingot": 598.8,
     "Alumina Solution": 2501.1,
-    "Quickwire": 300.0,
+    "Quickwire": 301.6,
     "Stun Rebar": 60.0,
     "Adaptive Control Unit": 10.5,
     "Assembly Director System": 3.8,
@@ -303,7 +303,7 @@
    },
    "makes": {
     "Caterium Ingot": 298.4,
-    "Wire": 9864.0,
+    "Wire": 10464.0,
     "Stator": 1233.0
    }
   },
@@ -350,7 +350,7 @@
     "Sulfuric Acid": 26.3,
     "Compacted Coal": 19.2,
     "Reanimated SAM": 150.0,
-    "Screws": 20150.0,
+    "Screws": 20478.9,
     "Rotor": 806.0,
     "Motor": 246.0
    }
@@ -369,7 +369,7 @@
     "Heavy Oil Residue": 23.1,
     "Fuel": 3.0,
     "Modular Frame": 615.0,
-    "Screws": 13104.0,
+    "Screws": 13187.2,
     "Heavy Modular Frame": 109.2
    }
   },
@@ -446,7 +446,7 @@
     "Fuel": 18.9,
     "Alumina Solution": 699.7,
     "Reanimated SAM": 149.3,
-    "Rifle Ammo": 120.0,
+    "Rifle Ammo": 570.0,
     "Homing Rifle Ammo": 60.0,
     "Modular Engine": 18.0,
     "Thermal Propulsion Rocket": 6.0
@@ -517,7 +517,7 @@
    "makes": {
     "Reanimated SAM": 149.3,
     "Empty Fluid Tank": 30.0,
-    "Quickwire": 240.0,
+    "Quickwire": 241.3,
     "Iodine-Infused Filter": 30.0,
     "AI Expansion Server": 3.0,
     "Ficsite Trigon": 3780.0,
@@ -546,8 +546,8 @@
     "Fuel": 76.4,
     "Reanimated SAM": 75.0,
     "Smokeless Powder": 381.0,
-    "Quickwire": 633.6,
-    "Cable": 2323.2,
+    "Quickwire": 660.3,
+    "Cable": 2423.5,
     "Computer": 290.4
    }
   },
@@ -565,8 +565,8 @@
     "Heavy Oil Residue": 149.1,
     "Fuel": 41.8,
     "Reanimated SAM": 75.0,
-    "Quickwire": 302.7,
-    "Cable": 1110.0,
+    "Quickwire": 309.9,
+    "Cable": 1138.0,
     "Automated Wiring": 55.5,
     "Encased Plutonium Cell": 372.0,
     "Plutonium Fuel Rod": 18.6
@@ -585,10 +585,12 @@
     "Heavy Oil Residue": 611.3,
     "Fuel": 192.0,
     "Turbofuel": 422.0,
-    "Empty Canister": 404.0,
+    "Empty Canister": 464.0,
     "Packaged Turbofuel": 404.0,
     "Supercomputer": 21.8,
-    "Turbo Motor": 21.0
+    "Turbo Motor": 21.0,
+    "Rifle Ammo": 150.0,
+    "Turbo Rifle Ammo": 300.0
    }
   },
   {
@@ -2420,13 +2422,223 @@
    "dst": 26,
    "rate": 1240.0,
    "dist_m": 3756
+  },
+  {
+   "item": "Caterium Ingot",
+   "src": 2,
+   "dst": 9,
+   "rate": 35.2,
+   "dist_m": 3517
+  },
+  {
+   "item": "Caterium Ingot",
+   "src": 2,
+   "dst": 0,
+   "rate": 12.2,
+   "dist_m": 4927
+  },
+  {
+   "item": "Caterium Ingot",
+   "src": 2,
+   "dst": 12,
+   "rate": 4.1,
+   "dist_m": 4350
+  },
+  {
+   "item": "Caterium Ingot",
+   "src": 2,
+   "dst": 9,
+   "rate": 10.3,
+   "dist_m": 3517
+  },
+  {
+   "item": "Caterium Ingot",
+   "src": 2,
+   "dst": 0,
+   "rate": 3.6,
+   "dist_m": 4927
+  },
+  {
+   "item": "Caterium Ingot",
+   "src": 2,
+   "dst": 12,
+   "rate": 1.2,
+   "dist_m": 4350
+  },
+  {
+   "item": "Caterium Ingot",
+   "src": 2,
+   "dst": 9,
+   "rate": 3.2,
+   "dist_m": 3517
+  },
+  {
+   "item": "Caterium Ingot",
+   "src": 2,
+   "dst": 0,
+   "rate": 1.1,
+   "dist_m": 4927
+  },
+  {
+   "item": "Caterium Ingot",
+   "src": 2,
+   "dst": 9,
+   "rate": 1.0,
+   "dist_m": 3517
+  },
+  {
+   "item": "Caterium Ingot",
+   "src": 2,
+   "dst": 15,
+   "rate": 75.0,
+   "dist_m": 5039
+  },
+  {
+   "item": "Iron Rod",
+   "src": 1,
+   "dst": 17,
+   "rate": 58.1,
+   "dist_m": 2377
+  },
+  {
+   "item": "Iron Rod",
+   "src": 1,
+   "dst": 2,
+   "rate": 33.1,
+   "dist_m": 5224
+  },
+  {
+   "item": "Iron Rod",
+   "src": 1,
+   "dst": 18,
+   "rate": 14.8,
+   "dist_m": 3641
+  },
+  {
+   "item": "Iron Rod",
+   "src": 1,
+   "dst": 17,
+   "rate": 17.0,
+   "dist_m": 2377
+  },
+  {
+   "item": "Iron Rod",
+   "src": 1,
+   "dst": 2,
+   "rate": 9.7,
+   "dist_m": 5224
+  },
+  {
+   "item": "Iron Rod",
+   "src": 1,
+   "dst": 18,
+   "rate": 4.3,
+   "dist_m": 3641
+  },
+  {
+   "item": "Iron Rod",
+   "src": 1,
+   "dst": 17,
+   "rate": 5.0,
+   "dist_m": 2377
+  },
+  {
+   "item": "Iron Rod",
+   "src": 1,
+   "dst": 2,
+   "rate": 2.8,
+   "dist_m": 5224
+  },
+  {
+   "item": "Iron Rod",
+   "src": 1,
+   "dst": 18,
+   "rate": 1.3,
+   "dist_m": 3641
+  },
+  {
+   "item": "Iron Rod",
+   "src": 1,
+   "dst": 17,
+   "rate": 1.5,
+   "dist_m": 2377
+  },
+  {
+   "item": "Caterium Ingot",
+   "src": 2,
+   "dst": 13,
+   "rate": 3.4,
+   "dist_m": 2222
+  },
+  {
+   "item": "Rubber",
+   "src": 27,
+   "dst": 13,
+   "rate": 22.2,
+   "dist_m": 2506
+  },
+  {
+   "item": "Rubber",
+   "src": 21,
+   "dst": 28,
+   "rate": 3.7,
+   "dist_m": 868
+  },
+  {
+   "item": "Rubber",
+   "src": 27,
+   "dst": 13,
+   "rate": 6.4,
+   "dist_m": 2506
+  },
+  {
+   "item": "Rubber",
+   "src": 21,
+   "dst": 28,
+   "rate": 1.1,
+   "dist_m": 868
+  },
+  {
+   "item": "Rubber",
+   "src": 27,
+   "dst": 13,
+   "rate": 1.8,
+   "dist_m": 2506
+  },
+  {
+   "item": "Copper Sheet",
+   "src": 4,
+   "dst": 22,
+   "rate": 90.0,
+   "dist_m": 1720
+  },
+  {
+   "item": "Smokeless Powder",
+   "src": 27,
+   "dst": 22,
+   "rate": 60.0,
+   "dist_m": 2611
+  },
+  {
+   "item": "Copper Sheet",
+   "src": 4,
+   "dst": 29,
+   "rate": 30.0,
+   "dist_m": 1901
+  },
+  {
+   "item": "Aluminum Casing",
+   "src": 25,
+   "dst": 29,
+   "rate": 18.0,
+   "dist_m": 730
   }
  ],
  "stats": {
   "complexes": 32,
-  "edges": 257,
+  "edges": 287,
   "machines": 12976,
-  "shipped_per_min": 193519,
+  "shipped_per_min": 194050,
   "unmet_raw": {}
  }
 }
