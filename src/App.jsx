@@ -69,7 +69,8 @@ function App(){
       <input className="sfilter" placeholder="filter by name, tag, region..." value={q} onChange={e=>setQ(e.target.value)}/>
       {tops.filter(c=>match(c)||kids(c.id).some(match)).map(c=>(<div key={c.id}>
         <button className={"navrow "+(sel===c.id?"on":"")} onClick={()=>setSel(c.id)}>
-          <span className="tchip" style={{color:tierColor(c.tier),borderColor:tierColor(c.tier)}}>{c.tier}</span>
+          <span className="bstep">{c.bstep||"-"}</span>
+          <span className={"stchip "+(cxStatus(c)==="Complete"?"done":cxStatus(c)==="In Progress"?"act":"todo")}>{cxStatus(c)==="Complete"?"done":cxStatus(c)==="In Progress"?"WIP":"todo"}</span>
           <span className="nm">{c.name}<em>{c.tags||c.region}</em></span>
           {graph.flag[c.id]&&<span className="flagdot" title="an input here has no source yet, or its source is undersized"/>}
           <span className="pct">{prog(c)}%</span></button>
