@@ -2846,6 +2846,24 @@
     "status": "todo",
     "sec": "PRODUCTION FLOW",
     "name": "Dissolved Silica"
+   },
+   {
+    "id": "a23_6",
+    "recipe": "Unpackage Nitric Acid",
+    "target": 1764,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": "Nitric Acid"
+   },
+   {
+    "id": "a23_7",
+    "recipe": "Packaged Nitric Acid",
+    "target": 1764,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": "Packaged Nitric Acid"
    }
   ],
   "totals": {},
@@ -2892,10 +2910,26 @@
    ],
    "Nitric Acid": [
     {
-     "from": "c11",
-     "q": 0,
+     "from": "local",
+     "q": 1764,
      "station": "",
-     "key": "c23|Nitric Acid|c11"
+     "key": "c23|Nitric Acid|local"
+    }
+   ],
+   "Packaged Nitric Acid": [
+    {
+     "from": "local",
+     "q": 1764,
+     "station": "",
+     "key": "c23|Packaged Nitric Acid|local"
+    }
+   ],
+   "Empty Fluid Tank": [
+    {
+     "from": "local",
+     "q": 1764,
+     "station": "",
+     "key": "c23|Empty Fluid Tank|local"
     }
    ]
   },
@@ -2970,7 +3004,7 @@
    "x": -1795,
    "y": -1055
   },
-  "desc": "Engine-generated. Nodes: Raw Quartz 3000, Limestone 3000, Iron 1800, Caterium 1200, Copper 600, SAM 600. 6 recipes."
+  "desc": "Engine-generated. Nodes: Raw Quartz 3000, Limestone 3000, Iron 1800, Caterium 1200, Copper 600, SAM 600. 8 recipes."
  },
  {
   "id": "c19",

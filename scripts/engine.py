@@ -47,18 +47,61 @@ CENTRAL_ITEMS = {"Computer","Supercomputer","Radio Control Unit","High-Speed Con
 # hand-fed / ubiquitous items we never compute or source (treated as free, like water)
 FREE_ITEMS = {"Water", "Biomass", "Mycelia"}
 
+# ============================================================ recipe selection
+def select_recipes(RMAP, caps, demand, plan_recipes):
+    """For each product, pick the best recipe from all candidates.
+    Rule: use raw-efficient recipes where a cap is tight; fewest-machine recipe
+    where resources are abundant. Prefer the plan's existing recipe when it doesn't
+    cause a cap breach — only override when needed."""
+    # group recipes by primary output item
+    by_output = defaultdict(list)
+    for r in RMAP.values():
+        if not r["o"]: continue
+        if not r.get("b"): continue
+        po = r["o"][0][0]
+        if po in FREE_ITEMS or po == "Power": continue
+        by_output[po].append(r)
+    pressure = {}
+    for res, cap in caps.items():
+        if cap > 0:
+            pressure[res] = demand.get(res, 0) / cap
+    def recipe_score(r):
+        base = r["o"][0][1] or 1
+        cost = 0.0
+        for it, q in r["i"]:
+            pu = q / base
+            if it in RAW and it != "Water":
+                p = pressure.get(it, 0.1)
+                cost += pu * (1.0 + p * p * 100)
+            elif it in FLUID_ITEMS:
+                cost += pu * 0.3
+            else:
+                cost += pu * 0.1
+        cost += (1.0 / base) * 0.001
+        return cost
+    selected = {}
+    for item, candidates in by_output.items():
+        if len(candidates) == 1:
+            selected[item] = candidates[0]["n"]
+        elif item in plan_recipes:
+            # plan already chose a recipe — keep it unless it breaches caps
+            selected[item] = plan_recipes[item]
+        else:
+            best = min(candidates, key=recipe_score)
+            selected[item] = best["n"]
+    return selected
+
 # ============================================================ data & demand
-def build_demand(plan, RMAP):
-    """From the plan's steps, derive per-product recipe (per-unit inputs) and total
-    demanded rate. Only primary outputs drive demand and routing. Byproducts are tracked
-    separately so emit_app_plan knows they exist locally, but they don't inflate demand."""
+def build_demand(plan, RMAP, selected_recipes):
+    """From the plan's steps, derive per-product total demanded rate.
+    Uses ENGINE-SELECTED recipes (not plan-static ones) for the per-unit input ratios.
+    The plan provides WHAT to make and HOW MUCH; the engine decides WHICH RECIPE."""
     prod = {}
-    byproduct_rate = defaultdict(float)   # item -> total byproduct rate across the plan
+    byproduct_rate = defaultdict(float)
     for c in plan:
         for s in c.get("steps", []):
             r = RMAP.get(s["recipe"])
-            if not r:
-                continue
+            if not r: continue
             base = (r["o"][0][1] if r["o"] else 1) or 1
             maxcl = (s.get("clock", 100)) / 100
             tgt = s.get("target", 0) or 0
@@ -66,15 +109,21 @@ def build_demand(plan, RMAP):
             cl = maxcl if (s.get("mode") == "full" or m == 0) else tgt / (m * base)
             po = r["o"][0][0]
             if po not in FREE_ITEMS and po != "Power":
-                d = prod.setdefault(po, {"in": {}, "rate": 0.0, "recipe": s["recipe"]})
+                d = prod.setdefault(po, {"in": {}, "rate": 0.0, "recipe": None})
                 d["rate"] += r["o"][0][1] * cl * m
-                for it, q in r["i"]:
-                    d["in"][it] = q / (r["o"][0][1] or 1)
-            # track byproducts (secondary outputs) — they're available but don't drive demand
             for oi in range(1, len(r["o"])):
                 bp, bq = r["o"][oi]
                 if bp not in FREE_ITEMS and bp != "Power":
                     byproduct_rate[bp] += bq * cl * m
+    # assign each product its engine-selected recipe's input ratios
+    for po, d in prod.items():
+        rname = selected_recipes.get(po)
+        if rname:
+            d["recipe"] = rname
+            r = RMAP.get(rname)
+            if r:
+                oq = r["o"][0][1] or 1
+                d["in"] = {it: q / oq for it, q in r["i"]}
     return prod, byproduct_rate
 
 def raw_demand(prod):
@@ -558,7 +607,7 @@ def emit_app_plan(comps, prod, made, edges, RMAP, caps):
                                                 "target": target_rate, "clock": 100, "status": "todo",
                                                 "sec": "PRODUCTION FLOW", "name": x})
         # after adding auto-steps, re-source any new needs — iterate until stable
-        for _pass in range(5):
+        for _pass in range(10):
             added = False
             for x, u in list(needs.items()):
                 if x in FREE_ITEMS: continue
@@ -572,7 +621,7 @@ def emit_app_plan(comps, prod, made, edges, RMAP, caps):
                     srcs[x] = [{"from": "raw", "q": round(u), "station": "", "key": "c%d|%s|raw" % (i, x)}]
                 elif local_out.get(x, 0) > 0.5:
                     srcs[x] = [{"from": "local", "q": round(min(local_out[x], u)), "station": "", "key": "c%d|%s|local" % (i, x)}]
-                elif bp_map[x]:
+                elif any(v > 0.5 for v in bp_map[x].values()):
                     rows = []
                     rem_need = u
                     for sci in sorted(bp_map[x], key=lambda c: _dist(comps[c], comps[i]) if c != i else -1):
@@ -666,7 +715,20 @@ def main():
     RMAP = {r["n"]: r for r in recipes}
     region = region_namer(mapbg)
 
-    prod, byproduct_rate = build_demand(plan, RMAP)
+    # build plan's existing recipe choices (item -> recipe name)
+    plan_recipes = {}
+    for c in plan:
+        for s in c.get("steps", []):
+            r = RMAP.get(s["recipe"])
+            if r and r["o"]:
+                plan_recipes[r["o"][0][0]] = s["recipe"]
+    # first pass: get raw demand from plan's static recipes to compute pressure
+    pre_prod, _ = build_demand(plan, RMAP, plan_recipes)
+    pre_dem = raw_demand(pre_prod)
+    # engine selects recipes based on resource pressure (prefers plan choices)
+    selected = select_recipes(RMAP, caps, pre_dem, plan_recipes)
+    # rebuild demand with engine-selected recipes
+    prod, byproduct_rate = build_demand(plan, RMAP, selected)
     dem = raw_demand(prod)
 
     # 1-3: solid claim + fluid claims, then merge into complexes
