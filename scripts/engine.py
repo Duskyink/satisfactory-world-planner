@@ -382,6 +382,14 @@ def emit_app_plan(comps, prod, made, edges, RMAP):
     for e in edges:
         imp_by[e["dst"]][e["item"]].append((e["src"], e["rate"]))
         exp_by[e["src"]][e["item"]].append((e["dst"], e["rate"]))
+    # Build recipe lookup: for any item, which recipe produces it?
+    # Prefer recipes where the item is a primary output; fall back to byproduct sources
+    produces = {}  # item -> recipe name
+    for r in RMAP.values():
+        for oi, (it, q) in enumerate(r["o"]):
+            if it not in FREE_ITEMS and it != "Power":
+                if it not in produces or oi == 0:  # primary output wins
+                    produces[it] = r["n"]
     plan = []
     all_steps = {}                                    # ci -> list of steps (built first pass)
     for i, c in enumerate(comps):
@@ -449,7 +457,7 @@ def emit_app_plan(comps, prod, made, edges, RMAP):
                     it2, q2 = r2["o"][oi2]
                     if it2 not in FREE_ITEMS and it2 != "Power":
                         bp_map[it2][ci2] += q2 / base2 * s2["target"]
-        for x, u in needs.items():
+        for x, u in list(needs.items()):
             if x in FREE_ITEMS or x in RAW or x in srcs: continue
             if u <= 0.5: continue
             lo = local_out.get(x, 0)
@@ -469,6 +477,66 @@ def emit_app_plan(comps, prod, made, edges, RMAP):
                     else:
                         rows.append({"from": "c%d" % sci, "q": round(take), "station": "", "key": "c%d|%s|c%d" % (i, x, sci)})
                 if rows: srcs[x] = rows
+            elif x in produces:
+                # No complex produces this item at all — add a step for the producing recipe
+                rname = produces[x]
+                r = RMAP.get(rname)
+                if r:
+                    base = r["o"][0][1] or 1
+                    # find which output index this item is
+                    oq = next((q for it2, q in r["o"] if it2 == x), base)
+                    target_rate = round(u * base / oq) if oq > 0 else round(u)
+                    sid = "a%d_%d" % (i, len(steps))
+                    steps.append({"id": sid, "recipe": rname, "target": target_rate,
+                                  "clock": 100, "status": "todo", "sec": "PRODUCTION FLOW",
+                                  "name": x})
+                    # recompute local_out with the new step
+                    for it2, q2 in r["o"]:
+                        local_out[it2] += q2 / base * target_rate
+                    for it2, q2 in r["i"]:
+                        needs[it2] = needs.get(it2, 0) + q2 / base * target_rate
+                    srcs[x] = [{"from": "local", "q": round(u), "station": "", "key": "c%d|%s|local" % (i, x)}]
+        # after adding auto-steps, re-source any new needs — iterate until stable
+        for _pass in range(5):
+            added = False
+            for x, u in list(needs.items()):
+                if x in FREE_ITEMS or x in srcs: continue
+                if u <= 0.5: continue
+                added = True
+                if x in RAW:
+                    srcs[x] = [{"from": "raw", "q": round(u), "station": "", "key": "c%d|%s|raw" % (i, x)}]
+                elif local_out.get(x, 0) > 0.5:
+                    srcs[x] = [{"from": "local", "q": round(min(local_out[x], u)), "station": "", "key": "c%d|%s|local" % (i, x)}]
+                elif bp_map[x]:
+                    rows = []
+                    rem_need = u
+                    for sci in sorted(bp_map[x], key=lambda c: _dist(comps[c], comps[i]) if c != i else -1):
+                        if rem_need <= 0.5: break
+                        avail_bp = bp_map[x][sci]
+                        take = min(avail_bp, rem_need)
+                        bp_map[x][sci] -= take; rem_need -= take
+                        if sci == i:
+                            rows.append({"from": "local", "q": round(take), "station": "", "key": "c%d|%s|local" % (i, x)})
+                        else:
+                            rows.append({"from": "c%d" % sci, "q": round(take), "station": "", "key": "c%d|%s|c%d" % (i, x, sci)})
+                    if rows: srcs[x] = rows
+                elif x in produces:
+                    rname = produces[x]
+                    r = RMAP.get(rname)
+                    if r:
+                        base = r["o"][0][1] or 1
+                        oq = next((q for it2, q in r["o"] if it2 == x), base)
+                        target_rate = round(u * base / oq) if oq > 0 else round(u)
+                        steps.append({"id": "a%d_%d" % (i, len(steps)), "recipe": rname,
+                                      "target": target_rate, "clock": 100, "status": "todo",
+                                      "sec": "PRODUCTION FLOW", "name": x})
+                        for it2, q2 in r["o"]:
+                            local_out[it2] += q2 / base * target_rate
+                        for it2, q2 in r["i"]:
+                            needs[it2] = needs.get(it2, 0) + q2 / base * target_rate
+                        srcs[x] = [{"from": "local", "q": round(u), "station": "", "key": "c%d|%s|local" % (i, x)}]
+            if not added: break
+        all_steps[i] = steps
         dests = {}                                    # outputs: local + one row per consumer
         for x, mrate in M.items():
             rows = []

@@ -2837,6 +2837,15 @@
     "status": "todo",
     "sec": "PRODUCTION FLOW",
     "name": "Reanimated SAM"
+   },
+   {
+    "id": "a23_5",
+    "recipe": "Quartz Purification",
+    "target": 13231,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": "Dissolved Silica"
    }
   ],
   "totals": {},
@@ -2871,6 +2880,22 @@
      "q": 600,
      "station": "",
      "key": "c23|SAM|raw"
+    }
+   ],
+   "Dissolved Silica": [
+    {
+     "from": "local",
+     "q": 10584,
+     "station": "",
+     "key": "c23|Dissolved Silica|local"
+    }
+   ],
+   "Nitric Acid": [
+    {
+     "from": "c11",
+     "q": 907,
+     "station": "",
+     "key": "c23|Nitric Acid|c11"
     }
    ]
   },
@@ -2945,7 +2970,7 @@
    "x": -1795,
    "y": -1055
   },
-  "desc": "Engine-generated. Nodes: Raw Quartz 3000, Limestone 3000, Iron 1800, Caterium 1200, Copper 600, SAM 600. 5 recipes."
+  "desc": "Engine-generated. Nodes: Raw Quartz 3000, Limestone 3000, Iron 1800, Caterium 1200, Copper 600, SAM 600. 6 recipes."
  },
  {
   "id": "c19",
@@ -6408,6 +6433,14 @@
      "station": "",
      "key": "c30|Ficsonium Fuel Rod|local"
     }
+   ],
+   "Excited Photonic Matter": [
+    {
+     "from": "c20",
+     "q": 375,
+     "station": "",
+     "key": "c30|Excited Photonic Matter|c20"
+    }
    ]
   },
   "dests": {
@@ -7421,6 +7454,15 @@
     "status": "todo",
     "sec": "PRODUCTION FLOW",
     "name": "Biochemical Sculptor"
+   },
+   {
+    "id": "a20_13",
+    "recipe": "Excited Photonic Matter",
+    "target": 375,
+    "clock": 100,
+    "status": "todo",
+    "sec": "PRODUCTION FLOW",
+    "name": "Excited Photonic Matter"
    }
   ],
   "totals": {},
@@ -7726,6 +7768,14 @@
      "station": "",
      "key": "c20|Plutonium Waste|c14"
     }
+   ],
+   "Excited Photonic Matter": [
+    {
+     "from": "local",
+     "q": 375,
+     "station": "",
+     "key": "c20|Excited Photonic Matter|local"
+    }
    ]
   },
   "dests": {
@@ -7819,6 +7869,6 @@
    "x": -400,
    "y": -1412
   },
-  "desc": "Engine-generated. Nodes: Iron 4800, Copper 2400, Limestone 2400. 13 recipes."
+  "desc": "Engine-generated. Nodes: Iron 4800, Copper 2400, Limestone 2400. 14 recipes."
  }
 ]
